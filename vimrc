@@ -301,8 +301,18 @@ let g:DevIconsEnableFoldersOpenClose = 1
 " Adjust icons padding
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
+
 " ## Easytags
-let g:easytags_async=1  " Async updates
+" Async updates
+let g:easytags_async = 1
+
+" Update on open & write
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+
+" Saves .tags file on cwd
+set cpoptions+=d
+set tags=./.tags;
+let g:easytags_dynamic_files = 2
 
 
 " ## Rootignore
