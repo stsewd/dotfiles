@@ -59,6 +59,8 @@ Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 
+Plugin 'xolox/vim-easytags'  " Automated tag file generation & highlighting
+
 
 " ## Linters & Formatters
 Plugin 'scrooloose/syntastic'  " Syntax checking
