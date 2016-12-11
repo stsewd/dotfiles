@@ -1,0 +1,202 @@
+"*":
+  MarkdownDocument:
+    enableAutoSave: "true"
+    markdownScopes: [
+      "source.gfm"
+      "text.md"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
+    fuzzyMatch: true
+  "asciidoc-preview":
+    exportAsPdf:
+      enabled: true
+  "atom-autocomplete-php":
+    binComposer: "/usr/bin/composer"
+  "atom-beautify":
+    general:
+      _analyticsUserId: "58751485-41b9-45e8-a77d-1ffed35651d6"
+  "autoclose-html":
+    legacyMode: true
+  "autocomplete-bibtex":
+    bibtex: [
+      "/home/stsewd/Documents/Facu/6/sis_operativos 2/deber6/bibliography.bib"
+    ]
+  "autocomplete-clang": {}
+  "autocomplete-java": {}
+  "autocomplete-jsp": {}
+  "autocomplete-plus":
+    enableExtendedUnicodeSupport: true
+    useCoreMovementCommands: false
+  "autocomplete-python": {}
+  "browser-refresh":
+    chromeBackgroundRefresh: false
+    firefox: true
+    googleChrome: false
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "linter-gcc"
+      "activate-power-mode"
+      "markdown-pdf"
+      "autocomplete-awk"
+      "terminal-plus"
+      "autocomplete-clang"
+      "linter-clang"
+      "git-control"
+      "open-recent"
+      "language-pfm"
+      "pdf-view"
+      "spell-check"
+      "markdown-toc"
+      "linter-pep8"
+      "linter-shellcheck"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+  docblockr: {}
+  editor:
+    fontSize: 12
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "a1cf28ee-d6c8-0532-2293-0e98ded374ad"
+  "file-icons": {}
+  "fuzzy-finder": {}
+  "git-plus": {}
+  "keyboard-localization":
+    useKeyboardLayout: "es_LA"
+  latex: {}
+  latextools:
+    builderSettings: {}
+    linux:
+      atomExecutable: "atom"
+    win32:
+      distro: "texlive"
+  linter:
+    errorPanelHeight: 24
+  "linter-clang":
+    clangDefaultCppFlags: "-std=c++14"
+    clangDefaultObjCppFlags: "-std=c++14"
+  "linter-flake8":
+    maxLineLength: 120
+  "linter-gcc":
+    gccDefaultCppFlags: "-c -Wall -std=c++11 `pkg-config --cflags --libs gtk+-3.0`"
+  "linter-jshint":
+    lintInlineJavaScript: true
+  "linter-markdown": {}
+  "linter-pep8":
+    maxLineLength: 120
+  "linter-php": {}
+  "linter-shellcheck": {}
+  "markdown-document": {}
+  "markdown-preview":
+    liveUpdate: false
+    useGitHubStyle: true
+  "markdown-preview-plus":
+    enablePandoc: true
+    pandocBibliography: true
+    pandocCSLFile: "bibliography.csl"
+    pandocRemoveReferences: false
+    useGitHubStyle: true
+    useLazyHeaders: false
+  "markdown-writer":
+    relativeImagePath: true
+    tableExtraPipes: true
+  minimap:
+    absoluteMode: true
+    plugins:
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "one-light-ui":
+    layoutMode: "Compact"
+  "open-file-in":
+    applications: "gimp,inkscape,svgTester,codeblocks"
+  "open-unsupported-files":
+    extensions: "doc,xls,ppt,docx,xlsx,pptx,rtf,tar,gz,bz2,exe,bat,psd,pdf,odt"
+  "package-sync":
+    createOnChange: true
+  pigments:
+    markerType: "dot"
+  "platformio-ide-terminal":
+    style:
+      theme: "dracula"
+  "project-manager":
+    includeGitRepositories: true
+  "spell-check": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "status-bar": {}
+  "sync-settings":
+    _analyticsUserId: "163294c8-6159-414b-abec-bc6c278d931c"
+  "terminal-plus":
+    core: {}
+    style:
+      theme: "dracula"
+    toggles: {}
+  "theme-switch":
+    darkProfiles: [
+      "one-dark-ui one-dark-syntax"
+      "one-dark-ui solarized-light-syntax"
+      "one-dark-ui solarized-dark-syntax"
+    ]
+    lightProfiles: [
+      "one-light-ui solarized-light-syntax"
+      "one-light-ui one-light-syntax"
+    ]
+    profiles: [
+      "one-dark-ui one-dark-syntax"
+      "one-dark-ui solarized-light-syntax"
+      "one-light-ui solarized-light-syntax"
+      "one-light-ui one-light-syntax"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    clearHighlightSearchOnResetNormalMode: true
+    highlightSearch: true
+    incrementalSearch: true
+    smoothScrollOnHalfScrollMotion: true
+    useSmartcaseForSearch: true
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false
+  whitespace: {}
+  wordcount: {}
+  "zotero-citations":
+    scanMode: "pandoc"
+".angular.html.text":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
+".asciidoc.properties.source":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
+".asciidoc.source":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
+".diff":
+  editor:
+    preferredLineLength: 120
+".gfm.source":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
