@@ -301,6 +301,9 @@ let g:DevIconsEnableFoldersOpenClose = 1
 " Adjust icons padding
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
+" ## Easytags
+let g:easytags_async=1  " Async updates
+
 
 " ## Rootignore
 " TODO: doesn't work
