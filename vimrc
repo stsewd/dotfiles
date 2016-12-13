@@ -74,6 +74,7 @@ Plugin 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plugin 'altercation/vim-colors-solarized'  " Solarized theme
 Plugin 'vim-airline/vim-airline-themes'  " Themes for airline
 Plugin 'ryanoasis/vim-devicons'  " Show icons on nerdtree
+Plugin 'joshdick/onedark.vim'
 " Plugin 'flazz/vim-colorschemes'  " Several colorschemes
 
 
@@ -124,6 +125,8 @@ set scrolloff=3  " Display at least 3 lines around you cursor
 syntax enable  " Enable syntax highlighting
 set encoding=utf8  " Set enconding
 
+set colorcolumn=120  " Set & show limit column
+
 
 " ## Lines
 set nowrap  " No wrap lines (display long lines)
@@ -168,7 +171,7 @@ set autoindent
 " ## Theme & Colorscheme
 let g:solarized_termcolors=256
 set background=light
-colorscheme solarized
+colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
@@ -278,6 +281,9 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+" Theme
+" let g:airline_theme='onedark'
 
 
 " ## Emmet
