@@ -92,6 +92,12 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'ekalinin/dockerfile.vim'
 
 
+" ## Markdown
+Plugin 'godlygeek/tabular'  " Filtrado y alineado de texto
+Plugin 'plasticboy/vim-markdown'  " Markdown
+Plugin 'shime/vim-livedown'  " Markdown preview
+
+
 call vundle#end()
 filetype plugin indent on
 
@@ -104,12 +110,6 @@ filetype plugin indent on
 set title  " Update the title of your window or your terminal
 set mouse=a  " Enable mouse support in terminal
 
-set number  " Display line numbers
-set relativenumber  " Show relative line numbers
-set cursorline  " Highlight current line
-set ruler  " Display cursor position
-set linespace=2  " Pixels between lines
-
 set guioptions-=T  " Disable the toolbar
 set guioptions-=m  " Disable the menubar
 set guioptions-=r  " Remove right-hand scroll bar
@@ -121,10 +121,17 @@ set antialias
 set gcr=n:blinkon0  " Disable cursor blinking
 
 set scrolloff=3  " Display at least 3 lines around you cursor
-
 syntax enable  " Enable syntax highlighting
-
 set encoding=utf8  " Set enconding
+
+
+" ## Lines
+set nowrap  " No wrap lines (display long lines)
+set number  " Display line numbers
+set relativenumber  " Show relative line numbers
+set cursorline  " Highlight current line
+set ruler  " Display cursor position
+set linespace=2  " Pixels between lines
 
 
 " ## Ex-mode
@@ -173,8 +180,13 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
+
 " ## Spellchecker
 set spelllang=en,es
+
+
+" ## Others
+let g:netrw_browsex_viewer="setsid xdg-open"  " Fix gx in gvim
 
 
 " .........................................................
@@ -251,15 +263,15 @@ set updatetime=250  " Update each 250 mls
 
 
 " ## The NerdCommenter
-let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
-let g:NERDTrimTrailingWhitespace = 1 "Enable trimming of trailing whitespace when uncommenting
+let g:NERDSpaceDelims = 1  " Add spaces after comment delimiters by default
+let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace when uncommenting
 
 
 " ## Airline
 set laststatus=2  " Always show
 
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
-let g:airline#extensions#tabline#fnamemod = ':t' " Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
@@ -269,7 +281,7 @@ endif
 
 
 " ## Emmet
-let g:user_emmet_leader_key='<C-Z>' " Trigger emmet with ctrl-z ,
+let g:user_emmet_leader_key='<C-Z>'  " Trigger emmet with ctrl-z ,
 
 
 " ## Session
@@ -315,7 +327,15 @@ set tags=./.tags;
 let g:easytags_dynamic_files = 2
 
 
+" ## Syntastic
+let g:syntastic_loc_list_height=5  " Height of errors window
+
+
 " ## Rootignore
 " TODO: doesn't work
 let g:RootIgnoreAgignore = 1  " Load wildignore from .gitignore
+
+" # TODO
+" http://vimawesome.com/plugin/vimwiki-the-lucky-one
+" Search for todo list manager or make my own plugin
 
