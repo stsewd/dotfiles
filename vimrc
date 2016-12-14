@@ -52,7 +52,6 @@ Plugin 'vimwiki/vimwiki'  " Personal wiki in vim
 Plugin 'tpope/vim-fugitive'  " Git wrapper for vim
 Plugin 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plugin 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
-Plugin 'octref/rootignore'  " Set wildignore from .gitignore file
 
 
 " ## Autocompletition & Snippets
@@ -252,8 +251,8 @@ let g:syntastic_check_on_wq = 0
 
 " ## NerdTree
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
-let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']  " Ignore python cache files
-let NERDTreeRespectWildIgnore=1  " Respect the vim wildignore setting
+" See https://gist.github.com/scrooloose/0cdccd1171891caf0e24
+" for ignore files in .gitignore
 
 
 " ## CtrlP
@@ -294,7 +293,12 @@ let g:user_emmet_leader_key='<C-Z>'  " Trigger emmet with ctrl-z ,
 
 " ## Session
 let g:session_autosave="yes"  " Autosave session
+let g:session_default_to_last = 1  " Autoload las saved session
 let g:session_autoload="yes"  " Autoload last saved session
+
+" Do not reload gui options
+let g:session_persist_font = 0
+let g:session_persist_colors = 0
 
 
 " ## Vimshell
@@ -336,7 +340,7 @@ let g:easytags_dynamic_files = 2
 
 
 " ## Syntastic
-let g:syntastic_loc_list_height=5  " Height of errors window
+let g:syntastic_loc_list_height=5  " Set height of errors window
 
 
 " ## Vimwiki
@@ -344,11 +348,6 @@ let g:syntastic_loc_list_height=5  " Height of errors window
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
 
 
-" ## Rootignore
-" TODO: doesn't work
-let g:RootIgnoreAgignore = 1  " Load wildignore from .gitignore
-
 " # TODO
-" http://vimawesome.com/plugin/vimwiki-the-lucky-one
 " Search for todo list manager or make my own plugin
 
