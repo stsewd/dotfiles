@@ -45,6 +45,8 @@ Plugin 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 Plugin 'ivalkeen/nerdtree-execute'  " Add execute menu to NerdTree
 
+Plugin 'vimwiki/vimwiki'  " Personal wiki in vim
+
 
 " ## Git Integration
 Plugin 'tpope/vim-fugitive'  " Git wrapper for vim
@@ -335,6 +337,11 @@ let g:easytags_dynamic_files = 2
 
 " ## Syntastic
 let g:syntastic_loc_list_height=5  " Height of errors window
+
+
+" ## Vimwiki
+" Markdown as default syntax
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
 
 
 " ## Rootignore
