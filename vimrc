@@ -251,6 +251,7 @@ let g:syntastic_check_on_wq = 0
 
 " ## NerdTree
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']  " Ignore python cache files
 " See https://gist.github.com/scrooloose/0cdccd1171891caf0e24
 " for ignore files in .gitignore
 
