@@ -190,6 +190,7 @@ set spelllang=en,es
 
 
 " ## Others
+set backspace=2 " make backspace work like most other apps
 let g:netrw_browsex_viewer="setsid xdg-open"  " Fix gx in gvim
 
 
