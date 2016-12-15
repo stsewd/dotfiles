@@ -53,6 +53,11 @@ Plugin 'tpope/vim-fugitive'  " Git wrapper for vim
 Plugin 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plugin 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
+ 
+" ## Github Integration
+Plugin 'tyru/open-browser.vim'  " Required by open-browser-github
+Plugin 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
+
 
 " ## Autocompletition & Snippets
 Plugin 'valloric/youcompleteme'
@@ -98,6 +103,11 @@ Plugin 'ekalinin/dockerfile.vim'
 Plugin 'godlygeek/tabular'  " Filtrado y alineado de texto
 Plugin 'plasticboy/vim-markdown'  " Markdown
 Plugin 'shime/vim-livedown'  " Markdown preview
+
+
+" ## Reading & Focus
+Plugin 'junegunn/goyo.vim'  " Free distraction mode
+Plugin 'junegunn/limelight.vim'  " Focus blocks
 
 
 call vundle#end()
@@ -356,7 +366,12 @@ let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 
 
 " ## Markdown
-let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal = 0  " Do not hide symbols
+
+
+" ## Goyo & Limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 
 " # TODO
