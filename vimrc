@@ -172,7 +172,7 @@ set autoindent
 " ## Theme & Colorscheme
 let g:solarized_termcolors=256
 set background=light
-colorscheme onedark  " solarized, onedark
+colorscheme solarized  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
@@ -211,7 +211,7 @@ vnoremap <Leader>p "+p
 
 " Press enter/shift+enter for inserting a new line on normal mode
 nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nmap <C-Enter> o<Esc>
 
 " Move lines with Alt+{jk}
 nnoremap <A-j> :m .+1<CR>==
@@ -348,6 +348,15 @@ let g:syntastic_loc_list_height=5  " Set height of errors window
 " ## Vimwiki
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
+
+
+" ## YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
+let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
+
+
+" ## Markdown
+let g:vim_markdown_conceal = 0
 
 
 " # TODO
