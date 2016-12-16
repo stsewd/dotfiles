@@ -40,7 +40,6 @@ Plugin 'tpope/vim-dispatch'  " Async vim
 
 Plugin 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
-" Problem: show half icons
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 
 Plugin 'ivalkeen/nerdtree-execute'  " Add execute menu to NerdTree
