@@ -41,7 +41,7 @@ Plugin 'tpope/vim-dispatch'  " Async vim
 Plugin 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 " Problem: show half icons
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 
 Plugin 'ivalkeen/nerdtree-execute'  " Add execute menu to NerdTree
 
@@ -122,14 +122,6 @@ filetype plugin indent on
 set title  " Update the title of your window or your terminal
 set mouse=a  " Enable mouse support in terminal
 
-set guioptions-=T  " Disable the toolbar
-set guioptions-=m  " Disable the menubar
-set guioptions-=r  " Remove right-hand scroll bar
-set guioptions-=L  " Remove left-hand scroll bar
-
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-set antialias
-
 set gcr=n:blinkon0  " Disable cursor blinking
 
 set scrolloff=3  " Display at least 3 lines around you cursor
@@ -201,7 +193,6 @@ set spelllang=en,es
 
 " ## Others
 set backspace=2 " make backspace work like most other apps
-let g:netrw_browsex_viewer="setsid xdg-open"  " Fix gx in gvim
 
 
 " .........................................................
