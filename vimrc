@@ -259,6 +259,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_enable_balloons = 0  " Disable balloons, too slow! 
+
 
 " ## NerdTree
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
