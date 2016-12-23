@@ -104,6 +104,11 @@ Plugin 'plasticboy/vim-markdown'  " Markdown
 Plugin 'shime/vim-livedown'  " Markdown preview
 
 
+" ## Pandoc
+" Plugin 'vim-pandoc/vim-pandoc'
+" Plugin 'vim-pandoc/vim-pandoc-syntax' 
+
+
 " ## Reading & Focus
 Plugin 'junegunn/goyo.vim'  " Free distraction mode
 Plugin 'junegunn/limelight.vim'  " Focus blocks
@@ -300,7 +305,7 @@ let g:session_autosave="yes"  " Autosave session
 let g:session_default_to_last = 1  " Autoload las saved session
 let g:session_autoload="yes"  " Autoload last saved session
 
-" Do not reload gui options
+" Do not reload gui settings
 let g:session_persist_font = 0
 let g:session_persist_colors = 0
 
@@ -358,7 +363,13 @@ let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 
 
 " ## Markdown
-let g:vim_markdown_conceal = 0  " Do not hide symbols
+" let g:vim_markdown_conceal = 0  " Do not hide symbols
+
+
+" ## Vim-Pandoc
+" let g:pandoc#syntax#conceal#use = 0  " Do not hide symbols
+" let g:pandoc#folding#fdc = 0  " Do not show folding numbers
+" let g:pandoc#modules#disabled = ['folding', 'spell']  " Folding module make vim slow!
 
 
 " ## Goyo & Limelight
