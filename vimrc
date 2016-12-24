@@ -46,6 +46,8 @@ Plugin 'ivalkeen/nerdtree-execute'  " Add execute menu to NerdTree
 
 Plugin 'vimwiki/vimwiki'  " Personal wiki in vim
 
+Plugin 'tommcdo/vim-exchange'  " Exchange operator support
+
 
 " ## Git Integration
 Plugin 'tpope/vim-fugitive'  " Git wrapper for vim
@@ -235,6 +237,9 @@ nnoremap <leader>j :bprevious<CR>
 " Close current buffer
 nnoremap <leader>q :bdelete<CR>
 
+" Hide current buffer
+nnoremap <leader>h :hide<CR>
+
 " Disable highlighting search with ctrl-c or escape
 nnoremap <esc> :noh<CR>
 nnoremap <C-c> :noh<CR>
@@ -363,7 +368,7 @@ let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 
 
 " ## Markdown
-" let g:vim_markdown_conceal = 0  " Do not hide symbols
+let g:vim_markdown_conceal = 0  " Do not hide symbols
 
 
 " ## Vim-Pandoc
