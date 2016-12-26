@@ -19,6 +19,7 @@ Plug 'matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-repeat'  " Extend . for repeat scripts actions
 
 Plug 'jeetsukumaran/vim-buffergator'  " Navigate between buffers (gb)
+Plug 'xolox/vim-session'  " Manage vim sessions automatically
 
 Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
@@ -47,7 +48,7 @@ Plug 'valloric/youcompleteme'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'xolox/vim-misc'  " Required by vim-easytags
+Plug 'xolox/vim-misc'  " Required by vim-easytags & vim-session
 Plug 'xolox/vim-easytags'  " Automated tag file generation & highlighting
 
 
@@ -105,6 +106,7 @@ call plug#end()
 " ..........................................................
 
 " ## GUI
+set title
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1  " Makes the cursor a pipe in insert-mode
 
 set colorcolumn=120  " Set & show limit column
@@ -154,6 +156,7 @@ set autoindent
 
 " ## Buffers
 set autoread " Reload files changed outside vim
+set hidden  " Allow change buffers without saving
 
 
 " ## Backup
@@ -296,6 +299,16 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 
 " ## YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
+
+
+" ## Session
+let g:session_autosave="yes"  " Autosave session
+let g:session_default_to_last = 1  " Autoload las saved session
+let g:session_autoload="yes"  " Autoload last saved session
+
+" Do not reload gui settings
+let g:session_persist_font = 0
+let g:session_persist_colors = 0
 
 
 " ## Markdown
