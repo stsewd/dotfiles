@@ -82,7 +82,6 @@ Plugin 'altercation/vim-colors-solarized'  " Solarized theme
 Plugin 'vim-airline/vim-airline-themes'  " Themes for airline
 Plugin 'ryanoasis/vim-devicons'  " Show icons on nerdtree
 Plugin 'joshdick/onedark.vim'
-" Plugin 'flazz/vim-colorschemes'  " Several colorschemes
 
 
 " ## HTML
@@ -130,13 +129,11 @@ set mouse=a  " Enable mouse support in terminal
 
 set gcr=n:blinkon0  " Disable cursor blinking
 
-set scrolloff=3  " Display at least 3 lines around you cursor
+set scrolloff=3  " Display at least 3 lines around the cursor
 syntax enable  " Enable syntax highlighting
 set encoding=utf8  " Set enconding
 
 set colorcolumn=120  " Set & show limit column
-
-" set termguicolors  " Only uses for onedark scheme
 
 
 " ## Lines
@@ -218,18 +215,6 @@ nnoremap <Leader>y "+y
 nnoremap <Leader>p "+p
 vnoremap <Leader>p "+p
 
-" Press enter/shift+enter for inserting a new line on normal mode
-nmap <S-Enter> O<Esc>
-nmap <C-Enter> o<Esc>
-
-" Move lines with Alt+{jk}
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-
 " Move to the next buffer
 nnoremap <leader>l :bnext<CR>
 
@@ -273,8 +258,6 @@ let g:syntastic_style_warning_symbol = '⚠️'
 " ## NerdTree
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
 let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']  " Ignore python cache files
-" See https://gist.github.com/scrooloose/0cdccd1171891caf0e24
-" for ignore files in .gitignore
 
 
 " ## CtrlP
