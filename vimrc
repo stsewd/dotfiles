@@ -136,6 +136,8 @@ set encoding=utf8  " Set enconding
 
 set colorcolumn=120  " Set & show limit column
 
+" set termguicolors  " Only uses for onedark scheme
+
 
 " ## Lines
 set nowrap  " No wrap lines (display long lines)
@@ -178,7 +180,7 @@ set autoindent
 
 
 " ## Theme & Colorscheme
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256  " Use if not solarized theme is on terminal
 set background=light
 colorscheme solarized  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
@@ -198,7 +200,7 @@ set spelllang=en,es
 
 
 " ## Others
-set backspace=2 " make backspace work like most other apps
+set backspace=2  " make backspace work like most other apps
 
 
 " .........................................................
@@ -302,9 +304,6 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
-" Theme
-" let g:airline_theme='onedark'
 
 
 " ## Emmet
