@@ -140,6 +140,7 @@ set hlsearch   " Highlight search results
 
 
 " ## Theme & Colorscheme
+" let g:solarized_terkcolors=256  " Use if not solarized theme is on terminal
 set background=light
 colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
@@ -248,8 +249,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 set updatetime=250  " Update each 250 mls
 
 
-" ## GitGutter
-set updatetime=250  " Update each 250 mls
+" ## The NerdCommenter
+let g:NERDSpaceDelims = 1  " Add spaces after comment delimiters by default
+let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace when uncommenting
 
 
 " ## Emmet
