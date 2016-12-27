@@ -208,12 +208,12 @@ set backspace=2  " make backspace work like most other apps
 let mapleader = " "
 
 " Copy to clipboard
-vnoremap <Leader>y "+y
-nnoremap <Leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
 
 " Paste from clipboard
-nnoremap <Leader>p "+p
-vnoremap <Leader>p "+p
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
 
 " Move to the next buffer
 nnoremap <leader>l :bnext<CR>
@@ -230,6 +230,9 @@ nnoremap <leader>h :hide<CR>
 " Disable highlighting search with ctrl-c or escape
 nnoremap <esc> :noh<CR>
 nnoremap <C-c> :noh<CR>
+
+" Search on buffers with ctrl-p
+nnoremap <silent> <leader>r :CtrlPBuffer<CR>
 
 
 " .........................................................

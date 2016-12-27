@@ -137,7 +137,6 @@ set smartcase
 
 
 " ## Theme & Colorscheme
-" let g:solarized_terkcolors=256  " Use if not solarized theme is on terminal
 set termguicolors  " Active true colors on terminal
 set background=light
 colorscheme onedark  " solarized, onedark
@@ -177,12 +176,12 @@ set spelllang=en,es
 let mapleader = " "
 
 " Copy to clipboard
-vnoremap <Leader>y "+y
-nnoremap <Leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
 
 " Paste from clipboard
-nnoremap <Leader>p "+p
-vnoremap <Leader>p "+p
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
 
 " Move to the next buffer
 nnoremap <leader>l :bnext<CR>
@@ -202,6 +201,9 @@ nnoremap <C-c> :noh<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
+
+" Search on buffers with ctrl-p
+nnoremap <silent> <leader>r :CtrlPBuffer<CR>
 
 
 " ..........................................................
