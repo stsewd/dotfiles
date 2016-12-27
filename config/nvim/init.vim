@@ -137,7 +137,7 @@ set smartcase
 
 
 " ## Theme & Colorscheme
-set termguicolors  " Active true colors on terminal
+set termguicolors  " Active true colors on terminal (deactive on solarized)
 set background=light
 colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
@@ -153,15 +153,6 @@ set expandtab
 
 " ## Buffers
 set hidden  " Allow change buffers without saving
-
-
-" ## Backup
-set backup
-" Move .swp files to tmp/
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
 
 
 " ## Spellchecker
@@ -212,7 +203,7 @@ nnoremap <silent> <leader>r :CtrlPBuffer<CR>
 
 " ## NerdTree
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
-let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']  " Ignore python cache files
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '^tags$']  " Ignore python cache files
 
 
 " ## Syntastic
@@ -289,9 +280,8 @@ let g:easytags_async = 1
 " Update on open & write
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 
-" Saves .tags file on cwd
+" Saves tags file on cwd
 set cpoptions+=d
-set tags=./.tags;
 let g:easytags_dynamic_files = 2
 
 
