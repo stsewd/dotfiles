@@ -99,6 +99,11 @@ export EDITOR='vim'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
+# Alises for nvim
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
+
 # Aliases for tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
