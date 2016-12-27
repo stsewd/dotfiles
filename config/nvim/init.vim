@@ -88,6 +88,10 @@ Plug 'plasticboy/vim-markdown'  " Markdown
 Plug 'shime/vim-livedown'  " Markdown preview
 
 
+" ## Python
+Plug 'python-mode/python-mode'
+
+
 " ## Pandoc
 " Plugin 'vim-pandoc/vim-pandoc'
 " Plugin 'vim-pandoc/vim-pandoc-syntax' 
@@ -314,6 +318,10 @@ let g:session_autoload="yes"  " Autoload last saved session
 " Do not reload gui settings
 let g:session_persist_font = 0
 let g:session_persist_colors = 0
+
+
+" ## Python-mode
+let g:pymode_python = 'python3'
 
 
 " ## Markdown
