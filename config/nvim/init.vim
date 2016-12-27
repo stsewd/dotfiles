@@ -135,9 +135,6 @@ set autoindent
 set ignorecase
 set smartcase
 
-set incsearch  " Highlight search results when typing
-set hlsearch   " Highlight search results
-
 
 " ## Theme & Colorscheme
 " let g:solarized_terkcolors=256  " Use if not solarized theme is on terminal
@@ -153,11 +150,9 @@ set shiftwidth=4
 set softtabstop=4
 set shiftround
 set expandtab
-set autoindent
 
 
 " ## Buffers
-set autoread " Reload files changed outside vim
 set hidden  " Allow change buffers without saving
 
 
@@ -235,8 +230,6 @@ let g:syntastic_style_warning_symbol = '⚠️'
 
 
 " ## Airline
-set laststatus=2  " Always show
-
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
