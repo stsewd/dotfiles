@@ -141,6 +141,7 @@ set hlsearch   " Highlight search results
 
 " ## Theme & Colorscheme
 " let g:solarized_terkcolors=256  " Use if not solarized theme is on terminal
+set termguicolors  " Active true colors on terminal
 set background=light
 colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
@@ -327,3 +328,30 @@ let g:vim_markdown_conceal = 0  " Do not hide symbols
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+
+" ..........................................................
+" # Instructions
+" ..........................................................
+"
+" ## Install Vim-Plug
+" - See the instructions on <https://github.com/junegunn/vim-plug>
+"
+" ## Install Plugins
+" - :PlugInstall
+"
+" ## Install pathched fonts
+" - Download one from <https://github.com/ryanoasis/nerd-fonts>
+" - Recomended: <https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf>
+" - Select that font on your terminal configurations
+"
+" ## Install ctags
+" - Ubuntu: apt install exuberant-ctags
+" - Fedora: dnf install ctags
+"
+" ## Compile YouCompleteMe
+" See instructions on :h youcompleteme-installation
+"
+" ## Install one-dark profile
+" For greater compatibility with one-dark theme
+" install <https://github.com/denysdovhan/one-gnome-terminal>.
+"
