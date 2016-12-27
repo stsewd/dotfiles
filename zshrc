@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # want your terminal to support 256 color schemes? I do ...
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
 
 # if you do a 'rm *', Zsh will give you a sanity check!
 setopt RM_STAR_WAIT
