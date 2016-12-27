@@ -200,6 +200,9 @@ nnoremap <leader>h :hide<CR>
 nnoremap <esc> :noh<CR>
 nnoremap <C-c> :noh<CR>
 
+" Exit terminal mode with escape
+tnoremap <Esc> <C-\><C-n>
+
 
 " ..........................................................
 " # Plugins Settings
