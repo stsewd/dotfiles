@@ -166,6 +166,10 @@ set spelllang=en,es
 set complete+=kspell  " Autocomplete with dictionary words
 
 
+" ## Others
+set undofile  " persistent undos (undo after reopen file)
+
+
 " .........................................................
 " " # Key-Bindings
 " " .........................................................
@@ -325,10 +329,12 @@ let g:session_persist_colors = 0
 
 " ## Python-mode
 let g:pymode_python = 'python3'
+let g:pymode_folding = 0  " Don't fold python code on open
 
 
 " ## Markdown
 let g:vim_markdown_conceal = 0  " Do not hide symbols
+let g:vim_markdown_folding_disabled=1  " Disabled automatically folding
 
 
 " ## Vim-Pandoc
