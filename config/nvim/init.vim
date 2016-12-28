@@ -31,6 +31,8 @@ Plug 'vimwiki/vimwiki'  " Personal wiki in vim
 
 Plug 'tommcdo/vim-exchange'  " Exchange operator support
 
+Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
+
 
 " ## Git Integration
 Plug 'tpope/vim-fugitive'  " Git wrapper for vim
@@ -144,9 +146,9 @@ set smartcase
 
 
 " ## Theme & Colorscheme
-set termguicolors  " Active true colors on terminal (deactive on solarized)
+" set termguicolors  " Active true colors on terminal (deactive on solarized)
 set background=light
-colorscheme onedark  " solarized, onedark
+colorscheme solarized  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
