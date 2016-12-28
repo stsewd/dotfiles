@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'yggdroot/indentline'  " Show indentation lines
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
+Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
 Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 
@@ -207,6 +208,10 @@ tnoremap <Esc> <C-\><C-n>
 " Search on buffers with ctrl-p
 nnoremap <silent> <leader>r :CtrlPBuffer<CR>
 
+" Active ctrlp-command-palette
+nnoremap <C-A-p> :CtrlPCmdPalette<CR>
+vnoremap <C-A-p> :CtrlPCmdPalette<CR>
+
 " Move lines with Alt+{jk}
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -256,7 +261,7 @@ endif
 
 
 " ## CtrlP
-let g:ctrlp_working_path_mode = 'ac'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
