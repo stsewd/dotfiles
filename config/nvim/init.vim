@@ -365,3 +365,6 @@ autocmd! User GoyoLeave Limelight!
 " For greater compatibility with one-dark theme
 " install <https://github.com/denysdovhan/one-gnome-terminal>.
 "
+" ## Install markdown preview
+" - npm install -g livedown
+"
