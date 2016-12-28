@@ -116,6 +116,8 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1  " Makes the cursor a pipe in insert-mode
 set colorcolumn=120  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
 
+set diffopt+=vertical  " Always use vertical diffs
+
 
 " ## Lines
 set nowrap  " No wrap lines (display long lines)
@@ -161,6 +163,7 @@ set hidden  " Allow change buffers without saving
 
 " ## Spellchecker
 set spelllang=en,es
+set complete+=kspell  " Autocomplete with dictionary words
 
 
 " .........................................................
