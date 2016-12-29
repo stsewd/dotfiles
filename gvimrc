@@ -12,6 +12,8 @@ set guioptions-=e  " Do not show tabline
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set antialias
 
+set guicursor=n:blinkon0  " Disable cursor blinking
+
 let g:netrw_browsex_viewer="setsid xdg-open"  " Fix gx in gvim
 
 

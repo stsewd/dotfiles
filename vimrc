@@ -122,7 +122,6 @@ call plug#end()
 " ## GUI
 set title  " Update the title of your window or your terminal
 set mouse=a  " Enable mouse support in terminal
-set gcr=n:blinkon0  " Disable cursor blinking
 
 set scrolloff=3  " Display at least 3 lines around the cursor
 set colorcolumn=120  " Set & show limit column
