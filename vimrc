@@ -172,9 +172,9 @@ set noerrorbells  " Prevent Vim from beeping
 
 
 " ## Theme & Colorscheme
-" set termguicolors  " Active true colors on terminal (deactive on solarized)
+set termguicolors  " Active true colors on terminal (deactive on solarized)
 set background=light
-colorscheme solarized  " solarized, onedark
+colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
