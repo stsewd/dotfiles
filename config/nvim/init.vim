@@ -31,6 +31,8 @@ Plug 'vimwiki/vimwiki'  " Personal wiki in vim
 
 Plug 'tommcdo/vim-exchange'  " Exchange operator support
 
+Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
+
 Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
 
 
@@ -146,9 +148,9 @@ set smartcase
 
 
 " ## Theme & Colorscheme
-" set termguicolors  " Active true colors on terminal (deactive on solarized)
+set termguicolors  " Active true colors on terminal (deactive on solarized)
 set background=light
-colorscheme solarized  " solarized, onedark
+colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
