@@ -28,12 +28,10 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on ner
 Plug 'ivalkeen/nerdtree-execute'  " Add execute menu to NerdTree
 
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
+Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
 
 Plug 'tommcdo/vim-exchange'  " Exchange operator support
-
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
-
-Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
 
 
 " ## Git Integration
@@ -87,14 +85,14 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'ekalinin/dockerfile.vim'
 
 
+" ## Python
+Plug 'python-mode/python-mode'
+
+
 " ## Markdown
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
 Plug 'plasticboy/vim-markdown'  " Markdown
 Plug 'shime/vim-livedown'  " Markdown preview
-
-
-" ## Python
-Plug 'python-mode/python-mode'
 
 
 " ## Pandoc
@@ -139,7 +137,6 @@ set shiftwidth=4
 set softtabstop=4
 set shiftround
 set expandtab
-set autoindent
 
 
 " ## Search
@@ -152,14 +149,6 @@ set termguicolors  " Active true colors on terminal (deactive on solarized)
 set background=light
 colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
-
-
-" ## Indentation
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set shiftround
-set expandtab
 
 
 " ## Buffers
@@ -313,6 +302,7 @@ let g:easytags_events = ['BufReadPost', 'BufWritePost']
 
 " Saves tags file on cwd
 set cpoptions+=d
+set tags=./.tags;
 let g:easytags_dynamic_files = 2
 
 
