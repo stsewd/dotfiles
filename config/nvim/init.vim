@@ -216,6 +216,9 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Insert new line on normal mode with alt+enter
 nmap <A-Enter> o<Esc>
 
+" Toggle nerdtree with F2
+map <F2> :NERDTreeToggle<CR>
+
 
 " ..........................................................
 " # Plugins Settings
