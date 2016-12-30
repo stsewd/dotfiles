@@ -86,7 +86,10 @@ Plug 'ekalinin/dockerfile.vim'
 
 
 " ## Python
-Plug 'python-mode/python-mode'
+" Plug 'python-mode/python-mode'
+
+" Jinja2
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 
 " ## Markdown
@@ -333,10 +336,10 @@ let g:session_persist_colors = 0
 
 
 " ## Python-mode
-let g:pymode_python = 'python3'
-let g:pymode_lint = 0  " Don't use linter, we have syntastic
-let g:pymode_rope = 0  " Don't load rope
-let g:pymode_folding = 0  " Don't fold python code on open
+" let g:pymode_python = 'python3'
+" let g:pymode_lint = 0  " Don't use linter, we have syntastic
+" let g:pymode_rope = 0  " Don't load rope
+" let g:pymode_folding = 0  " Don't fold python code on open
 
 
 " ## Markdown
