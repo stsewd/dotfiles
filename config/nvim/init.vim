@@ -353,11 +353,12 @@ autocmd! User GoyoLeave Limelight!
 
 " ## Startify
 let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
-let g:startify_session_persistence = 1  " Autosave sessions
 let g:startify_files_number = 5  " Show just 5 files on MRU
 let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks', 'commands']
-let g:startify_session_sort = 0  " List sessions by modification time
 
+let g:startify_session_persistence = 1  " Autosave sessions
+let g:startify_session_sort = 0  " List sessions by modification time
+let g:startify_session_delete_buffers = 1  " Delete open buffer before load session
 
 let g:ascii = [
     \ '              .::::::::::.              ',
