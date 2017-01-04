@@ -132,6 +132,7 @@ set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
 set ruler  " Display cursor position
 set linespace=2  " Pixels between lines
+set foldlevelstart=99  " Don't fold when open buffer
 
 
 " ## Indentation
@@ -344,7 +345,6 @@ let g:session_persist_colors = 0
 
 " ## Markdown
 let g:vim_markdown_conceal = 0  " Do not hide symbols
-let g:vim_markdown_folding_disabled=1  " Disabled automatically folding
 
 
 " ## Vim-Pandoc
