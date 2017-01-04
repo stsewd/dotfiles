@@ -247,7 +247,6 @@ let g:syntastic_enable_balloons = 0  " Disable balloons, too slow!
 
 let g:syntastic_python_checkers = ["flake8"]
 
-
 " Symbols
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'
@@ -327,6 +326,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 
 " ## YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
+let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 
 
 " ## Python-mode

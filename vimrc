@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'yggdroot/indentline'  " Show indentation lines
+Plug 'mhinz/vim-startify'  " Show a start screen
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
@@ -24,7 +25,6 @@ Plug 'matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-repeat'  " Extend . for repeat scripts actions
 
 Plug 'jeetsukumaran/vim-buffergator'  " Navigate between buffers (gb)
-Plug 'xolox/vim-session'  " Manage vim sessions automatically
 
 Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
@@ -36,9 +36,6 @@ Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
 
 Plug 'tommcdo/vim-exchange'  " Exchange operator support
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
-
-Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/vimshell.vim'  " Shell on vim
 
 
 " ## Git Integration
@@ -93,7 +90,9 @@ Plug 'ekalinin/dockerfile.vim'
 
 
 " ## Python
-Plug 'python-mode/python-mode'
+
+" Jinja2
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 
 " ## Markdown
@@ -128,6 +127,7 @@ set colorcolumn=120  " Set & show limit column
 set encoding=utf8  " Set enconding
 
 set diffopt+=vertical  " Always use vertical diffs
+set laststatus=2  " Always show status bar
 
 
 " ## Lines
@@ -137,6 +137,7 @@ set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
 set ruler  " Display cursor position
 set linespace=2  " Pixels between lines
+set foldlevelstart=99  " Don't fold when open buffer
 
 
 " ## Indentation
@@ -160,11 +161,6 @@ set hlsearch   " Highlight search results
 set wildmenu  " Tab completition on exmode
 
 
-" ## Buffers
-set autoread " Reload files changed outside vim
-set hidden  " Allow change buffers without saving
-
-
 " ## Beep
 set visualbell  " Prevent Vim from beeping
 set noerrorbells  " Prevent Vim from beeping
@@ -175,6 +171,11 @@ set termguicolors  " Active true colors on terminal (deactive on solarized)
 set background=light
 colorscheme onedark  " solarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
+
+
+" ## Buffers
+set autoread " Reload files changed outside vim
+set hidden  " Allow change buffers without saving
 
 
 " ## Backup
@@ -252,6 +253,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_enable_balloons = 0  " Disable balloons, too slow! 
 
+let g:syntastic_python_checkers = ["flake8"]
+
 " Symbols
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'
@@ -260,8 +263,6 @@ let g:syntastic_style_warning_symbol = '⚠️'
 
 
 " ## Airline
-set laststatus=2  " Always show
-
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
@@ -336,21 +337,11 @@ let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview win
 let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 
 
-" ## Session
-let g:session_autosave="yes"  " Autosave session
-let g:session_default_to_last = 1  " Autoload las saved session
-let g:session_autoload="yes"  " Autoload last saved session
-
-" Do not reload gui settings
-let g:session_persist_font = 0
-let g:session_persist_colors = 0
-
-
 " ## Python-mode
-let g:pymode_python = 'python3'
-let g:pymode_lint = 0  " Don't use linter, we have syntastic
-let g:pymode_rope = 0  " Don't load rope
-let g:pymode_folding = 0  " Don't fold python code on open
+" let g:pymode_python = 'python3'
+" let g:pymode_lint = 0  " Don't use linter, we have syntastic
+" let g:pymode_rope = 0  " Don't load rope
+" let g:pymode_folding = 0  " Don't fold python code on open
 
 
 " ## Markdown
@@ -368,7 +359,38 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 
-" ## Vimshell
-" Change prompt
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt = '$ '
+" ## Startify
+let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
+let g:startify_files_number = 5  " Show just 5 files on MRU
+let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks', 'commands']
+
+let g:startify_session_persistence = 1  " Autosave sessions
+let g:startify_session_sort = 0  " List sessions by modification time
+let g:startify_session_delete_buffers = 1  " Delete open buffer before load session
+
+let g:ascii = [
+    \ '              .::::::::::.              ',
+    \ '            .::``::::::::::.            ',
+    \ '            :::..:::::::::::            ',
+    \ '            ````````::::::::            ',
+    \ '    .::::::::::::::::::::::: iiiiiii,   ',
+    \ ' .:::::::::::::::::::::::::: iiiiiiiii. ',
+    \ ' ::::::::::::::::::::::::::: iiiiiiiiii ',
+    \ ' ::::::::::::::::::::::::::: iiiiiiiiii ',
+    \ ' :::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii ',
+    \ ' :::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii ',
+    \ ' `::::::::: iiiiiiiiiiiiiiiiiiiiiiiiii` ',
+    \ '    `:::::: iiiiiiiiiiiiiiiiiiiiiii`    ',
+    \ '            iiiiiiii,,,,,,,,            ',
+    \ '            iiiiiiiiiii''iii            ',
+    \ '            `iiiiiiiiii..ii`            ',
+    \ '              `iiiiiiiiii`              ',
+    \ ''
+    \]
+function! s:filter_header(lines) abort
+    let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+    let centered_lines = map(copy(a:lines),
+        \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+    return centered_lines
+endfunction
+let g:startify_custom_header = s:filter_header(g:ascii)
