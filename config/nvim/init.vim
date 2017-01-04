@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'yggdroot/indentline'  " Show indentation lines
+Plug 'mhinz/vim-startify'  " Show a start screen
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
@@ -20,7 +21,6 @@ Plug 'matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-repeat'  " Extend . for repeat scripts actions
 
 Plug 'jeetsukumaran/vim-buffergator'  " Navigate between buffers (gb)
-Plug 'xolox/vim-session'  " Manage vim sessions automatically
 
 Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
@@ -51,7 +51,7 @@ Plug 'valloric/youcompleteme'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'xolox/vim-misc'  " Required by vim-easytags & vim-session
+Plug 'xolox/vim-misc'  " Required by vim-easytags
 Plug 'xolox/vim-easytags'  " Automated tag file generation & highlighting
 
 
@@ -245,6 +245,9 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_enable_balloons = 0  " Disable balloons, too slow! 
 
+let g:syntastic_python_checkers = ["flake8"]
+
+
 " Symbols
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'
@@ -326,16 +329,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
 
 
-" ## Session
-let g:session_autosave="yes"  " Autosave session
-let g:session_default_to_last = 1  " Autoload las saved session
-let g:session_autoload="yes"  " Autoload last saved session
-
-" Do not reload gui settings
-let g:session_persist_font = 0
-let g:session_persist_colors = 0
-
-
 " ## Python-mode
 " let g:pymode_python = 'python3'
 " let g:pymode_lint = 0  " Don't use linter, we have syntastic
@@ -356,6 +349,43 @@ let g:vim_markdown_conceal = 0  " Do not hide symbols
 " ## Goyo & Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+
+" ## Startify
+let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
+let g:startify_files_number = 5  " Show just 5 files on MRU
+let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks', 'commands']
+
+let g:startify_session_persistence = 1  " Autosave sessions
+let g:startify_session_sort = 0  " List sessions by modification time
+let g:startify_session_delete_buffers = 1  " Delete open buffer before load session
+
+let g:ascii = [
+    \ '              .::::::::::.              ',
+    \ '            .::``::::::::::.            ',
+    \ '            :::..:::::::::::            ',
+    \ '            ````````::::::::            ',
+    \ '    .::::::::::::::::::::::: iiiiiii,   ',
+    \ ' .:::::::::::::::::::::::::: iiiiiiiii. ',
+    \ ' ::::::::::::::::::::::::::: iiiiiiiiii ',
+    \ ' ::::::::::::::::::::::::::: iiiiiiiiii ',
+    \ ' :::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii ',
+    \ ' :::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii ',
+    \ ' `::::::::: iiiiiiiiiiiiiiiiiiiiiiiiii` ',
+    \ '    `:::::: iiiiiiiiiiiiiiiiiiiiiii`    ',
+    \ '            iiiiiiii,,,,,,,,            ',
+    \ '            iiiiiiiiiii''iii            ',
+    \ '            `iiiiiiiiii..ii`            ',
+    \ '              `iiiiiiiiii`              ',
+    \ ''
+    \]
+function! s:filter_header(lines) abort
+    let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+    let centered_lines = map(copy(a:lines),
+        \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+    return centered_lines
+endfunction
+let g:startify_custom_header = s:filter_header(g:ascii)
 
 
 " ..........................................................
