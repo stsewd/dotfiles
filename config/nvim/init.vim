@@ -164,10 +164,6 @@ set spelllang=en,es
 set complete+=kspell  " Autocomplete with dictionary words
 
 
-" ## Others
-set undofile  " persistent undos (undo after reopen file)
-
-
 " .........................................................
 " " # Key-Bindings
 " " .........................................................

@@ -194,7 +194,6 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 " ## Others
 set backspace=2  " make backspace work like most other apps
-set undofile  " persistent undos (undo after reopen file)
 
 
 " .........................................................
