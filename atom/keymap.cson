@@ -33,9 +33,9 @@
 
 
 'body atom-text-editor.autocomplete-active':
-  # Autocomplete: Move up and down with ctrl-p, ctrl-n
-  'ctrl-p': 'autocomplete-plus:move-up'
-  'ctrl-n': 'autocomplete-plus:move-down'
+  # Autocomplete: Move up and down with ctrl-j, ctrl-k
+  'ctrl-k': 'autocomplete-plus:move-up'
+  'ctrl-j': 'autocomplete-plus:move-down'
   'pageup': 'autocomplete-plus:page-up'
   'pagedown': 'autocomplete-plus:page-down'
   'home': 'autocomplete-plus:move-to-top'
@@ -45,24 +45,42 @@
 
 
 'atom-workspace atom-panel-container.modal':
-  # Command palette: Move up and down with ctrl-p, ctrl-n
-  'ctrl-p': 'core:move-up'
-  'ctrl-n': 'core:move-down'
+  # Command palette: Move up and down with ctrl-j, ctrl-k
+  'ctrl-k': 'core:move-up'
+  'ctrl-j': 'core:move-down'
 
+'atom-workspace':
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'
+  'ctrl-cmd-i': 'cursor-history:next-within-editor'
+  'ctrl-cmd-o': 'cursor-history:prev-within-editor'
+
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'space c': 'vim-mode-plus:toggle-line-comments'
+
+  # Choose pane
+  '-': 'choose-pane:start'
+  'm m': 'choose-pane:focus-last-focused'
 
 'atom-text-editor.vim-mode-plus.normal-mode':
   # Vim mode plus, ex-mode
   ':': 'vim-mode-plus-ex-mode:open'
   '!': 'vim-mode-plus-ex-mode:toggle-setting'
 
-  # Vim mode plus, surround
-  'S': 'vim-mode-plus:surround-smart-word'
-  'd s': 'vim-mode-plus:delete-surround-any-pair'
-  'c s': 'vim-mode-plus:change-surround-any-pair'
-  'y s': 'vim-mode-plus:surround'
-  'y s w': 'vim-mode-plus:surround-word'
-  'y s m': 'vim-mode-plus:map-surround'
+  # Open here
+  'g f': 'open-this:here'
+  'ctrl-w f': 'open-this:split-down'
+  'ctrl-w F': 'open-this:split-right'
+  'g x': 'link:open'
 
-'atom-text-editor.vim-mode-plus.visual-mode':
-  # Vim mode plus, surround
-  'S': 'vim-mode-plus:surround'
+'atom-text-editor[mini]':
+  'ctrl-u': 'editor:delete-to-beginning-of-line'
+  'ctrl-w': 'editor:delete-to-beginning-of-word'
+
+'.tree-view':
+  '-': 'choose-pane:start'
+  'm m': 'choose-pane:focus-last-focused'
+
+'atom-text-editor#choose-pane-editor':
+  '-': 'choose-pane:last-focused'

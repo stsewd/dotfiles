@@ -11,20 +11,13 @@
     createDirectories: true
     createFileInstantly: true
     fuzzyMatch: true
-  "asciidoc-preview":
-    exportAsPdf:
-      enabled: true
-  "atom-autocomplete-php":
-    binComposer: "/usr/bin/composer"
   "atom-beautify":
     general:
       _analyticsUserId: "58751485-41b9-45e8-a77d-1ffed35651d6"
+  "atom-i18n":
+    locale: "es"
   "autoclose-html":
     legacyMode: true
-  "autocomplete-bibtex":
-    bibtex: [
-      "/home/stsewd/Documents/Facu/6/sis_operativos 2/deber6/bibliography.bib"
-    ]
   "autocomplete-clang": {}
   "autocomplete-java": {}
   "autocomplete-jsp": {}
@@ -32,47 +25,39 @@
     enableExtendedUnicodeSupport: true
     useCoreMovementCommands: false
   "autocomplete-python": {}
-  "browser-refresh":
-    chromeBackgroundRefresh: false
-    firefox: true
-    googleChrome: false
   core:
     autoHideMenuBar: true
     disabledPackages: [
       "linter-gcc"
-      "activate-power-mode"
-      "markdown-pdf"
       "autocomplete-awk"
-      "terminal-plus"
       "autocomplete-clang"
       "linter-clang"
-      "git-control"
-      "open-recent"
       "language-pfm"
       "pdf-view"
       "spell-check"
       "markdown-toc"
-      "linter-pep8"
       "linter-shellcheck"
     ]
     telemetryConsent: "limited"
-    themes: [
-      "one-light-ui"
-      "solarized-light-syntax"
-    ]
+  "cursor-history": {}
   docblockr: {}
   editor:
+    fontFamily: "DejaVu Sans Mono"
     fontSize: 12
-    preferredLineLength: 120
+    invisibles: {}
+    preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4
     tabType: "soft"
+  emmet: {}
   "exception-reporting":
     userId: "a1cf28ee-d6c8-0532-2293-0e98ded374ad"
   "file-icons": {}
   "fuzzy-finder": {}
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "65394971-3858-4380-8967-8ed78fe86cf4"
   "keyboard-localization":
     useKeyboardLayout: "es_LA"
   latex: {}
@@ -88,14 +73,10 @@
     clangDefaultCppFlags: "-std=c++14"
     clangDefaultObjCppFlags: "-std=c++14"
   "linter-flake8":
-    maxLineLength: 120
-  "linter-gcc":
-    gccDefaultCppFlags: "-c -Wall -std=c++11 `pkg-config --cflags --libs gtk+-3.0`"
+    maxLineLength: 80
   "linter-jshint":
     lintInlineJavaScript: true
   "linter-markdown": {}
-  "linter-pep8":
-    maxLineLength: 120
   "linter-php": {}
   "linter-shellcheck": {}
   "markdown-document": {}
@@ -170,6 +151,7 @@
     hideVcsIgnoredFiles: true
   "vim-mode-plus":
     clearHighlightSearchOnResetNormalMode: true
+    clearMultipleCursorsOnEscapeInsertMode: true
     highlightSearch: true
     incrementalSearch: true
     smoothScrollOnHalfScrollMotion: true
@@ -194,6 +176,9 @@
     preferredLineLength: 120
     tabLength: 4
 ".diff":
+  editor:
+    preferredLineLength: 120
+".diff.source":
   editor:
     preferredLineLength: 120
 ".gfm.source":
