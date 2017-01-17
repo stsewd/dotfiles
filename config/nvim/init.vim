@@ -77,6 +77,10 @@ Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after >
 
 
+" ## JavaScript
+Plug 'elzr/vim-json'
+
+
 " ## PHP
 Plug 'shawncplus/phpcomplete.vim'
 
@@ -226,7 +230,11 @@ map <F2> :NERDTreeToggle<CR>
 
 " ## NerdTree
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
-let NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '^tags$']  " Ignore python cache files
+" Ignored files
+let NERDTreeIgnore = [
+    \ '\.pyc$', '^__pycache__$', '^venv$',
+    \ '^tags$'
+    \]
 
 
 " ## Syntastic
