@@ -284,17 +284,17 @@ let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace w
 
 
 " ## Emmet
-let g:user_emmet_leader_key='<C-Z>'  " Trigger emmet with ctrl-z ,
+let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with ctrl-z ,
 
 
 " ## Vim-Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 " ## Ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger = '< c-j>'
+let g:UltiSnipsJumpForwardTrigger = '<c-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 
 
 " ## Dev-Icons
@@ -320,7 +320,7 @@ let g:easytags_dynamic_files = 2
 
 
 " ## Syntastic
-let g:syntastic_loc_list_height=5  " Set height of errors window
+let g:syntastic_loc_list_height = 5  " Set height of errors window
 
 
 " ## Vimwiki
