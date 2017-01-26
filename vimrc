@@ -81,6 +81,10 @@ Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after >
 
 
+" ## Javascript
+Plug 'elzr/vim-json' 
+
+
 " ## PHP
 Plug 'shawncplus/phpcomplete.vim'
 
