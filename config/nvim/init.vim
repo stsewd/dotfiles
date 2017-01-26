@@ -292,7 +292,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
 " ## Ultisnips
-let g:UltiSnipsExpandTrigger = '< c-j>'
+let g:UltiSnipsExpandTrigger = '<c-j>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 
