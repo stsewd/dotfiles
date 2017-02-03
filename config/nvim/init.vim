@@ -103,8 +103,8 @@ Plug 'shime/vim-livedown'  " Markdown preview
 
 
 " ## Pandoc
-" Plugin 'vim-pandoc/vim-pandoc'
-" Plugin 'vim-pandoc/vim-pandoc-syntax' 
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 
 
 " ## Reading & Focus
@@ -331,6 +331,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 " ## YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
 let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
+let g:ftplugin_sql_omni_key = '<C-j>'  " Do not use ctrl-c
 
 
 " ## Python-mode
