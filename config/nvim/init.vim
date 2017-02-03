@@ -365,32 +365,7 @@ let g:startify_session_persistence = 1  " Autosave sessions
 let g:startify_session_sort = 0  " List sessions by modification time
 let g:startify_session_delete_buffers = 1  " Delete open buffer before load session
 
-let g:ascii = [
-    \ '              .::::::::::.              ',
-    \ '            .::``::::::::::.            ',
-    \ '            :::..:::::::::::            ',
-    \ '            ````````::::::::            ',
-    \ '    .::::::::::::::::::::::: iiiiiii,   ',
-    \ ' .:::::::::::::::::::::::::: iiiiiiiii. ',
-    \ ' ::::::::::::::::::::::::::: iiiiiiiiii ',
-    \ ' ::::::::::::::::::::::::::: iiiiiiiiii ',
-    \ ' :::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii ',
-    \ ' :::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii ',
-    \ ' `::::::::: iiiiiiiiiiiiiiiiiiiiiiiiii` ',
-    \ '    `:::::: iiiiiiiiiiiiiiiiiiiiiii`    ',
-    \ '            iiiiiiii,,,,,,,,            ',
-    \ '            iiiiiiiiiii''iii            ',
-    \ '            `iiiiiiiiii..ii`            ',
-    \ '              `iiiiiiiiii`              ',
-    \ ''
-    \]
-function! s:filter_header(lines) abort
-    let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
-    let centered_lines = map(copy(a:lines),
-        \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
-    return centered_lines
-endfunction
-let g:startify_custom_header = s:filter_header(g:ascii)
+let g:startify_custom_header = []  " Disable header
 
 
 " ..........................................................
