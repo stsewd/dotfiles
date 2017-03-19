@@ -90,6 +90,7 @@ Plug 'ekalinin/dockerfile.vim'
 
 
 " ## Python
+Plug 'tweekmonster/braceless.vim'  " Add P text object for functions
 " Plug 'python-mode/python-mode'
 
 " Jinja2
@@ -100,6 +101,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
 Plug 'plasticboy/vim-markdown'  " Markdown
 Plug 'shime/vim-livedown'  " Markdown preview
+Plug 'mzlogin/vim-markdown-toc'  " Auto generate TOC
 
 
 " ## Pandoc
@@ -339,6 +341,10 @@ let g:ftplugin_sql_omni_key = '<C-j>'  " Do not use ctrl-c
 " let g:pymode_lint = 0  " Don't use linter, we have syntastic
 " let g:pymode_rope = 0  " Don't load rope
 " let g:pymode_folding = 0  " Don't fold python code on open
+
+
+" ## Braceless
+autocmd FileType python BracelessEnable +indent +fold
 
 
 " ## Markdown
