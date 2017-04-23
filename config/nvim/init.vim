@@ -349,6 +349,7 @@ autocmd FileType python BracelessEnable +indent +fold
 
 " ## Markdown
 let g:vim_markdown_conceal = 0  " Do not hide symbols
+let g:vim_markdown_no_default_key_mappings = 1
 
 
 " ## Vim-Pandoc
