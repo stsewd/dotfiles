@@ -81,6 +81,11 @@ Plug 'alvan/vim-closetag'  " Closes tag after >
 Plug 'elzr/vim-json'
 
 
+" ## TypeScript
+Plug 'leafgarland/typescript-vim' 
+Plug 'Quramy/vim-js-pretty-template'
+
+
 " ## PHP
 Plug 'shawncplus/phpcomplete.vim'
 
@@ -356,6 +361,11 @@ let g:vim_markdown_no_default_key_mappings = 1
 " let g:pandoc#syntax#conceal#use = 0  " Do not hide symbols
 " let g:pandoc#folding#fdc = 0  " Do not show folding numbers
 " let g:pandoc#modules#disabled = ['folding', 'spell']  " Folding module make vim slow!
+
+
+" ## vim-js-pretty-template
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
 
 
 " ## Goyo & Limelight
