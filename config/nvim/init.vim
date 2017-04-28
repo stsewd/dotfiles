@@ -77,6 +77,10 @@ Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after >
 
 
+" ## CSS
+Plug 'ap/vim-css-color'
+
+
 " ## JavaScript
 Plug 'elzr/vim-json'
 
@@ -339,6 +343,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
 let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 let g:ftplugin_sql_omni_key = '<C-j>'  " Do not use ctrl-c
+let g:ycm_filetype_blacklist = {}
 
 
 " ## Python-mode
