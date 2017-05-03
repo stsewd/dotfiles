@@ -116,3 +116,6 @@ alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 
+# Java
+export JAVA_HOME='/usr/java/default'
+
