@@ -10,6 +10,8 @@ Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'mhinz/vim-startify'  " Show a start screen
+Plug 'google/vim-searchindex'  " Show number of search
+
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
@@ -25,7 +27,7 @@ Plug 'jeetsukumaran/vim-buffergator'  " Navigate between buffers (gb)
 Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
-Plug 'ivalkeen/nerdtree-execute'  " Add execute menu to NerdTree
+Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
 
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
 Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
