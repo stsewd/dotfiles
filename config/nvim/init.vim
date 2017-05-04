@@ -11,8 +11,8 @@ Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'google/vim-searchindex'  " Show number of search
-
 Plug 'terryma/vim-smooth-scroll'  " More natural scroll
+Plug 'matze/vim-move'  " Move lines with Alt+{jk}
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
@@ -223,14 +223,6 @@ nnoremap <silent> <leader>r :CtrlPBuffer<CR>
 nnoremap <C-A-p> :CtrlPCmdPalette<CR>
 vnoremap <C-A-p> :CtrlPCmdPalette<CR>
 
-" Move lines with Alt+{jk}
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-
 " Insert new line on normal mode with alt+enter
 nmap <A-Enter> o<Esc>
 
@@ -344,16 +336,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 
 " ## YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
-let g:EclimCompletionMethod = 'omnifunc'  " Set eclim compatible with ycm
 let g:ftplugin_sql_omni_key = '<C-j>'  " Do not use ctrl-c
-let g:ycm_filetype_blacklist = {}
-
-
-" ## Python-mode
-" let g:pymode_python = 'python3'
-" let g:pymode_lint = 0  " Don't use linter, we have syntastic
-" let g:pymode_rope = 0  " Don't load rope
-" let g:pymode_folding = 0  " Don't fold python code on open
+let g:ycm_filetype_blacklist = {}  " Allow autocompletition anywhere!
 
 
 " ## Braceless
