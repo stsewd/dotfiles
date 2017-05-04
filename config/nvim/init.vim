@@ -12,6 +12,7 @@ Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'google/vim-searchindex'  " Show number of search
 
+Plug 'terryma/vim-smooth-scroll'  " More natural scroll
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
@@ -378,6 +379,13 @@ autocmd FileType typescript syn clear foldBraces
 " ## Goyo & Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+
+" ## vim-smooth-scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 
 " ## Startify
