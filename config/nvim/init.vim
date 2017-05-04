@@ -33,8 +33,13 @@ Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add ex
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
 Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
 
+
+" ## Text Objects
 Plug 'tommcdo/vim-exchange'  " Exchange operator support
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
+
+Plug 'kana/vim-textobj-user'  " Base
+Plug 'jceb/vim-textobj-uri'  " URI text motion (u)
 
 
 " ## Git Integration
