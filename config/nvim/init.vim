@@ -20,7 +20,7 @@ Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 
 Plug 'danro/rename.vim'  " Rename current open file/buffer
-Plug 'matchit.zip'  " Extend % for matching HTML tags
+Plug 'vim-scripts/matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-repeat'  " Extend . for repeat scripts actions
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 
