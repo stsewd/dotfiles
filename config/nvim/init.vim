@@ -389,33 +389,3 @@ let g:startify_session_delete_buffers = 1  " Delete open buffer before load sess
 
 let g:startify_custom_header = []  " Disable header
 
-
-" ..........................................................
-" # Instructions
-" ..........................................................
-"
-" ## Install Vim-Plug
-" - See the instructions on <https://github.com/junegunn/vim-plug>
-"
-" ## Install Plugins
-" - :PlugInstall
-"
-" ## Install pathched fonts
-" - Download one from <https://github.com/ryanoasis/nerd-fonts>
-" - Recomended: <https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf>
-" - Select that font on your terminal configurations
-"
-" ## Install ctags
-" - Ubuntu: apt install exuberant-ctags
-" - Fedora: dnf install ctags
-"
-" ## Compile YouCompleteMe
-" See instructions on :h youcompleteme-installation
-"
-" ## Install one-dark profile
-" For greater compatibility with one-dark theme
-" install <https://github.com/denysdovhan/one-gnome-terminal>.
-"
-" ## Install markdown preview
-" - npm install -g livedown
-"
