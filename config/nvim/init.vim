@@ -48,7 +48,7 @@ Plug 'tpope/vim-fugitive'  " Git wrapper for vim
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
- 
+
 " ## Github Integration
 Plug 'tyru/open-browser.vim'  " Required by open-browser-github
 Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
@@ -95,7 +95,7 @@ Plug 'elzr/vim-json'
 
 
 " ## TypeScript
-Plug 'leafgarland/typescript-vim' 
+Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
 
 
@@ -189,8 +189,8 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 
 " .........................................................
-" " # Key-Bindings
-" " .........................................................
+"  # Key-Bindings
+" .........................................................
 
 " Map <Leader> to space
 let mapleader = " "
