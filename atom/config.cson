@@ -1,187 +1,44 @@
 "*":
-  MarkdownDocument:
-    enableAutoSave: "true"
-    markdownScopes: [
-      "source.gfm"
-      "text.md"
-      "text.plain"
-      "text.plain.null-grammar"
-    ]
   "advanced-open-file":
     createDirectories: true
     createFileInstantly: true
     fuzzyMatch: true
-  "atom-beautify":
-    general:
-      _analyticsUserId: "58751485-41b9-45e8-a77d-1ffed35651d6"
-  "atom-i18n":
-    locale: "es"
-  "autoclose-html":
-    legacyMode: true
-  "autocomplete-clang": {}
-  "autocomplete-java": {}
-  "autocomplete-jsp": {}
+  "atom-package-deps":
+    ignored: []
   "autocomplete-plus":
     enableExtendedUnicodeSupport: true
     useCoreMovementCommands: false
-  "autocomplete-python": {}
   core:
+    audioBeep: false
     autoHideMenuBar: true
-    disabledPackages: [
-      "linter-gcc"
-      "autocomplete-awk"
-      "autocomplete-clang"
-      "linter-clang"
-      "language-pfm"
-      "pdf-view"
-      "spell-check"
-      "markdown-toc"
-      "linter-shellcheck"
-    ]
+    reopenProjectMenuCount: 10
     telemetryConsent: "limited"
-  "cursor-history": {}
-  docblockr: {}
   editor:
-    fontFamily: "DejaVu Sans Mono"
     fontSize: 12
-    invisibles: {}
-    preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
-    tabLength: 4
     tabType: "soft"
   emmet: {}
   "exception-reporting":
-    userId: "a1cf28ee-d6c8-0532-2293-0e98ded374ad"
+    userId: "11e7925d-fd58-4dc4-87ba-4b09650b7f62"
   "file-icons": {}
-  "fuzzy-finder": {}
   "git-plus":
-    general:
-      _analyticsUserId: "65394971-3858-4380-8967-8ed78fe86cf4"
-  "keyboard-localization":
-    useKeyboardLayout: "es_LA"
-  latex: {}
-  latextools:
-    builderSettings: {}
-    linux:
-      atomExecutable: "atom"
-    win32:
-      distro: "texlive"
-  linter:
-    errorPanelHeight: 24
-  "linter-clang":
-    clangDefaultCppFlags: "-std=c++14"
-    clangDefaultObjCppFlags: "-std=c++14"
-  "linter-flake8":
-    maxLineLength: 80
-  "linter-jshint":
-    lintInlineJavaScript: true
-  "linter-markdown": {}
-  "linter-php": {}
-  "linter-shellcheck": {}
-  "markdown-document": {}
-  "markdown-preview":
-    liveUpdate: false
-    useGitHubStyle: true
-  "markdown-preview-plus":
-    enablePandoc: true
-    pandocBibliography: true
-    pandocCSLFile: "bibliography.csl"
-    pandocRemoveReferences: false
-    useGitHubStyle: true
-    useLazyHeaders: false
-  "markdown-writer":
-    relativeImagePath: true
-    tableExtraPipes: true
-  minimap:
-    absoluteMode: true
-    plugins:
-      "minimap-autohide": true
-      "minimap-autohideDecorationsZIndex": 0
+    general: {}
   "one-dark-ui":
     layoutMode: "Compact"
-  "one-light-ui":
-    layoutMode: "Compact"
-  "open-file-in":
-    applications: "gimp,inkscape,svgTester,codeblocks"
-  "open-unsupported-files":
-    extensions: "doc,xls,ppt,docx,xlsx,pptx,rtf,tar,gz,bz2,exe,bat,psd,pdf,odt"
-  "package-sync":
-    createOnChange: true
-  pigments:
-    markerType: "dot"
   "platformio-ide-terminal":
-    style:
-      theme: "dracula"
-  "project-manager":
-    includeGitRepositories: true
-  "spell-check": {}
-  "split-diff":
-    diffWords: true
-    ignoreWhitespace: true
-    leftEditorColor: "red"
-    rightEditorColor: "green"
-    syncHorizontalScroll: true
-  "status-bar": {}
-  "sync-settings":
-    _analyticsUserId: "163294c8-6159-414b-abec-bc6c278d931c"
-  "terminal-plus":
     core: {}
     style:
-      theme: "dracula"
-    toggles: {}
-  "theme-switch":
-    darkProfiles: [
-      "one-dark-ui one-dark-syntax"
-      "one-dark-ui solarized-light-syntax"
-      "one-dark-ui solarized-dark-syntax"
-    ]
-    lightProfiles: [
-      "one-light-ui solarized-light-syntax"
-      "one-light-ui one-light-syntax"
-    ]
-    profiles: [
-      "one-dark-ui one-dark-syntax"
-      "one-dark-ui solarized-light-syntax"
-      "one-light-ui solarized-light-syntax"
-      "one-light-ui one-light-syntax"
-    ]
-  "tree-view":
-    hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
+      theme: "one-dark"
+    toggles:
+      autoClose: true
   "vim-mode-plus":
-    clearHighlightSearchOnResetNormalMode: true
     clearMultipleCursorsOnEscapeInsertMode: true
-    highlightSearch: true
+    ignoreCaseForSearch: true
     incrementalSearch: true
+    smoothScrollOnFullScrollMotion: true
     smoothScrollOnHalfScrollMotion: true
+    useClipboardAsDefaultRegister: false
     useSmartcaseForSearch: true
-  "vim-surround": {}
   welcome:
     showOnStartup: false
-  whitespace: {}
-  wordcount: {}
-  "zotero-citations":
-    scanMode: "pandoc"
-".angular.html.text":
-  editor:
-    preferredLineLength: 120
-    tabLength: 4
-".asciidoc.properties.source":
-  editor:
-    preferredLineLength: 120
-    tabLength: 4
-".asciidoc.source":
-  editor:
-    preferredLineLength: 120
-    tabLength: 4
-".diff":
-  editor:
-    preferredLineLength: 120
-".diff.source":
-  editor:
-    preferredLineLength: 120
-".gfm.source":
-  editor:
-    preferredLineLength: 120
-    tabLength: 4
