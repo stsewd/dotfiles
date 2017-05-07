@@ -6,7 +6,7 @@
 ## Neovim
 
 ![](https://cloud.githubusercontent.com/assets/4975310/25513658/734edbd4-2b9c-11e7-80f1-6543827bda2b.png)
-![](https://cloud.githubusercontent.com/assets/4975310/25513705/f66899f6-2b9c-11e7-951d-cce14eb47705.png)
+![](https://cloud.githubusercontent.com/assets/4975310/25776767/c861a5b4-328d-11e7-8fb2-c7aed5337bdd.png)
 
 
 ### Installation
