@@ -340,6 +340,12 @@ let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace w
 let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with ctrl-z ,
 
 
+" ## Indentline
+
+let g:indentLine_fileTypeExclude = ['text', 'sh', 'help']
+let g:indentLine_bufNameExclude = ['NERD_tree.*']
+
+
 " ## Vim-Closetag
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
