@@ -50,8 +50,11 @@
   'space l': 'pane:show-next-item'
   'space j': 'pane:show-previous-item'
 
-  #  Close pane
+  # Close pane
   'space q': 'tab:close'
+
+  # Show spellcheck
+  'z =': 'spell-check:correct-misspelling'
 
 'atom-text-editor[mini]':
   'ctrl-u': 'editor:delete-to-beginning-of-line'
