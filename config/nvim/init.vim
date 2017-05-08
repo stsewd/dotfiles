@@ -280,6 +280,9 @@ let NERDTreeIgnore = [
     \ '^tags$'
     \]
 
+let NERDTreeMinimalUI=1  " Hide help text
+let NERDTreeAutoDeleteBuffer=1
+
 
 " ## Syntastic
 
