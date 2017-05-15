@@ -11,6 +11,9 @@
   core:
     audioBeep: false
     autoHideMenuBar: true
+    packagesWithKeymapsDisabled: [
+      "zentabs"
+    ]
     reopenProjectMenuCount: 10
     telemetryConsent: "limited"
   editor:
