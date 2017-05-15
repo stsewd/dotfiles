@@ -9,7 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " ## General Utilities
 
 Plug 'mhinz/vim-startify'  " Show a start screen
-Plug 'scrooloose/nerdtree'  " Tree explorer
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Tree explorer
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
 
 
@@ -108,7 +108,7 @@ Plug 'junegunn/limelight.vim'  " Focus blocks
 
 " ### CSS
 
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color', { 'for': 'css' }
 
 " ### Docker
 
@@ -116,7 +116,7 @@ Plug 'ekalinin/dockerfile.vim'
 
 " ### HTML
 
-Plug 'mattn/emmet-vim'  " Emmet
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
 Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after >
@@ -132,9 +132,9 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " ### Markdown
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
-Plug 'plasticboy/vim-markdown'  " Markdown
-Plug 'shime/vim-livedown'  " Markdown preview
-Plug 'mzlogin/vim-markdown-toc'  " Auto generate TOC
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview
+Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
 " ### Pandoc
 
@@ -143,7 +143,7 @@ Plug 'mzlogin/vim-markdown-toc'  " Auto generate TOC
 
 " ### PHP
 
-Plug 'shawncplus/phpcomplete.vim'
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
 " ### Python
 
@@ -342,7 +342,7 @@ let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with ctrl-z ,
 
 " ## Indentline
 
-let g:indentLine_fileTypeExclude = ['text', 'sh', 'help']
+let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
 
