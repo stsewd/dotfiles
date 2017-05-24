@@ -298,7 +298,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_enable_balloons = 0  " Disable balloons, too slow! 
 
-let g:syntastic_python_checkers = ["flake8"]
+let g:syntastic_python_checkers = ['flake8', 'mypy']
 
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'
