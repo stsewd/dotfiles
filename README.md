@@ -31,6 +31,7 @@
   - `npm install -g livedown`
 - Install flake8 for python develpment :snake:
   - `pip install flake8`
+  - `pip install mypy`
   
 ### Configurations
 
