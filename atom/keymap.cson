@@ -44,6 +44,7 @@
   'ctrl-j': 'core:move-down'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  # Toggle comments
   'space c': 'vim-mode-plus:toggle-line-comments'
 
   # Move between panes
@@ -55,6 +56,9 @@
 
   # Show spellcheck
   'z =': 'spell-check:correct-misspelling'
+
+  # Use leader (space) for clipboard register (yank, delete, etc)
+  'space': 'vim-mode-plus:set-register-name-to-*'
 
 'atom-text-editor[mini]':
   'ctrl-u': 'editor:delete-to-beginning-of-line'
