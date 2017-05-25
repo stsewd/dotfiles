@@ -165,7 +165,7 @@ call plug#end()
 " ## GUI
 
 set title
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1  " Makes the cursor a pipe in insert-mode
+set mouse=a
 
 set colorcolumn=120  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
