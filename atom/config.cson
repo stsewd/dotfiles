@@ -30,6 +30,9 @@
     general: {}
   "one-dark-ui":
     layoutMode: "Compact"
+  "linter-ui-default":
+    showPanel: true
+    statusBarRepresents: "Current File"
   "platformio-ide-terminal":
     core: {}
     style:
