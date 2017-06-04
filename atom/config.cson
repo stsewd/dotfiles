@@ -3,6 +3,9 @@
     createDirectories: true
     createFileInstantly: true
     fuzzyMatch: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "a9b116b4-6aae-40b6-8d34-e1da2445c55d"
   "atom-package-deps":
     ignored: []
   "autocomplete-plus":
