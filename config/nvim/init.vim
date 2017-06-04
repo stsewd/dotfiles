@@ -33,6 +33,7 @@ Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'jeetsukumaran/vim-buffergator'  " Navigate between buffers (gb)
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
+Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
 
 
 " ## Other Utilities
@@ -266,6 +267,8 @@ nmap <A-Enter> o<Esc>
 " Toggle nerdtree with F2
 map <F2> :NERDTreeToggle<CR>
 
+" View plugin page
+nnoremap <silent> gp :OpenPluginPage<CR>
 
 " ..........................................................
 " # Plugins Settings
