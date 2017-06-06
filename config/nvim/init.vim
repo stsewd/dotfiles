@@ -148,7 +148,9 @@ Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
 " ### Python
 
-Plug 'tweekmonster/braceless.vim'  " Add P text object for functions
+Plug 'umutcoskun/vim-mule'  " Django helper
+Plug 'bps/vim-textobj-python', { 'for': 'python' }
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
 " ## TypeScript
 
