@@ -125,6 +125,11 @@ Plug 'alvan/vim-closetag'  " Closes tag after >
 
 Plug 'elzr/vim-json'
 
+" ### Jekyll
+
+Plug 'tpope/vim-liquid'
+Plug 'parkr/vim-jekyll'
+
 " ### Jinja2
 
 Plug 'Glench/Vim-Jinja2-Syntax'
