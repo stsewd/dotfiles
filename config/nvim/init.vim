@@ -233,6 +233,9 @@ set complete+=kspell  " Autocomplete with dictionary words
 " Map <Leader> to space
 let mapleader = " "
 
+" Save
+nnoremap <leader>s :w<CR>
+
 " Copy to clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
