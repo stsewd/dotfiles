@@ -360,7 +360,7 @@ let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace w
 
 " ## Emmet
 
-let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with ctrl-z ,
+let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
 
 
 " ## Indentline
