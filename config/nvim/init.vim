@@ -37,7 +37,7 @@ Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins
 
 " ## Other Utilities
 
-Plug 'danro/rename.vim'  " Rename current open file/buffer
+Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'tpope/vim-repeat'  " Extend . for repeat scripts actions
 Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
