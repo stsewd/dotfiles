@@ -124,6 +124,7 @@ Plug 'alvan/vim-closetag'  " Closes tag after >
 
 " ### JavaScript
 
+Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
 
 " ### Jekyll
