@@ -108,6 +108,7 @@ Plug 'junegunn/limelight.vim'  " Focus blocks
 
 " ### CSS
 
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'ap/vim-css-color', { 'for': 'css' }
 
 " ### Docker
