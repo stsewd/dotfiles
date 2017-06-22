@@ -22,7 +22,6 @@ Plug 'vim-scripts/matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
-Plug 'terryma/vim-smooth-scroll'  " More natural scroll
 
 
 " ## Navigation Utilities
@@ -33,6 +32,7 @@ Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
+Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 
 
 " ## Other Utilities
@@ -75,18 +75,19 @@ Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 
 " ## Autocompletition & Snippets
 
-Plug 'valloric/youcompleteme'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'  " Show function signature
+
+Plug 'ervandew/supertab'  " User tab for navigate on completitions
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'xolox/vim-misc'  " Required by vim-easytags
-Plug 'xolox/vim-easytags'  " Automated tag file generation & highlighting
-
 
 " ## Linters & Formatters
 
-Plug 'scrooloose/syntastic'  " Syntax checking
+Plug 'neomake/neomake'  " Syntax checking
+Plug 'dojoteef/neomake-autolint'  " Check syntax while inserting
 Plug 'Chiel92/vim-autoformat'  " Easy code formatting
 
 
@@ -120,7 +121,7 @@ Plug 'ekalinin/dockerfile.vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
 Plug 'othree/html5.vim'  " html5 completition
-Plug 'alvan/vim-closetag'  " Closes tag after >
+Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### JavaScript
 
@@ -154,7 +155,8 @@ Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
 " ### Python
 
-Plug 'umutcoskun/vim-mule'  " Django helper
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'umutcoskun/vim-mule',  { 'for': 'python' }  " Django helper
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
@@ -175,6 +177,7 @@ call plug#end()
 
 set title
 set mouse=a
+set noshowmode
 
 set colorcolumn=120  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
@@ -265,9 +268,6 @@ nnoremap <C-c> :noh<CR>
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 
-" Search on buffers with ctrl-p
-nnoremap <silent> <leader>r :CtrlPBuffer<CR>
-
 " Active ctrlp-command-palette
 nnoremap <C-A-p> :CtrlPCmdPalette<CR>
 vnoremap <C-A-p> :CtrlPCmdPalette<CR>
@@ -278,12 +278,44 @@ nmap <A-Enter> o<Esc>
 " Toggle nerdtree with F2
 map <F2> :NERDTreeToggle<CR>
 
+" Toggle indentline with F4
+map <F4> :IndentLinesToggle<CR>
+
 " View plugin page
-nnoremap <silent> gp :OpenPluginPage<CR>
+nnoremap gp :OpenPluginPage<CR>
 
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
+
+" ## Deoplete
+
+let g:deoplete#enable_at_startup = 1
+
+" Autoclose preview window
+autocmd CompleteDone * silent! pclose!
+
+let g:deoplete#sources#jedi#show_docstring = 1
+
+
+" ## Echodoc
+
+let g:echodoc_enable_at_startup = 1
+
+
+" ## Supertab
+
+" Invert tab direction
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+
+" ## Neomake
+
+let g:neomake_open_list = 2  " Stay on the cursor when open
+let g:neomake_list_height = 5
+
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+
 
 " ## NerdTree
 
@@ -298,29 +330,6 @@ let NERDTreeMinimalUI=1  " Hide help text
 let NERDTreeAutoDeleteBuffer=1
 
 
-" ## Syntastic
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_enable_balloons = 0  " Disable balloons, too slow! 
-
-let g:syntastic_python_checkers = ['flake8', 'mypy']
-let g:syntastic_python_mypy_args = "--ignore-missing-imports --follow-imports=silent"
-
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '⚠️'
-
-
 " ## Airline
 
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
@@ -331,6 +340,11 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+
+" ## Gutentags
+
+let g:gutentags_ctags_tagfile = '.tags'
 
 
 " ## CtrlP
@@ -396,37 +410,10 @@ let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 
-" ## Easytags
-
-" Async updates
-let g:easytags_async = 1
-
-" Update on open & write
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-
-" Saves tags file on cwd
-set cpoptions+=d
-set tags=./.tags;
-let g:easytags_dynamic_files = 2
-
-
 " ## Vimwiki
 
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
-
-
-" ## YouCompleteMe
-
-let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
-let g:ftplugin_sql_omni_key = '<C-j>'  " Do not use ctrl-c
-let g:ycm_filetype_blacklist = {}  " Allow autocompletition anywhere!
-
-
-" ## Braceless
-
-autocmd FileType python BracelessEnable +indent +fold
-
 
 " ## Markdown
 
@@ -451,14 +438,6 @@ autocmd FileType typescript syn clear foldBraces
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
-
-" ## vim-smooth-scroll
-
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 
 " ## Startify
