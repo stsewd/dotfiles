@@ -86,7 +86,8 @@ Plug 'honza/vim-snippets'
 
 " ## Linters & Formatters
 
-Plug 'scrooloose/syntastic'  " Syntax checking
+Plug 'neomake/neomake'  " Syntax checking
+Plug 'dojoteef/neomake-autolint'  " Check syntax while inserting
 Plug 'Chiel92/vim-autoformat'  " Easy code formatting
 
 
@@ -304,6 +305,15 @@ let g:echodoc_enable_at_startup = 1
 " Invert tab direction
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
+
+" ## Neomake
+
+let g:neomake_open_list = 2  " Stay on the cursor when open
+let g:neomake_list_height = 5
+
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+
+
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
@@ -315,29 +325,6 @@ let NERDTreeIgnore = [
 
 let NERDTreeMinimalUI=1  " Hide help text
 let NERDTreeAutoDeleteBuffer=1
-
-
-" ## Syntastic
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_enable_balloons = 0  " Disable balloons, too slow! 
-
-let g:syntastic_python_checkers = ['flake8', 'mypy']
-let g:syntastic_python_mypy_args = "--ignore-missing-imports --follow-imports=silent"
-
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '⚠️'
 
 
 " ## Airline
