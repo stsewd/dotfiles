@@ -156,7 +156,7 @@ Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 " ### Python
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-Plug 'umutcoskun/vim-mule'  { 'for': 'python' }  " Django helper
+Plug 'umutcoskun/vim-mule',  { 'for': 'python' }  " Django helper
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
