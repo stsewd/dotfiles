@@ -149,10 +149,6 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 " Plug 'vim-pandoc/vim-pandoc'
 " Plug 'vim-pandoc/vim-pandoc-syntax'
 
-" ### PHP
-
-Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
-
 " ### Python
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
