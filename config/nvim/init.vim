@@ -75,7 +75,7 @@ Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 
 " ## Autocompletition & Snippets
 
-Plug 'valloric/youcompleteme'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -279,6 +279,13 @@ nnoremap <silent> gp :OpenPluginPage<CR>
 " # Plugins Settings
 " ..........................................................
 
+" ## Deoplete
+
+let g:deoplete#enable_at_startup = 1
+
+" Autoclose preview window
+autocmd CompleteDone * silent! pclose!
+
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
@@ -399,14 +406,6 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
-
-
-" ## YouCompleteMe
-
-let g:ycm_autoclose_preview_window_after_completion = 1  " Autoclose preview window after insert
-let g:ftplugin_sql_omni_key = '<C-j>'  " Do not use ctrl-c
-let g:ycm_filetype_blacklist = {}  " Allow autocompletition anywhere!
-
 
 " ## Braceless
 
