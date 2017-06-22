@@ -32,6 +32,7 @@ Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
+Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 
 
 " ## Other Utilities
@@ -78,9 +79,6 @@ Plug 'valloric/youcompleteme'
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-
-Plug 'xolox/vim-misc'  " Required by vim-easytags
-Plug 'xolox/vim-easytags'  " Automated tag file generation & highlighting
 
 
 " ## Linters & Formatters
@@ -332,6 +330,11 @@ if !exists('g:airline_symbols')
 endif
 
 
+" ## Gutentags
+
+let g:gutentags_ctags_tagfile = '.tags'
+
+
 " ## CtrlP
 
 let g:ctrlp_working_path_mode = 'ra'
@@ -393,20 +396,6 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 " Adjust icons padding
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-
-
-" ## Easytags
-
-" Async updates
-let g:easytags_async = 1
-
-" Update on open & write
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-
-" Saves tags file on cwd
-set cpoptions+=d
-set tags=./.tags;
-let g:easytags_dynamic_files = 2
 
 
 " ## Vimwiki
