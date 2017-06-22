@@ -278,6 +278,9 @@ nmap <A-Enter> o<Esc>
 " Toggle nerdtree with F2
 map <F2> :NERDTreeToggle<CR>
 
+" Toggle indentline with F4
+map <F4> :IndentLinesToggle<CR>
+
 " View plugin page
 nnoremap <silent> gp :OpenPluginPage<CR>
 
