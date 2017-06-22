@@ -78,6 +78,7 @@ Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/echodoc.vim'  " Show function signature
 
+Plug 'ervandew/supertab'  " User tab for navigate on completitions
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -291,6 +292,12 @@ autocmd CompleteDone * silent! pclose!
 " ## Echodoc
 
 let g:echodoc_enable_at_startup = 1
+
+
+" ## Supertab
+
+" Invert tab direction
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " ## NerdTree
 
