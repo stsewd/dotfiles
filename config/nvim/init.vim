@@ -154,7 +154,8 @@ Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
 " ### Python
 
-Plug 'umutcoskun/vim-mule'  " Django helper
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'umutcoskun/vim-mule'  { 'for': 'python' }  " Django helper
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
@@ -290,6 +291,9 @@ let g:deoplete#enable_at_startup = 1
 " Autoclose preview window
 autocmd CompleteDone * silent! pclose!
 
+let g:deoplete#sources#jedi#show_docstring = 1
+
+
 " ## Echodoc
 
 let g:echodoc_enable_at_startup = 1
@@ -420,11 +424,6 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
-
-" ## Braceless
-
-autocmd FileType python BracelessEnable +indent +fold
-
 
 " ## Markdown
 
