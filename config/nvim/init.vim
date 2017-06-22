@@ -114,7 +114,7 @@ Plug 'ap/vim-css-color', { 'for': 'css' }
 
 " ### Docker
 
-Plug 'ekalinin/dockerfile.vim'
+Plug 'ekalinin/dockerfile.vim', { 'for': 'docker' }
 
 " ### HTML
 
@@ -126,7 +126,7 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 " ### JavaScript
 
 Plug 'pangloss/vim-javascript'
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', { 'for': 'json' }
 
 " ### Jekyll
 
