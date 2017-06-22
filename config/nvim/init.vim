@@ -175,6 +175,7 @@ call plug#end()
 
 set title
 set mouse=a
+set noshowmode
 
 set colorcolumn=120  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
