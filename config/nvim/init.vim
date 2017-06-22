@@ -262,9 +262,6 @@ nnoremap <C-c> :noh<CR>
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 
-" Search on buffers with ctrl-p
-nnoremap <silent> <leader>r :CtrlPBuffer<CR>
-
 " Active ctrlp-command-palette
 nnoremap <C-A-p> :CtrlPCmdPalette<CR>
 vnoremap <C-A-p> :CtrlPCmdPalette<CR>
