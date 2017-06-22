@@ -282,7 +282,7 @@ map <F2> :NERDTreeToggle<CR>
 map <F4> :IndentLinesToggle<CR>
 
 " View plugin page
-nnoremap <silent> gp :OpenPluginPage<CR>
+nnoremap gp :OpenPluginPage<CR>
 
 " ..........................................................
 " # Plugins Settings
