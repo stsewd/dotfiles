@@ -22,7 +22,6 @@ Plug 'vim-scripts/matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
-Plug 'terryma/vim-smooth-scroll'  " More natural scroll
 
 
 " ## Navigation Utilities
@@ -451,14 +450,6 @@ autocmd FileType typescript syn clear foldBraces
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
-
-" ## vim-smooth-scroll
-
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 
 " ## Startify
