@@ -76,6 +76,8 @@ Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 " ## Autocompletition & Snippets
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'  " Show function signature
+
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -285,6 +287,10 @@ let g:deoplete#enable_at_startup = 1
 
 " Autoclose preview window
 autocmd CompleteDone * silent! pclose!
+
+" ## Echodoc
+
+let g:echodoc_enable_at_startup = 1
 
 " ## NerdTree
 
