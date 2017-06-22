@@ -117,7 +117,7 @@ Plug 'ekalinin/dockerfile.vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
 Plug 'othree/html5.vim'  " html5 completition
-Plug 'alvan/vim-closetag'  " Closes tag after >
+Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### JavaScript
 
