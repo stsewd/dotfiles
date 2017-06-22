@@ -165,6 +165,10 @@ Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Quramy/vim-js-pretty-template'
 
+" ## Vim
+
+Plug 'Shougo/neco-vim', { 'for': 'vim' }
+
 
 call plug#end()
 
