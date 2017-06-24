@@ -73,12 +73,15 @@ Plug 'tyru/open-browser.vim'  " Required by open-browser-github
 Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 
 
-" ## Autocompletition & Snippets
+" ## Autocompletition
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/echodoc.vim'  " Show function signature
 
 Plug 'ervandew/supertab'  " User tab for navigate on completitions
+
+
+" ## Snippets
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
