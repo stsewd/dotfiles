@@ -96,7 +96,7 @@ Plug 'Chiel92/vim-autoformat'  " Easy code formatting
 
 " ## Themes & Color Schemes
 
-Plug 'altercation/vim-colors-solarized'  " Solarized theme
+Plug 'iCyMind/NeoSolarized'  " Solarized theme
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on nerdtree
 Plug 'joshdick/onedark.vim'
@@ -219,9 +219,9 @@ set smartcase
 
 " ## Theme & Colorscheme
 
-set termguicolors  " Active true colors on terminal (deactive on solarized)
+set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme onedark  " solarized, onedark
+colorscheme NeoSolarized  " NeoSolarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
