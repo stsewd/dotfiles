@@ -128,7 +128,8 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### JavaScript
 
-Plug 'pangloss/vim-javascript'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
 " ### Jekyll
