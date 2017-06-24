@@ -23,16 +23,18 @@
 
 ### Installing extras
 
-- Compile [YouCompleteme](https://github.com/Valloric/YouCompleteMe#installation)
+- Install python3 interface
+  - `pip install --upgrade neovim`
 - Install ctags
   - Debian based: `apt install exuberant-ctags`
   - Fedora: `dnf install ctags`
 - Install markdown preview
   - `npm install -g livedown`
-- Install flake8 for python develpment :snake:
+- Tools for python develpment :snake:
+  - `pip install jedi`
   - `pip install flake8`
   - `pip install mypy`
-  
+
 ### Configurations
 
 Check `config/nvim/init.vim` for see all the plugins, settings and key-bindings, it's well documented.
