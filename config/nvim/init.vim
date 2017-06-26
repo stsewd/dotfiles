@@ -224,7 +224,7 @@ set smartcase
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme NeoSolarized  " NeoSolarized, onedark
+colorscheme onedark  " NeoSolarized, onedark
 hi clear CursorLineNr  " Clear highlighting line number
 
 
