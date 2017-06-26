@@ -292,6 +292,7 @@ map <F3> :IndentLinesToggle<CR>
 " View plugin page
 nnoremap gp :OpenPluginPage<CR>
 
+
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
@@ -323,6 +324,11 @@ let g:neomake_open_list = 2  " Stay on the cursor when open
 let g:neomake_list_height = 5
 
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+
+
+" Neomake-Autolint
+
+let g:neomake_autolint_updatetime = 1000
 
 
 " ## NerdTree
