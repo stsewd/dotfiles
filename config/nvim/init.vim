@@ -31,7 +31,6 @@ Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
 Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
-Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 
 
@@ -168,6 +167,7 @@ Plug 'Quramy/vim-js-pretty-template'
 " ## Vim
 
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
+Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
 
 
 call plug#end()
