@@ -320,9 +320,6 @@ let g:SuperTabDefaultCompletionType = '<c-n>'
 
 " ## Neomake
 
-let g:neomake_open_list = 2  " Stay on the cursor when open
-let g:neomake_list_height = 5
-
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 
 
