@@ -393,7 +393,7 @@ let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
 " ## Indentline
 
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
-let g:indentLine_bufNameExclude = ['NERD_tree.*']
+let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
 
 " ## Vim-Closetag
