@@ -30,10 +30,12 @@
   - Fedora: `dnf install ctags`
 - Install markdown preview
   - `npm install -g livedown`
-- Tools for python develpment :snake:
+- Tools for python development :snake:
   - `pip install jedi`
   - `pip install flake8`
   - `pip install mypy`
+- Tools for VimL development
+  - `pip install vim-vint`
 
 ### Configurations
 
