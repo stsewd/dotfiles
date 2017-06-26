@@ -79,6 +79,8 @@ Plug 'Shougo/echodoc.vim'  " Show function signature
 
 Plug 'ervandew/supertab'  " User tab for navigate on completitions
 
+Plug 'fszymanski/deoplete-emoji'
+
 
 " ## Snippets
 
