@@ -244,7 +244,7 @@ set complete+=kspell  " Autocomplete with dictionary words
 " .........................................................
 
 " Map <Leader> to space
-let mapleader = " "
+let g:mapleader = ' '
 
 " Save
 nnoremap <leader>s :w<CR>
@@ -314,7 +314,7 @@ let g:echodoc_enable_at_startup = 1
 " ## Supertab
 
 " Invert tab direction
-let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
 " ## Neomake
@@ -329,13 +329,13 @@ let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
 " Ignored files
-let NERDTreeIgnore = [
+let g:NERDTreeIgnore = [
     \ '\.pyc$', '^__pycache__$', '^venv$',
     \ '^tags$'
     \]
 
-let NERDTreeMinimalUI=1  " Hide help text
-let NERDTreeAutoDeleteBuffer=1
+let g:NERDTreeMinimalUI = 1  " Hide help text
+let g:NERDTreeAutoDeleteBuffer = 1
 
 
 " ## Airline
@@ -423,6 +423,7 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
 
+
 " ## Markdown
 
 let g:vim_markdown_conceal = 0  " Do not hide symbols
@@ -433,7 +434,7 @@ let g:vim_markdown_no_default_key_mappings = 1
 
 " let g:pandoc#syntax#conceal#use = 0  " Do not hide symbols
 " let g:pandoc#folding#fdc = 0  " Do not show folding numbers
-" let g:pandoc#modules#disabled = ['folding', 'spell']  " Folding module make vim slow!
+" let g:pandoc#modules#disabled = ['folding']  " Folding module make vim slow!
 
 
 " ## vim-js-pretty-template
