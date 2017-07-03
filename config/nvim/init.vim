@@ -419,7 +419,7 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
 " ## Vim-Closetag
 
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.md'
 
 
 " ## Ultisnips
