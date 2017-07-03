@@ -205,7 +205,6 @@ set nowrap  " No wrap lines (display long lines)
 set number  " Display line numbers
 set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
-set ruler  " Display cursor position
 set linespace=2  " Pixels between lines
 set foldlevelstart=99  " Don't fold when open buffer
 
