@@ -292,8 +292,8 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <C-A-p> :CtrlPCmdPalette<CR>
 vnoremap <C-A-p> :CtrlPCmdPalette<CR>
 
-" Insert new line on normal mode with alt+enter
-nmap <A-Enter> o<Esc>
+" Insert new line on normal mode with Alt+Enter
+nnoremap <M-Enter> o<Esc>
 
 " Toggle nerdtree with F2
 map <F2> :NERDTreeToggle<CR>
