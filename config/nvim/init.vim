@@ -261,6 +261,10 @@ nnoremap <leader>s :w<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 
+" Cut to clipboard
+vnoremap <leader>d "+d
+nnoremap <leader>d "+d
+
 " Paste from clipboard
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
