@@ -214,10 +214,13 @@ set expandtab
 set smartindent
 
 
-" ## Search
+" ## Search & replace
 
 set ignorecase
 set smartcase
+
+" Show replace live preview
+set inccommand=nosplit
 
 
 " ## Theme & Colorscheme
