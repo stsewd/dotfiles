@@ -340,6 +340,12 @@ let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 let g:neomake_autolint_updatetime = 1000
 
 
+" Vim-grammarous
+
+let g:grammarous#default_comments_only_filetypes = {
+    \ '*': 1, 'help': 0, 'markdown': 0, 'liquid': 0
+    \}
+
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
