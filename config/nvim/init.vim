@@ -99,6 +99,8 @@ Plug 'neomake/neomake'  " Syntax checking
 Plug 'dojoteef/neomake-autolint'  " Check syntax while inserting
 Plug 'Chiel92/vim-autoformat'  " Easy code formatting
 
+Plug 'rhysd/vim-grammarous'  " Grammar checker
+
 
 " ## Themes & Color Schemes
 
