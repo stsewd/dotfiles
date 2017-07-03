@@ -257,6 +257,12 @@ let g:mapleader = ' '
 " Save
 nnoremap <leader>s :w<CR>
 
+" Edit init.vim
+nnoremap <leader>e :e $MYVIMRC<CR>
+
+" Esc
+inoremap jk <esc>
+
 " Copy to clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
