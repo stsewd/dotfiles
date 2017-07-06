@@ -274,6 +274,8 @@ nnoremap <leader>d "+d
 " Paste from clipboard
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>P "+P
 
 " Move to the next buffer
 nnoremap <leader>l :bnext<CR>
