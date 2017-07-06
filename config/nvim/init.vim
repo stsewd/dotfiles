@@ -322,7 +322,10 @@ nnoremap gp :OpenPluginPage<CR>
 let g:deoplete#enable_at_startup = 1
 
 " Autoclose preview window
-autocmd CompleteDone * silent! pclose!
+augroup deoplete
+  autocmd!
+  autocmd CompleteDone * silent! pclose!
+augroup END
 
 let g:deoplete#sources#jedi#show_docstring = 1
 
@@ -424,6 +427,13 @@ let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
+" Deactivate on completition, to slow
+augroup indent_line
+  autocmd!
+  autocmd InsertEnter * IndentLinesDisable
+  autocmd InsertLeave * IndentLinesEnable
+augroup END
+
 
 " ## Vim-Closetag
 
@@ -467,15 +477,20 @@ let g:vim_markdown_no_default_key_mappings = 1
 
 
 " ## vim-js-pretty-template
-
-autocmd FileType typescript JsPreTmpl html
-autocmd FileType typescript syn clear foldBraces
+augroup js_pretty_template
+  autocmd!
+  autocmd FileType typescript JsPreTmpl html
+  autocmd FileType javascript JsPreTmpl html
+  autocmd FileType typescript syn clear foldBraces
+augroup END
 
 
 " ## Goyo & Limelight
-
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+augroup goyo
+  autocmd!
+  autocmd! User GoyoEnter Limelight
+  autocmd! User GoyoLeave Limelight!
+augroup END
 
 
 " ## Startify
