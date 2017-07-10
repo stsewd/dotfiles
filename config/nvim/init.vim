@@ -382,6 +382,11 @@ if !exists('g:airline_symbols')
 endif
 
 
+" ## Emoji
+
+call deoplete#custom#set('emoji', 'filetypes', ['gitcommit', 'markdown', 'liquid'])
+
+
 " ## Gutentags
 
 let g:gutentags_ctags_tagfile = '.tags'
