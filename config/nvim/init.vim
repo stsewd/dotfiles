@@ -39,7 +39,7 @@ Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 " ## Other Utilities
 
 Plug 'tpope/vim-eunuch'  " Command line utilities
-Plug 'tpope/vim-repeat'  " Extend . for repeat scripts actions
+Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
@@ -61,7 +61,7 @@ Plug 'kana/vim-textobj-user'  " Base
 Plug 'jceb/vim-textobj-uri'  " URI text object (u)
 Plug 'kana/vim-textobj-indent'  " Indentation text object
 
-Plug 'wellle/targets.vim'
+Plug 'wellle/targets.vim'  " Operator pending mappings
 
 
 " ## Git Integration
@@ -248,7 +248,7 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 
 " .........................................................
-"  # Key-Bindings
+"  # Mappings
 " .........................................................
 
 " Map <Leader> to space
