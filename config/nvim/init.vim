@@ -177,6 +177,7 @@ Plug 'Quramy/vim-js-pretty-template'
 
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
+Plug 'junegunn/vader.vim'
 
 
 call plug#end()
