@@ -80,6 +80,7 @@ Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 " ## Autocompletition
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax'  " Provides completitions from syntax
 Plug 'Shougo/echodoc.vim'  " Show function signature
 
 Plug 'ervandew/supertab'  " User tab for navigate on completitions
