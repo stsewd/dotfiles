@@ -234,8 +234,7 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme onedark  " NeoSolarized, onedark
-hi clear CursorLineNr  " Clear highlighting line number
+colorscheme NeoSolarized  " NeoSolarized, onedark
 
 
 " ## Buffers
