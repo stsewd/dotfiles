@@ -126,7 +126,7 @@ Plug 'ap/vim-css-color', { 'for': 'css' }
 
 " ### Docker
 
-Plug 'ekalinin/dockerfile.vim', { 'for': 'docker' }
+Plug 'ekalinin/dockerfile.vim', { 'for': 'Dockerfile' }
 
 " ### HTML
 
