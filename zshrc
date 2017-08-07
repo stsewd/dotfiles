@@ -95,7 +95,7 @@ setopt RM_STAR_WAIT
 # good 'ol Bash
 setopt interactivecomments
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
