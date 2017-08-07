@@ -171,6 +171,7 @@ Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
 " ## TypeScript
 
+Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Quramy/vim-js-pretty-template'
 
