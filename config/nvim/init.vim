@@ -324,7 +324,7 @@ nnoremap gp :OpenPluginPage<CR>
 let g:deoplete#enable_at_startup = 1
 
 " Autoclose preview window
-augroup deoplete
+augroup deopleteCompleteDone
   autocmd!
   autocmd CompleteDone * silent! pclose!
 augroup END
