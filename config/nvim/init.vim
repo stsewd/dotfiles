@@ -328,6 +328,10 @@ augroup deopleteCompleteDone
   autocmd CompleteDone * silent! pclose!
 augroup END
 
+" ### Emoji
+
+call deoplete#custom#set('emoji', 'filetypes', ['gitcommit', 'markdown', 'liquid'])
+
 " ### Jedi
 
 let g:deoplete#sources#jedi#show_docstring = 1
@@ -390,11 +394,6 @@ let g:airline_powerline_fonts = 1
 
 " ale integration
 let g:airline#extensions#ale#enabled = 1
-
-
-" ## Emoji
-
-call deoplete#custom#set('emoji', 'filetypes', ['gitcommit', 'markdown', 'liquid'])
 
 
 " ## Gutentags
