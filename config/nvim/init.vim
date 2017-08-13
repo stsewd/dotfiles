@@ -96,8 +96,7 @@ Plug 'honza/vim-snippets'
 
 " ## Linters & Formatters
 
-Plug 'neomake/neomake'  " Syntax checking
-Plug 'dojoteef/neomake-autolint'  " Check syntax while inserting
+Plug 'w0rp/ale'  " Async lint engine
 Plug 'Chiel92/vim-autoformat'  " Easy code formatting
 
 Plug 'rhysd/vim-grammarous'  " Grammar checker
@@ -343,17 +342,18 @@ let g:echodoc_enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
-" ## Neomake
+" ## ALE
 
-let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+let g:ale_fixers = {
+    \ 'javascript': 'eslint'
+    \}
 
 
-" Neomake-Autolint
-
-let g:neomake_autolint_updatetime = 1000
-
-
-" Vim-grammarous
+" ## Vim-grammarous
 
 let g:grammarous#default_comments_only_filetypes = {
     \ '*': 1, 'help': 0, 'markdown': 0, 'liquid': 0
@@ -379,9 +379,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+
+" ale integration
+let g:airline#extensions#ale#enabled = 1
 
 
 " ## Emoji
