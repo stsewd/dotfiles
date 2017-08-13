@@ -137,6 +137,7 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 " ### JavaScript
 
 Plug 'carlitux/deoplete-ternjs'
+Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
@@ -340,6 +341,12 @@ let g:deoplete#sources#jedi#show_docstring = 1
 
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#docs = 1
+
+
+" ## Ternjs
+
+let g:tern#command = ['tern']
+let g:tern#arguments = ['--persistent']
 
 
 " ## Echodoc
