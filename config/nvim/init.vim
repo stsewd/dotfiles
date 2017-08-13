@@ -328,7 +328,14 @@ augroup deopleteCompleteDone
   autocmd CompleteDone * silent! pclose!
 augroup END
 
+" ### Jedi
+
 let g:deoplete#sources#jedi#show_docstring = 1
+
+" ### Ternjs
+
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#docs = 1
 
 
 " ## Echodoc
