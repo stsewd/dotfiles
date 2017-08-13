@@ -362,6 +362,7 @@ let g:grammarous#default_comments_only_filetypes = {
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
+
 " Ignored files
 let g:NERDTreeIgnore = [
     \ '\.pyc$', '^__pycache__$', '^venv$',
@@ -402,7 +403,7 @@ let g:ctrlp_open_new_file = 'r'
 " Ignored files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
