@@ -24,6 +24,7 @@ Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'brooth/far.vim'  " Find and replace
+Plug 'haya14busa/incsearch.vim'  " Better incsearch
 
 
 " ## Navigation Utilities
@@ -291,10 +292,6 @@ nnoremap <leader>q :bdelete<CR>
 " Hide current buffer
 nnoremap <leader>h :hide<CR>
 
-" Disable highlighting search with ctrl-c or escape
-nnoremap <esc> :noh<CR>
-nnoremap <C-c> :noh<CR>
-
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 
@@ -448,6 +445,22 @@ set updatetime=250  " Update each 250 mls
 
 let g:NERDSpaceDelims = 1  " Add spaces after comment delimiters by default
 let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace when uncommenting
+
+
+" ## Incsearch
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 
 " ## Emmet
