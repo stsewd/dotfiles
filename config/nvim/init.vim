@@ -506,6 +506,11 @@ augroup jsPrettyTemplateAu
 augroup END
 
 
+" ## Vim-json
+
+let g:vim_json_syntax_conceal = 0
+
+
 " ## Goyo & Limelight
 
 augroup goyoLimelightAu
