@@ -49,12 +49,10 @@ Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add ex
 " ## Notes
 
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
-Plug 'Hans-Guenter/TaskList.vim'  " TODO's finder
 
 
 " ## Text Objects & Motions
 
-Plug 'tommcdo/vim-exchange'  " Exchange operator support
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
 
 Plug 'kana/vim-textobj-user'  " Base
@@ -165,8 +163,6 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 " ### Python
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-Plug 'umutcoskun/vim-mule',  { 'for': 'python' }  " Django helper
-Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
 " ## TypeScript
