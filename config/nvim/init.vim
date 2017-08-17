@@ -57,9 +57,9 @@ Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
 
 Plug 'kana/vim-textobj-user'  " Base
 Plug 'jceb/vim-textobj-uri'  " URI text object (u)
-Plug 'kana/vim-textobj-indent'  " Indentation text object
+Plug 'kana/vim-textobj-indent'  " Indentation text object (i)
 
-Plug 'wellle/targets.vim'  " Operator pending mappings
+Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 
 
 " ## Git Integration
@@ -231,7 +231,7 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme NeoSolarized  " NeoSolarized, onedark
+colorscheme onedark  " NeoSolarized, onedark
 
 
 " ## Buffers
@@ -320,7 +320,7 @@ nnoremap gp :OpenPluginPage<CR>
 let g:deoplete#enable_at_startup = 1
 
 " Autoclose preview window
-augroup deopleteCompleteDone
+augroup deopleteCompleteDoneAu
   autocmd!
   autocmd CompleteDone * silent! pclose!
 augroup END
@@ -443,7 +443,7 @@ let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
 " Deactivate on completition, to slow
-augroup indent_line
+augroup indentLineAu
   autocmd!
   autocmd InsertEnter * IndentLinesDisable
   autocmd InsertLeave * IndentLinesEnable
@@ -492,7 +492,8 @@ let g:vim_markdown_no_default_key_mappings = 1
 
 
 " ## vim-js-pretty-template
-augroup js_pretty_template
+
+augroup jsPrettyTemplateAu
   autocmd!
   autocmd FileType typescript JsPreTmpl html
   autocmd FileType javascript JsPreTmpl html
@@ -501,7 +502,8 @@ augroup END
 
 
 " ## Goyo & Limelight
-augroup goyo
+
+augroup goyoLimelightAu
   autocmd!
   autocmd! User GoyoEnter Limelight
   autocmd! User GoyoLeave Limelight!
