@@ -132,6 +132,10 @@ Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
 Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
+" ### Java
+
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
+
 " ### JavaScript
 
 Plug 'carlitux/deoplete-ternjs'
@@ -372,11 +376,20 @@ let g:ale_fixers = {
     \}
 
 
+" ## vim-javacomplete2
+
+augroup vimJavaCompleteAu
+  autocmd!
+  autocmd FileType java setlocal omnifunc=javacomplete#Complete
+augroup END
+
+
 " ## Vim-grammarous
 
 let g:grammarous#default_comments_only_filetypes = {
     \ '*': 1, 'help': 0, 'markdown': 0, 'liquid': 0
     \}
+
 
 " ## NerdTree
 
