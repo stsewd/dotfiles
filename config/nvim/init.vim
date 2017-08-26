@@ -117,6 +117,8 @@ Plug 'junegunn/limelight.vim'  " Focus blocks
 
 " ## Languages
 
+Plug 'sheerun/vim-polyglot'
+
 " ### CSS
 
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
