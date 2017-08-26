@@ -121,18 +121,12 @@ Plug 'sheerun/vim-polyglot'
 
 " ### CSS
 
-Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'ap/vim-css-color', { 'for': 'css' }
-
-" ### Docker
-
-Plug 'ekalinin/dockerfile.vim', { 'for': 'Dockerfile' }
 
 " ### HTML
 
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
-Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Java
@@ -143,8 +137,6 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'elzr/vim-json', { 'for': 'json' }
 
 " ### Jekyll
 
@@ -158,7 +150,6 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " ### Markdown
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
@@ -175,7 +166,6 @@ Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 " ## TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Quramy/vim-js-pretty-template'
 
 " ## Vim
@@ -525,11 +515,6 @@ augroup jsPrettyTemplateAu
   autocmd FileType javascript JsPreTmpl html
   autocmd FileType typescript syn clear foldBraces
 augroup END
-
-
-" ## Vim-json
-
-let g:vim_json_syntax_conceal = 0
 
 
 " ## Goyo & Limelight
