@@ -406,6 +406,7 @@ let g:NERDTreeAutoDeleteBuffer = 1
 
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
+let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
