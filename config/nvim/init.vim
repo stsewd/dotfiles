@@ -65,7 +65,7 @@ Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 
 " ## Git Integration
 
-Plug 'tpope/vim-fugitive'  " Git wrapper for vim
+Plug 'tpope/vim-fugitive'  " Git wrapper
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
