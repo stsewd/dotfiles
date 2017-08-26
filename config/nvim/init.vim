@@ -422,16 +422,15 @@ let g:gutentags_ctags_tagfile = '.tags'
 
 " ## CtrlP
 
-let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_open_new_file = 'r'
 
 " Ignored files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+    \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'some_bad_symbolic_links',
+    \ }
 
 " Ignore files on .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
