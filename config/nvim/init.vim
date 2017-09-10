@@ -18,7 +18,6 @@ Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'matze/vim-move'  " Move lines with Alt+{jk}
 Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'google/vim-searchindex'  " Show number of search
-Plug 'vim-scripts/matchit.zip'  " Extend % for matching HTML tags
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
