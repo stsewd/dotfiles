@@ -25,6 +25,9 @@ Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'brooth/far.vim'  " Find and replace
 Plug 'haya14busa/incsearch.vim'  " Better incsearch
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
+Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
+Plug 'tpope/vim-eunuch'  " Command line utilities
+Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 
 " ## Navigation Utilities
@@ -37,10 +40,6 @@ Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 
 
 " ## Other Utilities
-
-Plug 'tpope/vim-eunuch'  " Command line utilities
-Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
-Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
