@@ -25,6 +25,7 @@ Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'brooth/far.vim'  " Find and replace
 Plug 'haya14busa/incsearch.vim'  " Better incsearch
+Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 
 
 " ## Navigation Utilities
@@ -533,6 +534,11 @@ augroup goyoLimelightAu
   autocmd! User GoyoEnter Limelight
   autocmd! User GoyoLeave Limelight!
 augroup END
+
+
+" ## Highlightedyank
+
+let g:highlightedyank_highlight_duration = 250
 
 
 " ## Startify
