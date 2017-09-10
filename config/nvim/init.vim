@@ -65,7 +65,7 @@ Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 
 " ## Git Integration
 
-Plug 'tpope/vim-fugitive'  " Git wrapper for vim
+Plug 'tpope/vim-fugitive'  " Git wrapper
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
@@ -117,20 +117,16 @@ Plug 'junegunn/limelight.vim'  " Focus blocks
 
 " ## Languages
 
+Plug 'sheerun/vim-polyglot'
+
 " ### CSS
 
-Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'ap/vim-css-color', { 'for': 'css' }
-
-" ### Docker
-
-Plug 'ekalinin/dockerfile.vim', { 'for': 'Dockerfile' }
 
 " ### HTML
 
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
-Plug 'othree/html5.vim'  " html5 completition
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Java
@@ -141,8 +137,6 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'elzr/vim-json', { 'for': 'json' }
 
 " ### Jekyll
 
@@ -156,7 +150,6 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " ### Markdown
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
@@ -170,10 +163,13 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
+" ## Text
+
+Plug 'lervag/vimtex', { 'for': 'tex' }
+
 " ## TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Quramy/vim-js-pretty-template'
 
 " ## Vim
@@ -316,6 +312,11 @@ nnoremap gp :OpenPluginPage<CR>
 " # Plugins Settings
 " ..........................................................
 
+" ## Polyglot
+
+let g:polyglot_disabled = ['tex']  " Use vimtex
+
+
 " ## Deoplete
 
 let g:deoplete#enable_at_startup = 1
@@ -406,6 +407,7 @@ let g:NERDTreeAutoDeleteBuffer = 1
 
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
+let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
@@ -421,16 +423,15 @@ let g:gutentags_ctags_tagfile = '.tags'
 
 " ## CtrlP
 
-let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_open_new_file = 'r'
 
 " Ignored files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+    \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'some_bad_symbolic_links',
+    \ }
 
 " Ignore files on .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -523,11 +524,6 @@ augroup jsPrettyTemplateAu
   autocmd FileType javascript JsPreTmpl html
   autocmd FileType typescript syn clear foldBraces
 augroup END
-
-
-" ## Vim-json
-
-let g:vim_json_syntax_conceal = 0
 
 
 " ## Goyo & Limelight
