@@ -138,7 +138,6 @@ Plug 'ternjs/tern_for_vim'
 
 " ### Jekyll
 
-Plug 'tpope/vim-liquid'
 Plug 'parkr/vim-jekyll'
 
 " ### Jinja2
