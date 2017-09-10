@@ -163,6 +163,10 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
+" ## Text
+
+Plug 'lervag/vimtex', { 'for': 'tex' }
+
 " ## TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
@@ -307,6 +311,11 @@ nnoremap gp :OpenPluginPage<CR>
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
+
+" ## Polyglot
+
+let g:polyglot_disabled = ['tex']  " Use vimtex
+
 
 " ## Deoplete
 
