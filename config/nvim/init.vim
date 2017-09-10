@@ -31,7 +31,6 @@ Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
-Plug 'easymotion/vim-easymotion'  " Move quickly on vim
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
