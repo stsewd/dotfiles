@@ -158,6 +158,7 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 " ### Python
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
 " ## Text
@@ -331,6 +332,7 @@ call deoplete#custom#set('emoji', 'filetypes', ['gitcommit', 'markdown', 'liquid
 " ### Jedi
 
 let g:deoplete#sources#jedi#show_docstring = 1
+let g:jedi#completions_enabled = 0  " Already provided by deoplete
 
 " ### Ternjs
 
