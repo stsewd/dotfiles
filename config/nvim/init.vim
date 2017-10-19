@@ -437,6 +437,11 @@ map g/ <Plug>(incsearch-stay)
 let g:incsearch#auto_nohlsearch = 1
 
 
+" ## FZF
+
+let g:fzf_command_prefix = 'Fz'
+
+
 " ## Emmet
 
 let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
