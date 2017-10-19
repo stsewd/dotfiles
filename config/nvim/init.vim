@@ -32,8 +32,8 @@ Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 " ## Navigation Utilities
 
-Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
-Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
