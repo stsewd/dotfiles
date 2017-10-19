@@ -111,3 +111,5 @@ alias ez='vim ~/.zshrc'
 # Java
 export JAVA_HOME='/usr/java/default'
 
+# Respect .gitignore using ag
+export FZF_DEFAULT_COMMAND='ag -g ""'
