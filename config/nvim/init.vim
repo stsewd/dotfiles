@@ -32,8 +32,8 @@ Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 " ## Navigation Utilities
 
-Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
-Plug 'fisadev/vim-ctrlp-cmdpalette'  " Command palette
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
@@ -289,10 +289,6 @@ nnoremap <leader>h :hide<CR>
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 
-" Active ctrlp-command-palette
-nnoremap <C-A-p> :CtrlPCmdPalette<CR>
-vnoremap <C-A-p> :CtrlPCmdPalette<CR>
-
 " Insert new line on normal mode with Alt+Enter
 nnoremap <M-Enter> o<Esc>
 
@@ -421,22 +417,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:gutentags_ctags_tagfile = '.tags'
 
 
-" ## CtrlP
-
-let g:ctrlp_open_new_file = 'r'
-
-" Ignored files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ 'link': 'some_bad_symbolic_links',
-    \ }
-
-" Ignore files on .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-
 " ## GitGutter
 
 set updatetime=250  " Update each 250 mls
@@ -455,6 +435,17 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 let g:incsearch#auto_nohlsearch = 1
+
+
+" ## FZF
+
+let g:fzf_command_prefix = 'Fz'
+
+nnoremap <C-p>p :FzFiles<CR>
+nnoremap <C-p>l :FzBLines<CR>
+nnoremap <C-p>b :FzBuffers<CR>
+nnoremap <C-p>c :FzCommands<CR>
+nnoremap <C-p>s :FzSnippets<CR>
 
 
 " ## Emmet
