@@ -147,6 +147,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " ### Markdown
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
+Plug 'plasticboy/vim-markdown'
 Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
