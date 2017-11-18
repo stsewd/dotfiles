@@ -162,16 +162,16 @@ Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 
-" ## Text
+" ### Text
 
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
-" ## TypeScript
+" ### TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
 Plug 'Quramy/vim-js-pretty-template'
 
-" ## Vim
+" ### Vim
 
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
@@ -309,7 +309,10 @@ nnoremap gp :OpenPluginPage<CR>
 
 " ## Polyglot
 
-let g:polyglot_disabled = ['tex']  " Use vimtex
+let g:polyglot_disabled = [
+    \ 'tex',
+    \ 'markdown'
+    \]
 
 
 " ## Deoplete
