@@ -126,7 +126,7 @@ Plug 'ap/vim-css-color', { 'for': 'css' }
 " ### HTML
 
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'gregsexton/matchtag'  " Match html tags (colorize tags)
+Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Java
