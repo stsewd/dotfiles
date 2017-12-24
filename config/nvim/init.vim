@@ -269,6 +269,9 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 " Esc
 inoremap jk <esc>
 
+" Clear highlighted
+nnoremap <C-l> :nohlsearch<CR>
+
 " Copy to clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
