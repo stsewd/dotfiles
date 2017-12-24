@@ -60,6 +60,8 @@ Plug 'kana/vim-textobj-indent'  " Indentation text object (i)
 
 Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 
+Plug 'justinmk/vim-sneak'  " s
+
 
 " ## Git Integration
 
@@ -541,6 +543,12 @@ augroup END
 " ## Highlightedyank
 
 let g:highlightedyank_highlight_duration = 250
+
+
+" ## Sneak
+
+let g:sneak#label = 1  " Show labels
+let g:sneak#use_ic_scs = 1  " Case insensitive
 
 
 " ## Startify
