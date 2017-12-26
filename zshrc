@@ -97,22 +97,12 @@ export EDITOR='nvim'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-# Alises for nvim
-alias vim="nvim"
-alias vi="nvim"
-alias oldvim="vim"
-
 # Aliases for tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-
-# Convenience aliases for editing configs
-alias ev='vim ~/.vimrc'
-alias et='vim ~/.tmux.conf'
-alias ez='vim ~/.zshrc'
 
 # Java
 export JAVA_HOME='/usr/java/default'
