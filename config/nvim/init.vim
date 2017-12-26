@@ -554,6 +554,10 @@ let g:highlightedyank_highlight_duration = 250
 let g:sneak#label = 1  " Show labels
 let g:sneak#use_ic_scs = 1  " Case insensitive
 
+" Always show labels
+nmap s <Plug>SneakLabel_s
+nmap S <Plug>SneakLabel_S
+
 
 " ## Startify
 
