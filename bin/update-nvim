@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo Updating Neovim
+
+wget -O ~/bin/nvim.appimage \
+  https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+
+echo Neovim updated!
