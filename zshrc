@@ -109,3 +109,11 @@ export JAVA_HOME='/usr/java/default'
 
 # Respect .gitignore using ag
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Integration with fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+export PATH="/home/stsewd/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
