@@ -238,7 +238,7 @@ set inccommand=nosplit
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-set background=light
+set background=dark
 colorscheme onedark  " NeoSolarized, onedark
 
 
