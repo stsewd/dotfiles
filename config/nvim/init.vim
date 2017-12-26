@@ -66,6 +66,7 @@ Plug 'justinmk/vim-sneak'  " s
 " ## Git Integration
 
 Plug 'tpope/vim-fugitive'  " Git wrapper
+Plug 'junegunn/gv.vim'  " Git log
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
