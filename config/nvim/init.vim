@@ -43,6 +43,7 @@ Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
+Plug 'kassio/neoterm'  " Terminal wrapper
 
 
 " ## Notes
@@ -559,6 +560,18 @@ let g:sneak#use_ic_scs = 1  " Case insensitive
 " Always show labels
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
+
+
+" ## Neoterm
+
+" Open a terminal
+nnoremap <silent> <leader>tt :call neoterm#toggle()<CR>
+" Clear terminal
+nnoremap <silent> <leader>tl :call neoterm#clear()<CR>
+" Kills the current job (send a <c-c>)
+nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
+"Close terminal and delete buffer
+nnoremap <silent> <leader>tc :Tclose!<CR>
 
 
 " ## Startify
