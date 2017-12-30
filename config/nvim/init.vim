@@ -392,7 +392,8 @@ augroup END
 " ## Vim-grammarous
 
 let g:grammarous#default_comments_only_filetypes = {
-    \ '*': 1, 'help': 0, 'markdown': 0, 'liquid': 0
+    \ '*': 1, 'help': 0, 'markdown': 0,
+    \ 'liquid': 0, 'rst': 0
     \}
 
 
