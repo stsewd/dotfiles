@@ -413,6 +413,9 @@ let g:NERDTreeIgnore = [
 let g:NERDTreeMinimalUI = 1  " Hide help text
 let g:NERDTreeAutoDeleteBuffer = 1
 
+" Too slow when scrolling
+let g:NERDTreeLimitedSyntax = 1
+
 
 " ## Airline
 
