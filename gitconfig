@@ -6,4 +6,9 @@
 
 [core]
 	excludesfile = ~/.gitignore
-	editor = nvim
+  editor = nvim
+
+[alias]
+# sudo dnf install git-daemon
+# git serve path/to/serve
+serve = !sh -c 'git daemon --verbose --export-all --reuseaddr --base-path=$1' -
