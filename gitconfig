@@ -1,12 +1,13 @@
 [user]
-	name = Santos Gallegos
-	email = santos_g@outlook.com
+name = Santos Gallegos
+email = santos_g@outlook.com
+
 [push]
-	default = simple
+default = simple
 
 [core]
-	excludesfile = ~/.gitignore
-  editor = nvim
+excludesfile = ~/.gitignore
+editor = nvim
 
 [alias]
 # sudo dnf install git-daemon
