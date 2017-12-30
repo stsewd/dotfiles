@@ -566,6 +566,7 @@ nnoremap gp :OpenPluginPage<CR>
 
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
 
 
 " ## Neoterm
