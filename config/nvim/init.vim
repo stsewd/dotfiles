@@ -305,15 +305,6 @@ tnoremap <Esc> <C-\><C-n>
 " Insert new line on normal mode with Alt+Enter
 nnoremap <M-Enter> o<Esc>
 
-" Toggle nerdtree with F2
-map <F2> :NERDTreeToggle<CR>
-
-" Toggle indentline with F3
-map <F3> :IndentLinesToggle<CR>
-
-" View plugin page
-nnoremap gp :OpenPluginPage<CR>
-
 
 " ..........................................................
 " # Plugins Settings
@@ -416,6 +407,9 @@ let g:NERDTreeAutoDeleteBuffer = 1
 
 " Too slow when scrolling
 let g:NERDTreeLimitedSyntax = 1
+
+" Toggle nerdtree with F2
+map <F2> :NERDTreeToggle<CR>
 
 
 " ## Airline
@@ -560,6 +554,18 @@ let g:sneak#use_ic_scs = 1  " Case insensitive
 " Always show labels
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
+
+
+" ## OpenPluginPage
+
+" View plugin page
+nnoremap gp :OpenPluginPage<CR>
+
+
+" ## Fugitive
+
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
 
 
 " ## Neoterm
