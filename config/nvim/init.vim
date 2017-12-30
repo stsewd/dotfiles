@@ -567,6 +567,9 @@ nnoremap <leader>gp :Gpush<CR>
 
 " ## Neoterm
 
+let g:neoterm_autojump = 1
+let g:neoterm_autoinsert = 1
+
 " Open/close a terminal
 nnoremap <silent> <leader>tt :Ttoggle<CR>
 " Send current selection to REPL
