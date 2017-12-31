@@ -109,6 +109,7 @@ Plug 'iCyMind/NeoSolarized'  " Solarized theme
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on nerdtree
 Plug 'joshdick/onedark.vim'
+Plug 'trevordmiller/nova-vim'
 
 
 " ## Reading & Focus
@@ -236,7 +237,7 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=dark
-colorscheme onedark  " NeoSolarized, onedark
+colorscheme nova  " NeoSolarized, onedark, nova
 
 
 " ## Buffers
@@ -475,7 +476,12 @@ let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
 
 " ## Indentline
 
-let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
+" Doesn't appear on nova colorscheme
+if g:colors_name ==? 'nova'
+  let g:indentLine_setColors = 0
+endif
+
+let g:indentLine_fileTypeExclude = ['text', 'help', 'rst']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
 " Deactivate on completition, to slow
