@@ -29,3 +29,8 @@ Session.vim
 .tags
 tags
 
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
