@@ -576,7 +576,9 @@ nnoremap gp :OpenPluginPage<CR>
 " ## Fugitive
 
 nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <leader>gp :Gpush<CR>
 
 
