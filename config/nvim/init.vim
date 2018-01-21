@@ -161,6 +161,7 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
 Plug 'jmcomets/vim-pony/'
