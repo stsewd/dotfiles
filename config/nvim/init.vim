@@ -308,9 +308,6 @@ nnoremap <leader>h :hide<CR>
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 
-" Insert new line on normal mode with Alt+Enter
-nnoremap <M-Enter> o<Esc>
-
 
 " ..........................................................
 " # Plugins Settings
