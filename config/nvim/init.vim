@@ -108,7 +108,6 @@ Plug 'rhysd/vim-grammarous'  " Grammar checker
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on nerdtree
 Plug 'iCyMind/NeoSolarized'  " Solarized theme
-Plug 'joshdick/onedark.vim'
 Plug 'trevordmiller/nova-vim'
 
 
@@ -237,8 +236,8 @@ set inccommand=nosplit
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-set background=dark
-colorscheme nova  " NeoSolarized, onedark, nova
+set background=light
+colorscheme nova  " NeoSolarized, nova
 
 
 " ## Buffers
