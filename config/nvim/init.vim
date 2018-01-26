@@ -144,6 +144,10 @@ Plug 'ternjs/tern_for_vim'
 
 Plug 'parkr/vim-jekyll'
 
+" ### Log
+
+Plug 'dzeban/vim-log-syntax'
+
 " ### Markdown
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
