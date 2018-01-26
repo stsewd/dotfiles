@@ -273,6 +273,8 @@ let g:mapleader = ' '
 " Save
 nnoremap <leader>s :w<CR>
 
+inoremap wq <ESC>:wq<CR>
+
 " Edit init.vim
 nnoremap <leader>e :e $MYVIMRC<CR>
 
