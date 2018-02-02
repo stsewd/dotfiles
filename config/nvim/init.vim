@@ -281,6 +281,7 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 
 " Esc
 inoremap jk <esc>
+tmap jk <esc>
 
 " Clear highlighted
 nnoremap <C-l> :nohlsearch<CR>
