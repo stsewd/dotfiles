@@ -38,6 +38,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buffer
 
 
 " ## Other Utilities
@@ -309,7 +310,7 @@ nnoremap <leader>l :bnext<CR>
 nnoremap <leader>j :bprevious<CR>
 
 " Close current buffer
-nnoremap <leader>q :bdelete<CR>
+nnoremap <leader>Q :bdelete<CR>
 
 " Hide current buffer
 nnoremap <leader>h :hide<CR>
@@ -610,12 +611,19 @@ nnoremap <silent> <leader>tc :Tclose!<CR>
 
 let g:pickachu_default_app = 'date'
 
+
 " ## Spotify
 
 nnoremap <C-s>n :Spotify next<CR>
 nnoremap <C-s>p :Spotify prev<CR>
 nnoremap <C-s>s :Spotify play/pause<CR>
 nnoremap <C-s>c :Spotify status<CR>
+
+
+" ## Sayonara
+
+nnoremap <silent> <leader>q :Sayonara<CR>
+
 
 " ## Startify
 
