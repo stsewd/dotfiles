@@ -93,7 +93,7 @@ setopt RM_STAR_WAIT
 # Neovim alias for appimage
 alias nvim='nvim.appimage'
 
-export EDITOR='nvim'
+export EDITOR='nvim.appimage'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
