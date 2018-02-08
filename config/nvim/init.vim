@@ -171,7 +171,7 @@ Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'stsewd/isort.nvim', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
-Plug 'jmcomets/vim-pony/'
+Plug 'jmcomets/vim-pony'
 
 " ### reStructuredText
 
