@@ -9,7 +9,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " ## General Utilities
 
 Plug 'mhinz/vim-startify'  " Show a start screen
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Tree explorer
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'DougBeney/pickachu'  " Picker color/date/files
 
@@ -25,6 +24,7 @@ Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'brooth/far.vim'  " Find and replace
 Plug 'haya14busa/incsearch.vim'  " Better incsearch
+Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
@@ -33,18 +33,21 @@ Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 " ## Navigation Utilities
 
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Tree explorer
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
+Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
+Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'majutsushi/tagbar'  " Display tags in a window
-Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
+
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
+Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buffer
 
 
 " ## Other Utilities
 
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
-Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
 Plug 'kassio/neoterm'  " Terminal wrapper
 Plug 'stsewd/spotify.nvim'  " Control Spotify
 
@@ -72,7 +75,6 @@ Plug 'justinmk/vim-sneak'  " s
 Plug 'tpope/vim-fugitive'  " Git wrapper
 Plug 'junegunn/gv.vim'  " Git log
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
-Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
 
 " ## Github Integration
@@ -81,7 +83,7 @@ Plug 'tyru/open-browser.vim'  " Required by open-browser-github
 Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
 
 
-" ## Autocompletition
+" ## Autocompletion
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'  " Provides completitions from syntax
@@ -108,7 +110,7 @@ Plug 'rhysd/vim-grammarous'  " Grammar checker
 " ## Themes & Color Schemes
 
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
-Plug 'ryanoasis/vim-devicons'  " Show icons on nerdtree
+Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'iCyMind/NeoSolarized'  " Solarized theme
 Plug 'trevordmiller/nova-vim'
 
