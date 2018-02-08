@@ -102,7 +102,6 @@ Plug 'honza/vim-snippets'
 
 Plug 'w0rp/ale'  " Async lint engine
 Plug 'Chiel92/vim-autoformat'  " Easy code formatting
-
 Plug 'rhysd/vim-grammarous'  " Grammar checker
 
 
@@ -277,8 +276,6 @@ let g:mapleader = ' '
 " Save
 nnoremap <leader>s :w<CR>
 
-inoremap wq <ESC>:wq<CR>
-
 " Edit init.vim
 nnoremap <leader>e :e $MYVIMRC<CR>
 
@@ -303,17 +300,9 @@ vnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>P "+P
 
-" Move to the next buffer
+" Move to the next/prev buffer
 nnoremap <leader>l :bnext<CR>
-
-" Move to the previous buffer
 nnoremap <leader>j :bprevious<CR>
-
-" Close current buffer
-nnoremap <leader>Q :bdelete<CR>
-
-" Hide current buffer
-nnoremap <leader>h :hide<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
