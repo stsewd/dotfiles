@@ -45,6 +45,7 @@ Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
 Plug 'kassio/neoterm'  " Terminal wrapper
+Plug 'stsewd/spotify.nvim'  " Control Spotify
 
 
 " ## Notes
@@ -608,6 +609,13 @@ nnoremap <silent> <leader>tc :Tclose!<CR>
 " ## Pickachu
 
 let g:pickachu_default_app = 'date'
+
+" ## Spotify
+
+nnoremap <C-s>n :Spotify next<CR>
+nnoremap <C-s>p :Spotify prev<CR>
+nnoremap <C-s>s :Spotify play/pause<CR>
+nnoremap <C-s>c :Spotify status<CR>
 
 " ## Startify
 
