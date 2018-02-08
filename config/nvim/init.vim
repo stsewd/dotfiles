@@ -598,8 +598,8 @@ let g:pickachu_default_app = 'date'
 
 " ## Spotify
 
-nnoremap <C-s>n :Spotify next<CR>
-nnoremap <C-s>p :Spotify prev<CR>
+nnoremap <C-s>j :Spotify next<CR>
+nnoremap <C-s>k :Spotify prev<CR>
 nnoremap <C-s>s :Spotify play/pause<CR>
 nnoremap <C-s>c :Spotify status<CR>
 
