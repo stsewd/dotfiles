@@ -49,12 +49,8 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 " ## Other Utilities
 
 Plug 'kassio/neoterm'  " Terminal wrapper
-Plug 'stsewd/spotify.nvim'  " Control Spotify
-
-
-" ## Notes
-
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
+Plug 'stsewd/spotify.nvim'  " Control Spotify
 
 
 " ## Text Objects & Motions
