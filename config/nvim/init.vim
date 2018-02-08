@@ -11,6 +11,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Tree explorer
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
+Plug 'DougBeney/pickachu'  " Picker color/date/files
 
 
 " ## Editor Utilities
@@ -603,6 +604,10 @@ nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
 " Close terminal and delete buffer
 nnoremap <silent> <leader>tc :Tclose!<CR>
 
+
+" ## Pickachu
+
+let g:pickachu_default_app = 'date'
 
 " ## Startify
 
