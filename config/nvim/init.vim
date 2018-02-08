@@ -343,7 +343,7 @@ augroup END
 
 " ### Emoji
 
-call deoplete#custom#set('emoji', 'filetypes', ['gitcommit', 'markdown', 'liquid'])
+call deoplete#custom#source('emoji', 'filetypes', ['gitcommit', 'markdown', 'liquid'])
 
 " ### Jedi
 
