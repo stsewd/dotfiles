@@ -205,7 +205,6 @@ set noshowmode
 
 set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
-set sidescroll=1
 
 set diffopt+=vertical  " Always use vertical diffs
 
