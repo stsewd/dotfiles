@@ -121,6 +121,10 @@ Plug 'junegunn/limelight.vim'  " Focus blocks
 
 Plug 'sheerun/vim-polyglot'
 
+" ### C/C++
+
+Plug 'tweekmonster/deoplete-clang2'
+
 " ### CSS
 
 Plug 'ap/vim-css-color', { 'for': 'css' }
