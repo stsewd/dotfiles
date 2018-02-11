@@ -39,7 +39,7 @@ Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add ex
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'  " General fuzyfinder
+Plug 'junegunn/fzf.vim'  " General fuzzy finder
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'majutsushi/tagbar'  " Display tags in a window
