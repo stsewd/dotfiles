@@ -51,7 +51,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 Plug 'janko-m/vim-test' " Tests execution
 Plug 'kassio/neoterm'  " Terminal wrapper
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
-Plug 'stsewd/spotify.nvim'  " Control Spotify
+Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
 
 
 " ## Text Objects & Motions
@@ -170,7 +170,7 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
-Plug 'stsewd/isort.nvim', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
+Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
 Plug 'jmcomets/vim-pony'
@@ -191,7 +191,7 @@ Plug 'Quramy/vim-js-pretty-template'
 " ### Vim
 
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
-Plug 'stsewd/open-plugin-page.nvim', { 'for': 'vim', 'do': ':UpdateRemotePlugins' }
+Plug 'stsewd/open-plugin-page.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/vader.vim', { 'for': 'vim' }
 
 
