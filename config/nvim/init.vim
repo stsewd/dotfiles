@@ -338,6 +338,10 @@ call deoplete#custom#source(
     \ 'emoji',
     \ 'filetypes', ['gitcommit', 'markdown', 'liquid']
     \)
+call deoplete#custom#source(
+    \ 'emoji',
+    \ 'min_pattern_length', 0
+    \)
 
 " ### Jedi
 
