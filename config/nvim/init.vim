@@ -48,6 +48,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 
 " ## Other Utilities
 
+Plug 'janko-m/vim-test' " Tests execution
 Plug 'kassio/neoterm'  " Terminal wrapper
 Plug 'vimwiki/vimwiki'  " Personal wiki in vim
 Plug 'stsewd/spotify.nvim'  " Control Spotify
@@ -593,6 +594,11 @@ vnoremap <silent> <leader>tt :TREPLSendSelection<CR>
 nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
 " Close terminal and delete buffer
 nnoremap <silent> <leader>tc :Tclose!<CR>
+
+
+" ## Vim-test
+
+let g:test#strategy = 'neoterm'
 
 
 " ## Pickachu
