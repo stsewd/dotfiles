@@ -630,6 +630,5 @@ let g:startify_files_number = 5  " Show just 5 files on MRU
 let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks', 'commands']
 
 let g:startify_session_persistence = 1  " Autosave sessions
-let g:startify_session_sort = 1  " List sessions by modification time
 
 let g:startify_custom_header = []  " Disable header
