@@ -177,7 +177,7 @@ Plug 'jmcomets/vim-pony'
 
 " ### reStructuredText
 
-Plug 'Rykka/riv.vim'
+Plug 'Rykka/riv.vim', { 'for': 'rst' }
 
 " ### Text
 
