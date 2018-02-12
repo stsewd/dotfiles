@@ -468,6 +468,7 @@ nnoremap <C-p>p :FzFiles<CR>
 nnoremap <C-p>l :FzBLines<CR>
 nnoremap <C-p>b :FzBuffers<CR>
 nnoremap <C-p>a :FzAg<CR>
+nnoremap <C-p>o :FzHistory<CR>
 nnoremap <C-p>c :FzCommands<CR>
 
 
