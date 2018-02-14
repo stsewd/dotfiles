@@ -286,7 +286,7 @@ inoremap jk <esc>
 tmap jk <esc>
 
 " Clear highlighted
-nnoremap <C-l> :nohlsearch<CR>
+nnoremap <silent> <C-l> :nohlsearch<CR>
 
 " Copy to clipboard
 vnoremap <leader>y "+y
