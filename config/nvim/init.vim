@@ -484,14 +484,18 @@ if g:colors_name ==? 'nova'
   hi ColorColumn guibg=#556873  " Show ColorColumn
 endif
 
-let g:indentLine_fileTypeExclude = ['text', 'help', 'rst', 'startify']
-let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
+let g:indentLine_fileTypeExclude = ['text', 'help', 'rst', 'startify', 'nerdtree']
+let g:indentLine_bufTypeExclude = ['terminal']
 
 " Deactivate on completition, to slow
 augroup indentLineAu
   autocmd!
   autocmd InsertEnter * IndentLinesDisable
-  autocmd InsertLeave * IndentLinesEnable
+  autocmd InsertLeave *
+        \ if index(g:indentLine_fileTypeExclude, &filetype) < 0
+        \   || index(g:indentLine_bufTypeExclude, &buftype) < 0 
+        \ | execute 'silent IndentLinesEnable' | 
+        \ endif
 augroup END
 
 
