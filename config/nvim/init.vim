@@ -225,7 +225,7 @@ set foldlevelstart=99  " Don't fold when open buffer
 
 " ## Indentation
 
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set softtabstop=2
 set shiftround
