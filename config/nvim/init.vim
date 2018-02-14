@@ -437,7 +437,6 @@ let g:airline#extensions#ale#enabled = 1
 " ## Gutentags
 
 let g:gutentags_enabled = 0  " Too slow on big projects
-let g:gutentags_ctags_tagfile = '.tags'
 
 
 " ## GitGutter
