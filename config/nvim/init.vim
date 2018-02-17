@@ -464,12 +464,12 @@ let g:incsearch#auto_nohlsearch = 1
 
 let g:fzf_command_prefix = 'Fz'
 
-nnoremap <C-p>p :FzFiles<CR>
-nnoremap <C-p>l :FzBLines<CR>
-nnoremap <C-p>b :FzBuffers<CR>
-nnoremap <C-p>a :FzAg<CR>
-nnoremap <C-p>o :FzHistory<CR>
-nnoremap <C-p>c :FzCommands<CR>
+nnoremap <C-p> :FzFiles<CR>
+nnoremap <C-f> :FzBuffers<CR>
+nnoremap <C-g> :FzAg<CR>
+nnoremap <M-l> :FzBLines<CR>
+nnoremap <M-o> :FzHistory<CR>
+nnoremap <M-c> :FzCommands<CR>
 
 
 " ## Emmet
