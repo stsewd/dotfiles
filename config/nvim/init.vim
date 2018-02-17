@@ -125,6 +125,7 @@ Plug 'sheerun/vim-polyglot'
 " ### C/C++
 
 Plug 'tweekmonster/deoplete-clang2'
+Plug 'kana/vim-altr'
 
 " ### CSS
 
@@ -625,6 +626,11 @@ nnoremap <C-s>c :Spotify status<CR>
 " ## Sayonara
 
 nnoremap <silent> <leader>q :Sayonara<CR>
+
+
+" ## vim-altr
+
+nmap <M-a> <Plug>(altr-forward)
 
 
 " ## Startify
