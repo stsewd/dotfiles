@@ -482,7 +482,6 @@ let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
 " Doesn't appear on nova colorscheme
 if g:colors_name ==? 'nova'
   let g:indentLine_setColors = 0
-  hi ColorColumn guibg=#556873  " Show ColorColumn
 endif
 
 let g:indentLine_fileTypeExclude = ['text', 'help', 'rst', 'startify', 'nerdtree']
