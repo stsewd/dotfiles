@@ -8,7 +8,7 @@ wget -O ~/bin/nvim.appimage \
 # The last command was ok?
 if [ $? -eq 0 ]; then
   echo "Neovim updated!"
-  nvim --version | head -n 1
+  nvim.appimage --version | head -n 1
 else
   echo "Something bad happened :("
   echo "Make sure Neovim isn't opened."
