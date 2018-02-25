@@ -493,7 +493,7 @@ augroup indentLineAu
   autocmd InsertEnter * IndentLinesDisable
   autocmd InsertLeave *
         \ if index(g:indentLine_fileTypeExclude, &filetype) < 0
-        \   || index(g:indentLine_bufTypeExclude, &buftype) < 0 
+        \   && index(g:indentLine_bufTypeExclude, &buftype) < 0 
         \ | execute 'silent IndentLinesEnable' | 
         \ endif
 augroup END
