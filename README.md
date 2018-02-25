@@ -5,20 +5,20 @@
 
 ## Neovim
 
-![](https://cloud.githubusercontent.com/assets/4975310/25513658/734edbd4-2b9c-11e7-80f1-6543827bda2b.png)
-![](https://cloud.githubusercontent.com/assets/4975310/25776767/c861a5b4-328d-11e7-8fb2-c7aed5337bdd.png)
-
+![1](https://user-images.githubusercontent.com/4975310/36638015-50c4a3ec-19b6-11e8-9591-397d674c8099.png)
+![2](https://user-images.githubusercontent.com/4975310/36638014-50a6f11c-19b6-11e8-8304-2aca8c5a1d94.png)
+![3](https://user-images.githubusercontent.com/4975310/36638013-50869b1a-19b6-11e8-9143-1ed04a06d677.png)
 
 ### Installation
 
-- First [install neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- First [install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Make a symbolic link (or just copy the folder) of `config/nvim` to `~/.config/nvim`
 - Install [vim plug](https://github.com/junegunn/vim-plug#neovim) (plugin manager)
-- Install a [pathched font](https://github.com/ryanoasis/nerd-fonts).
-  - [The one I use](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
+- Install a [patched font](https://github.com/ryanoasis/nerd-fonts).
+  - [The one I use](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraMono/Regular/complete/Fura%20Mono%20Regular%20Nerd%20Font%20Complete.otf)
 - Select the previous font on your terminal configurations
-- Install [one dark gnome terminal](https://github.com/denysdovhan/one-gnome-terminal#instalation) (only if you want to use that theme with neovim)
-- Open neovim and do `:PlugInstall`
+- Install [nova for gnome terminal](https://github.com/agarrharr/nova-gnome-terminal#installation) (only if you want to use that theme with Neovim)
+- Open Neovim and do `:PlugInstall`
    - All the plugins are downloaded to `~/.local/share/nvim/plugged`
 
 ### Installing extras
