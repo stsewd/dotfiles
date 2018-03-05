@@ -136,10 +136,6 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
-" ### Java
-
-Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
-
 " ### JavaScript
 
 Plug 'carlitux/deoplete-ternjs'
@@ -376,14 +372,6 @@ let g:ale_fixers = {
     \ 'javascript': 'eslint',
     \ 'python': 'autopep8'
     \}
-
-
-" ## vim-javacomplete2
-
-augroup vimJavaCompleteAu
-  autocmd!
-  autocmd FileType java setlocal omnifunc=javacomplete#Complete
-augroup END
 
 
 " ## Vim-grammarous
