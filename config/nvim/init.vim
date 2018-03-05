@@ -183,7 +183,6 @@ Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " ### TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
-Plug 'Quramy/vim-js-pretty-template'
 
 " ### Vim
 
@@ -529,23 +528,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 
 let g:vim_markdown_conceal = 0  " Do not hide symbols
 let g:vim_markdown_no_default_key_mappings = 1
-
-
-" ## Vim-Pandoc
-
-" let g:pandoc#syntax#conceal#use = 0  " Do not hide symbols
-" let g:pandoc#folding#fdc = 0  " Do not show folding numbers
-" let g:pandoc#modules#disabled = ['folding']  " Folding module make vim slow!
-
-
-" ## vim-js-pretty-template
-
-augroup jsPrettyTemplateAu
-  autocmd!
-  autocmd FileType typescript JsPreTmpl html
-  autocmd FileType javascript JsPreTmpl html
-  autocmd FileType typescript syn clear foldBraces
-augroup END
 
 
 " ## Goyo & Limelight
