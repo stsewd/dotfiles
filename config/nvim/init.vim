@@ -24,7 +24,6 @@ Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'brooth/far.vim'  " Find and replace
 Plug 'haya14busa/incsearch.vim'  " Better incsearch
-Plug 'bronson/vim-visual-star-search'  " Search selected text with */#
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
