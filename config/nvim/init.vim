@@ -156,11 +156,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
-" ### Pandoc
-
-" Plug 'vim-pandoc/vim-pandoc'
-" Plug 'vim-pandoc/vim-pandoc-syntax'
-
 " ### Python
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
