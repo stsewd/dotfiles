@@ -496,11 +496,6 @@ augroup indentLineAu
 augroup END
 
 
-" ## Vim-Closetag
-
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.md'
-
-
 " ## Ultisnips
 
 let g:UltiSnipsExpandTrigger = '<c-j>'
