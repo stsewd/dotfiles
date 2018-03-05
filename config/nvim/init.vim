@@ -484,7 +484,10 @@ if g:colors_name ==? 'nova'
   let g:indentLine_setColors = 0
 endif
 
-let g:indentLine_fileTypeExclude = ['text', 'help', 'man', 'rst', 'startify', 'nerdtree']
+let g:indentLine_fileTypeExclude = [
+    \ 'text', 'help', 'man', 'rst',
+    \ 'markdown', 'startify', 'nerdtree'
+    \]
 let g:indentLine_bufTypeExclude = ['terminal']
 
 " Deactivate on completition, to slow
