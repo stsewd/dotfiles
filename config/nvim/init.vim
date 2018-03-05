@@ -580,7 +580,8 @@ nmap S <Plug>SneakLabel_S
 " ## OpenPluginPage
 
 " View plugin page
-nnoremap gp :OpenPluginPage<CR>
+autocmd! BufNewFile,BufRead *init.vim
+       \ nnoremap <buffer> gp :OpenPluginPage<CR>
 
 
 " ## Fugitive
