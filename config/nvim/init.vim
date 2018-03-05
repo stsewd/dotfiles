@@ -180,10 +180,6 @@ Plug 'jmcomets/vim-pony'
 
 Plug 'Rykka/riv.vim', { 'for': 'rst' }
 
-" ### Text
-
-Plug 'lervag/vimtex', { 'for': 'tex' }
-
 " ### TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
@@ -318,7 +314,6 @@ tnoremap <Esc> <C-\><C-n>
 " ## Polyglot
 
 let g:polyglot_disabled = [
-    \ 'tex',
     \ 'markdown'
     \]
 
