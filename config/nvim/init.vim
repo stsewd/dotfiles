@@ -215,7 +215,6 @@ set shiftwidth=2
 set softtabstop=2
 set shiftround
 set expandtab
-set smartindent
 
 
 " ## Search & replace
