@@ -392,7 +392,7 @@ let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeLimitedSyntax = 1
 
 " Toggle nerdtree with F2
-map <F2> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 
 " ## Airline
