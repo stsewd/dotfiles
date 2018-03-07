@@ -32,7 +32,7 @@ Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
 
 " ## Navigation Utilities
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Tree explorer
+Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
