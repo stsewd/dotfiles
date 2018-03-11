@@ -1,15 +1,18 @@
 #!/bin/bash
 
-echo Updating Neovim
+echo Downloading Neovim
 
-wget -O ~/bin/nvim.appimage \
+wget -O /tmp/nvim.appimage \
   https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 
 # The last command was ok?
 if [ $? -eq 0 ]; then
+  echo Neovim downloaded
+  echo Moving temporal file
+  chmod +x /tmp/nvim.appimage
+  mv /tmp/nvim.appimage ~/bin/
   echo "Neovim updated!"
   nvim.appimage --version | head -n 1
 else
-  echo "Something bad happened :("
-  echo "Make sure Neovim isn't opened."
+  echo "Something bad happened while downloading Neovim :("
 fi
