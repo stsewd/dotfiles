@@ -107,6 +107,9 @@ alias tkill='tmux kill-session -t'
 # Java
 export JAVA_HOME='/usr/java/default'
 
+# Django
+alias dj='python manage.py'
+
 # Respect .gitignore using ag
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
