@@ -292,6 +292,7 @@ nnoremap <leader>j :bprevious<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
+autocmd TermOpen * startinsert
 
 
 " ..........................................................
