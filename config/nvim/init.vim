@@ -443,13 +443,15 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nnoremap <C-p> :FzFiles<CR>
 
 function! s:set_fzf_maps()
-  tnoremap <buffer> <C-t> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzFiles<CR>
-  tnoremap <buffer> <C-f> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzBuffers<CR>
-  tnoremap <buffer> <C-s> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzGFiles?<CR>
-  tnoremap <buffer> <C-g> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzAg<CR>
-  tnoremap <buffer> <C-l> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzBLines<CR>
-  tnoremap <buffer> <C-o> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzHistory<CR>
-  tnoremap <buffer> <C-c> <C-\><C-n>:close<CR>:sleep 50m<CR>:FzCommands<CR>
+  let l:commands = {
+    \ 'Files': 't', 'Buffers': 'f', 'GFiles?': 's', 'Ag': 'g',
+    \ 'Blines': 'l', 'History': 'o', 'Commands': 'c'
+    \}
+  for [l:command, l:map] in items(l:commands)
+    execute 'tnoremap <buffer> <C-'. l:map .'> '.
+          \ '<C-\><C-n>:close<CR>:sleep 50m<CR>'.
+          \ ':Fz'. l:command .'<CR>'
+  endfor
 endfunction
 
 augroup fzfMappingsAu
