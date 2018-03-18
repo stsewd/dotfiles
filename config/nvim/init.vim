@@ -132,7 +132,6 @@ Plug 'ap/vim-css-color', { 'for': 'css' }
 
 " ### HTML
 
-Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
@@ -458,10 +457,6 @@ augroup fzfMappingsAu
   autocmd!
   autocmd FileType fzf call <SID>set_fzf_maps()
 augroup END
-
-" ## Emmet
-
-let g:user_emmet_leader_key = '<C-Z>'  " Trigger emmet with <ctrl-z ,>
 
 
 " ## Indentline
