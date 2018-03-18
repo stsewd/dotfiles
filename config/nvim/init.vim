@@ -437,14 +437,25 @@ let g:incsearch#auto_nohlsearch = 1
 " ## FZF
 
 let g:fzf_command_prefix = 'Fz'
+let g:fzf_commands_expect = 'alt-enter'
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 nnoremap <C-p> :FzFiles<CR>
-nnoremap <C-f> :FzBuffers<CR>
-nnoremap <C-g> :FzAg<CR>
-nnoremap <M-l> :FzBLines<CR>
-nnoremap <M-o> :FzHistory<CR>
-nnoremap <M-c> :FzCommands<CR>
 
+function! s:set_fzf_maps()
+  tnoremap <buffer> <C-t> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzFiles<CR>
+  tnoremap <buffer> <C-f> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzBuffers<CR>
+  tnoremap <buffer> <C-s> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzGFiles?<CR>
+  tnoremap <buffer> <C-g> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzAg<CR>
+  tnoremap <buffer> <C-l> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzBLines<CR>
+  tnoremap <buffer> <C-o> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzHistory<CR>
+  tnoremap <buffer> <C-c> <C-\><C-n>:close<CR>:sleep 100m<CR>:FzCommands<CR>
+endfunction
+
+augroup fzfMappingsAu
+  autocmd!
+  autocmd FileType fzf call <SID>set_fzf_maps()
+augroup END
 
 " ## Emmet
 
