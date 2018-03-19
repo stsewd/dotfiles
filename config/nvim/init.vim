@@ -561,10 +561,6 @@ let g:neoterm_autoinsert = 1
 nnoremap <silent> <leader>tt :Ttoggle<CR>
 " Send current selection to REPL
 vnoremap <silent> <leader>tt :TREPLSendSelection<CR>
-" Kills the current job (send a <c-c>)
-nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
-" Close terminal and delete buffer
-nnoremap <silent> <leader>tc :Tclose!<CR>
 
 
 " ## Vim-test
