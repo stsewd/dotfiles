@@ -437,8 +437,9 @@ nnoremap <C-p> :FzFiles<CR>
 
 function! s:set_fzf_maps()
   let l:commands = {
-    \ 'Files': 't', 'Buffers': 'f', 'GFiles?': 's', 'Ag': 'g',
-    \ 'BLines': 'l', 'History': 'o', 'Commands': 'c', 'Helptags': 'h'
+    \ 'Files': 'b', 'Buffers': 'f', 'GFiles?': 's', 'Ag': 'g',
+    \ 'BLines': 'l', 'History': 'o', 'Commands': 'c', 'Helptags': 'h',
+    \ 'BTags': 't'
     \}
   for [l:command, l:map] in items(l:commands)
     execute 'tnoremap <buffer> <C-'. l:map .'> '.
