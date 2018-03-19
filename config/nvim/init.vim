@@ -22,7 +22,6 @@ Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
-Plug 'brooth/far.vim'  " Find and replace
 Plug 'haya14busa/incsearch.vim'  " Better incsearch
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
