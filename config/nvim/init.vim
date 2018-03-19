@@ -10,7 +10,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
-Plug 'DougBeney/pickachu'  " Picker color/date/files
 
 
 " ## Editor Utilities
@@ -562,11 +561,6 @@ vnoremap <silent> <leader>tt :TREPLSendSelection<CR>
 " ## Vim-test
 
 let g:test#strategy = 'neoterm'
-
-
-" ## Pickachu
-
-let g:pickachu_default_app = 'date'
 
 
 " ## Spotify
