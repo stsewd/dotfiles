@@ -386,7 +386,6 @@ let g:NERDTreeAutoDeleteBuffer = 1
 " Too slow when scrolling
 let g:NERDTreeLimitedSyntax = 1
 
-" Toggle nerdtree with F2
 map <C-n> :NERDTreeToggle<CR>
 
 
