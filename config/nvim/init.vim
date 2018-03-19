@@ -395,6 +395,7 @@ let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
+let g:airline#extensions#tagbar#enabled = 0  " Disable tagbar integration
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
