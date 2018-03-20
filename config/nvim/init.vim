@@ -439,7 +439,7 @@ function! s:set_fzf_maps()
   let l:commands = {
     \ 'Files': 'b', 'Buffers': 'f', 'GFiles?': 's', 'Ag': 'g',
     \ 'BLines': 'l', 'History': 'o', 'Commands': 'c', 'Helptags': 'h',
-    \ 'BTags': 't'
+    \ 'BTags': 't', 'GCheckout': 'e'
     \}
   for [l:command, l:map] in items(l:commands)
     execute 'tnoremap <buffer> <C-'. l:map .'> '.
@@ -452,6 +452,17 @@ augroup fzfMappingsAu
   autocmd!
   autocmd FileType fzf call <SID>set_fzf_maps()
 augroup END
+
+function! s:open_branch_fzf(line)
+  let l:parser = split(a:line)
+  let l:branch = l:parser[0] ==? '*' ? l:parser[1] : l:parser[0]
+  execute '!git checkout ' . l:branch
+endfunction
+
+command! -bang -nargs=0 FzGCheckout
+  \ call fzf#vim#grep(
+  \   'git branch -v', 0,
+  \   { 'sink': function('s:open_branch_fzf') }, <bang>0)
 
 
 " ## Indentline
