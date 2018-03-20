@@ -456,7 +456,8 @@ augroup END
 function! s:open_branch_fzf(line)
   let l:parser = split(a:line)
   let l:branch = l:parser[0] ==? '*' ? l:parser[1] : l:parser[0]
-  execute '!git checkout ' . l:branch
+  execute 'terminal git checkout ' . l:branch
+  call feedkeys('i', 'n')
 endfunction
 
 command! -bang -nargs=0 FzGCheckout
