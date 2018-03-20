@@ -155,7 +155,7 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
 " ### Python
 
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -172,9 +172,9 @@ Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
 
 " ### Vim
 
-Plug 'Shougo/neco-vim', { 'for': 'vim' }
+Plug 'Shougo/neco-vim'
 Plug 'stsewd/open-plugin-page.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'junegunn/vader.vim', { 'for': 'vim' }
+Plug 'junegunn/vader.vim'
 
 
 call plug#end()
