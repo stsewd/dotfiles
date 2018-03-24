@@ -592,7 +592,8 @@ nnoremap <silent> <leader>q :Sayonara<CR>
 
 " ## vim-altr
 
-nmap <M-a> <Plug>(altr-forward)
+nmap <leader>a <Plug>(altr-forward)
+nmap <leader>A <Plug>(altr-back)
 
 
 " ## Startify
