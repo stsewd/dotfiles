@@ -10,7 +10,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
-
+Plug 'editorconfig/editorconfig-vim'
 
 " ## Editor Utilities
 
