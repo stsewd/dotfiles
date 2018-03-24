@@ -292,6 +292,14 @@ tnoremap <Esc> <C-\><C-n>
 autocmd TermOpen * startinsert
 
 
+" Preserve the cursor position when changing buffers
+augroup RestartWindowViewAu
+  autocmd!
+  autocmd BufLeave * let b:winview = winsaveview()
+  autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
+augroup end
+
+
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
