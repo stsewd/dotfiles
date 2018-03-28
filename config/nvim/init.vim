@@ -74,16 +74,16 @@ Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 " ## Github Integration
 
 Plug 'tyru/open-browser.vim'  " Required by open-browser-github
-Plug 'tyru/open-browser-github.vim'  " Open github project, issues, etc.
+Plug 'tyru/open-browser-github.vim'  " Open a GitHub project, issues, etc.
 
 
 " ## Autocompletion
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-syntax'  " Provides completitions from syntax
+Plug 'Shougo/neco-syntax'  " Provides completions from syntax
 Plug 'Shougo/echodoc.vim'  " Show function signature
 
-Plug 'ervandew/supertab'  " User tab for navigate on completitions
+Plug 'ervandew/supertab'  " Uses tab for navigate on completions
 
 Plug 'fszymanski/deoplete-emoji'
 
