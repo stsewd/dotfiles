@@ -253,11 +253,12 @@ let g:python_host_prog = b:pyenv_path . '/neovim2/bin/python'
 "  # Mappings
 " .........................................................
 
-" Map <Leader> to space
+" Map <Leader> to space and <LocalLeader> to comma
 let g:mapleader = ' '
+let g:maplocalleader = ','
 
 " Save
-nnoremap <leader>s :w<CR>
+nnoremap <leader>w :w<CR>
 
 " Edit init.vim
 nnoremap <leader>e :e $MYVIMRC<CR>
@@ -267,7 +268,7 @@ inoremap jk <esc>
 tmap jk <esc>
 
 " Clear highlighted
-nnoremap <silent> <C-l> :nohlsearch<CR>
+nnoremap <silent> <leader>l :nohlsearch<CR>
 
 " Copy to clipboard
 vnoremap <leader>y "+y
@@ -284,7 +285,7 @@ nnoremap <leader>P "+P
 vnoremap <leader>P "+P
 
 " Move to the next/prev buffer
-nnoremap <leader>l :bnext<CR>
+nnoremap <leader>k :bnext<CR>
 nnoremap <leader>j :bprevious<CR>
 
 " Exit terminal mode with escape
@@ -518,6 +519,8 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 " ## Vimwiki
 
+let g:vimwiki_map_prefix = '<Leader>r'
+
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
 
@@ -556,7 +559,7 @@ nmap S <Plug>SneakLabel_S
 
 " View plugin page
 autocmd! BufNewFile,BufRead *init.vim
-       \ nnoremap <buffer> gp :OpenPluginPage<CR>
+       \ nnoremap <buffer> <localleader>p :OpenPluginPage<CR>
 
 
 " ## Fugitive
@@ -586,11 +589,11 @@ let g:test#strategy = 'neoterm'
 
 " ## Spotify
 
-nnoremap <C-s>j :Spotify next<CR>
-nnoremap <C-s>k :Spotify prev<CR>
-nnoremap <C-s>s :Spotify play/pause<CR>
-nnoremap <C-s>o :Spotify open<CR>
-nnoremap <C-s>c :Spotify status<CR>
+nnoremap <leader>sj :Spotify next<CR>
+nnoremap <leader>sk :Spotify prev<CR>
+nnoremap <leader>ss :Spotify play/pause<CR>
+nnoremap <leader>so :Spotify open<CR>
+nnoremap <leader>sc :Spotify status<CR>
 
 
 " ## Sayonara
