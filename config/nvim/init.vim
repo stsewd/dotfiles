@@ -34,6 +34,7 @@ Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 Plug 'arkgast/nerdtree-execute', { 'branch': 'standard_linux_opener' }  " Add execute menu to NerdTree
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
+Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Deactivate relativenumber when are not needed
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
