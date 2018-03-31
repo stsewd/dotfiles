@@ -292,13 +292,25 @@ nnoremap <leader>j :bprevious<CR>
 tnoremap <Esc> <C-\><C-n>
 autocmd TermOpen * startinsert
 
+" .........................................................
+"  # Custom Commands and Autocommands
+" .........................................................
 
 " Preserve the cursor position when changing buffers
 augroup RestartWindowViewAu
   autocmd!
   autocmd BufLeave * let b:winview = winsaveview()
-  autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
+  autocmd BufEnter * if (exists('b:winview')) | call winrestview(b:winview) | endif
 augroup end
+
+" Set help buffer as listed
+augroup HelpBufferAu
+  autocmd!
+  autocmd BufEnter * if &buftype ==? 'help' | set buflisted | endif
+augroup end
+
+" Activate spell
+command! Spell setlocal spell | syntax spell toplevel
 
 
 " ..........................................................
