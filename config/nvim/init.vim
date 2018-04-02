@@ -113,7 +113,6 @@ Plug 'trevordmiller/nova-vim'
 " ## Reading & Focus
 
 Plug 'junegunn/goyo.vim'  " Free distraction mode
-Plug 'junegunn/limelight.vim'  " Focus blocks
 
 
 " ## Languages
@@ -543,15 +542,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 
 let g:vim_markdown_conceal = 0  " Do not hide symbols
 let g:vim_markdown_no_default_key_mappings = 1
-
-
-" ## Goyo & Limelight
-
-augroup goyoLimelightAu
-  autocmd!
-  autocmd! User GoyoEnter Limelight
-  autocmd! User GoyoLeave Limelight!
-augroup END
 
 
 " ## Highlightedyank
