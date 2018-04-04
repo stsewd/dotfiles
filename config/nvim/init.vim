@@ -455,24 +455,31 @@ let g:fzf_command_prefix = 'Fz'
 let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-nnoremap <C-p> :FzFiles<CR>
+nnoremap <silent> <C-p> :call <SID>open_fzf()<CR>
 
-function! s:set_fzf_maps()
-  let l:commands = {
-    \ 'Files': 'b', 'Buffers': 'f', 'GFiles?': 's', 'Ag': 'g',
-    \ 'BLines': 'l', 'History': 'o', 'Commands': 'c', 'Helptags': 'h',
-    \ 'BTags': 't', 'GCheckout': 'e'
-    \}
-  for [l:command, l:map] in items(l:commands)
-    execute 'tnoremap <buffer> <C-'. l:map .'> '.
-          \ '<C-\><C-n>:close<CR>:sleep 50m<CR>'.
-          \ ':Fz'. l:command .'<CR>'
-  endfor
+function! s:open_fzf()
+  let l:commands= [
+    \ 'Files', 'Buffers', 'BLines', 'Ag',
+    \ 'Commands', 'GFiles?', 'GCheckout',
+    \ 'History', 'BTags'
+    \]
+  let l:choices = [
+    \ '&files', '&buffers', '&lines', '&ag',
+    \ '&commands', 'git &status', '&git checkout',
+    \ '&history', '&tags'
+    \]
+  let l:choice = confirm('Complete', join(l:choices, "\n"))
+  if l:choice != 0
+    execute ':Fz'.l:commands[l:choice - 1]
+  endif
 endfunction
 
 augroup fzfMappingsAu
   autocmd!
-  autocmd FileType fzf call <SID>set_fzf_maps()
+  autocmd FileType fzf tnoremap <buffer> <silent> <C-f>
+    \ <C-\><C-n>:close<CR>
+    \ :sleep 50m<CR>
+    \ :call <SID>open_fzf()<CR>
 augroup END
 
 function! s:open_branch_fzf(line)
