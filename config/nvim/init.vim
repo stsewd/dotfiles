@@ -342,6 +342,11 @@ call deoplete#custom#source(
 let g:deoplete#sources#jedi#show_docstring = 1
 let g:jedi#completions_enabled = 0  " Already provided by deoplete
 
+let g:jedi#goto_command = '<localleader>d'
+let g:jedi#goto_assignments_command = '<localleader>g'
+let g:jedi#usages_command = '<localleader>n'
+let g:jedi#rename_command = '<localleader>r'
+
 " ### Ternjs
 
 let g:deoplete#sources#ternjs#types = 1
