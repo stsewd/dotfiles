@@ -138,10 +138,6 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim'
 
-" ### Jekyll
-
-Plug 'parkr/vim-jekyll'
-
 " ### Log
 
 Plug 'dzeban/vim-log-syntax'
