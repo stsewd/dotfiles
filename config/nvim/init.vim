@@ -72,7 +72,7 @@ Plug 'junegunn/gv.vim'  " Git log
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 
 
-" ## Github Integration
+" ## GitHub Integration
 
 Plug 'tyru/open-browser.vim'  " Required by open-browser-github
 Plug 'tyru/open-browser-github.vim'  " Open a GitHub project, issues, etc.
