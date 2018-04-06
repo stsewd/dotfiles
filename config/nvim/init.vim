@@ -573,6 +573,12 @@ autocmd! BufNewFile,BufRead *init.vim
        \ nnoremap <buffer> <localleader>p :OpenPluginPage<CR>
 
 
+" ## Open browser GitHub
+
+nnoremap <leader>o :OpenGithubFile<CR>
+vnoremap <leader>o :OpenGithubFile<CR>
+
+
 " ## Fugitive
 
 nnoremap <silent> <leader>gs :Gstatus<CR>
