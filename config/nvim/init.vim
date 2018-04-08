@@ -571,10 +571,7 @@ nmap S <Plug>SneakLabel_S
 
 " ## OpenPluginPage
 
-" View plugin page
-autocmd! BufNewFile,BufRead *init.vim
-       \ nnoremap <buffer> <localleader>p :OpenPluginPage<CR>
-
+nmap <localleader>p <Plug>(OpenPluginPage)
 
 " ## Open browser GitHub
 
