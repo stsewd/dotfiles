@@ -485,10 +485,14 @@ function! s:open_branch_fzf(line)
   call feedkeys('i', 'n')
 endfunction
 
-command! -bang -nargs=0 FzGCheckout
-  \ call fzf#vim#grep(
+function! s:show_branches_fzf(bang)
+  let l:current = system('git symbolic-ref --short HEAD')
+  call fzf#vim#grep(
   \   'git branch -v', 0,
-  \   { 'sink': function('s:open_branch_fzf') }, <bang>0)
+  \   { 'sink': function('s:open_branch_fzf'), 'options': ['--no-multi', '--header='.l:current] }, a:bang)
+endfunction
+
+command! -bang -nargs=0 FzGCheckout call <SID>show_branches_fzf(<bang>0)
 
 
 " ## Indentline
