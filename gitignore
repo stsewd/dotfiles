@@ -25,7 +25,8 @@ Session.vim
 # temporary
 .netrwhist
 *~
-# auto-generated tag files
+# ctags
+.ctags
 .tags
 tags
 
