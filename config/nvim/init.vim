@@ -281,7 +281,7 @@ nnoremap <leader>j :bprevious<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
-autocmd TermOpen * startinsert
+autocmd TermOpen * startinsert | setlocal norelativenumber nonumber
 
 " .........................................................
 "  # Custom Commands and Autocommands
