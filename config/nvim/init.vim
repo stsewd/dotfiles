@@ -276,8 +276,8 @@ nnoremap <leader>P "+P
 vnoremap <leader>P "+P
 
 " Move to the next/prev buffer
-nnoremap <leader>k :bnext<CR>
-nnoremap <leader>j :bprevious<CR>
+nnoremap <silent> <leader>k :bnext<CR>
+nnoremap <silent> <leader>j :bprevious<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
