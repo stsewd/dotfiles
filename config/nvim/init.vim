@@ -132,10 +132,6 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim'
 
-" ### Log
-
-Plug 'dzeban/vim-log-syntax'
-
 " ### Markdown
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
