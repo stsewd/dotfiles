@@ -404,7 +404,8 @@ let g:NERDTreeAutoDeleteBuffer = 1
 " Too slow when scrolling
 let g:NERDTreeLimitedSyntax = 1
 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>N :NERDTreeFind<CR>
 
 
 " ## Airline
