@@ -487,9 +487,10 @@ endfunction
 
 function! s:show_branches_fzf(bang)
   let l:current = system('git symbolic-ref --short HEAD')
+  let l:current = substitute(l:current, '\n', '', '')
   call fzf#vim#grep(
-  \   'git branch -v', 0,
-  \   { 'sink': function('s:open_branch_fzf'), 'options': ['--no-multi', '--header='.l:current] }, a:bang)
+    \ "git branch -v | sed -r -e '/^\\*/d' -e 's/^\\s*//'", 0,
+    \ { 'sink': function('s:open_branch_fzf'), 'options': ['--no-multi', '--header='.l:current] }, a:bang)
 endfunction
 
 command! -bang -nargs=0 FzGCheckout call <SID>show_branches_fzf(<bang>0)
