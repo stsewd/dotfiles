@@ -12,6 +12,7 @@ Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
 Plug 'editorconfig/editorconfig-vim'
 
+
 " ## Editor Utilities
 
 Plug 'matze/vim-move'  " Move lines with Alt+{jk}
@@ -25,8 +26,7 @@ Plug 'haya14busa/incsearch.vim'  " Better incsearch
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
-Plug 'chrisbra/nrrwrgn'  " Focus & isolate a region (selected text)
-
+Plug 'justinmk/diffchar.vim'  " Diff char by char
 
 " ## Navigation Utilities
 
