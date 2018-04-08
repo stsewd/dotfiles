@@ -451,7 +451,7 @@ let g:fzf_command_prefix = 'Fz'
 let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-nnoremap <silent> <C-p> :call <SID>open_fzf()<CR>
+nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
 
 function! s:open_fzf()
   let l:commands= [
