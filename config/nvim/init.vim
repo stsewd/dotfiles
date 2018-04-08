@@ -93,7 +93,6 @@ Plug 'honza/vim-snippets'
 " ## Linters & Formatters
 
 Plug 'w0rp/ale'  " Async lint engine
-Plug 'Chiel92/vim-autoformat'  " Easy code formatting
 Plug 'rhysd/vim-grammarous'  " Grammar checker
 
 
