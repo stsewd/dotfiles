@@ -67,15 +67,10 @@ Plug 'justinmk/vim-sneak'  " s
 
 " ## Git Integration
 
+Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'tpope/vim-fugitive'  " Git wrapper
 Plug 'junegunn/gv.vim'  " Git log
-Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
-
-
-" ## GitHub Integration
-
-Plug 'tyru/open-browser.vim'  " Required by open-browser-github
-Plug 'tyru/open-browser-github.vim'  " Open a GitHub project, issues, etc.
+Plug 'tpope/vim-rhubarb'  " GitHub Integration
 
 
 " ## Autocompletion
@@ -576,14 +571,15 @@ autocmd! BufNewFile,BufRead *init.vim
 
 " ## Open browser GitHub
 
-nnoremap <leader>o :OpenGithubFile<CR>
-vnoremap <leader>o :OpenGithubFile<CR>
+nnoremap <leader>o :Gbrowse<CR>
+vnoremap <leader>o :Gbrowse<CR>
 
 
 " ## Fugitive
 
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <leader>gp :Gpush<CR>
