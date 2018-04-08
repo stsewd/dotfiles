@@ -204,6 +204,7 @@ set expandtab
 
 set ignorecase
 set smartcase
+set gdefault
 
 " Show replace live preview
 set inccommand=nosplit
