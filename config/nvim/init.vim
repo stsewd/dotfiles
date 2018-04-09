@@ -604,11 +604,11 @@ let g:test#strategy = 'neoterm'
 
 " ## Spotify
 
-nnoremap <leader>sj :Spotify next<CR>
-nnoremap <leader>sk :Spotify prev<CR>
-nnoremap <leader>ss :Spotify play/pause<CR>
-nnoremap <leader>so :Spotify open<CR>
-nnoremap <leader>sc :Spotify status<CR>
+nmap <leader>ss <Plug>(spotify-play/pause)
+nmap <leader>sj <Plug>(spotify-next)
+nmap <leader>sk <Plug>(spotify-prev)
+nmap <leader>so <Plug>(spotify-open)
+nmap <leader>sc <Plug>(spotify-status)
 
 
 " ## Sayonara
