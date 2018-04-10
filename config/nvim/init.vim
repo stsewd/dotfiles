@@ -460,7 +460,7 @@ function! s:open_fzf()
   let l:choices = [
     \ '&files', '&buffers', '&lines', '&ag',
     \ '&commands', 'git &status', '&git checkout',
-    \ '&history', '&tags', 'B&Tags'
+    \ '&history', '&tags', 'buffer &Tags'
     \]
   let l:choice = confirm('Complete', join(l:choices, "\n"))
   if l:choice != 0
