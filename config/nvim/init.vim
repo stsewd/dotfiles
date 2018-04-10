@@ -456,12 +456,12 @@ function! s:open_fzf()
   let l:commands= [
     \ 'Files', 'Buffers', 'BLines', 'Ag',
     \ 'Commands', 'GFiles?', 'GCheckout',
-    \ 'History', 'BTags'
+    \ 'History', 'Tags', 'BTags'
     \]
   let l:choices = [
     \ '&files', '&buffers', '&lines', '&ag',
     \ '&commands', 'git &status', '&git checkout',
-    \ '&history', '&tags'
+    \ '&history', '&tags', 'B&Tags'
     \]
   let l:choice = confirm('Complete', join(l:choices, "\n"))
   if l:choice != 0
