@@ -571,8 +571,8 @@ nmap <localleader>p <Plug>(OpenPluginPage)
 
 " ## Open browser GitHub
 
-nnoremap <leader>o :Gbrowse<CR>
-vnoremap <leader>o :Gbrowse<CR>
+nnoremap <leader>go :Gbrowse<CR>
+vnoremap <leader>go :Gbrowse<CR>
 
 
 " ## Fugitive
