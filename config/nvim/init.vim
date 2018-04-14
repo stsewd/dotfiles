@@ -280,11 +280,14 @@ nnoremap <silent> <leader>j :bprevious<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
-autocmd TermOpen * startinsert | setlocal norelativenumber nonumber
+
 
 " .........................................................
 "  # Custom Commands and Autocommands
 " .........................................................
+
+" Enter insert mode when openning a terminal
+autocmd TermOpen * startinsert | setlocal norelativenumber nonumber
 
 " Preserve the cursor position when changing buffers
 augroup RestartWindowViewAu
