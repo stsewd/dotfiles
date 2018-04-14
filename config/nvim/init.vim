@@ -41,6 +41,7 @@ Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'majutsushi/tagbar'  " Display tags in a window
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buffer
+Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 
 
 " ## Other Utilities
@@ -612,6 +613,11 @@ nmap <leader>sc <Plug>(spotify-status)
 " ## Sayonara
 
 nnoremap <silent> <leader>q :Sayonara<CR>
+
+
+" ## Vim-bbye
+
+nnoremap <Leader>Q :Bdelete<CR>
 
 
 " ## vim-altr
