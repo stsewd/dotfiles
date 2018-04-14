@@ -564,6 +564,11 @@ let g:vim_markdown_no_default_key_mappings = 1
 let g:highlightedyank_highlight_duration = 250
 
 
+" ## Closetag
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*tmpl'
+
+
 " ## Sneak
 
 let g:sneak#label = 1  " Show labels
