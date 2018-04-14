@@ -428,7 +428,9 @@ let g:airline#extensions#ale#enabled = 1
 
 " ## Gutentags
 
-let g:gutentags_enabled = 0  " Too slow on big projects
+" Activate only on projects that have a ctags configuration file
+let g:gutentags_add_default_project_roots = ['.ctags']
+let g:gutentags_add_default_project_roots = 0
 
 
 " ## GitGutter
