@@ -270,6 +270,10 @@ vnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>P "+P
 
+" Scroll
+nnoremap <up> <c-y>
+nnoremap <down> <c-e>
+
 " Move to the next/prev buffer
 nnoremap <silent> <leader>k :bnext<CR>
 nnoremap <silent> <leader>j :bprevious<CR>
