@@ -274,8 +274,8 @@ nnoremap <up> <c-y>
 nnoremap <down> <c-e>
 
 " Move to the next/prev buffer
-nnoremap <silent> <leader>k :bnext<CR>
-nnoremap <silent> <leader>j :bprevious<CR>
+nnoremap <silent> <leader>k <cmd>execute v:count.'bnext'<CR>
+nnoremap <silent> <leader>j <cmd>execute v:count.'bprevious'<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
