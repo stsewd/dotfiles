@@ -620,7 +620,7 @@ let g:test#strategy = 'neoterm'
 nmap <leader>ss <Plug>(spotify-play/pause)
 nmap <leader>sj <Plug>(spotify-next)
 nmap <leader>sk <Plug>(spotify-prev)
-nmap <leader>so <Plug>(spotify-open)
+nmap <leader>so <Plug>(spotify-show)
 nmap <leader>sc <Plug>(spotify-status)
 
 
