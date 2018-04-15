@@ -251,7 +251,6 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 
 " Esc
 inoremap jk <esc>
-tmap jk <esc>
 
 " Clear highlighted
 nnoremap <silent> <leader>l :nohlsearch<CR>
@@ -280,7 +279,8 @@ nnoremap <silent> <leader>j :bprevious<CR>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
-
+tnoremap jk <C-\><C-n>
+tnoremap <A-[> <Esc>
 
 " .........................................................
 "  # Custom Commands and Autocommands
