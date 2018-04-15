@@ -293,7 +293,7 @@ autocmd TermOpen * startinsert | setlocal norelativenumber nonumber
 augroup RestartWindowViewAu
   autocmd!
   autocmd BufLeave * let b:winview = winsaveview()
-  autocmd BufEnter * if (exists('b:winview')) | call winrestview(b:winview) | endif
+  autocmd BufEnter * if (exists('b:winview') && &filetype !=? 'nerdtree') | call winrestview(b:winview) | endif
 augroup end
 
 " Set help buffer as listed
