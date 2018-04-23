@@ -239,7 +239,7 @@ let g:python_host_prog = b:pyenv_path . '/neovim2/bin/python'
 "  # Mappings
 " .........................................................
 
-" Map <Leader> to space and <LocalLeader> to comma
+" Map <leader> to space and <localleader> to comma
 let g:mapleader = ' '
 let g:maplocalleader = ','
 
@@ -547,7 +547,7 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 " ## Vimwiki
 
-let g:vimwiki_map_prefix = '<Leader>r'
+let g:vimwiki_map_prefix = '<leader>r'
 
 " Markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
@@ -632,7 +632,7 @@ nnoremap <silent> <leader>q :Sayonara<CR>
 
 " ## Vim-bbye
 
-nnoremap <Leader>Q :Bdelete<CR>
+nnoremap <leader>Q :Bdelete<CR>
 
 
 " ## vim-altr
