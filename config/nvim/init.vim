@@ -150,7 +150,7 @@ Plug 'tweekmonster/django-plus.vim'
 
 " ### reStructuredText
 
-Plug 'Rykka/riv.vim', { 'for': 'rst' }
+" Plug 'Rykka/riv.vim', { 'for': 'rst' }  " Too slow, broken, buggy
 
 " ### TypeScript
 
