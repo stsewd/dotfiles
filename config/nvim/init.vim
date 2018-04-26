@@ -15,7 +15,6 @@ Plug 'editorconfig/editorconfig-vim'
 
 " ## Editor Utilities
 
-Plug 'matze/vim-move'  " Move lines with Alt+{jk}
 Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'google/vim-searchindex'  " Show number of search
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
