@@ -11,8 +11,9 @@ if [ $? -eq 0 ]; then
   echo Moving temporal file
   chmod +x /tmp/nvim.appimage
   mv /tmp/nvim.appimage ~/bin/
+  ln -s -f nvim.appimage nvim
   echo "Neovim updated!"
-  nvim.appimage --version | head -n 1
+  nvim --version | head -n 1
 else
   echo "Something bad happened while downloading Neovim :("
 fi

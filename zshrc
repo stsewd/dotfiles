@@ -90,10 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # If you do a 'rm *', Zsh will give you a sanity check!
 setopt RM_STAR_WAIT
 
-# Neovim alias for appimage
-alias nvim='nvim.appimage'
-
-export EDITOR='nvim.appimage'
+export EDITOR='nvim'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
