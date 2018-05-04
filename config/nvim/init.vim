@@ -517,12 +517,15 @@ let g:indentLine_fileTypeExclude = [
 augroup indentLineAu
   autocmd!
   autocmd InsertEnter * IndentLinesDisable
-  autocmd InsertLeave *
-        \ if index(g:indentLine_fileTypeExclude, &filetype) < 0
-        \   && index(g:indentLine_bufTypeExclude, &buftype) < 0 
-        \ | execute 'silent IndentLinesEnable' | 
-        \ endif
+  autocmd InsertLeave * call <SID>indentline_enable()
 augroup END
+
+function! s:indentline_enable()
+  if (index(g:indentLine_fileTypeExclude, &filetype) < 0 &&
+      \ index(g:indentLine_bufTypeExclude, &buftype) < 0)
+    execute 'silent IndentLinesEnable'
+  endif
+endfunction
 
 
 " ## Ultisnips
