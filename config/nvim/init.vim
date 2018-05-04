@@ -46,7 +46,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 
 Plug 'janko-m/vim-test' " Tests execution
 Plug 'kassio/neoterm'  " Terminal wrapper
-Plug 'vimwiki/vimwiki'  " Personal wiki in vim
+Plug 'vimwiki/vimwiki', { 'on': 'VimwikiIndex' }  " Personal wiki in vim
 Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
 
 
