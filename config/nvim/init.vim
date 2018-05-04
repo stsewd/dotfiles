@@ -67,7 +67,6 @@ Plug 'justinmk/vim-sneak'  " s
 
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'tpope/vim-fugitive'  " Git wrapper
-Plug 'junegunn/gv.vim'  " Git log
 Plug 'tpope/vim-rhubarb'  " GitHub Integration
 
 
