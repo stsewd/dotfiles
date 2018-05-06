@@ -1,5 +1,5 @@
 [distutils]
-index-servers=
+index-servers =
     pypi
     pypitest
 
