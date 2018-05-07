@@ -228,7 +228,7 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 let b:pyenv_path = expand('~/.pyenv/versions')
 
-let g:python3_host_prog = b:pyenv_path . '/neovim3/bin/python'
+let g:python3_host_prog = b:pyenv_path . '/neovim/bin/python'
 let g:python_host_prog = b:pyenv_path . '/neovim2/bin/python'
 
 
