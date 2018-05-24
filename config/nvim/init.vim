@@ -146,10 +146,6 @@ Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
 
-" ### reStructuredText
-
-" Plug 'Rykka/riv.vim', { 'for': 'rst' }  " Too slow, broken, buggy
-
 " ### TypeScript
 
 Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
