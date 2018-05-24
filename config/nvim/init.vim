@@ -253,6 +253,9 @@ inoremap jk <esc>
 " Clear highlighted
 nnoremap <silent> <leader>l :nohlsearch<CR>
 
+" Copy current file name
+nnoremap <silent> <leader>cf :let @" = expand('%')<CR>
+
 " Copy to clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
@@ -599,6 +602,8 @@ nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <leader>gp :Gpush<CR>
 
 
