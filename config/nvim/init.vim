@@ -32,6 +32,7 @@ Plug 'justinmk/diffchar.vim'  " Diff char by char
 Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
 Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
+Plug 'tpope/vim-apathy'  " Extends gf
 Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Deactivate relativenumber when are not needed
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
