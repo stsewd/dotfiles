@@ -49,6 +49,7 @@ Plug 'janko-m/vim-test' " Tests execution
 Plug 'kassio/neoterm'  " Terminal wrapper
 Plug 'vimwiki/vimwiki', { 'on': 'VimwikiIndex' }  " Personal wiki in vim
 Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
+Plug 'soywod/vim-keepeye'  " Keep your eyes safe :KeepEye
 
 
 " ## Text Objects & Motions
@@ -640,6 +641,11 @@ nnoremap <leader>Q :Sayonara!<CR>
 nmap <leader>a <Plug>(altr-forward)
 nmap <leader>A <Plug>(altr-back)
 
+
+" ## KeepEye
+
+let g:keepeye_autostart = 1
+let g:keepeye_system_notification = 1
 
 " ## Startify
 
