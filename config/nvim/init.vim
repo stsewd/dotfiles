@@ -644,8 +644,7 @@ nmap <leader>A <Plug>(altr-back)
 
 " ## KeepEye
 
-let g:keepeye_autostart = 1
-let g:keepeye_system_notification = 1
+let g:keepeye_features = ['notification']
 
 " ## Startify
 
