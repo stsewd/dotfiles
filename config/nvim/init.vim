@@ -650,9 +650,13 @@ let g:keepeye_features = ['notification']
 
 let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
 
+let g:startify_commands = [
+    \ { 'u': ':PlugUpdate' },
+    \ ]
+
 let g:startify_lists = [
-    \ { 'type': 'sessions', 'header': ['Sessions'] },
-    \ { 'type': 'commands', 'header': ['Commands'] },
+    \ { 'type': 'sessions' },
+    \ { 'type': 'commands' },
     \ ]
 
 let g:startify_session_persistence = 1  " Autosave sessions
