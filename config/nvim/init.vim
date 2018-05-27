@@ -1,3 +1,4 @@
+scriptencoding utf-8
 " .........................................................
 " # Plugins
 " .........................................................
@@ -661,4 +662,8 @@ let g:startify_lists = [
 
 let g:startify_session_persistence = 1  " Autosave sessions
 
-let g:startify_custom_header = []  " Disable header
+let g:startify_custom_header = [
+    \ '          Happy Coding!',
+    \ '    >_              ',
+    \ '             @stsewd',
+    \ ]
