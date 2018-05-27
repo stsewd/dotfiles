@@ -649,8 +649,11 @@ let g:keepeye_features = ['notification']
 " ## Startify
 
 let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
-let g:startify_files_number = 5  " Show just 5 files on MRU
-let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks', 'commands']
+
+let g:startify_lists = [
+    \ { 'type': 'sessions', 'header': ['Sessions'] },
+    \ { 'type': 'commands', 'header': ['Commands'] },
+    \ ]
 
 let g:startify_session_persistence = 1  " Autosave sessions
 
