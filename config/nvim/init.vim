@@ -665,5 +665,4 @@ let g:startify_session_persistence = 1  " Autosave sessions
 let g:startify_custom_header = [
     \ '          Happy Coding!',
     \ '    >_              ',
-    \ '             @stsewd',
     \ ]
