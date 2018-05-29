@@ -410,9 +410,17 @@ nnoremap <leader>N :NERDTreeFind<CR>
 
 " ## Airline
 
+" Mappings to change buffer
+for s:i in range(1, 9)
+  execute 'nmap <leader>' . s:i . ' <Plug>AirlineSelectTab' . s:i
+endfor
+nmap <leader>j <Plug>AirlineSelectPrevTab
+nmap <leader>k <Plug>AirlineSelectNextTab
+
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
 let g:airline#extensions#tagbar#enabled = 0  " Disable tagbar integration
 let g:airline#extensions#hunks#enabled = 0  " Don't show changes summary
