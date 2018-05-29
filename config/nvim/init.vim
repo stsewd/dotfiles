@@ -69,7 +69,7 @@ Plug 'justinmk/vim-sneak'  " s
 
 Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
 Plug 'tpope/vim-fugitive'  " Git wrapper
-Plug 'tpope/vim-rhubarb'  " GitHub Integration
+Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 
 " ## Autocompletion
@@ -590,10 +590,10 @@ nmap <localleader>p <Plug>(OpenPluginPage)
 
 " ## Open browser GitHub
 
-nnoremap <leader>go :Gbrowse @origin<CR>
-vnoremap <leader>go :Gbrowse @origin<CR>
-nnoremap <leader>gO :Gbrowse<CR>
-vnoremap <leader>gO :Gbrowse<CR>
+nnoremap <leader>go :Gina browse :<CR>
+vnoremap <leader>go :Gina browse :<CR>
+nnoremap <leader>gO :Gina browse<CR>
+vnoremap <leader>gO :Gina browse<CR>
 
 
 " ## Fugitive
@@ -605,7 +605,7 @@ nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gp :Gina push<CR>
 
 
 " ## Neoterm
