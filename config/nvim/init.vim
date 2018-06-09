@@ -442,7 +442,7 @@ let g:gutentags_add_default_project_roots = 0
 
 " ## GitGutter
 
-set updatetime=250  " Update each 250 mls
+set updatetime=100  " Update each 250 mls
 
 
 " ## The NerdCommenter
