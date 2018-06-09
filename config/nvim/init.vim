@@ -299,6 +299,10 @@ augroup end
 " Activate spell
 command! Spell setlocal spell | syntax spell toplevel
 
+augroup CustomTerminalMappingsAu
+  autocmd!
+  autocmd BufEnter * if &buftype ==? 'terminal' | noremap <buffer> <CR> a<C-p><CR> | endif
+augroup end
 
 " ..........................................................
 " # Plugins Settings
