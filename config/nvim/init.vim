@@ -297,7 +297,7 @@ augroup HelpBufferAu
 augroup end
 
 " Activate spell
-command! Spell setlocal spell | syntax spell toplevel
+command! -bang Spell setlocal spell<bang> | syntax spell toplevel
 
 augroup CustomTerminalMappingsAu
   autocmd!
