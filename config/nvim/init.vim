@@ -429,9 +429,6 @@ let g:airline#extensions#hunks#enabled = 0  " Don't show changes summary
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
 
-" ale integration
-let g:airline#extensions#ale#enabled = 1
-
 
 " ## Gutentags
 
