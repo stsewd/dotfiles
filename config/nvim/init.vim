@@ -31,8 +31,6 @@ Plug 'justinmk/diffchar.vim'  " Diff char by char
 " ## Navigation Utilities
 
 Plug 'scrooloose/nerdtree'  " Tree explorer
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Colored files and icons on nerdtree
-Plug 'xuyuanp/nerdtree-git-plugin'  " Show git status on nerdtree
 Plug 'tpope/vim-apathy'  " Extends gf
 Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Deactivate relativenumber when are not needed
 
@@ -48,7 +46,6 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 
 Plug 'janko-m/vim-test' " Tests execution
 Plug 'kassio/neoterm'  " Terminal wrapper
-Plug 'vimwiki/vimwiki', { 'on': 'VimwikiIndex' }  " Personal wiki in vim
 Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
 
 
@@ -401,9 +398,6 @@ let g:NERDTreeIgnore = [
 let g:NERDTreeMinimalUI = 1  " Hide help text
 let g:NERDTreeAutoDeleteBuffer = 1
 
-" Too slow when scrolling
-let g:NERDTreeLimitedSyntax = 1
-
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeFind<CR>
 
@@ -550,14 +544,6 @@ let g:DevIconsEnableFoldersOpenClose = 1
 
 " Adjust icons padding
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-
-
-" ## Vimwiki
-
-let g:vimwiki_map_prefix = '<leader>r'
-
-" Markdown as default syntax
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki.md'}]
 
 
 " ## Markdown
