@@ -405,9 +405,6 @@ nnoremap <leader>N :NERDTreeFind<CR>
 " ## Airline
 
 " Mappings to change buffer
-for s:i in range(1, 9)
-  execute 'nmap <leader>' . s:i . ' <Plug>AirlineSelectTab' . s:i
-endfor
 nmap <leader>j <Plug>AirlineSelectPrevTab
 nmap <leader>k <Plug>AirlineSelectNextTab
 
