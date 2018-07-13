@@ -441,8 +441,8 @@ let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace w
 
 " ## Incsearch
 
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
 
 let g:incsearch#auto_nohlsearch = 1
 
