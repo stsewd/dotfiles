@@ -392,7 +392,7 @@ let g:NERDTreeChDirMode = 2  " Change cwd to parent node
 " Ignored files
 let g:NERDTreeIgnore = [
     \ '\.pyc$', '^__pycache__$', '^venv$',
-    \ '^tags$', 'node_modules'
+    \ '^tags$', 'node_modules', '\.o$'
     \]
 
 let g:NERDTreeMinimalUI = 1  " Hide help text
