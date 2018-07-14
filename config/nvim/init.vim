@@ -296,9 +296,11 @@ augroup end
 " Activate spell
 command! -bang Spell setlocal spell<bang> | syntax spell toplevel
 
+" Terminal mappings
 augroup CustomTerminalMappingsAu
   autocmd!
-  autocmd BufEnter * if &buftype ==? 'terminal' | noremap <buffer> <CR> a<C-p><CR> | endif
+  autocmd BufEnter *
+        \ if &buftype ==? 'terminal' | noremap <buffer> <CR> a<C-p><CR><C-\><C-n> | endif
 augroup end
 
 " ..........................................................
