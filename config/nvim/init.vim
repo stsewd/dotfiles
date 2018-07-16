@@ -610,6 +610,9 @@ vnoremap <silent> <leader>tt :TREPLSendSelection<CR>
 " ## Vim-test
 
 let g:test#strategy = 'neoterm'
+let g:test#custom_runners = {'Python': ['Tox']}
+
+nnoremap <leader>T :TestFile<CR>
 
 
 " ## Spotify
