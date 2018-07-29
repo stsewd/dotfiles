@@ -206,6 +206,8 @@ set inccommand=nosplit
 set termguicolors  " Active true colors on terminal
 set background=light
 colorscheme nova  " NeoSolarized, nova
+" Hack to fix incompatible hl with recent versions of neovim
+highlight CursorLine ctermfg=black
 
 
 " ## Buffers
