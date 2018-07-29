@@ -132,7 +132,7 @@ Plug 'ternjs/tern_for_vim'
 
 Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
 Plug 'plasticboy/vim-markdown'
-Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview
+Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview (npm install -g livedown)
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }  " Auto generate TOC
 
 " ### Python
