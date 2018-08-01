@@ -36,6 +36,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Deactivate relativenumber when are n
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
+Plug 'mhinz/vim-grepper'
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'majutsushi/tagbar'  " Display tags in a window
