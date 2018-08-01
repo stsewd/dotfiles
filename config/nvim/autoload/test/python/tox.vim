@@ -13,15 +13,16 @@ function! test#python#tox#test_file(file) abort
 endfunction
 
 function! test#python#tox#build_position(type, position) abort
+  let l:file = fnamemodify(a:position['file'], ':p')
   if a:type ==# 'nearest'
     let l:name = s:nearest_test(a:position)
     if !empty(l:name)
-      return [a:position['file'].'::'.l:name]
+      return [l:file.'::'.l:name]
     else
-      return [a:position['file']]
+      return [l:file]
     endif
   elseif a:type ==# 'file'
-    return [a:position['file']]
+      return [l:file]
   else
     return []
   endif
