@@ -597,9 +597,6 @@ let g:neoterm_default_mod = 'rightbelow'
 
 " Open/close a terminal
 nnoremap <silent> <leader>tt <cmd>execute v:count.'Ttoggle'<CR>
-nnoremap <silent> <leader>tn :Tnew<CR>
-" Send current selection to REPL
-vnoremap <silent> <leader>tt :TREPLSendSelection<CR>
 
 
 " ## Vim-test
