@@ -250,9 +250,6 @@ inoremap jk <esc>
 " Clear highlighted
 nnoremap <silent> <leader>l :nohlsearch<CR>
 
-" Copy current file name
-nnoremap <silent> <leader>cf :let @" = expand('%')<CR>
-
 " Copy to clipboard
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
