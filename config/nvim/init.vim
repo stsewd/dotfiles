@@ -614,7 +614,8 @@ vnoremap <silent> <leader>tt :TREPLSendSelection<CR>
 let g:test#strategy = 'neoterm'
 let g:test#custom_runners = {'Python': ['Tox']}
 
-nnoremap <leader>T :TestFile<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>tn :TestNearest<CR>
 
 
 " ## Spotify
