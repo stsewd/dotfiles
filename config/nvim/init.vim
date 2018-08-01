@@ -153,7 +153,6 @@ Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
 
 Plug 'Shougo/neco-vim'
 Plug 'stsewd/open-plugin-page.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'junegunn/vader.vim'
 
 
 call plug#end()
