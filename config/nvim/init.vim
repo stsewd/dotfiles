@@ -477,14 +477,6 @@ function! s:open_fzf()
   endif
 endfunction
 
-augroup fzfMappingsAu
-  autocmd!
-  autocmd FileType fzf tnoremap <buffer> <silent> <C-f>
-    \ <C-\><C-n>:close<CR>
-    \ :sleep 50m<CR>
-    \ :call <SID>open_fzf()<CR>
-augroup END
-
 function! s:open_branch_fzf(line)
   let l:parser = split(a:line)
   let l:branch = l:parser[0] ==? '*' ? l:parser[1] : l:parser[0]
