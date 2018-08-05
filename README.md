@@ -37,6 +37,22 @@
 - Tools for VimL development
   - `pip install vim-vint`
 
+### Test it with Docker
+
+```bash
+docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/plugged:/root/.local/share/nvim/plugged stsewd/neovim
+```
+
+Install the plugins
+
+```bash
+nvim +PlugInstall
+```
+
+Reopen Neovim and start coding.
+
+To update the docker image just run `docker pull stsewd/neovim`
+
 ### Configurations
 
 Check `config/nvim/init.vim` for see all the plugins, settings and key-bindings, it's well documented.
