@@ -223,10 +223,11 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 " ## Python
 
-let b:pyenv_path = expand('~/.pyenv/versions')
-
-let g:python3_host_prog = b:pyenv_path . '/neovim/bin/python'
-let g:python_host_prog = b:pyenv_path . '/neovim2/bin/python'
+let b:python_path = $NVIM_PYTHON_HOST
+if b:python_path !=# ''
+  let g:python3_host_prog = expand(b:python_path)
+endif
+let g:loaded_python_provider = 1
 
 
 " .........................................................
