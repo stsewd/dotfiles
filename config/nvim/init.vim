@@ -426,7 +426,7 @@ let g:airline_powerline_fonts = 1
 " ## Gutentags
 
 " Activate only on projects that have a ctags configuration file
-let g:gutentags_add_default_project_roots = ['.ctags']
+let g:gutentags_project_root = ['.ctags']
 let g:gutentags_add_default_project_roots = 0
 
 
