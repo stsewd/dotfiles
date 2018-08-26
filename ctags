@@ -23,6 +23,7 @@
 --exclude=node_modules
 --exclude=bower_components
 --exclude=dist
+--exclude=build
 --exclude=test
 --exclude=tests
 --exclude=.tmp
@@ -34,8 +35,10 @@
 --exclude=.pytest_cache
 --exclude=.mypy_cache
 --exclude=.tox
+--exclude=.nox
 --exclude=.coverage
 --exclude=.env
 --exclude=env
 --exclude=.venv
 --exclude=venv
+--exclude=htmlcov
