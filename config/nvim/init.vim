@@ -179,6 +179,7 @@ set nowrap  " No wrap lines (display long lines)
 set number  " Display line numbers
 set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
+set nojoinspaces  " Always use one space to join line
 
 
 " ## Indentation
