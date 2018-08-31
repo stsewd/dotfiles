@@ -510,6 +510,8 @@ augroup indentLineAu
   autocmd!
   autocmd InsertEnter * IndentLinesDisable
   autocmd InsertLeave * call <SID>indentline_enable()
+  autocmd User SneakEnter IndentLinesDisable
+  autocmd User SneakLeave call <SID>indentline_enable()
 augroup END
 
 function! s:indentline_enable()
