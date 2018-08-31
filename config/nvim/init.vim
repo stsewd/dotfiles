@@ -28,6 +28,7 @@ Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'justinmk/diffchar.vim'  " Diff char by char
 
+
 " ## Navigation Utilities
 
 Plug 'scrooloose/nerdtree'  " Tree explorer
