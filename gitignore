@@ -28,6 +28,7 @@ Session.vim
 # ctags
 .ctags
 .tags
+.notags
 tags
 
 # pyenv
