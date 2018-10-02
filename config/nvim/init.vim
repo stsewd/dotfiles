@@ -269,6 +269,10 @@ vnoremap <leader>P "+P
 nnoremap <up> <c-y>
 nnoremap <down> <c-e>
 
+" Search
+nnoremap * *<C-o>
+nnoremap # #<C-o>
+
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 tnoremap jk <C-\><C-n>
