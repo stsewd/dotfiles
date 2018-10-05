@@ -1,8 +1,8 @@
 symlinks:
-	ln -s ctags ~/.ctags
-	ln -s gitconfig ~/.gitconfig
-	ln -s gitignore ~/.gitignore
-	ln -s pypirc ~/.pypirc
-	ln -s tmux.conf ~/.tmux.conf
-	ln -s zshrc ~/.zshrc
-    ln -s config/nvim ~/.config/nvim
+	ln -s -f `pwd`/ctags ~/.ctags
+	ln -s -f `pwd`/gitconfig ~/.gitconfig
+	ln -s -f `pwd`/gitignore ~/.gitignore
+	ln -s -f `pwd`/pypirc ~/.pypirc
+	ln -s -f `pwd`/tmux.conf ~/.tmux.conf
+	ln -s -f `pwd`/zshrc ~/.zshrc
+	ln -s -f `pwd`/config/nvim ~/.config/nvim
