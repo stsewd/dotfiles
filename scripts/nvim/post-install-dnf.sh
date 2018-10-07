@@ -5,3 +5,4 @@ dnf install ctags
 touch ~/.notags
 
 dnf install wmctrl
+dnf the_silver_searcher
