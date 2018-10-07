@@ -1,0 +1,30 @@
+#!/bin/bash
+
+python_version=3.7.0
+venv_name="$(basename `pwd`)"
+help="Usage $0 [--name virtualenv name] [--version python version]"
+
+while (( "$#" )); do
+  case "$1" in
+    --name)
+      venv_name=$2
+      shift 2
+      ;;
+    --version)
+      python_version=$2
+      shift 2
+      ;;
+    -h|--help)
+      echo "$help"
+      exit 0
+      ;;
+    *)
+      echo "Invalid usage."
+      echo "$help"
+      exit 1
+      ;;
+  esac
+done
+
+pyenv virtualenv $python_version $venv_name
+echo "$venv_name" > .python-version
