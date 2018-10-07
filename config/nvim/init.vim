@@ -115,7 +115,6 @@ Plug 'sheerun/vim-polyglot'
 " ### C/C++
 
 Plug 'tweekmonster/deoplete-clang2'
-Plug 'kana/vim-altr'
 
 " ### CSS
 
@@ -125,11 +124,6 @@ Plug 'ap/vim-css-color', { 'for': 'css' }
 
 Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
-
-" ### JavaScript
-
-Plug 'carlitux/deoplete-ternjs'
-Plug 'ternjs/tern_for_vim'
 
 " ### Markdown
 
@@ -145,10 +139,6 @@ Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
-
-" ### TypeScript
-
-Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
 
 " ### Vim
 
@@ -347,17 +337,6 @@ let g:jedi#goto_assignments_command = '<localleader>g'
 let g:jedi#usages_command = '<localleader>n'
 let g:jedi#rename_command = '<localleader>r'
 
-" ### Ternjs
-
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#sources#ternjs#docs = 1
-
-
-" ## Ternjs
-
-let g:tern#command = ['tern']
-let g:tern#arguments = ['--persistent']
-
 
 " ## Echodoc
 
@@ -424,7 +403,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
-let g:airline#extensions#whitespace#enabled = 1  " Disable whitespace extension
 let g:airline#extensions#tagbar#enabled = 0  " Disable tagbar integration
 let g:airline#extensions#hunks#enabled = 0  " Don't show changes summary
 
