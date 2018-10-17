@@ -470,8 +470,9 @@ endfunction
 function! s:show_branches_fzf(bang)
   let l:current = system('git symbolic-ref --short HEAD')
   let l:current = substitute(l:current, '\n', '', '')
+  let l:current_scaped = substitute(l:current, '/', '\\/', '')
   call fzf#vim#grep(
-    \ "git branch -r --no-color | sed -r -e 's/^[^/]*\\///' -e '/^" . l:current . "$/d' -e '/^HEAD/d' | sort -u", 0,
+    \ "git branch -r --no-color | sed -r -e 's/^[^/]*\\///' -e '/^" . l:current_scaped . "$/d' -e '/^HEAD/d' | sort -u", 0,
     \ { 'sink': function('s:open_branch_fzf'), 'options': ['--no-multi', '--header='.l:current] }, a:bang)
 endfunction
 
