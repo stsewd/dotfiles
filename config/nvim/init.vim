@@ -585,7 +585,7 @@ nnoremap <silent> <leader>tt <cmd>execute v:count.'Ttoggle'<CR>
 " ## Vim-test
 
 let g:test#strategy = 'neoterm'
-let g:test#custom_runners = {'Python': ['Tox']}
+let g:test#custom_runners = {'Python': ['Nox', 'Tox']}
 
 nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>tn :TestNearest<CR>
