@@ -215,10 +215,7 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 " ## Python
 
-let b:python_path = $NVIM_PYTHON_HOST
-if b:python_path !=# ''
-  let g:python3_host_prog = expand(b:python_path)
-endif
+" Deactivate python 2 support
 let g:loaded_python_provider = 1
 
 
