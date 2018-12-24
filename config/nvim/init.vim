@@ -424,12 +424,6 @@ let g:gutentags_add_default_project_roots = 0
 set updatetime=100  " Update each 250 mls
 
 
-" ## The NerdCommenter
-
-let g:NERDSpaceDelims = 1  " Add spaces after comment delimiters by default
-let g:NERDTrimTrailingWhitespace = 1  " Enable trimming of trailing whitespace when uncommenting
-
-
 " ## Incsearch
 
 map / <Plug>(incsearch-forward)
