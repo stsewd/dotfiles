@@ -100,6 +100,7 @@ Plug 'rhysd/vim-grammarous'  " Grammar checker
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'iCyMind/NeoSolarized'  " Solarized theme
+Plug 'lifepillar/vim-solarized8'  " Solarized theme
 Plug 'trevordmiller/nova-vim'
 
 
@@ -197,7 +198,7 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme nova  " NeoSolarized, nova
+colorscheme nova  " solarized8, nova
 " Hack to fix incompatible hl with recent versions of neovim
 highlight CursorLine ctermfg=black
 
@@ -581,7 +582,7 @@ nnoremap <silent> <leader>tt <cmd>execute v:count.'Ttoggle'<CR>
 " ## Vim-test
 
 let g:test#strategy = 'neoterm'
-let g:test#custom_runners = {'Python': ['Nox', 'Tox']}
+let g:test#custom_runners = {'Python': ['Tox', 'Nox']}
 
 nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>tn :TestNearest<CR>
