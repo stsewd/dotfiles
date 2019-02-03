@@ -24,7 +24,7 @@
 ### Installing extras
 
 - Install python3 interface
-  - `pip install --upgrade neovim`
+  - `pip install --upgrade pynvim`
 - Install ctags
   - Debian based: `apt install exuberant-ctags`
   - Fedora: `dnf install ctags`
