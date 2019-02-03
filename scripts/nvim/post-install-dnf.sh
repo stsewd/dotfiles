@@ -5,4 +5,5 @@ dnf install ctags
 touch ~/.notags
 
 dnf install wmctrl
-dnf the_silver_searcher
+dnf install the_silver_searcher
+dnf install autojump-zsh
