@@ -55,4 +55,4 @@ To update the docker image just run `docker pull stsewd/neovim`
 
 ### Configurations
 
-Check `config/nvim/init.vim` for see all the plugins, settings and key-bindings, it's well documented.
+Check [`config/nvim/init.vim`](config/nvim/init.vim) for see all the plugins, settings and key-bindings, it's well documented.
