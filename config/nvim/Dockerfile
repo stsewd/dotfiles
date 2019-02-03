@@ -8,9 +8,8 @@ RUN apt-get update
 RUN apt-get install -y neovim
 
 # Python dependencies
-RUN apt-get install -y python-dev python-pip python3-dev python3-pip
-RUN pip install neovim
-RUN pip3 install neovim
+RUN apt-get install -y python3-dev python3-pip
+RUN pip3 install pynvim
 
 RUN apt-get install -y git curl
 
