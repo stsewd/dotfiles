@@ -73,13 +73,10 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 " ## Autocompletion
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-syntax'  " Provides completions from syntax
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'Shougo/echodoc.vim'  " Show function signature
 
 Plug 'ervandew/supertab'  " Uses tab for navigate on completions
-
-Plug 'fszymanski/deoplete-emoji'
 
 
 " ## Snippets
@@ -90,7 +87,6 @@ Plug 'honza/vim-snippets'
 
 " ## Linters & Formatters
 
-Plug 'w0rp/ale'  " Async lint engine
 Plug 'rhysd/vim-grammarous'  " Grammar checker
 
 
@@ -129,8 +125,6 @@ Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview (npm instal
 
 " ### Python
 
-Plug 'zchee/deoplete-jedi'
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
@@ -139,6 +133,7 @@ Plug 'tweekmonster/django-plus.vim'
 " ### Vim
 
 Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
 Plug 'stsewd/open-plugin-page.nvim', { 'do': ':UpdateRemotePlugins' }
 
 
@@ -303,33 +298,30 @@ let g:polyglot_disabled = [
     \]
 
 
-" ## Deoplete
+" ## coc.nvim
 
-let g:deoplete#enable_at_startup = 1
+" Show documentation using K
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
-" Autoclose preview window
-augroup deopleteCompleteDoneAu
-  autocmd!
-  autocmd CompleteDone * silent! pclose!
-augroup END
+" Move to prev/nex error
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
-" ### Emoji
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
 
-call deoplete#custom#source(
-    \ 'emoji',
-    \ 'min_pattern_length', 0
-    \)
-
-" ### Jedi
-
-let g:deoplete#sources#jedi#show_docstring = 1
-let g:jedi#completions_enabled = 0  " Already provided by deoplete
-
-let g:jedi#goto_command = '<localleader>d'
-let g:jedi#goto_assignments_command = '<localleader>g'
-let g:jedi#usages_command = '<localleader>n'
-let g:jedi#rename_command = '<localleader>r'
-
+" Remap for rename current word
+nmap <leader>r <Plug>(coc-rename)
 
 " ## Echodoc
 
@@ -341,26 +333,6 @@ let g:echodoc#type = 'virtual'
 
 " Invert tab direction
 let g:SuperTabDefaultCompletionType = '<c-n>'
-
-
-" ## ALE
-
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_info_str = 'I'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_virtualtext_cursor = 1
-
-let g:ale_linters = {
-    \ 'python': ['flake8'],
-    \ 'javascript': ['eslint']
-    \}
-let g:ale_fixers = {
-    \ '*': ['trim_whitespace']
-    \}
-
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
 " ## Vim-grammarous
