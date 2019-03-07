@@ -26,7 +26,6 @@ Plug 'haya14busa/incsearch.vim'  " Better incsearch
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
-Plug 'justinmk/diffchar.vim'  " Diff char by char
 
 
 " ## Navigation Utilities
