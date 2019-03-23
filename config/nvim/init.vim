@@ -305,7 +305,7 @@ let g:polyglot_disabled = [
 " Show documentation using K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if &filetype == 'vim'
+  if &filetype == 'vim' || &filetype == 'help'
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')
