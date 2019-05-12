@@ -94,7 +94,6 @@ Plug 'rhysd/vim-grammarous'  " Grammar checker
 
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
-Plug 'iCyMind/NeoSolarized'  " Solarized theme
 Plug 'lifepillar/vim-solarized8'  " Solarized theme
 Plug 'trevordmiller/nova-vim'
 
