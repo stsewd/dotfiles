@@ -58,6 +58,7 @@ Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
 Plug 'kana/vim-textobj-user'  " Base
 Plug 'jceb/vim-textobj-uri'  " URI text object (u)
 Plug 'kana/vim-textobj-indent'  " Indentation text object (i)
+Plug 'kana/vim-textobj-function'
 
 Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 
