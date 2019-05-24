@@ -251,8 +251,8 @@ nnoremap <up> <c-y>
 nnoremap <down> <c-e>
 
 " Search
-nnoremap * *<C-o>
-nnoremap # #<C-o>
+nnoremap * *N
+nnoremap # #N
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
