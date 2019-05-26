@@ -27,4 +27,10 @@ while (( "$#" )); do
 done
 
 pyenv virtualenv $python_version $venv_name
+
+file = ".python-version"
+if [ -f $file ]; then
+  echo "File already exists. Overriding"
+fi
+
 echo "$venv_name" > .python-version
