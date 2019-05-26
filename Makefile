@@ -1,4 +1,5 @@
 symlinks:
+	ln -s -f `pwd`/notags ~/.notags
 	ln -s -f `pwd`/ctags ~/.ctags
 	ln -s -f `pwd`/gitconfig ~/.gitconfig
 	ln -s -f `pwd`/gitignore ~/.gitignore
