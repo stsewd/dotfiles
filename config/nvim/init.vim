@@ -86,11 +86,6 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
 
-" ## Linters & Formatters
-
-Plug 'rhysd/vim-grammarous'  " Grammar checker
-
-
 " ## Themes & Color Schemes
 
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
@@ -108,10 +103,6 @@ Plug 'junegunn/goyo.vim'  " Free distraction mode
 
 Plug 'sheerun/vim-polyglot'
 
-" ### CSS
-
-Plug 'ap/vim-css-color', { 'for': 'css' }
-
 " ### HTML
 
 Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
@@ -119,7 +110,7 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Markdown
 
-Plug 'godlygeek/tabular'  " Filtrado y alineado de texto
+Plug 'godlygeek/tabular'  " Align and filer text
 Plug 'plasticboy/vim-markdown'
 Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview (npm install -g livedown)
 
