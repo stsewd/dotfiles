@@ -316,6 +316,9 @@ nmap <silent> gr <Plug>(coc-references)
 " Remap for rename current word
 nmap <leader>r <Plug>(coc-rename)
 
+" Refresh completion
+inoremap <silent><expr> <C-n> coc#refresh()
+
 " ## Echodoc
 
 let g:echodoc_enable_at_startup = 1
