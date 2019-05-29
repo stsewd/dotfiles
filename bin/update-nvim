@@ -16,6 +16,7 @@ if [ $? -eq 0 ]; then
   # Backup in case new version is buggy
   if [ -f $target_file ]; then
     cp $target_file ${target_file}.back
+    echo "Backup created: ${target_file}.back"
   fi
   mv $dowloaded_file $target_file
   echo "Neovim updated!"
