@@ -358,6 +358,11 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeFind<CR>
 
 
+" ## Tagbar
+
+let g:tagbar_sort = 0
+nnoremap <leader>m :Tagbar<CR>
+
 " ## Airline
 
 " Mappings to change buffer
