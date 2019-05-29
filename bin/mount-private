@@ -1,4 +1,19 @@
 #!/bin/sh
 
-echo "Mounting ~/.$1 -> ~/$1"
-sudo encfs -i 20 --public ~/.$1 ~/$1
+time=20
+directory=""
+while (( "$#" )); do
+  case "$1" in
+    -t|--time)
+      time=$2
+      shift 2
+      ;;
+    *)
+      directory=$1
+      shift 1
+      ;;
+  esac
+done
+
+echo "Mounting ~/.$directory -> ~/$directory"
+sudo encfs -i $time --public ~/.$directory ~/$directory
