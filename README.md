@@ -5,9 +5,10 @@
 
 ## Neovim
 
-![1](https://user-images.githubusercontent.com/4975310/36638015-50c4a3ec-19b6-11e8-9591-397d674c8099.png)
-![2](https://user-images.githubusercontent.com/4975310/36638014-50a6f11c-19b6-11e8-8304-2aca8c5a1d94.png)
-![3](https://user-images.githubusercontent.com/4975310/36638013-50869b1a-19b6-11e8-9143-1ed04a06d677.png)
+![1](https://user-images.githubusercontent.com/4975310/58529932-53ac5a00-81a2-11e9-8ca2-99d22e5a6ca5.png)
+![2](https://user-images.githubusercontent.com/4975310/58529933-53ac5a00-81a2-11e9-9a59-ded48913cd1b.png)
+![3](https://user-images.githubusercontent.com/4975310/58529934-5444f080-81a2-11e9-8a03-4c8bd2329a34.png)
+![4](https://user-images.githubusercontent.com/4975310/58529935-5444f080-81a2-11e9-8c1d-9f1f7b8bc80d.png)
 
 ### Installation
 
