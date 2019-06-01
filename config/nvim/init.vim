@@ -181,7 +181,7 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme nova  " solarized8, nova
+colorscheme nova " solarized8, nova
 " Hack to fix incompatible hl with recent versions of neovim
 highlight CursorLine ctermfg=black
 
@@ -201,6 +201,7 @@ set complete+=kspell  " Autocomplete with dictionary words
 
 " Deactivate python 2 support
 let g:loaded_python_provider = 1
+let g:python3_host_prog = expand($NVIM_PYTHON_HOST)
 
 
 " .........................................................
