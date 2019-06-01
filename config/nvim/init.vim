@@ -319,11 +319,6 @@ nmap <leader>r <Plug>(coc-rename)
 " Refresh completion
 inoremap <silent><expr> <C-n> coc#refresh()
 
-" ## Echodoc
-
-let g:echodoc_enable_at_startup = 1
-let g:echodoc#type = 'virtual'
-
 
 " ## Supertab
 
