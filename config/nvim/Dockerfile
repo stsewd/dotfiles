@@ -1,11 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Install latest Neovim
-RUN apt-get update
-RUN apt-get install -y software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common 
 RUN add-apt-repository ppa:neovim-ppa/unstable
-RUN apt-get update
-RUN apt-get install -y neovim
+RUN apt-get update && apt-get install -y neovim
 
 # Python dependencies
 RUN apt-get install -y python3-dev python3-pip
@@ -15,12 +13,12 @@ RUN apt-get install -y git curl
 
 # My configuration
 RUN git clone --depth 1 \
-    https://github.com/stsewd/dotfiles /code
+    https://github.com/stsewd/dotfiles $HOME
 
-RUN mkdir ~/.config/ && ln -s /code/config/nvim ~/.config/nvim
+RUN mkdir $HOME/.config/ && ln -s $HOME/config/nvim ~/.config/nvim
 
 ## Install vim-plug
-RUN curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+RUN curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 WORKDIR /src
