@@ -75,7 +75,6 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 " ## Autocompletion
 
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-Plug 'Shougo/echodoc.vim'  " Show function signature
 
 Plug 'ervandew/supertab'  " Uses tab for navigate on completions
 
