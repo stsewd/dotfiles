@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python_version=3.7.0
+python_version=3.7.3
 venv_name="$(basename `pwd`)"
 help="Usage $0 [--name virtualenv name] [--version python version]"
 
@@ -28,9 +28,9 @@ done
 
 pyenv virtualenv $python_version $venv_name
 
-file = ".python-version"
+file=".python-version"
 if [ -f $file ]; then
   echo "File already exists. Overriding"
 fi
 
-echo "$venv_name" > .python-version
+echo "$venv_name" > $file
