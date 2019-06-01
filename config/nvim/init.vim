@@ -382,6 +382,11 @@ let g:airline_powerline_fonts = 1
 let g:gutentags_project_root = ['.ctags']
 let g:gutentags_add_default_project_roots = 0
 
+" Filter for files under vcs
+let g:gutentags_file_list_command = {
+    \ 'markers': { '.git': 'git ls-files' },
+    \ }
+
 
 " ## GitGutter
 
