@@ -116,7 +116,6 @@ Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview (npm instal
 " ### Python
 
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
-Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
 
