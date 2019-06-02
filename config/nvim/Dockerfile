@@ -13,9 +13,10 @@ RUN apt-get install -y git curl
 
 # My configuration
 RUN git clone --depth 1 \
-    https://github.com/stsewd/dotfiles $HOME
+    https://github.com/stsewd/dotfiles $HOME/dotfiles
 
-RUN mkdir $HOME/.config/ && ln -s $HOME/config/nvim ~/.config/nvim
+RUN mkdir $HOME/.config/ && \
+    ln -s $HOME/dotfiles/config/nvim $HOME/.config/nvim
 
 ## Install vim-plug
 RUN curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
