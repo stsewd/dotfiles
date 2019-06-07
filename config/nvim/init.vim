@@ -17,7 +17,6 @@ Plug 'editorconfig/editorconfig-vim'
 " ## Editor Utilities
 
 Plug 'yggdroot/indentline'  " Show indentation lines
-Plug 'google/vim-searchindex'  " Show number of search
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
