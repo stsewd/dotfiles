@@ -324,16 +324,6 @@ inoremap <silent><expr> <C-n> coc#refresh()
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
-" ## Vim-grammarous
-
-let g:grammarous#use_location_list = 1
-
-let g:grammarous#default_comments_only_filetypes = {
-    \ '*': 1, 'help': 0, 'markdown': 0,
-    \ 'liquid': 0, 'rst': 0
-    \}
-
-
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
