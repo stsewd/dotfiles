@@ -21,7 +21,6 @@ Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
-Plug 'haya14busa/incsearch.vim'  " Better incsearch
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
@@ -378,14 +377,7 @@ let g:gutentags_file_list_command = {
 " ## GitGutter
 
 set updatetime=100  " Update each 250 mls
-
-
-" ## Incsearch
-
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-
-let g:incsearch#auto_nohlsearch = 1
+let g:gitgutter_terminal_reports_focus = 0
 
 
 " ## FZF
