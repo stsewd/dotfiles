@@ -74,8 +74,6 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-Plug 'ervandew/supertab'  " Uses tab for navigate on completions
-
 
 " ## Snippets
 
