@@ -371,7 +371,7 @@ let g:gutentags_add_default_project_roots = 0
 
 " Filter for files under vcs
 let g:gutentags_file_list_command = {
-    \ 'markers': { '.git': 'git ls-files' },
+    \ 'markers': { '.git': 'git ls-files | grep -E  "(*.\.c$)|(*.\.h$)|(*.\.py$)"' },
     \ }
 
 
