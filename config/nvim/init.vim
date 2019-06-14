@@ -294,7 +294,7 @@ let g:polyglot_disabled = [
 " Show documentation using K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if &filetype == 'vim' || &filetype == 'help'
+  if index(['vim', 'help', 'c'], &filetype) > 0
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')
@@ -358,7 +358,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
 let g:airline#extensions#tagbar#enabled = 0  " Disable tagbar integration
-let g:airline#extensions#hunks#enabled = 0  " Don't show changes summary
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
