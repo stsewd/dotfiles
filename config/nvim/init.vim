@@ -106,7 +106,6 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 Plug 'godlygeek/tabular'  " Align and filer text
 Plug 'plasticboy/vim-markdown'
-Plug 'shime/vim-livedown', { 'for': 'markdown' }  " Markdown preview (npm install -g livedown)
 
 " ### Python
 
