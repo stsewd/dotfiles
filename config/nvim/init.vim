@@ -462,7 +462,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 " ## Dev-Icons
 
 " Show folders icons
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
 " Adjust icons padding
