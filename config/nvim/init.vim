@@ -30,7 +30,6 @@ Plug 'tpope/vim-eunuch'  " Command line utilities
 
 Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'tpope/vim-apathy'  " Extends gf
-Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Deactivate relativenumber when are not needed
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
