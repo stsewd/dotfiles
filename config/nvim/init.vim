@@ -285,6 +285,18 @@ let g:polyglot_disabled = [
 
 " ## coc.nvim
 
+call coc#add_extension(
+    \ 'coc-syntax',
+    \ 'coc-dictionary',
+    \ 'coc-ultisnips',
+    \ 'coc-emoji',
+    \ 'coc-json',
+    \ 'coc-yaml',
+    \ 'coc-html',
+    \ 'coc-css',
+    \ 'coc-python',
+    \)
+
 " Show documentation using K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -297,7 +309,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Move to prev/nex error
+" Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
@@ -366,7 +378,7 @@ let g:gutentags_file_list_command = {
 
 " ## GitGutter
 
-set updatetime=100  " Update each 250 mls
+set updatetime=100  " Update each 100 mls
 let g:gitgutter_terminal_reports_focus = 0
 
 
