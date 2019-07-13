@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "http://json.schemastore.org/travis": "/.?travis.ya?ml"
+  },
+  "python.jediEnabled": false
+}
