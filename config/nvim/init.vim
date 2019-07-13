@@ -353,7 +353,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
-let g:airline#extensions#tagbar#enabled = 0  " Disable tagbar integration
 
 " Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
