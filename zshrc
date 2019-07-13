@@ -4,6 +4,10 @@ export PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export EDITOR=nvim
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -71,9 +75,17 @@ ZSH_THEME="amuse"
 plugins=(
   git
   docker
+  pip
+  dnf
+  github
+  python
+  zsh-syntax-highlighting
+  zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -U compinit && compinit
 
 # User configuration
 
@@ -102,10 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ** Custom settings **
-
-export EDITOR='nvim'
-export USE_EDITOR=$EDITOR
-export VISUAL=$EDITOR
 
 # Django
 alias dj='python manage.py'
