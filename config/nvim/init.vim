@@ -314,12 +314,6 @@ nmap <leader>r <Plug>(coc-rename)
 inoremap <silent><expr> <C-n> coc#refresh()
 
 
-" ## Supertab
-
-" Invert tab direction
-let g:SuperTabDefaultCompletionType = '<c-n>'
-
-
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
