@@ -36,3 +36,6 @@ tags
 
 # mypy
 .mypy_cache/
+
+# vim
+.vim
