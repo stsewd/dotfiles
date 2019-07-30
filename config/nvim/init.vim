@@ -396,7 +396,7 @@ function! s:open_fzf()
     \ 'History', 'Tags', 'BTags'
     \]
   let l:choices = [
-    \ '&files', '&buffers', '&lines', '&ag',
+    \ '&files', '&open buffers', '&lines', '&ag',
     \ '&commands', 'git &status', '&git checkout',
     \ '&history', '&tags', 'buffer &Tags'
     \]
