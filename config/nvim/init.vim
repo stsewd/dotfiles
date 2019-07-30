@@ -70,7 +70,7 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 " ## Autocompletion
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 " ## Snippets
