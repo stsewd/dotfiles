@@ -239,6 +239,7 @@ nnoremap # #N
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
 tnoremap jk <C-\><C-n>
+" Send scape to terminal
 tnoremap <A-[> <Esc>
 
 " .........................................................
@@ -299,10 +300,8 @@ call coc#add_extension(
 " Show documentation using K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if index(['vim', 'help'], &filetype) >= 0
-    execute 'h ' . expand('<cword>')
-  elseif index(['c', 'cpp'], &filetype) >= 0
-    execute 'Man ' . expand('<cword>')
+  if index(['vim', 'help', 'c', 'cpp'], &filetype) >= 0
+    normal! K
   else
     call CocAction('doHover')
   endif
