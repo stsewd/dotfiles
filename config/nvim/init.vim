@@ -393,12 +393,12 @@ nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
 
 function! s:open_fzf()
   let l:commands= [
-    \ 'Files', 'Buffers', 'BLines', 'Ag',
+    \ 'Files', 'Buffers', 'BLines', 'Rg',
     \ 'Commands', 'GFiles?', 'GCheckout',
     \ 'History', 'Tags', 'BTags'
     \]
   let l:choices = [
-    \ '&files', '&open buffers', '&lines', '&ag',
+    \ '&files', '&open buffers', '&lines', '&rg',
     \ '&commands', 'git &status', '&git checkout',
     \ '&history', '&tags', 'buffer &Tags'
     \]
