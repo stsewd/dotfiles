@@ -81,6 +81,7 @@ plugins=(
   python
   zsh-syntax-highlighting
   zsh-completions
+  dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
