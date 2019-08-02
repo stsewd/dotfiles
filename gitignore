@@ -14,6 +14,7 @@
 .nfs*
 
 # Vim
+.vim
 
 # swap
 [._]*.s[a-v][a-z]
@@ -37,5 +38,5 @@ tags
 # mypy
 .mypy_cache/
 
-# vim
-.vim
+# Dotenv
+.env
