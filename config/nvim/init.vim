@@ -513,6 +513,7 @@ nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gina push<CR>
+nnoremap <leader>gP :Gina pull<CR>
 
 
 " ## Neoterm
