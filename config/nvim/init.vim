@@ -75,7 +75,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ## Snippets
 
-Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
 
@@ -184,7 +183,6 @@ set hidden  " Allow change buffers without saving
 " ## Spellchecker
 
 set spelllang=en,es
-set complete+=kspell  " Autocomplete with dictionary words
 
 
 " ## Python
@@ -288,7 +286,7 @@ let g:polyglot_disabled = [
 call coc#add_extension(
     \ 'coc-syntax',
     \ 'coc-dictionary',
-    \ 'coc-ultisnips',
+    \ 'coc-snippets',
     \ 'coc-emoji',
     \ 'coc-json',
     \ 'coc-yaml',
@@ -456,11 +454,9 @@ function! s:indentline_enable()
 endfunction
 
 
-" ## Ultisnips
+" ## Snippets
 
-let g:UltiSnipsExpandTrigger = '<c-j>'
-let g:UltiSnipsJumpForwardTrigger = '<c-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 " ## Dev-Icons
