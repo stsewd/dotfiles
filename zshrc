@@ -123,7 +123,7 @@ alias dj='python manage.py'
 # Integration with fzf
 
 # Respect .gitignore using rg
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob '!.git''
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
