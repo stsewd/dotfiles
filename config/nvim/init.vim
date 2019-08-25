@@ -83,7 +83,7 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'lifepillar/vim-solarized8'  " Solarized theme
-Plug 'trevordmiller/nova-vim'
+Plug 'arcticicestudio/nord-vim'
 
 
 " ## Reading & Focus
@@ -170,9 +170,7 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme nova " solarized8, nova
-" Hack to fix incompatible hl with recent versions of neovim
-highlight CursorLine ctermfg=black
+colorscheme nord " solarized8, nord
 
 
 " ## Buffers
@@ -310,6 +308,7 @@ nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
+noremap <leader>gd gd
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gt <Plug>(coc-type-definition)
