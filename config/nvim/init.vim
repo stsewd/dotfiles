@@ -421,11 +421,9 @@ let g:indentLine_fileTypeExclude = [
     \ 'markdown', 'startify', 'nerdtree'
     \]
 
-" Deactivate on completition, to slow
+" Deactivate on sneak
 augroup indentLineAu
   autocmd!
-  autocmd InsertEnter * IndentLinesDisable
-  autocmd InsertLeave * call <SID>indentline_enable()
   autocmd User SneakEnter IndentLinesDisable
   autocmd User SneakLeave call <SID>indentline_enable()
 augroup END
