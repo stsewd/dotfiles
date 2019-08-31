@@ -256,6 +256,10 @@ augroup CustomTerminalAutoCommand
         \ setlocal norelativenumber nonumber
 augroup end
 
+
+" Copy current path with line number
+nnoremap <silent> <leader>o :let @" = expand('%:p') . ':' . line('.')<CR>
+
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
