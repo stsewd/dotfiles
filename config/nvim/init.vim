@@ -231,6 +231,10 @@ tnoremap jk <C-\><C-n>
 " Send scape to terminal
 tnoremap <A-[> <Esc>
 
+" Copy current path with line number
+nnoremap <silent> <leader>o 
+      \ :let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>
+
 " .........................................................
 "  # Custom Commands and Autocommands
 " .........................................................
@@ -255,11 +259,6 @@ augroup CustomTerminalAutoCommand
         \ noremap <buffer> <CR> a<C-p><CR><C-\><C-n> |
         \ setlocal norelativenumber nonumber
 augroup end
-
-
-" Copy current path with line number
-nnoremap <silent> <leader>o 
-      \ :let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>
 
 " ..........................................................
 " # Plugins Settings
