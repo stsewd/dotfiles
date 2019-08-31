@@ -46,6 +46,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 Plug 'janko-m/vim-test' " Tests execution
 Plug 'kassio/neoterm'  " Terminal wrapper
 Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
+Plug 'junegunn/goyo.vim'  " Free distraction mode
 
 
 " ## Text Objects & Motions
@@ -85,11 +86,7 @@ Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'lifepillar/vim-solarized8'  " Solarized theme
 Plug 'arcticicestudio/nord-vim'
-
-
-" ## Reading & Focus
-
-Plug 'junegunn/goyo.vim'  " Free distraction mode
+Plug 'mhartington/oceanic-next'
 
 
 " ## Languages
