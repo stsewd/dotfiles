@@ -16,6 +16,7 @@ Plug 'vim-airline/vim-airline'  " Status bar & tabline
 " ## Editor Utilities
 
 Plug 'yggdroot/indentline'  " Show indentation lines
+Plug 'godlygeek/tabular'  " Align and filer text
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
@@ -99,11 +100,6 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
-
-" ### Markdown
-
-Plug 'godlygeek/tabular'  " Align and filer text
-Plug 'plasticboy/vim-markdown'
 
 " ### Python
 
@@ -257,8 +253,8 @@ augroup CustomTerminalAutoCommand
   " - Excecute previous command with <CR>
   " - Don't show line numbers
   autocmd!
-  autocmd TermOpen * 
-        \ startinsert | 
+  autocmd TermOpen *
+        \ startinsert |
         \ noremap <buffer> <CR> a<C-p><CR><C-\><C-n> |
         \ setlocal norelativenumber nonumber
 augroup end
@@ -266,13 +262,6 @@ augroup end
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
-
-" ## Polyglot
-
-let g:polyglot_disabled = [
-    \ 'markdown'
-    \]
-
 
 " ## coc.nvim
 
@@ -462,12 +451,6 @@ let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 
-" ## Markdown
-
-let g:vim_markdown_conceal = 0  " Do not hide symbols
-let g:vim_markdown_no_default_key_mappings = 1
-
-
 " ## Highlightedyank
 
 let g:highlightedyank_highlight_duration = 250
@@ -497,7 +480,6 @@ nmap <localleader>p <Plug>(OpenPluginPage)
 nnoremap <leader>go :Gina browse :<CR>
 vnoremap <leader>go :Gina browse :<CR>
 nnoremap <leader>gO :Gina browse<CR>
-vnoremap <leader>gO :Gina browse<CR>
 
 
 " ## Fugitive
