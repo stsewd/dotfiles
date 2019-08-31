@@ -258,7 +258,8 @@ augroup end
 
 
 " Copy current path with line number
-nnoremap <silent> <leader>o :let @" = expand('%:p') . ':' . line('.')<CR>
+nnoremap <silent> <leader>o 
+      \ :let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>
 
 " ..........................................................
 " # Plugins Settings
