@@ -242,30 +242,25 @@ tnoremap <A-[> <Esc>
 "  # Custom Commands and Autocommands
 " .........................................................
 
-" Enter insert mode when openning a terminal
-autocmd TermOpen * startinsert | setlocal norelativenumber nonumber
+" Activate spell
+command! -bang Spell setlocal spell<bang> | syntax spell toplevel
 
-" Preserve the cursor position when changing buffers
 augroup RestartWindowViewAu
+  " Preserve the cursor position when changing buffers
   autocmd!
   autocmd BufLeave * let b:winview = winsaveview()
   autocmd BufEnter * if (exists('b:winview') && &filetype !=? 'nerdtree') | call winrestview(b:winview) | endif
 augroup end
 
-" Set help buffer as listed
-augroup HelpBufferAu
+augroup CustomTerminalAutoCommand
+  " - Start on insert mode
+  " - Excecute previous command with <CR>
+  " - Don't show line numbers
   autocmd!
-  autocmd BufEnter * if &buftype ==? 'help' | set buflisted | endif
-augroup end
-
-" Activate spell
-command! -bang Spell setlocal spell<bang> | syntax spell toplevel
-
-" Terminal mappings
-augroup CustomTerminalMappingsAu
-  autocmd!
-  autocmd BufEnter *
-        \ if &buftype ==? 'terminal' | noremap <buffer> <CR> a<C-p><CR><C-\><C-n> | endif
+  autocmd TermOpen * 
+        \ startinsert | 
+        \ noremap <buffer> <CR> a<C-p><CR><C-\><C-n> |
+        \ setlocal norelativenumber nonumber
 augroup end
 
 " ..........................................................
