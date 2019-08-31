@@ -162,8 +162,8 @@ set inccommand=nosplit
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-set background=light
-colorscheme nord " solarized8, nord
+set background=dark
+colorscheme OceanicNext  " solarized8, OceanicNext, nord
 
 
 " ## Buffers
