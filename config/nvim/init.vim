@@ -378,12 +378,12 @@ function! s:open_fzf()
   let l:commands= [
     \ 'Files', 'Buffers', 'BLines', 'Rg',
     \ 'Commands', 'GFiles?', 'GCheckout',
-    \ 'History', 'Tags', 'BTags'
+    \ 'History', 'History:', 'History/', 'Tags', 'BTags'
     \]
   let l:choices = [
     \ '&files', '&open buffers', '&lines', '&rg',
     \ '&commands', 'git &status', '&git checkout',
-    \ '&history', '&tags', 'buffer &Tags'
+    \ '&history', 'history&:', 'history&/', '&tags', 'buffer &Tags'
     \]
   let l:choice = confirm('Complete', join(l:choices, "\n"))
   if l:choice != 0
