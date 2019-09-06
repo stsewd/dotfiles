@@ -232,7 +232,7 @@ tnoremap jk <C-\><C-n>
 tnoremap <A-[> <Esc>
 
 " Copy current path with line number
-nnoremap <silent> <leader>o 
+nnoremap <silent> <leader>o
       \ :let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>
 
 " .........................................................
@@ -411,10 +411,7 @@ command! -bang -nargs=0 FzGCheckout call <SID>show_branches_fzf(<bang>0)
 
 " ## Indentline
 
-" Doesn't appear on nova colorscheme
-if g:colors_name ==? 'nova'
-  let g:indentLine_setColors = 0
-endif
+let g:indentLine_color_gui = '#4f5b66'
 
 let g:indentLine_bufTypeExclude = ['terminal']
 let g:indentLine_fileTypeExclude = [
