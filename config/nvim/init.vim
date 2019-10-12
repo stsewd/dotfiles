@@ -242,12 +242,34 @@ nnoremap <silent> <leader>o
 " Activate spell
 command! -bang Spell setlocal spell<bang> | syntax spell toplevel
 
-augroup RestartWindowViewAu
-  " Preserve the cursor position when changing buffers
-  autocmd!
-  autocmd BufLeave * let b:winview = winsaveview()
-  autocmd BufEnter * if (exists('b:winview') && &filetype !=? 'nerdtree') | call winrestview(b:winview) | endif
-augroup end
+" Remove trailing white spaces
+command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
+
+" Save current view settings on a per-window, per-buffer basis.
+" https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
+function! AutoSaveWinView()
+  if !exists("w:SavedBufView")
+    let w:SavedBufView = {}
+  endif
+  let w:SavedBufView[bufnr("%")] = winsaveview()
+endfunction
+
+" Restore current view settings.
+function! AutoRestoreWinView()
+  let buf = bufnr("%")
+  if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
+    let v = winsaveview()
+    let atStartOfFile = v.lnum == 1 && v.col == 0
+    if atStartOfFile && !&diff
+      call winrestview(w:SavedBufView[buf])
+    endif
+    unlet w:SavedBufView[buf]
+  endif
+endfunction
+
+autocmd BufLeave * call AutoSaveWinView()
+autocmd BufEnter * call AutoRestoreWinView()
+
 
 augroup CustomTerminalAutoCommand
   " - Start on insert mode
