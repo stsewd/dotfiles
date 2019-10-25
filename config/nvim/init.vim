@@ -298,6 +298,7 @@ call coc#add_extension(
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-python',
+    \ 'coc-rls',
     \)
 
 " Show documentation using K
@@ -527,6 +528,11 @@ let g:test#custom_runners = {'Python': ['Tox', 'Nox']}
 
 nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>tn :TestNearest<CR>
+
+
+" ## rust.vim
+
+let g:rustfmt_autosave = 1
 
 
 " ## Spotify
