@@ -416,7 +416,7 @@ endfunction
 
 function! s:open_branch_fzf(line)
   let l:branch = a:line
-  execute 'terminal git checkout ' . l:branch
+  execute 'split | terminal git checkout ' . l:branch
   call feedkeys('i', 'n')
 endfunction
 
