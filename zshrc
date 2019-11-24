@@ -79,6 +79,8 @@ plugins=(
   dnf
   github
   python
+  rust
+  cargo
   zsh-syntax-highlighting
   zsh-completions
   dotenv
@@ -141,3 +143,6 @@ export NVIM_PYTHON_HOST=$PYENV_ROOT/versions/neovim/bin/python
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Rust
+export PATH="$HOME/.rustup:$HOME/.cargo/bin:$PATH"
