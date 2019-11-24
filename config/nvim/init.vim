@@ -85,7 +85,6 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'lifepillar/vim-solarized8'  " Solarized theme
-Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 
 
@@ -162,8 +161,8 @@ set inccommand=nosplit
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-set background=dark
-colorscheme OceanicNext  " solarized8, OceanicNext, nord
+set background=light
+colorscheme OceanicNext  " solarized8, OceanicNext
 
 
 " ## Buffers
