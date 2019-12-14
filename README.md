@@ -16,27 +16,24 @@
 - Make a symbolic link (or just copy the folder) of `config/nvim` to `~/.config/nvim`
 - Install [vim plug](https://github.com/junegunn/vim-plug#neovim) (plugin manager)
 - Install a [patched font](https://github.com/ryanoasis/nerd-fonts).
-  - [The one I use](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraMono/Regular/complete/Fura%20Mono%20Regular%20Nerd%20Font%20Complete.otf)
+  - [The one I use](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete.ttf)
 - Select the previous font on your terminal configurations
-- Install [nova for gnome terminal](https://github.com/agarrharr/nova-gnome-terminal#installation) (only if you want to use that theme with Neovim)
 - Open Neovim and do `:PlugInstall`
    - All the plugins are downloaded to `~/.local/share/nvim/plugged`
+- Install a terminal theme.
+  - [I use nova](https://github.com/agarrharr/nova-gnome-terminal#installation)
 
 ### Installing extras
 
+- Install a clipboard provider.
+  - Fedora: `dnf install xclip`
 - Install python3 interface
-  - `pip install --upgrade pynvim`
+  - `pip install --upgrade --user pynvim` (using [pyenv](https://github.com/pyenv/pyenv-installer) is recommended)
+- Install Node for COC. 
+  - Using [nvm](https://github.com/nvm-sh/nvm#installation-and-update) is recommended.
 - Install ctags
   - Debian based: `apt install exuberant-ctags`
   - Fedora: `dnf install ctags`
-- Install markdown preview
-  - `npm install -g livedown`
-- Tools for python development :snake:
-  - `pip install jedi`
-  - `pip install flake8`
-  - `pip install mypy`
-- Tools for VimL development
-  - `pip install vim-vint`
 
 ### Test it with Docker
 
