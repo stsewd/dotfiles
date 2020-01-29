@@ -5,5 +5,6 @@ symlinks:
 	ln -s -f `pwd`/gitignore ~/.gitignore
 	ln -s -f `pwd`/pypirc ~/.pypirc
 	ln -s -f `pwd`/tmux.conf ~/.tmux.conf
+	ln -s -f `pwd`/tmate.conf ~/.tmate.conf
 	ln -s -f `pwd`/zshrc ~/.zshrc
 	ln -s -f `pwd`/config/nvim ~/.config/nvim
