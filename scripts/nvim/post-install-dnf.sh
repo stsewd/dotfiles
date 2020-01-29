@@ -1,9 +1,11 @@
 #!/bin/bash
 
-dnf install ctags
+dnf install \
+  ctags \
+  wmctrl \
+  the_silver_searcher \
+  autojump-zsh \
+  direnv
+
 # Don't run ctags on HOME
 touch ~/.notags
-
-dnf install wmctrl
-dnf install the_silver_searcher
-dnf install autojump-zsh
