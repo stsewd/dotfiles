@@ -5,7 +5,8 @@ dnf install \
   wmctrl \
   the_silver_searcher \
   autojump-zsh \
-  direnv
+  direnv \
+  jq
 
 # Don't run ctags on HOME
 touch ~/.notags
