@@ -120,6 +120,9 @@ autoload -U compinit && compinit
 # Django
 alias dj='python manage.py'
 
+# Bitwarden
+alias bwunlock='export BW_SESSION="`bw unlock --raw`"'
+
 
 # Direnv integration
 eval "$(direnv hook zsh)"
