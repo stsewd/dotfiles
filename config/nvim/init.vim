@@ -430,6 +430,9 @@ endfunction
 
 command! -bang -nargs=0 FzGCheckout call <SID>show_branches_fzf(<bang>0)
 
+" Open fzf in a floating window
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
 
 " ## Indentline
 
