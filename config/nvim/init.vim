@@ -193,6 +193,9 @@ let g:maplocalleader = ','
 " Save
 nnoremap <leader>w :w<CR>
 
+" Refresh
+nnoremap <leader>E :e!<CR>
+
 " Edit init.vim
 nnoremap <leader>e :e $MYVIMRC<CR>
 
