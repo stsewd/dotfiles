@@ -24,6 +24,7 @@ Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
+Plug 'brooth/far.vim'  " Find and replace
 
 
 " ## Navigation Utilities
@@ -334,6 +335,12 @@ nmap <C-w><leader> <Plug>(coc-float-jump)
 inoremap <silent><expr> <C-n> coc#refresh()
 
 
+" ## Far
+
+let g:far#source = 'rgnvim'
+let g:far#auto_delete_replaced_buffers = 1
+" let g:far#ignore_files += ['./.gitignore']
+
 " ## NerdTree
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
@@ -365,7 +372,7 @@ nmap <leader>k <Plug>AirlineSelectNextTab
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
 let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
 let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
 
