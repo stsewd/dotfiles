@@ -34,6 +34,7 @@ Plug 'tpope/vim-apathy'  " Extends gf
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
+Plug 'stsewd/fzf-checkout.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'kana/vim-altr'  " Altern between files
 
@@ -422,23 +423,6 @@ function! s:open_fzf()
     execute ':Fz'.l:commands[l:choice - 1]
   endif
 endfunction
-
-function! s:open_branch_fzf(line)
-  let l:branch = a:line
-  execute 'split | terminal git checkout ' . l:branch
-  call feedkeys('i', 'n')
-endfunction
-
-function! s:show_branches_fzf(bang)
-  let l:current = system('git symbolic-ref --short HEAD')
-  let l:current = substitute(l:current, '\n', '', 'g')
-  let l:current_scaped = substitute(l:current, '/', '\\/', 'g')
-  call fzf#vim#grep(
-    \ "git branch -r --no-color | sed -r -e 's/^[^/]*\\///' -e '/^" . l:current_scaped . "$/d' -e '/^HEAD/d' | sort -u", 0,
-    \ { 'sink': function('s:open_branch_fzf'), 'options': ['--no-multi', '--header='.l:current] }, a:bang)
-endfunction
-
-command! -bang -nargs=0 FzGCheckout call <SID>show_branches_fzf(<bang>0)
 
 " Open fzf in a floating window
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
