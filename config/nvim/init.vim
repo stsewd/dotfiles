@@ -340,7 +340,7 @@ inoremap <silent><expr> <C-n> coc#refresh()
 
 let g:far#source = 'rgnvim'
 let g:far#auto_delete_replaced_buffers = 1
-" let g:far#ignore_files += ['./.gitignore']
+let g:far#ignore_files = ['.gitignore']
 
 " ## NerdTree
 
