@@ -16,7 +16,6 @@ Plug 'vim-airline/vim-airline'  " Status bar & tabline
 " ## Editor Utilities
 
 Plug 'yggdroot/indentline'  " Show indentation lines
-Plug 'godlygeek/tabular'  " Align and filer text
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
