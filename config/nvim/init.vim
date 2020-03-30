@@ -104,6 +104,10 @@ Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
 Plug 'tweekmonster/django-plus.vim'
 
+" ### ReStructuredText
+
+Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " ### Vim
 
 Plug 'Shougo/neco-vim'
