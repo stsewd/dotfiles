@@ -31,7 +31,7 @@ Plug 'brooth/far.vim'  " Find and replace
 Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'tpope/vim-apathy'  " Extends gf
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'mhinz/vim-grepper'
