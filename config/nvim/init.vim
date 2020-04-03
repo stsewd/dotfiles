@@ -295,7 +295,7 @@ augroup end
 
 " ## coc.nvim
 
-call coc#add_extension(
+let g:coc_global_extensions = [
     \ 'coc-syntax',
     \ 'coc-dictionary',
     \ 'coc-snippets',
@@ -306,7 +306,7 @@ call coc#add_extension(
     \ 'coc-css',
     \ 'coc-python',
     \ 'coc-rls',
-    \)
+    \]
 
 " Show documentation using K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
