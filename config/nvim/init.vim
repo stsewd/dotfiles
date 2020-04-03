@@ -451,7 +451,7 @@ augroup END
 function! s:indentline_enable()
   if (index(g:indentLine_fileTypeExclude, &filetype) < 0 &&
       \ index(g:indentLine_bufTypeExclude, &buftype) < 0)
-    execute 'silent IndentLinesEnable'
+    silent IndentLinesEnable
   endif
 endfunction
 
@@ -492,7 +492,7 @@ nmap S <Plug>SneakLabel_S
 
 " ## OpenPluginPage
 
-nmap <localleader>p <Plug>(OpenPluginPage)
+nmap <silent> <localleader>p <Plug>(OpenPluginPage)
 
 " ## Open browser GitHub
 
