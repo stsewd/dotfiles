@@ -146,7 +146,7 @@ set nojoinspaces  " Always use one space to join line
 
 " ## Indentation
 
-set tabstop=4
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set shiftround
