@@ -45,7 +45,6 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buf
 " ## Other Utilities
 
 Plug 'janko-m/vim-test' " Tests execution
-Plug 'kassio/neoterm'  " Terminal wrapper
 Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
 Plug 'junegunn/goyo.vim'  " Free distraction mode
 
@@ -512,22 +511,13 @@ nnoremap <leader>gp :Gina push<CR>
 nnoremap <leader>gP :Gina pull<CR>
 
 
-" ## Neoterm
-
-let g:neoterm_autoinsert = 1
-let g:neoterm_default_mod = 'rightbelow'
-
-" Open/close a terminal
-nnoremap <silent> <leader>tt <cmd>execute v:count.'Ttoggle'<CR>
-
-
 " ## Vim-test
 
-let g:test#strategy = 'neoterm'
+let g:test#strategy = 'neovim'
 let g:test#custom_runners = {'Python': ['Tox', 'Nox']}
 
 nnoremap <leader>tf :TestFile<CR>
-nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>tt :TestNearest<CR>
 
 
 " ## rust.vim
