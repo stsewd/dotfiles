@@ -7,7 +7,7 @@ function! test#python#tox#test_file(file) abort
     if exists('g:test#python#runner')
       return g:test#python#runner ==# 'tox'
     else
-      return executable('tox')
+      return filereadable('tox.ini') && executable('tox')
     endif
   endif
 endfunction

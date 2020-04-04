@@ -7,7 +7,7 @@ function! test#python#nox#test_file(file) abort
     if exists('g:test#python#runner')
       return g:test#python#runner ==# 'nox'
     else
-      return executable('nox')
+      return filereadable('noxfile.py') && executable('nox')
     endif
   endif
 endfunction
