@@ -111,8 +111,6 @@ Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
-Plug 'stsewd/open-plugin-page.nvim', { 'do': ':UpdateRemotePlugins' }
-
 
 call plug#end()
 
@@ -489,10 +487,6 @@ let g:sneak#use_ic_scs = 1  " Case insensitive
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 
-
-" ## OpenPluginPage
-
-nmap <silent> <localleader>p <Plug>(OpenPluginPage)
 
 " ## Open browser GitHub
 
