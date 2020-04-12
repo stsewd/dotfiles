@@ -413,19 +413,19 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
 
 function! s:open_fzf()
-  let l:commands= [
-    \ 'Files', 'Buffers', 'BLines', 'Rg',
-    \ 'Commands', 'GFiles?', 'GCheckout',
-    \ 'History', 'History:', 'History/', 'Tags', 'BTags'
-    \]
   let l:choices = [
-    \ '&files', '&open buffers', '&lines', '&rg',
-    \ '&commands', 'git &status', '&git checkout',
-    \ '&history', 'history&:', 'history&/', '&tags', 'buffer &Tags'
+    \ ['[f]iles', 'Files'], ['[o]pen buffers', 'Buffers'], ['[l]ines', 'BLines'], ['[r]g', 'Rg'],
+    \ ['[c]ommands', 'Commands'], ['git [s]tatus', 'GFiles'], ['[g]it checkout', 'GCheckout'],
+    \ ['[h]istory', 'History'], ['history[:]', 'History:'], ['history[/]', 'History/'],
     \]
-  let l:choice = confirm('Complete', join(l:choices, "\n"))
-  if l:choice != 0
-    execute ':Fz'.l:commands[l:choice - 1]
+  let l:options = map(copy(l:choices), 'v:val[0]')
+  echo 'Fzf ' . join(l:options, ', ') . ': '
+  let l:key = nr2char(getchar())
+  let l:match = match(l:options, '\[' . l:key . '\]')
+  echon "\r\r"
+  echon ''
+  if l:match >= 0
+    execute ':' . g:fzf_command_prefix . l:choices[l:match][1]
   endif
 endfunction
 
