@@ -422,8 +422,7 @@ function! s:open_fzf()
   echo 'Fzf ' . join(l:options, ', ') . ': '
   let l:key = nr2char(getchar())
   let l:match = match(l:options, '\[' . l:key . '\]')
-  echon "\r\r"
-  echon ''
+  redraw
   if l:match >= 0
     execute ':' . g:fzf_command_prefix . l:choices[l:match][1]
   endif
