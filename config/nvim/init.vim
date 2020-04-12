@@ -1,9 +1,9 @@
 scriptencoding utf-8
+
 " .........................................................
 " # Plugins
 " .........................................................
 
-" Plugins folder
 call plug#begin('~/.local/share/nvim/plugged')
 
 
@@ -181,7 +181,7 @@ set spelllang=en,es
 
 " Deactivate python 2 support
 let g:loaded_python_provider = 1
-let g:python3_host_prog = expand($NVIM_PYTHON_HOST)
+let g:python3_host_prog = $NVIM_PYTHON_HOST
 
 
 " .........................................................
@@ -200,9 +200,6 @@ nnoremap <leader>E :e!<CR>
 
 " Edit init.vim
 nnoremap <leader>e :e $MYVIMRC<CR>
-
-" Esc
-inoremap jk <esc>
 
 " Clear highlighted
 nnoremap <silent> <leader>l :nohlsearch<CR>
@@ -233,7 +230,6 @@ nnoremap # #N
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
-tnoremap jk <C-\><C-n>
 " Send scape to terminal
 tnoremap <A-[> <Esc>
 
