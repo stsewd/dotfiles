@@ -325,11 +325,11 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
 
-" Remap for rename current word
+" Remap for actions
 nmap <leader>r <Plug>(coc-rename)
 
 " Jump to floating window
-nmap <C-w><leader> <Plug>(coc-float-jump)
+nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
 
 " Refresh completion
 inoremap <silent><expr> <C-n> coc#refresh()
