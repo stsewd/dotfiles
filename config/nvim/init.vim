@@ -196,10 +196,10 @@ let g:maplocalleader = ','
 nnoremap <leader>w :w<CR>
 
 " Refresh
-nnoremap <leader>E :e!<CR>
+nnoremap <leader>e :e!<CR>
 
 " Edit init.vim
-nnoremap <leader>e :e $MYVIMRC<CR>
+nnoremap <leader>i :e $MYVIMRC<CR>
 
 " Clear highlighted
 nnoremap <silent> <leader>l :nohlsearch<CR>
