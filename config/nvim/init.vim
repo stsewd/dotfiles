@@ -111,6 +111,7 @@ Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
+Plug 'junegunn/vader.vim'
 
 call plug#end()
 
@@ -438,8 +439,8 @@ let g:indentLine_color_gui = '#4f5b66'
 
 let g:indentLine_bufTypeExclude = ['terminal']
 let g:indentLine_fileTypeExclude = [
-    \ 'text', 'help', 'man', 'rst',
-    \ 'markdown', 'startify', 'nerdtree'
+    \ 'text', 'help', 'man', 'rst', 'vader',
+    \ 'markdown', 'startify', 'nerdtree',
     \]
 
 " Deactivate on sneak
