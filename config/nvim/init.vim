@@ -461,11 +461,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " ## Dev-Icons
 
-" Show folders icons
 let g:DevIconsEnableFoldersOpenClose = 1
-
-" Adjust icons padding
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 
 " ## Highlightedyank
