@@ -547,20 +547,18 @@ nmap <leader>A <Plug>(altr-back)
 
 " ## Startify
 
+let g:startify_session_persistence = 1  " Autosave sessions
 let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
 
+let g:startify_custom_header = startify#pad([
+    \ '>>> Happy Coding @' . $USER . '!',
+    \])
+
 let g:startify_commands = [
-    \ { 'u': ':PlugUpdate' },
-    \ ]
+    \ {'u': ':PlugUpgrade | PlugUpdate'},
+    \]
 
 let g:startify_lists = [
-    \ { 'type': 'sessions' },
-    \ { 'type': 'commands' },
-    \ ]
-
-let g:startify_session_persistence = 1  " Autosave sessions
-
-let g:startify_custom_header = [
-    \ '          Happy Coding!',
-    \ '    >_              ',
-    \ ]
+    \ {'type': 'sessions'},
+    \ {'type': 'commands'},
+    \]
