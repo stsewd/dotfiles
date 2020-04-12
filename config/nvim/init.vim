@@ -86,6 +86,7 @@ Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'lifepillar/vim-solarized8'  " Solarized theme
 Plug 'mhartington/oceanic-next'
+Plug 'ayu-theme/ayu-vim'
 
 
 " ## Languages
@@ -165,7 +166,8 @@ set inccommand=nosplit
 
 set termguicolors  " Active true colors on terminal
 set background=light
-colorscheme OceanicNext  " solarized8, OceanicNext
+let g:ayucolor = 'mirage'  " mirage, light, dark
+colorscheme ayu  " solarized8, OceanicNext, ayu
 
 
 " ## Buffers
@@ -434,7 +436,7 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 " ## Indentline
 
-let g:indentLine_color_gui = '#4f5b66'
+let g:indentLine_setColors = 0
 
 let g:indentLine_bufTypeExclude = ['terminal']
 let g:indentLine_fileTypeExclude = [
@@ -551,7 +553,7 @@ let g:startify_session_persistence = 1  " Autosave sessions
 let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
 
 let g:startify_custom_header = startify#pad([
-    \ '>>> Happy Coding @' . $USER . '!',
+    \ '>>> Happy coding @' . $USER . '!',
     \])
 
 let g:startify_commands = [
