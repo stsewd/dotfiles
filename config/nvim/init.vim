@@ -533,7 +533,7 @@ nmap <leader>sc <Plug>(spotify-status)
 " ## Sayonara
 
 nnoremap <silent> <leader>q :Sayonara<CR>
-nnoremap <leader>Q :Sayonara!<CR>
+nnoremap <silent> <leader>Q :Sayonara!<CR>
 
 
 " ## vim-altr
