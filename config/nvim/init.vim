@@ -344,18 +344,23 @@ let g:far#source = 'rgnvim'
 let g:far#auto_delete_replaced_buffers = 1
 let g:far#ignore_files = ['.gitignore']
 
+
 " ## NerdTree
 
+" Minimal UI
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeMinimalMenu = 1
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
+let g:NERDTreeAutoDeleteBuffer = 1
 
 " Ignored files
 let g:NERDTreeIgnore = [
     \ '\.pyc$', '^__pycache__$', '^venv$',
     \ '^tags$', 'node_modules', '\.o$'
     \]
-
-let g:NERDTreeMinimalUI = 1  " Hide help text
-let g:NERDTreeAutoDeleteBuffer = 1
 
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeFind<CR>
@@ -463,7 +468,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " ## Dev-Icons
 
-let g:DevIconsEnableFoldersOpenClose = 1
+let g:webdevicons_enable_nerdtree = 0
 
 
 " ## Highlightedyank
