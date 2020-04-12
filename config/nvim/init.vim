@@ -510,6 +510,12 @@ nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>tt :TestNearest<CR>
 
 
+" ## Markdown
+
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_default_key_mappings = 1
+
+
 " ## rust.vim
 
 let g:rustfmt_autosave = 1
