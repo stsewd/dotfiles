@@ -8,3 +8,4 @@ symlinks:
 	ln -s -f `pwd`/tmate.conf ~/.tmate.conf
 	ln -s -f `pwd`/zshrc ~/.zshrc
 	ln -s -f `pwd`/config/nvim ~/.config/nvim
+	ln -s -f `pwd`/config/bat ~/.config/bat

@@ -6,6 +6,7 @@ dnf install \
   the_silver_searcher \
   autojump-zsh \
   direnv \
+  bat \
   jq
 
 # Don't run ctags on HOME
