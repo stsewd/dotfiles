@@ -224,6 +224,8 @@ vnoremap <leader>P "+P
 " Scroll
 nnoremap <up> <c-y>
 nnoremap <down> <c-e>
+nnoremap <right> zl
+nnoremap <left> zh
 
 " Search
 nnoremap * *N
