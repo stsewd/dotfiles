@@ -34,7 +34,6 @@ Plug 'tpope/vim-apathy'  " Extends gf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
-Plug 'mhinz/vim-grepper'
 Plug 'kana/vim-altr'  " Altern between files
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
