@@ -360,8 +360,8 @@ let g:NERDTreeIgnore = [
     \ '^tags$', 'node_modules', '\.o$'
     \]
 
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>N :NERDTreeFind<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>N :NERDTreeFind<CR>
 
 
 " ## Tagbar
