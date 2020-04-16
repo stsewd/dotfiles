@@ -119,10 +119,11 @@ call plug#end()
 " # Settings
 " ..........................................................
 
-" ## GUI
+" ## UI
 
 set title
 set mouse=a
+set updatetime=100
 set noshowmode
 set pumblend=30
 
@@ -130,6 +131,9 @@ set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
 
 set diffopt+=vertical  " Always use vertical diffs
+
+set hidden
+set spelllang=en,es
 
 
 " ## Lines
@@ -155,9 +159,7 @@ set expandtab
 set ignorecase
 set smartcase
 set gdefault
-
-" Show replace live preview
-set inccommand=nosplit
+set inccommand=nosplit " Show replace live preview
 
 
 " ## Theme & Colorscheme
@@ -166,16 +168,6 @@ set termguicolors  " Active true colors on terminal
 set background=light
 let g:ayucolor = 'mirage'  " mirage, light, dark
 colorscheme ayu  " solarized8, ayu
-
-
-" ## Buffers
-
-set hidden  " Allow change buffers without saving
-
-
-" ## Spellchecker
-
-set spelllang=en,es
 
 
 " ## Python
@@ -272,14 +264,13 @@ autocmd BufEnter * call AutoRestoreWinView()
 
 
 augroup CustomTerminalAutoCommand
-  " - Start on insert mode
-  " - Excecute previous command with <CR>
-  " - Don't show line numbers
   autocmd!
-  autocmd TermOpen *
-        \ startinsert |
-        \ noremap <buffer> <CR> a<C-p><CR><C-\><C-n> |
-        \ setlocal norelativenumber nonumber
+  " - Start on insert mode
+  autocmd TermOpen * startinsert
+  " - Excecute previous command with <CR>
+  autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
+  " - Don't show line numbers
+  autocmd TermOpen * setlocal norelativenumber nonumber
 augroup end
 
 " ..........................................................
@@ -366,6 +357,7 @@ nnoremap <silent> <leader>N :NERDTreeFind<CR>
 let g:tagbar_sort = 0
 nnoremap <leader>m :Tagbar<CR>
 
+
 " ## Airline
 
 " Mappings to change buffer
@@ -380,8 +372,6 @@ let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
 let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_skip_empty_sections = 1
-
-" Load Powerline font/symbols
 let g:airline_powerline_fonts = 1
 
 
@@ -399,7 +389,6 @@ let g:gutentags_file_list_command = {
 
 " ## GitGutter
 
-set updatetime=100  " Update each 100 mls
 let g:gitgutter_terminal_reports_focus = 0
 
 
