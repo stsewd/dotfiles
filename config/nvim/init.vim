@@ -242,9 +242,6 @@ nnoremap <silent> <leader>o
 "  # Custom Commands and Autocommands
 " .........................................................
 
-" Activate spell
-command! -bang Spell setlocal spell<bang> | syntax spell toplevel
-
 " Remove trailing white spaces
 command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
 
