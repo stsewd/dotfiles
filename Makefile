@@ -1,3 +1,14 @@
+install:
+	dnf install \
+		ctags \
+		wmctrl \
+		the_silver_searcher \
+		direnv \
+		bat \
+		jq
+	# Don't run ctags on $HOME
+	touch ~/.notags
+
 symlinks:
 	ln -s -f `pwd`/notags ~/.notags
 	ln -s -f `pwd`/ctags ~/.ctags

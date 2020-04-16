@@ -1,5 +1,0 @@
-neovim
-flake8
-jedi
-rstcheck
-vim-vint
