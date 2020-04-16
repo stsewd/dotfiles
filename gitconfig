@@ -1,6 +1,6 @@
 [user]
 name = Santos Gallegos
-email = santos_g@outlook.com
+email = stsewd@protonmail.com
 
 [push]
 default = simple
@@ -8,11 +8,6 @@ default = simple
 [core]
 excludesfile = ~/.gitignore
 editor = nvim
-
-[alias]
-# sudo dnf install git-daemon
-# git serve path/to/serve
-serve = !sh -c 'git daemon --verbose --export-all --reuseaddr --enable=receive-pack --base-path=$1' -
 
 [hub]
 protocol = ssh
