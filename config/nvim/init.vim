@@ -72,10 +72,6 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 " ## Autocompletion
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-
-" ## Snippets
-
 Plug 'honza/vim-snippets'
 
 
