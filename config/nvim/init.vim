@@ -298,25 +298,20 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Move to prev/next error
-nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
-nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-noremap <leader>gd gd
-nmap <silent> gd <Plug>(coc-definition)
+" Mappings
+set tagfunc=CocTagFunc
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
 
-" Remap for actions
-nmap <leader>r <Plug>(coc-rename)
-
-" Jump to floating window
+nmap <silent> <leader>r <Plug>(coc-rename)
+imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
-
-" Refresh completion
 inoremap <silent><expr> <C-n> coc#refresh()
+
+" Move to prev/next error
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
 
 " ## Far
@@ -439,11 +434,6 @@ function! s:indentline_enable()
     silent IndentLinesEnable
   endif
 endfunction
-
-
-" ## Snippets
-
-imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 " ## Dev-Icons
