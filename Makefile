@@ -19,3 +19,4 @@ symlinks:
 	ln -s -f `pwd`/zshrc ~/.zshrc
 	ln -s -f `pwd`/config/nvim ~/.config/nvim
 	ln -s -f `pwd`/config/bat ~/.config/bat
+	ln -s -f `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
