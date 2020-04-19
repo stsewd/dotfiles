@@ -26,8 +26,7 @@ Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'brooth/far.vim'  " Find and replace
 
 
-" ## Navigation Utilities
-
+" ## Navigation
 Plug 'scrooloose/nerdtree'  " Tree explorer
 Plug 'tpope/vim-apathy'  " Extends gf
 
@@ -378,11 +377,6 @@ let g:gutentags_file_list_command = {
     \ }
 
 
-" ## GitGutter
-
-let g:gitgutter_terminal_reports_focus = 0
-
-
 " ## FZF
 
 let g:fzf_command_prefix = 'Fz'
@@ -461,11 +455,13 @@ nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 
 
-" ## Open browser GitHub
+" ## Gina
 
 nnoremap <leader>go :Gina browse :<CR>
 vnoremap <leader>go :Gina browse :<CR>
 nnoremap <leader>gO :Gina browse<CR>
+nnoremap <leader>gp :Gina push<CR>
+nnoremap <leader>gP :Gina pull<CR>
 
 
 " ## Fugitive
@@ -474,8 +470,6 @@ nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gina push<CR>
-nnoremap <leader>gP :Gina pull<CR>
 
 
 " ## Vim-test
