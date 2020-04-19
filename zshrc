@@ -159,3 +159,10 @@ export PATH="$HOME/.rustup:$HOME/.cargo/bin:$PATH"
 # Utils
 # Check memory usage
 alias psmem="ps aux  | awk '{print \$6/1024 \" MB\\t\\t\" \$11}'  | sort -n"
+alias cat=bat
+
+
+# Kitty
+alias icat="kitty +kitten icat"
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
