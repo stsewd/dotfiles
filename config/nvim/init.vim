@@ -190,7 +190,7 @@ nnoremap <leader>e :e!<CR>
 nnoremap <leader>i :e $MYVIMRC<CR>
 
 " Clear highlighted
-nnoremap <silent> <leader>l :nohlsearch<CR>
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " Copy to clipboard
 vnoremap <leader>y "+y
@@ -215,6 +215,10 @@ nnoremap <left> zh
 " Search
 nnoremap * *N
 nnoremap # #N
+
+" Keep undo
+inoremap <C-U> <C-G>u<C-U>
+inoremap <C-W> <C-G>u<C-W>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
