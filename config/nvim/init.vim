@@ -37,14 +37,14 @@ Plug 'kana/vim-altr'  " Altern between files
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'majutsushi/tagbar'  " Display tags in a window
-Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }  " Close/hide/delete current buffer
+Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 
 
 " ## Other Utilities
 
 Plug 'janko-m/vim-test' " Tests execution
-Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }  " Control Spotify
-Plug 'junegunn/goyo.vim'  " Free distraction mode
+Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
+Plug 'junegunn/goyo.vim', {'on': 'Goyo'}  " Free distraction mode
 
 
 " ## Text Objects & Motions
@@ -88,18 +88,16 @@ Plug 'sheerun/vim-polyglot'
 
 " ### HTML
 
-Plug 'valloric/MatchTagAlways'  " Match html tags (colorize tags)
 Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Python
 
-Plug 'bps/vim-textobj-python', { 'for': 'python' }
-Plug 'raimon49/requirements.txt.vim', { 'for': 'requirements' }
-Plug 'tweekmonster/django-plus.vim'
+Plug 'bps/vim-textobj-python', {'for': 'python'}
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " ### ReStructuredText
 
-Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'stsewd/sphinx.nvim', {'do': ':UpdateRemotePlugins'}
 
 " ### Vim
 
