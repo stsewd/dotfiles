@@ -27,13 +27,10 @@ Plug 'brooth/far.vim'  " Find and replace
 
 
 " ## Navigation
-Plug 'scrooloose/nerdtree'  " Tree explorer
-Plug 'tpope/vim-apathy'  " Extends gf
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
-Plug 'kana/vim-altr'  " Altern between files
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'majutsushi/tagbar'  " Display tags in a window
@@ -507,12 +504,6 @@ nmap <leader>sc <Plug>(spotify-status)
 
 nnoremap <silent> <leader>q :Sayonara<CR>
 nnoremap <silent> <leader>Q :Sayonara!<CR>
-
-
-" ## vim-altr
-
-nmap <leader>a <Plug>(altr-forward)
-nmap <leader>A <Plug>(altr-back)
 
 
 " ## Startify
