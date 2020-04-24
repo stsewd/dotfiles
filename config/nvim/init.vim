@@ -362,6 +362,8 @@ let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|sta
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_skip_empty_sections = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#coc#enabled = 0
 
 
 " ## Gutentags
