@@ -6,6 +6,7 @@ install:
 		ctags \
 		wmctrl \
 		the_silver_searcher \
+		ripgrep \
 		direnv \
 		bat \
 		jq
