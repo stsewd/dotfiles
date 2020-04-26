@@ -1,12 +1,15 @@
 install:
-	dnf install \
+	sudo dnf install \
+		zsh \
+		xclip \
+		encfs \
 		ctags \
 		wmctrl \
 		the_silver_searcher \
 		direnv \
 		bat \
 		jq
-	# Don't run ctags on $HOME
+
 	touch ~/.notags
 
 symlinks:
