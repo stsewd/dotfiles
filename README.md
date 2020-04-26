@@ -11,28 +11,10 @@
 
 ### Installation
 
-- First [install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- [Install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Make a symbolic link (or just copy the folder) of `config/nvim` to `~/.config/nvim`
 - Install [vim plug](https://github.com/junegunn/vim-plug#neovim) (plugin manager)
-- Install a [patched font](https://github.com/ryanoasis/nerd-fonts).
-  - [The one I use](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete.ttf)
-- Select the previous font on your terminal configurations
 - Open Neovim and do `:PlugInstall`
-   - All the plugins are downloaded to `~/.local/share/nvim/plugged`
-- Install a terminal theme.
-  - [I use nova](https://github.com/agarrharr/nova-gnome-terminal#installation)
-
-### Installing extras
-
-- Install a clipboard provider.
-  - Fedora: `dnf install xclip`
-- Install python3 interface
-  - `pip install --upgrade --user pynvim` (using [pyenv](https://github.com/pyenv/pyenv-installer) is recommended)
-- Install Node for COC. 
-  - Using [nvm](https://github.com/nvm-sh/nvm#installation-and-update) is recommended.
-- Install ctags
-  - Debian based: `apt install exuberant-ctags`
-  - Fedora: `dnf install ctags`
 
 ### Test it with Docker
 
@@ -53,3 +35,13 @@ To update the docker image just run `docker pull stsewd/neovim`
 ### Configurations
 
 Check [`config/nvim/init.vim`](config/nvim/init.vim) for see all the plugins, settings and key-bindings, it's well documented.
+
+## Recommended tools
+
+- [kitty](https://sw.kovidgoyal.net/kitty/) as terminal emulator
+- [zsh + ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) as shell
+- [fzf](https://github.com/junegunn/fzf) for fuzzy search
+- [ripgrep](https://github.com/BurntSushi/ripgrep) for recursive search using regular expressions
+- [nvm](https://github.com/nvm-sh/nvm) for installing and managing Node versions
+- [pyenv](https://github.com/pyenv/pyenv-installer) for installing and managing Python versions
+- [hub](https://hub.github.com/) (git wrapper for GitHub)
