@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo Downloading Neovim
+echo Downloading Neovim...
 
 dowloaded_file=/tmp/nvim.appimage
-target_file=~/bin/nvim
+target_file=~/.local/bin/nvim
 
 wget -O $dowloaded_file \
   https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
