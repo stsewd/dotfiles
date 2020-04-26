@@ -40,6 +40,8 @@ Check [`config/nvim/init.vim`](config/nvim/init.vim) for see all the plugins, se
 
 - [kitty](https://sw.kovidgoyal.net/kitty/) as terminal emulator
 - [zsh + ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) as shell
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) for a patched font to have nice characters inside Neovim
+  (I use [Noto Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete.ttf))
 - [fzf](https://github.com/junegunn/fzf) for fuzzy search
 - [ripgrep](https://github.com/BurntSushi/ripgrep) for recursive search using regular expressions
 - [nvm](https://github.com/nvm-sh/nvm) for installing and managing Node versions
