@@ -9,6 +9,7 @@ install:
 		ripgrep \
 		direnv \
 		bat \
+		fzf \
 		jq
 
 	touch ~/.notags
