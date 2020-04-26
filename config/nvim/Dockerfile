@@ -25,8 +25,8 @@ RUN curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 WORKDIR /src
 CMD bash
 
-# Run this Dockerfil with
-# docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/plugged:/root/.local/share/nvim/plugged stsewd/neovim
+# Run this Dockerfile with
+# $ docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/plugged:/root/.local/share/nvim/plugged stsewd/neovim
 # $ nvim +PlugInstall
 # :qa
 # $ nvim
