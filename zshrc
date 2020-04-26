@@ -74,6 +74,7 @@ ZSH_THEME="amuse"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  fzf
   docker
   pip
   dnf
@@ -134,8 +135,6 @@ eval "$(direnv hook zsh)"
 
 # Respect .gitignore using rg
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob '!.git''
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 # pyenv
