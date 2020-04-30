@@ -264,7 +264,7 @@ augroup CustomTerminalAutoCommand
   " - Excecute previous command with <CR>
   autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
   " - Don't show line numbers
-  autocmd TermOpen * setlocal norelativenumber nonumber
+  autocmd TermOpen * setlocal norelativenumber nonumber scrolloff=0
 augroup end
 
 " ..........................................................
