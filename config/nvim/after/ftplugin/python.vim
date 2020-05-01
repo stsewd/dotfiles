@@ -1,3 +1,5 @@
+setlocal tagfunc=CocTagFunc
+
 " Folding
 setlocal foldmethod=indent
 setlocal foldnestmax=2

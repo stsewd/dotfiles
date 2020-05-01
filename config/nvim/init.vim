@@ -265,6 +265,10 @@ augroup CustomTerminalAutoCommand
   autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
   " - Don't show line numbers
   autocmd TermOpen * setlocal norelativenumber nonumber scrolloff=0
+  
+  " Mimic a per buffer scrolloff
+  autocmd BufEnter * if &buftype == 'terminal' | let &scrolloff = 0 | endif
+  autocmd BufLeave * if &buftype == 'terminal' | let &scrolloff = 3 | endif
 augroup end
 
 " ..........................................................
@@ -297,7 +301,6 @@ function! s:show_documentation()
 endfunction
 
 " Mappings
-set tagfunc=CocTagFunc
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
@@ -403,7 +406,7 @@ function! s:open_fzf()
 endfunction
 
 " Open fzf in a floating window
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.5 } }
 
 
 " ## Indentline
