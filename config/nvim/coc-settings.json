@@ -2,5 +2,6 @@
   "yaml.schemas": {
     "http://json.schemastore.org/travis": "/.?travis.ya?ml"
   },
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "rust.clippy_preference": "on"
 }
