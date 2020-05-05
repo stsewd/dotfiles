@@ -298,7 +298,7 @@ function! s:show_documentation()
 endfunction
 
 " Mappings
-nmap <silent> gd <Plug>(coc-definition)
+set tagfunc=CocTagFunc
 nmap <silent> gr <Plug>(coc-rename)
 nmap <silent> qf <Plug>(coc-fix-current)
 
