@@ -265,11 +265,7 @@ augroup CustomTerminalAutoCommand
   " - Excecute previous command with <CR>
   autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
   " - Don't show line numbers
-  autocmd TermOpen * setlocal norelativenumber nonumber scrolloff=0
-  
-  " Mimic a per buffer scrolloff
-  autocmd BufEnter * if &buftype == 'terminal' | let &scrolloff = 0 | endif
-  autocmd BufLeave * if &buftype == 'terminal' | let &scrolloff = 3 | endif
+  autocmd TermOpen * setlocal norelativenumber nonumber
 augroup end
 
 " ..........................................................
