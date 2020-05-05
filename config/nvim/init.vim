@@ -302,11 +302,10 @@ function! s:show_documentation()
 endfunction
 
 " Mappings
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-rename)
+nmap <silent> qf <Plug>(coc-fix-current)
 
-nmap <silent> <leader>r <Plug>(coc-rename)
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
 inoremap <silent><expr> <C-n> coc#refresh()
