@@ -324,8 +324,8 @@ let g:far#ignore_files = ['.gitignore']
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeMinimalMenu = 1
 let g:NERDTreeStatusline = ''
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
 let g:NERDTreeAutoDeleteBuffer = 1
