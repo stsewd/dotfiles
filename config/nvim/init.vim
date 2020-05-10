@@ -23,7 +23,7 @@ Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
-Plug 'brooth/far.vim'  " Find and replace
+Plug 'mhinz/vim-grepper'
 
 
 " ## Navigation
@@ -309,13 +309,6 @@ inoremap <silent><expr> <C-n> coc#refresh()
 " Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
-
-
-" ## Far
-
-let g:far#source = 'rgnvim'
-let g:far#auto_delete_replaced_buffers = 1
-let g:far#ignore_files = ['.gitignore']
 
 
 " ## NerdTree
