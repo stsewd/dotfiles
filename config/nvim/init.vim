@@ -322,6 +322,7 @@ let g:NERDTreeDirArrowCollapsible = ''
 
 let g:NERDTreeChDirMode = 2  " Change cwd to parent node
 let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeMapHelp = '<Nop>'
 
 " Ignored files
 let g:NERDTreeIgnore = [
