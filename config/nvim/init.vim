@@ -90,7 +90,7 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Python
 
-Plug 'bps/vim-textobj-python', {'for': 'python'}
+Plug 'jeetsukumaran/vim-pythonsense', {'for': 'python'}
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " ### ReStructuredText
