@@ -34,7 +34,7 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'stsewd/gx-extended.vim'
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
-Plug 'majutsushi/tagbar'  " Display tags in a window
+Plug 'liuchengxu/vista.vim'
 Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 
 
@@ -334,10 +334,14 @@ nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <leader>N :NERDTreeFind<CR>
 
 
-" ## Tagbar
+" ## Vista
 
-let g:tagbar_sort = 0
-nnoremap <leader>m :Tagbar<CR>
+let g:vista_default_executive = 'coc'
+let g:vista_sidebar_width = 40
+let g:vista_echo_cursor = 0
+
+nnoremap <silent> <leader>m :Vista!!<CR>
+nnoremap <silent> <leader>M :Vista ctags<CR>
 
 
 " ## Airline
