@@ -184,22 +184,14 @@ nnoremap <leader>e :e!<CR>
 " Edit init.vim
 nnoremap <leader>i :e $MYVIMRC<CR>
 
-" Clear highlighted
+" Clear highlight
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
-" Copy to clipboard
-vnoremap <leader>y "+y
-nnoremap <leader>y "+y
-
-" Cut to clipboard
-vnoremap <leader>d "+d
-nnoremap <leader>d "+d
-
-" Paste from clipboard
-nnoremap <leader>p "+p
-vnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>P "+P
+" Copy/cut/paste to/from clipboard
+noremap <leader>y "+y
+noremap <leader>d "+d
+noremap <leader>p "+p
+noremap <leader>P "+P
 
 " Scroll
 nnoremap <up> <c-y>
@@ -458,8 +450,7 @@ nmap S <Plug>SneakLabel_S
 
 " ## Gina
 
-nnoremap <leader>go :Gina browse :<CR>
-vnoremap <leader>go :Gina browse :<CR>
+noremap <leader>go :Gina browse :<CR>
 nnoremap <leader>gO :Gina browse<CR>
 nnoremap <leader>gp :Gina push<CR>
 nnoremap <leader>gP :Gina pull<CR>
