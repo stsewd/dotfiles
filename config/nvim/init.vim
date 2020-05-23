@@ -20,7 +20,6 @@ Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'scrooloose/nerdcommenter'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
-Plug 'machakann/vim-highlightedyank' " Highlight yanked text
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'mhinz/vim-grepper'
@@ -268,6 +267,15 @@ augroup CustomTerminalAutoCommand
   autocmd TermOpen * setlocal norelativenumber nonumber
 augroup end
 
+
+augroup CustomAutoCommand
+  autocmd!
+  " - Highligh on yank
+  autocmd TextYankPost *
+        \ silent! lua require'vim.highlight'.on_yank("IncSearch", 250)
+augroup end
+
+
 " ..........................................................
 " # Plugins Settings
 " ..........................................................
@@ -431,11 +439,6 @@ endfunction
 " ## Dev-Icons
 
 let g:webdevicons_enable_nerdtree = 0
-
-
-" ## Highlightedyank
-
-let g:highlightedyank_highlight_duration = 250
 
 
 " ## Closetag
