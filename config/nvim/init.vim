@@ -75,7 +75,6 @@ Plug 'honza/vim-snippets'
 
 Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
-Plug 'lifepillar/vim-solarized8'  " Solarized theme
 Plug 'ayu-theme/ayu-vim'
 
 
@@ -157,7 +156,7 @@ set inccommand=nosplit " Show replace live preview
 set termguicolors  " Active true colors on terminal
 set background=light
 let g:ayucolor = 'mirage'  " mirage, light, dark
-colorscheme ayu  " solarized8, ayu
+colorscheme ayu
 
 
 " ## Python
