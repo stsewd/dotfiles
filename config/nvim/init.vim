@@ -39,7 +39,6 @@ Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffe
 
 " ## Other Utilities
 
-Plug 'janko-m/vim-test' " Tests execution
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}  " Free distraction mode
 
@@ -208,7 +207,7 @@ inoremap <C-W> <C-G>u<C-W>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
-" Send scape to terminal
+" Send escape to terminal
 tnoremap <A-[> <Esc>
 
 " Copy current path with line number
@@ -461,15 +460,6 @@ nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
-
-
-" ## Vim-test
-
-let g:test#strategy = 'neovim'
-let g:test#custom_runners = {'Python': ['Tox', 'Nox']}
-
-nnoremap <leader>tf :TestFile<CR>
-nnoremap <leader>tt :TestNearest<CR>
 
 
 " ## Markdown
