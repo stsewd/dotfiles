@@ -22,10 +22,12 @@ Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
+Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 Plug 'mhinz/vim-grepper'
 
 
 " ## Navigation
+
 Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
@@ -34,7 +36,6 @@ Plug 'stsewd/gx-extended.vim'
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'liuchengxu/vista.vim'
-Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 
 
 " ## Other Utilities
@@ -46,15 +47,12 @@ Plug 'junegunn/goyo.vim', {'on': 'Goyo'}  " Free distraction mode
 " ## Text Objects & Motions
 
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
+Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
+Plug 'justinmk/vim-sneak'  " s
 
 Plug 'kana/vim-textobj-user'  " Base
 Plug 'jceb/vim-textobj-uri'  " URI text object (u)
-Plug 'kana/vim-textobj-indent'  " Indentation text object (i)
 Plug 'kana/vim-textobj-function'
-
-Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
-
-Plug 'justinmk/vim-sneak'  " s
 
 
 " ## Git Integration
