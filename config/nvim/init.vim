@@ -346,16 +346,15 @@ nnoremap <silent> <leader>M :Vista ctags<CR>
 nmap <leader>j <Plug>AirlineSelectPrevTab
 nmap <leader>k <Plug>AirlineSelectNextTab
 
+let g:airline_skip_empty_sections = 1
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
 let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
-let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
+let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|startify|undotree'
 let g:airline#extensions#hunks#enabled = 0
-let g:airline_skip_empty_sections = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#coc#enabled = 0
 
 
