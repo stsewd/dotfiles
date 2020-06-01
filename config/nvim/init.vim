@@ -151,15 +151,13 @@ set inccommand=nosplit " Show replace live preview
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-set background=light
 let g:ayucolor = 'mirage'  " mirage, light, dark
 colorscheme ayu
 
 
-" ## Python
+" ## Python providers
 
-" Deactivate python 2 support
-let g:loaded_python_provider = 1
+let g:loaded_python_provider = 0
 let g:python3_host_prog = $NVIM_PYTHON_HOST
 
 
