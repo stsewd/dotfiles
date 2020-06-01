@@ -165,9 +165,8 @@ let g:python3_host_prog = $NVIM_PYTHON_HOST
 "  # Mappings
 " .........................................................
 
-" Map <leader> to space and <localleader> to comma
-let g:mapleader = ' '
-let g:maplocalleader = ','
+" Map <leader> to space
+let g:mapleader = "\<space>"
 
 " Save
 nnoremap <leader>w :w<CR>
