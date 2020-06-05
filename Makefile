@@ -7,6 +7,7 @@ install:
 		wmctrl \
 		the_silver_searcher \
 		ripgrep \
+		hub \
 		direnv \
 		bat \
 		fzf \
