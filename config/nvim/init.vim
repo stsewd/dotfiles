@@ -470,6 +470,11 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_no_default_key_mappings = 1
 
 
+" ## ReStructuredText
+
+let g:rst_style = 1
+
+
 " ## rust.vim
 
 let g:rustfmt_autosave = 1
