@@ -278,6 +278,7 @@ let g:coc_global_extensions = [
     \ 'coc-css',
     \ 'coc-python',
     \ 'coc-rls',
+    \ 'coc-tag',
     \]
 
 " Show documentation using K
@@ -289,6 +290,13 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+augroup CocAutocomands
+  autocmd!
+  " Show function signature while completing args
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  autocmd FileType json,js,html setlocal formatexpr=CocAction('formatSelected')
+augroup END
 
 " Mappings
 set tagfunc=CocTagFunc
