@@ -278,6 +278,7 @@ let g:coc_global_extensions = [
     \ 'coc-css',
     \ 'coc-python',
     \ 'coc-rls',
+    \ 'coc-tsserver',
     \ 'coc-tag',
     \]
 
@@ -295,7 +296,7 @@ augroup CocAutocomands
   autocmd!
   " Show function signature while completing args
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  autocmd FileType json,js,html setlocal formatexpr=CocAction('formatSelected')
+  autocmd FileType json,js,html,python setlocal formatexpr=CocAction('formatSelected')
 augroup END
 
 " Mappings
@@ -344,6 +345,18 @@ let g:vista_echo_cursor = 0
 nnoremap <silent> <leader>m :Vista!!<CR>
 nnoremap <silent> <leader>M :Vista ctags<CR>
 
+" ## Wordmotion
+
+" Disable uppercase mappings
+let g:wordmotion_mappings = {
+    \ 'W': '',
+    \ 'E': '',
+    \ 'B': '',
+    \ 'gE': '',
+    \ 'aW': '',
+    \ 'iW': '',
+    \ '<C-R><C-A>': '',
+    \}
 
 " ## Airline
 
