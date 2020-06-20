@@ -1,12 +1,12 @@
 [distutils]
 index-servers =
     pypi
-    pypitest
-
-[pypitest]
-repository = https://test.pypi.org/legacy/
-username = stsewd
+    testpypi
 
 [pypi]
-repository = https://upload.pypi.org/legacy/
 username = stsewd
+repository = https://upload.pypi.org/legacy/
+
+[testpypi]
+username = stsewd
+repository = https://test.pypi.org/legacy/
