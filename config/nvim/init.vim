@@ -521,8 +521,9 @@ let g:startify_lists = [
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-highlight = {enable = true, disable = {'html'}},
-incremental_selection = {
+  ensure_installed = 'all',
+  highlight = {enable = true, disable = {'html'}},
+  incremental_selection = {
     enable = true,
     keymaps = {
       init_selection = "<CR>",
