@@ -24,11 +24,12 @@ Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 Plug 'mhinz/vim-grepper'
+Plug 'nvim-treesitter/nvim-treesitter'  " treesitter integration: highlight and selection
 
 
 " ## Navigation
 
-Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
@@ -313,27 +314,21 @@ nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
 
-" ## NerdTree
+" ## Luatree
 
-" Minimal UI
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeMinimalMenu = 1
-let g:NERDTreeStatusline = ''
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+nnoremap <silent> <leader>n :LuaTreeToggle<CR>
+nnoremap <silent> <leader>N :LuaTreeFindFile<CR>:LuaTreeOpen<CR>
 
-let g:NERDTreeChDirMode = 2  " Change cwd to parent node
-let g:NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeMapHelp = '<Nop>'
+let g:lua_tree_ignore = [
+      \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags',
+      \]
+let g:lua_tree_icons = {
+      \ 'default': ' ',
+      \ 'folder': {'default': '', 'open': ''},
+      \}
 
-" Ignored files
-let g:NERDTreeIgnore = [
-    \ '\.pyc$', '^__pycache__$', '^venv$',
-    \ '^tags$', 'node_modules', '\.o$'
-    \]
-
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <leader>N :NERDTreeFind<CR>
+highlight link LuaTreeFolderName NERDTreeDir
+highlight link LuaTreeSpecialFile Normal
 
 
 " ## Vista
@@ -349,14 +344,14 @@ nnoremap <silent> <leader>M :Vista ctags<CR>
 
 " Disable uppercase mappings
 let g:wordmotion_mappings = {
-    \ 'W': '',
-    \ 'E': '',
-    \ 'B': '',
-    \ 'gE': '',
-    \ 'aW': '',
-    \ 'iW': '',
-    \ '<C-R><C-A>': '',
-    \}
+      \ 'W': '',
+      \ 'E': '',
+      \ 'B': '',
+      \ 'gE': '',
+      \ 'aW': '',
+      \ 'iW': '',
+      \ '<C-R><C-A>': '',
+      \}
 
 " ## Airline
 
@@ -384,8 +379,8 @@ let g:gutentags_add_default_project_roots = 0
 
 " Filter for files under vcs
 let g:gutentags_file_list_command = {
-    \ 'markers': { '.git': 'git ls-files | grep -E  "(.*\.c$)|(.*\.h$)|(.*\.cc$)|(.*\.hh)|(.*\.py$)"' },
-    \ }
+      \ 'markers': { '.git': 'git ls-files | grep -E  "(.*\.c$)|(.*\.h$)|(.*\.cc$)|(.*\.hh)|(.*\.py$)"' },
+      \ }
 
 
 " ## FZF
@@ -398,10 +393,10 @@ nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
 
 function! s:open_fzf()
   let l:choices = [
-    \ ['[f]iles', 'Files'], ['[o]pen buffers', 'Buffers'], ['[l]ines', 'BLines'], ['[r]g', 'Rg'],
-    \ ['[c]ommands', 'Commands'], ['git [s]tatus', 'GFiles?'], ['[g]it checkout', 'GCheckout'],
-    \ ['[h]istory', 'History'], ['history[:]', 'History:'], ['history[/]', 'History/'],
-    \]
+        \ ['[f]iles', 'Files'], ['[o]pen buffers', 'Buffers'], ['[l]ines', 'BLines'], ['[r]g', 'Rg'],
+        \ ['[c]ommands', 'Commands'], ['git [s]tatus', 'GFiles?'], ['[g]it checkout', 'GCheckout'],
+        \ ['[h]istory', 'History'], ['history[:]', 'History:'], ['history[/]', 'History/'],
+        \]
   let l:options = map(copy(l:choices), 'v:val[0]')
   echo 'Fzf ' . join(l:options, ', ') . ': '
   let l:key = nr2char(getchar())
@@ -422,9 +417,9 @@ let g:indentLine_setColors = 0
 
 let g:indentLine_bufTypeExclude = ['terminal']
 let g:indentLine_fileTypeExclude = [
-    \ 'text', 'help', 'man', 'rst', 'vader',
-    \ 'markdown', 'startify', 'nerdtree',
-    \]
+      \ 'text', 'help', 'man', 'rst',
+      \ 'vader', 'markdown', 'startify',
+      \]
 
 " Deactivate on sneak
 augroup indentLineAu
@@ -439,11 +434,6 @@ function! s:indentline_enable()
     silent IndentLinesEnable
   endif
 endfunction
-
-
-" ## Dev-Icons
-
-let g:webdevicons_enable_nerdtree = 0
 
 
 " ## Closetag
@@ -514,14 +504,32 @@ let g:startify_session_persistence = 1  " Autosave sessions
 let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
 
 let g:startify_custom_header = startify#pad([
-    \ '>>> Happy coding @' . $USER . '!',
-    \])
+      \ '>>> Happy coding @' . $USER . '!',
+      \])
 
 let g:startify_commands = [
-    \ {'u': ':PlugUpgrade | PlugUpdate'},
-    \]
+      \ {'u': ':PlugUpgrade | PlugUpdate'},
+      \]
 
 let g:startify_lists = [
-    \ {'type': 'sessions'},
-    \ {'type': 'commands'},
-    \]
+      \ {'type': 'sessions'},
+      \ {'type': 'commands'},
+      \]
+
+
+" ## Treesitter
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+highlight = {enable = true, disable = {'html'}},
+incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<CR>",
+      scope_incremental = "<CR>",
+      node_incremental = "<TAB>",
+      node_decremental = "<S-TAB>",
+    },
+  },
+}
+EOF
