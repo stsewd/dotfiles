@@ -32,7 +32,7 @@ Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
-Plug 'stsewd/gx-extended.vim'
+Plug '~/github/gx-extended.vim'
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'liuchengxu/vista.vim'
@@ -384,7 +384,7 @@ let g:gutentags_add_default_project_roots = 0
 
 " Filter for files under vcs
 let g:gutentags_file_list_command = {
-    \ 'markers': { '.git': 'git ls-files | grep -E  "(.*\.c$)|(.*\.h$)|(.*\.py$)"' },
+    \ 'markers': { '.git': 'git ls-files | grep -E  "(.*\.c$)|(.*\.h$)|(.*\.cc$)|(.*\.hh)|(.*\.py$)"' },
     \ }
 
 
