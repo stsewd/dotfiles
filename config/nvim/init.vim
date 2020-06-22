@@ -33,7 +33,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
-Plug '~/github/gx-extended.vim'
+Plug 'stsewd/gx-extended.vim'
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'liuchengxu/vista.vim'
