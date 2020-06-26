@@ -3,5 +3,11 @@
     "http://json.schemastore.org/travis": "/.?travis.ya?ml"
   },
   "python.jediEnabled": false,
-  "rust.clippy_preference": "on"
+  "rust.clippy_preference": "on",
+  "clangd.arguments": [
+    "--fallback-style", "{BasedOnStyle: webkit, IndentWidth: 2}",
+    "--clang-tidy", "--clang-tidy-checks=*",
+    "--cross-file-rename",
+    "--index"
+  ]
 }
