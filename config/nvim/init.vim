@@ -281,12 +281,13 @@ let g:coc_global_extensions = [
     \ 'coc-rls',
     \ 'coc-tsserver',
     \ 'coc-tag',
+    \ 'coc-clangd',
     \]
 
 " Show documentation using K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if index(['vim', 'help', 'c', 'cpp'], &filetype) >= 0
+  if index(['vim', 'help'], &filetype) >= 0
     normal! K
   else
     call CocAction('doHover')
@@ -297,13 +298,16 @@ augroup CocAutocomands
   autocmd!
   " Show function signature while completing args
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  autocmd FileType json,js,html,python setlocal formatexpr=CocAction('formatSelected')
+  autocmd FileType
+        \ json,js,html,python,c,cpp,h,hh
+        \ setlocal formatexpr=CocAction('formatSelected')
 augroup END
 
 " Mappings
 set tagfunc=CocTagFunc
 nmap <silent> gr <Plug>(coc-rename)
 nmap <silent> qf <Plug>(coc-fix-current)
+nnoremap <silent> <space>l :CocCommand<CR>
 
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
