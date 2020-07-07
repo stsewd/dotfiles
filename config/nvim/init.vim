@@ -258,7 +258,7 @@ augroup CustomAutoCommand
   autocmd!
   " - Highligh on yank
   autocmd TextYankPost *
-        \ silent! lua require'vim.highlight'.on_yank("IncSearch", 250)
+        \ silent! lua require'vim.highlight'.on_yank {timeout=250}
 augroup end
 
 
