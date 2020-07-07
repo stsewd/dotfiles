@@ -523,10 +523,13 @@ let g:startify_lists = [
 
 " ## Treesitter
 
+" Don't highlight errors
+highlight link TSError Normal
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = 'all',
-  highlight = {enable = true, disable = {'html'}},
+  highlight = {enable = true, disable = {}},
   incremental_selection = {
     enable = true,
     keymaps = {
