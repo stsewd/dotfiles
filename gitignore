@@ -40,3 +40,7 @@ tags
 
 # Dotenv
 .env
+.envrc
+
+# nvm
+.nvmrc
