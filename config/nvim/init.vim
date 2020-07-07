@@ -269,6 +269,7 @@ augroup end
 " ## coc.nvim
 
 let g:coc_global_extensions = [
+    \ 'coc-word',
     \ 'coc-syntax',
     \ 'coc-dictionary',
     \ 'coc-snippets',
