@@ -526,6 +526,7 @@ let g:startify_lists = [
 
 " Don't highlight errors
 highlight link TSError Normal
+highlight link TSDefinition TSDefinitionUsage
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -538,6 +539,24 @@ require'nvim-treesitter.configs'.setup {
       scope_incremental = "<CR>",
       node_incremental = "<TAB>",
       node_decremental = "<S-TAB>",
+    },
+  },
+  refactor = {
+    highlight_definitions = {
+      enable = true,
+    },
+    smart_rename = {
+      enable = true,
+      keymaps = {
+        smart_rename = "grr",
+      },
+    },
+    navigation = {
+      enable = true,
+      keymaps = {
+        goto_definition = "gd",
+        list_definitions = "gD",
+      },
     },
   },
 }
