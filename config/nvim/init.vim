@@ -53,7 +53,6 @@ Plug 'justinmk/vim-sneak'  " s
 
 Plug 'kana/vim-textobj-user'  " Base
 Plug 'jceb/vim-textobj-uri'  " URI text object (u)
-Plug 'kana/vim-textobj-function'
 
 
 " ## Git Integration
@@ -86,7 +85,6 @@ Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Python
 
-Plug 'jeetsukumaran/vim-pythonsense', {'for': 'python'}
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " ### ReStructuredText
@@ -113,6 +111,7 @@ set mouse=a
 set updatetime=100
 set noshowmode
 set pumblend=30
+set noswapfile
 
 set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
@@ -173,7 +172,7 @@ let g:mapleader = "\<space>"
 nnoremap <leader>w :w<CR>
 
 " Refresh
-nnoremap <leader>e :e!<CR>
+nnoremap <leader>e :e! <bar> TSBufEnable highlight<CR>
 
 " Edit init.vim
 nnoremap <leader>i :e $MYVIMRC<CR>
@@ -300,7 +299,7 @@ augroup CocAutocomands
   " Show function signature while completing args
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
   autocmd FileType
-        \ json,js,html,python,c,cpp,h,hh
+        \ json,js,html,c,cpp,h,hh
         \ setlocal formatexpr=CocAction('formatSelected')
 augroup END
 
@@ -557,6 +556,15 @@ require'nvim-treesitter.configs'.setup {
         goto_definition = "gd",
         list_definitions = "gD",
       },
+    },
+  },
+  textobjects = {
+    enable = true,
+    keymaps = {
+      ["af"] = "@function.outer",
+      ["if"] = "@function.inner",
+      ["ac"] = "@class.outer",
+      ["ic"] = "@class.inner",
     },
   },
 }
