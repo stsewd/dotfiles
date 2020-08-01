@@ -47,3 +47,4 @@ Check [`config/nvim/init.vim`](config/nvim/init.vim) for see all the plugins, se
 - [nvm](https://github.com/nvm-sh/nvm) for installing and managing Node versions
 - [pyenv](https://github.com/pyenv/pyenv-installer) for installing and managing Python versions
 - [hub](https://hub.github.com/) (git wrapper for GitHub)
+- [tldr](https://github.com/dbrgn/tealdeer#installing)

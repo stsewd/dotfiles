@@ -51,9 +51,6 @@ Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
 Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 Plug 'justinmk/vim-sneak'  " s
 
-Plug 'kana/vim-textobj-user'  " Base
-Plug 'jceb/vim-textobj-uri'  " URI text object (u)
-
 
 " ## Git Integration
 
@@ -422,7 +419,7 @@ let g:indentLine_setColors = 0
 let g:indentLine_bufTypeExclude = ['terminal']
 let g:indentLine_fileTypeExclude = [
       \ 'text', 'help', 'man', 'rst',
-      \ 'vader', 'markdown', 'startify',
+      \ 'vader', 'markdown', 'startify', 'tsplayground',
       \]
 
 " Deactivate on sneak
