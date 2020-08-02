@@ -324,7 +324,7 @@ let g:lua_tree_ignore = [
       \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags',
       \]
 let g:lua_tree_icons = {
-      \ 'default': ' ',
+      \ 'default': '  ',
       \ 'folder': {'default': '', 'open': ''},
       \}
 
