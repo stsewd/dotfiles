@@ -526,7 +526,7 @@ highlight link TSDefinition TSDefinitionUsage
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = 'all',
+  ensure_installed = "all",
   highlight = {enable = true, disable = {}},
   incremental_selection = {
     enable = true,
@@ -562,6 +562,28 @@ require'nvim-treesitter.configs'.setup {
       ["if"] = "@function.inner",
       ["ac"] = "@class.outer",
       ["ic"] = "@class.inner",
+    },
+    swap_next = {
+      ["<leader>a"] = "@parameter.inner",
+    },
+    swap_previous = {
+      ["<leader>A"] = "@parameter.inner",
+    },
+    goto_next_start = {
+      ["]m"] = "@function.outer",
+      ["]]"] = "@class.outer",
+    },
+    goto_next_end = {
+      ["]M"] = "@function.outer",
+      ["]["] = "@class.outer",
+    },
+    goto_previous_start = {
+      ["[m"] = "@function.outer",
+      ["[["] = "@class.outer",
+    },
+    goto_previous_end = {
+      ["[M"] = "@function.outer",
+      ["[]"] = "@class.outer",
     },
   },
 }
