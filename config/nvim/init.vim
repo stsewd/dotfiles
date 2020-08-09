@@ -524,7 +524,7 @@ let g:startify_lists = [
 highlight link TSError Normal
 highlight link TSDefinition TSDefinitionUsage
 
-lua <<EOF
+lua << EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   highlight = {enable = true, disable = {}},
