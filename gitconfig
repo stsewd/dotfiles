@@ -3,7 +3,7 @@ name = Santos Gallegos
 email = stsewd@protonmail.com
 
 [push]
-default = simple
+default = current
 
 [core]
 excludesfile = ~/.gitignore
