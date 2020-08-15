@@ -24,7 +24,7 @@ Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
 Plug 'mhinz/vim-grepper'
-Plug 'nvim-treesitter/nvim-treesitter'  " treesitter integration: highlight and selection
+Plug 'nvim-treesitter/nvim-treesitter'  " treesitter integration: highlight, text-objects, etc
 
 
 " ## Navigation
