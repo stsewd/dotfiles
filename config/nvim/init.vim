@@ -393,6 +393,8 @@ let g:gutentags_file_list_command = {
 let g:fzf_command_prefix = 'Fz'
 let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+" Open fzf in a floating window
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.5 } }
 
 nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
 
@@ -411,9 +413,6 @@ function! s:open_fzf()
     execute ':' . g:fzf_command_prefix . l:choices[l:match][1]
   endif
 endfunction
-
-" Open fzf in a floating window
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.5 } }
 
 
 " ## Indentline
