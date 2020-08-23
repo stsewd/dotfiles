@@ -15,6 +15,9 @@ install:
 
 	touch ~/.notags
 
+setup:
+	./scripts/kitty.sh
+
 symlinks:
 	ln -s -f `pwd`/ctags ~/.ctags
 	ln -s -f `pwd`/gitconfig ~/.gitconfig
@@ -26,5 +29,6 @@ symlinks:
 	ln -s -f `pwd`/config/nvim ~/.config/nvim
 	ln -s -f `pwd`/config/bat ~/.config/bat
 	ln -s -f `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+	ln -s -f `pwd`/config/kitty/theme.conf ~/.config/kitty/theme.conf
 
 .PHONY: install symlinks
