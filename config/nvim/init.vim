@@ -422,7 +422,7 @@ let g:indentLine_setColors = 0
 
 let g:indentLine_bufTypeExclude = ['terminal', 'help']
 let g:indentLine_fileTypeExclude = [
-      \ 'text', 'man', 'rst', 'vader',
+      \ 'text', 'man', 'rst', 'vader', 'help',
       \ 'markdown', 'startify', 'tsplayground',
       \]
 
