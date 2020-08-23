@@ -318,7 +318,7 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 " ## Luatree
 
 nnoremap <silent> <leader>n :LuaTreeToggle<CR>
-nnoremap <silent> <leader>N :LuaTreeFindFile<CR>:LuaTreeOpen<CR>
+nnoremap <silent> <leader>N :LuaTreeFindFile<CR>
 
 let g:lua_tree_ignore = [
       \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags',
