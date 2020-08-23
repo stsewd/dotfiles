@@ -320,6 +320,7 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>n :LuaTreeToggle<CR>
 nnoremap <silent> <leader>N :LuaTreeFindFile<CR>
 
+let g:lua_tree_show_icons = {'git': 1, 'icons': 0, 'folders': 1}
 let g:lua_tree_ignore = [
       \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags',
       \]
