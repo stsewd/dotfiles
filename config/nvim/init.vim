@@ -216,16 +216,16 @@ command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
 " Save current view settings on a per-window, per-buffer basis.
 " https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
 function! AutoSaveWinView()
-  if !exists("w:SavedBufView")
+  if !exists('w:SavedBufView')
     let w:SavedBufView = {}
   endif
-  let w:SavedBufView[bufnr("%")] = winsaveview()
+  let w:SavedBufView[bufnr('%')] = winsaveview()
 endfunction
 
 " Restore current view settings.
 function! AutoRestoreWinView()
-  let buf = bufnr("%")
-  if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
+  let buf = bufnr('%')
+  if exists('w:SavedBufView') && has_key(w:SavedBufView, buf)
     let v = winsaveview()
     let atStartOfFile = v.lnum == 1 && v.col == 0
     if atStartOfFile && !&diff
@@ -235,8 +235,11 @@ function! AutoRestoreWinView()
   endif
 endfunction
 
-autocmd BufLeave * call AutoSaveWinView()
-autocmd BufEnter * call AutoRestoreWinView()
+augroup AutoRestoreWinAutoCommand
+  autocmd!
+  autocmd BufLeave * call AutoSaveWinView()
+  autocmd BufEnter * call AutoRestoreWinView()
+augroup end
 
 
 augroup CustomTerminalAutoCommand
@@ -417,10 +420,10 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.5 } }
 
 let g:indentLine_setColors = 0
 
-let g:indentLine_bufTypeExclude = ['terminal']
+let g:indentLine_bufTypeExclude = ['terminal', 'help']
 let g:indentLine_fileTypeExclude = [
-      \ 'text', 'help', 'man', 'rst',
-      \ 'vader', 'markdown', 'startify', 'tsplayground',
+      \ 'text', 'man', 'rst', 'vader',
+      \ 'markdown', 'startify', 'tsplayground',
       \]
 
 " Deactivate on sneak
