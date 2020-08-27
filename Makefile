@@ -16,6 +16,7 @@ install:
 	touch ~/.notags
 
 setup:
+	./scripts/fonts.sh
 	./scripts/kitty.sh
 
 symlinks:
@@ -31,4 +32,4 @@ symlinks:
 	ln -s -f `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 	ln -s -f `pwd`/config/kitty/theme.conf ~/.config/kitty/theme.conf
 
-.PHONY: install symlinks
+.PHONY: install symlinks setup
