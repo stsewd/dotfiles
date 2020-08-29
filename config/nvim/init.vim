@@ -401,7 +401,7 @@ nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
 function! s:open_fzf()
   let l:choices = [
         \ ['[f]iles', 'Files'], ['[o]pen buffers', 'Buffers'], ['[l]ines', 'BLines'], ['[r]g', 'Rg'],
-        \ ['[c]ommands', 'Commands'], ['git [s]tatus', 'GFiles?'], ['[g]it checkout', 'GCheckout'],
+        \ ['[c]ommands', 'Commands'], ['git [s]tatus', 'GFiles?'], ['[g]it checkout', 'GBranches'],
         \ ['[h]istory', 'History'], ['history[:]', 'History:'], ['history[/]', 'History/'],
         \]
   let l:options = map(copy(l:choices), 'v:val[0]')
