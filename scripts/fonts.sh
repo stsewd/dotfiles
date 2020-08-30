@@ -2,8 +2,8 @@
 # https://www.jetbrains.com/lp/mono/
 
 FONT_NAME=JetBrainsMono-2.001.zip
-wget -O /tmp/font.zip https://download.jetbrains.com/fonts/${FONT_NAME}
-unzip /tmp/font.zip -od /tmp/fonts/
+wget -O /tmp/fonts.zip https://download.jetbrains.com/fonts/${FONT_NAME}
+unzip -od /tmp/fonts/ /tmp/fonts.zip
 
 FONT_DIR=/tmp/fonts/ttf
 cp -v \
