@@ -1,5 +1,5 @@
 install:
-	sudo dnf install \
+	sudo dnf install -y \
 		zsh \
 		xclip \
 		encfs \
@@ -12,10 +12,10 @@ install:
 		bat \
 		fzf \
 		jq
-
-	touch ~/.notags
+	./scripts/nvim.sh
 
 setup:
+	touch ~/.notags
 	./scripts/fonts.sh
 	./scripts/kitty.sh
 

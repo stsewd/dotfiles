@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 # Install latest Neovim
-RUN apt-get update && apt-get install -y software-properties-common 
+RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:neovim-ppa/unstable
 RUN apt-get update && apt-get install -y neovim
 
