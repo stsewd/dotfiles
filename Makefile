@@ -14,11 +14,20 @@ install:
 		jq
 
 	touch ~/.notags
+
+	./scripts/zsh.sh
 	./scripts/nvim.sh
+	./scripts/rust.sh
+	./scripts/pyenv.sh
+
+	cargo install tealdeer
 
 setup:
 	./scripts/fonts.sh
 	./scripts/kitty.sh
+	./scripts/nvm.sh
+
+	pyenv update
 
 symlinks:
 	ln -sf `pwd`/ctags ~/.ctags
