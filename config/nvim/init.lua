@@ -25,6 +25,8 @@ require'nvim-treesitter.configs'.setup {
       keymaps = {
         goto_definition = "gd",
         list_definitions = "gD",
+        goto_next_usage = "]d",
+        goto_previous_usage = "[d",
       },
     },
   },
