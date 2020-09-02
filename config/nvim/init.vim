@@ -11,6 +11,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'mhinz/vim-startify'  " Show a start screen
 Plug 'vim-airline/vim-airline'  " Status bar & tabline
+Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
 
 " ## Editor Utilities
@@ -36,12 +37,6 @@ Plug 'stsewd/gx-extended.vim'
 
 Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
 Plug 'liuchengxu/vista.vim'
-
-
-" ## Other Utilities
-
-Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
-Plug 'junegunn/goyo.vim', {'on': 'Goyo'}  " Free distraction mode
 
 
 " ## Text Objects & Motions
@@ -91,7 +86,6 @@ Plug 'stsewd/sphinx.nvim', {'do': ':UpdateRemotePlugins'}
 
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
-Plug 'junegunn/vader.vim'
 
 call plug#end()
 
