@@ -210,7 +210,7 @@ nnoremap <silent> <leader>o
 " Remove trailing white spaces
 command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
 
-command! -nargs=+ -complete=file Grep silent grep! <args>
+command! -nargs=+ -complete=file Grep silent grep! <args> <bar> cwindow
 
 " Save current view settings on a per-window, per-buffer basis.
 " https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
@@ -254,8 +254,6 @@ augroup end
 
 augroup CustomAutoCommand
   autocmd!
-  " Open the quickfix window after :grep
-  autocmd QuickFixCmdPost grep cwindow
   " - Highligh on yank
   autocmd TextYankPost *
         \ silent! lua require'vim.highlight'.on_yank {timeout=250}
