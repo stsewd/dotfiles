@@ -30,13 +30,11 @@ Plug 'nvim-treesitter/nvim-treesitter'  " treesitter integration: highlight, tex
 " ## Navigation
 
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'liuchengxu/vista.vim'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'stsewd/gx-extended.vim'
-
-Plug 'ludovicchabant/vim-gutentags'  " Automated tag file generation
-Plug 'liuchengxu/vista.vim'
 
 
 " ## Text Objects & Motions
@@ -378,18 +376,6 @@ let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
 let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|startify|undotree'
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#coc#enabled = 0
-
-
-" ## Gutentags
-
-" Activate only on projects that have a ctags configuration file
-let g:gutentags_project_root = ['.ctags']
-let g:gutentags_add_default_project_roots = 0
-
-" Filter for files under vcs
-let g:gutentags_file_list_command = {
-      \ 'markers': {'.git': 'git ls-files | grep -E  "(.*\.c)|(.*\.h)|(.*\.cc)|(.*\.hh)|(.*\.py)$"'},
-      \ }
 
 
 " ## FZF
