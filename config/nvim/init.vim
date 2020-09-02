@@ -23,7 +23,6 @@ Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
 Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffer
-Plug 'mhinz/vim-grepper'
 Plug 'nvim-treesitter/nvim-treesitter'  " treesitter integration: highlight, text-objects, etc
 
 
@@ -144,6 +143,10 @@ set smartcase
 set gdefault
 set inccommand=nosplit " Show replace live preview
 
+" Use rg for :grep
+set grepprg=rg\ --vimgrep
+set grepformat=%f:%l:%c:%m
+
 
 " ## Theme & Colorscheme
 
@@ -255,6 +258,8 @@ augroup end
 
 augroup CustomAutoCommand
   autocmd!
+  " Open the quickfix window after :grep
+  autocmd QuickFixCmdPost grep cwindow
   " - Highligh on yank
   autocmd TextYankPost *
         \ silent! lua require'vim.highlight'.on_yank {timeout=250}
