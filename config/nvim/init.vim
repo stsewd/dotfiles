@@ -438,7 +438,6 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*tmpl'
 " ## Sneak
 
 let g:sneak#label = 1  " Show labels
-let g:sneak#use_ic_scs = 1  " Case insensitive
 
 " Always show labels
 nmap s <Plug>SneakLabel_s
