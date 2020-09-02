@@ -41,4 +41,6 @@ symlinks:
 	ln -sf `pwd`/config/bat/ ~/.config/
 	ln -sf `pwd`/config/kitty/ ~/.config/
 
+	sudo ln -sf `pwd`/daemon.json /etc/docker/daemon.json
+
 .PHONY: install symlinks setup
