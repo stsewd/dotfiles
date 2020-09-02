@@ -216,6 +216,8 @@ nnoremap <silent> <leader>o
 " Remove trailing white spaces
 command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
 
+command! -nargs=+ -complete=file Grep silent grep! <args>
+
 " Save current view settings on a per-window, per-buffer basis.
 " https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
 function! AutoSaveWinView()
