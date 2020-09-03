@@ -161,7 +161,7 @@ let g:python3_host_prog = $NVIM_PYTHON_HOST
 let g:mapleader = "\<space>"
 
 " Save
-nnoremap <leader>w :w<CR>
+nnoremap <leader>w :update<CR>
 
 " Refresh
 nnoremap <leader>e :e! <bar> TSBufEnable highlight<CR>
