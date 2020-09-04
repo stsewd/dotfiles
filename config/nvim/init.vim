@@ -118,8 +118,10 @@ set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
 set nojoinspaces  " Always use one space to join line
 
-
-" ## Indentation
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set foldnestmax=2
+set foldlevel=1
 
 set tabstop=4
 set shiftwidth=2
