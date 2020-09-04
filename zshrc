@@ -121,8 +121,9 @@ autoload -U compinit && compinit
 
 # ** Custom settings **
 
-# Django
+# Python & Django
 alias dj='python manage.py'
+alias p=python
 
 
 # Direnv integration
