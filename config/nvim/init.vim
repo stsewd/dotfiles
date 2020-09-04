@@ -9,8 +9,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " ## General Utilities
 
-Plug 'mhinz/vim-startify'  " Show a start screen
-Plug 'vim-airline/vim-airline'  " Status bar & tabline
+Plug 'mhinz/vim-startify'  " Start screen
+Plug 'itchyny/lightline.vim'
+Plug 'pacha/vem-tabline'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
 
@@ -59,7 +60,6 @@ Plug 'honza/vim-snippets'
 
 " ## Themes & Color Schemes
 
-Plug 'vim-airline/vim-airline-themes'  " Themes for airline
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
 Plug 'ayu-theme/ayu-vim'
 
@@ -262,6 +262,12 @@ augroup end
 " # Plugins Settings
 " ..........................................................
 
+" ## Unimpaired
+
+nmap <leader>j <Plug>unimpairedBPrevious
+nmap <leader>k <Plug>unimpairedBNext
+
+
 " ## coc.nvim
 
 let g:coc_global_extensions = [
@@ -355,22 +361,21 @@ let g:wordmotion_mappings = {
       \ '<C-R><C-A>': '',
       \}
 
-" ## Airline
 
-" Mappings to change buffer
-nmap <leader>j <Plug>AirlineSelectPrevTab
-nmap <leader>k <Plug>AirlineSelectNextTab
+" ## Lightline
 
-let g:airline_skip_empty_sections = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1  " Show open buffers/tabs
-let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
-let g:airline#extensions#virtualenv#enabled = 0  " Don't show current virtualenv
-let g:airline#extensions#tabline#ignore_bufadd_pat = '!|defx|gundo|nerd_tree|startify|undotree'
-let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#coc#enabled = 0
+let g:lightline = {'colorscheme': 'ayu'}
+let g:lightline.enable = {'tabline': 0}
+let g:lightline.separator = {'left': '', 'right': ''}
+let g:lightline.component_function = {'gitbranch': 'FugitiveHead'}
+let g:lightline.active = {}
+let g:lightline.active.left = [
+      \ ['mode', 'paste'],
+      \ ['gitbranch', 'readonly', 'filename', 'modified'],
+      \]
+let g:lightline.active.right = [
+      \ ['lineinfo'], ['percent'], ['filetype'],
+      \]
 
 
 " ## FZF
