@@ -315,11 +315,6 @@ nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
 
-" ## Polyglot
-
-let g:polyglot_disabled = ['help']
-
-
 " ## Luatree
 
 nnoremap <silent> <leader>n :LuaTreeToggle<CR>
