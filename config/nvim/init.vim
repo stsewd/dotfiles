@@ -264,12 +264,6 @@ augroup end
 " # Plugins Settings
 " ..........................................................
 
-" ## Unimpaired
-
-nmap <leader>j <Plug>unimpairedBPrevious
-nmap <leader>k <Plug>unimpairedBNext
-
-
 " ## coc.nvim
 
 let g:coc_global_extensions = [
@@ -362,6 +356,13 @@ let g:wordmotion_mappings = {
       \ 'iW': '',
       \ '<C-R><C-A>': '',
       \}
+
+
+" ## vem-tabline
+
+let g:vem_tabline_show = 2
+nmap <leader>j <Plug>vem_next_buffer-
+nmap <leader>k <Plug>vem_prev_buffer-
 
 
 " ## Lightline
