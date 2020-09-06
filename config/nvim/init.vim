@@ -361,8 +361,8 @@ let g:wordmotion_mappings = {
 " ## vem-tabline
 
 let g:vem_tabline_show = 2
-nmap <leader>j <Plug>vem_next_buffer-
-nmap <leader>k <Plug>vem_prev_buffer-
+nmap <leader>j <Plug>vem_prev_buffer-
+nmap <leader>k <Plug>vem_next_buffer-
 
 
 " ## Lightline
