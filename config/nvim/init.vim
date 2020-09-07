@@ -515,8 +515,6 @@ let g:startify_lists = [
 
 " ## Treesitter
 
-" Don't highlight errors
-highlight link TSError Normal
 highlight link TSDefinition TSDefinitionUsage
 
 luafile $HOME/.config/nvim/init.lua
