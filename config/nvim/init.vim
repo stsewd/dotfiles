@@ -344,19 +344,6 @@ let g:vista_echo_cursor = 0
 nnoremap <silent> <leader>m :Vista!!<CR>
 nnoremap <silent> <leader>M :Vista ctags<CR>
 
-" ## Wordmotion
-
-" Disable uppercase mappings
-let g:wordmotion_mappings = {
-      \ 'W': '',
-      \ 'E': '',
-      \ 'B': '',
-      \ 'gE': '',
-      \ 'aW': '',
-      \ 'iW': '',
-      \ '<C-R><C-A>': '',
-      \}
-
 
 " ## vem-tabline
 
