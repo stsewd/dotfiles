@@ -422,7 +422,7 @@ endfunction
 
 " ## Closetag
 
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*tmpl'
+let g:closetag_filenames = '*.html,*.xhtml,*.tmpl,*.md'
 
 
 " ## Sneak
