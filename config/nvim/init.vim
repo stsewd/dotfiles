@@ -245,7 +245,7 @@ augroup CustomTerminalAutoCommand
   autocmd!
   " - Start on insert mode
   autocmd TermOpen * startinsert
-  " - Excecute previous command with <CR>
+  " - Execute previous command with <CR>
   autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
   " - Don't show line numbers
   autocmd TermOpen * setlocal norelativenumber nonumber
@@ -254,7 +254,7 @@ augroup end
 
 augroup CustomAutoCommand
   autocmd!
-  " - Highligh on yank
+  " - Highlight on yank
   autocmd TextYankPost *
         \ silent! lua require'vim.highlight'.on_yank {timeout=250}
 augroup end
