@@ -28,6 +28,7 @@ setup:
 	./scripts/nvm.sh
 
 	pyenv update
+	npm install -g yarn
 
 symlinks:
 	ln -sf `pwd`/ctags ~/.ctags
