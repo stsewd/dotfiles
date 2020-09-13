@@ -21,6 +21,7 @@ Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'tpope/vim-commentary'  " Comment lines easily``
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
+Plug 'alvan/vim-closetag'  " Close tags after '>'
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
@@ -54,7 +55,7 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 " ## Autocompletion
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'honza/vim-snippets'
 
 
@@ -67,10 +68,6 @@ Plug 'ayu-theme/ayu-vim'
 " ## Languages
 
 Plug 'sheerun/vim-polyglot'
-
-" ### HTML
-
-Plug 'alvan/vim-closetag'  " Closes tag after '>'
 
 " ### Python
 
