@@ -19,7 +19,7 @@ Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
 Plug 'yggdroot/indentline'  " Show indentation lines
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
-Plug 'tpope/vim-commentary'  " Comment lines easily``
+Plug 'tpope/vim-commentary'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
 Plug 'alvan/vim-closetag'  " Close tags after '>'
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
