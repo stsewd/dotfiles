@@ -403,9 +403,8 @@ let g:closetag_filenames = '*.html,*.xhtml,*.tmpl,*.md'
 
 " ## Sneak
 
-let g:sneak#label = 1  " Show labels
-
-" Always show labels
+" Show labels
+let g:sneak#label = 1
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
 
