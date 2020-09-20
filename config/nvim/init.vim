@@ -89,21 +89,18 @@ call plug#end()
 " # Settings
 " ..........................................................
 
-" ## UI
+" ## General
 
 set title
 set mouse=a
 set updatetime=100
 set noshowmode
 set pumblend=30
+set hidden
 set noswapfile
-
 set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
-
 set diffopt+=vertical  " Always use vertical diffs
-
-set hidden
 set spelllang=en,es
 
 
@@ -246,11 +243,6 @@ augroup CustomTerminalAutoCommand
   autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
   " - Don't show line numbers
   autocmd TermOpen * setlocal norelativenumber nonumber
-augroup end
-
-
-augroup CustomAutoCommand
-  autocmd!
   " - Highlight on yank
   autocmd TextYankPost *
         \ silent! lua require'vim.highlight'.on_yank {timeout=250}
