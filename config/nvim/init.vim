@@ -363,23 +363,12 @@ let g:fzf_command_prefix = 'Fz'
 let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-nnoremap <silent> <leader>f :call <SID>open_fzf()<CR>
-
-function! s:open_fzf()
-  let l:choices = [
-        \ ['[f]iles', 'Files'], ['[o]pen buffers', 'Buffers'], ['[l]ines', 'BLines'], ['[r]g', 'Rg'],
-        \ ['[c]ommands', 'Commands'], ['git [s]tatus', 'GFiles?'], ['[g]it checkout', 'GBranches'],
-        \ ['[h]istory', 'History'], ['history[:]', 'History:'], ['history[/]', 'History/'],
-        \]
-  let l:options = map(copy(l:choices), 'v:val[0]')
-  echo 'Fzf ' . join(l:options, ', ') . ': '
-  let l:key = nr2char(getchar())
-  let l:match = match(l:options, '\[' . l:key . '\]')
-  redraw | echo
-  if l:match >= 0
-    execute ':' . g:fzf_command_prefix . l:choices[l:match][1]
-  endif
-endfunction
+noremap <leader>ff :FzFiles<CR>
+noremap <leader>fo :FzBuffers<CR>
+noremap <leader>fl :FzBLines<CR>
+noremap <leader>fr :FzRg<CR>
+noremap <leader>fs :FzGFiles<CR>
+noremap <leader>fg :FzGBranches<CR>
 
 
 " ## Indentline
