@@ -367,7 +367,7 @@ noremap <leader>ff :FzFiles<CR>
 noremap <leader>fo :FzBuffers<CR>
 noremap <leader>fl :FzBLines<CR>
 noremap <leader>fr :FzRg<CR>
-noremap <leader>fs :FzGFiles<CR>
+noremap <leader>fs :FzGFiles?<CR>
 noremap <leader>fg :FzGBranches<CR>
 
 
