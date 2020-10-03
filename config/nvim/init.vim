@@ -62,7 +62,7 @@ Plug 'honza/vim-snippets'
 " ## Themes & Color Schemes
 
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
-Plug 'ayu-theme/ayu-vim'
+Plug 'stsewd/ayu-vim', {'branch': 'tabline'}
 
 
 " ## Languages
