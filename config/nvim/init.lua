@@ -10,26 +10,6 @@ require'nvim-treesitter.configs'.setup {
       node_decremental = "<S-TAB>",
     },
   },
-  refactor = {
-    highlight_definitions = {
-      enable = true,
-    },
-    smart_rename = {
-      enable = true,
-      keymaps = {
-        -- smart_rename = "grr",
-      },
-    },
-    navigation = {
-      enable = true,
-      keymaps = {
-        goto_definition = "gd",
-        list_definitions = "gD",
-        goto_next_usage = "]d",
-        goto_previous_usage = "[d",
-      },
-    },
-  },
   textobjects = {
     select = {
       enable = true,
@@ -38,6 +18,8 @@ require'nvim-treesitter.configs'.setup {
         ["if"] = "@function.inner",
         ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
+        ["ib"] = "@block.inner",
+        ["ab"] = "@block.outer",
       },
     },
     swap = {
@@ -69,4 +51,24 @@ require'nvim-treesitter.configs'.setup {
       },
     },
   },
+  refactor = {
+    highlight_definitions = {
+      enable = true,
+    },
+    smart_rename = {
+      enable = true,
+      keymaps = {
+        smart_rename = "grr",
+      },
+    },
+    navigation = {
+      enable = true,
+      keymaps = {
+        goto_definition = "gd",
+        goto_next_usage = "]d",
+        goto_previous_usage = "[d",
+      },
+    },
+  },
+  playground = {enable = true},
 }
