@@ -1,6 +1,10 @@
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
-  highlight = {enable = true, disable = {}},
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+    disable = {},
+  },
   incremental_selection = {
     enable = true,
     keymaps = {

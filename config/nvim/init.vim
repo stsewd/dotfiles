@@ -183,8 +183,8 @@ nnoremap <right> zl
 nnoremap <left> zh
 
 " Search
-nnoremap * *N
-nnoremap # #N
+nnoremap * *``
+nnoremap # #``
 
 " Keep undo
 inoremap <C-U> <C-G>u<C-U>
@@ -319,7 +319,7 @@ let g:lua_tree_ignore = [
       \]
 let g:lua_tree_icons = {
       \ 'default': '  ',
-      \ 'folder': {'default': '', 'open': ''},
+      \ 'folder': {'default': '', 'open': ''},
       \}
 
 highlight link LuaTreeFolderName NERDTreeDir
