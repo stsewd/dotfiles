@@ -315,7 +315,7 @@ nnoremap <silent> <leader>N :LuaTreeFindFile<CR>
 
 let g:lua_tree_show_icons = {'git': 1, 'icons': 0, 'folders': 1}
 let g:lua_tree_ignore = [
-      \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags',
+      \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags', '.nox', '.pytest_cache',
       \]
 let g:lua_tree_icons = {
       \ 'default': '  ',
@@ -481,4 +481,4 @@ let g:startify_lists = [
 
 highlight link TSDefinition TSDefinitionUsage
 
-luafile $HOME/.config/nvim/init.lua
+luafile $HOME/.config/nvim/tree-sitter-config.lua
