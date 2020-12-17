@@ -11,7 +11,8 @@ install:
 		direnv \
 		bat \
 		fzf \
-		jq
+		jq \
+		perl-Image-ExifTool
 
 	touch ~/.notags
 
