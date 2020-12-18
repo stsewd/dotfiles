@@ -1,5 +1,7 @@
 install:
 	sudo dnf install -y \
+		util-linux-user \
+		clang \
 		zsh \
 		xclip \
 		encfs \
@@ -12,7 +14,9 @@ install:
 		bat \
 		fzf \
 		jq \
-		perl-Image-ExifTool
+		perl-Image-ExifTool \
+		gnome-shell-theme-flat-remix \
+		flat-remix-theme
 
 	touch ~/.notags
 
@@ -23,12 +27,15 @@ install:
 
 	cargo install tealdeer
 
+	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	flatpak install flathub com.spotify.Client
+
 setup:
 	./scripts/fonts.sh
 	./scripts/kitty.sh
 	./scripts/nvm.sh
 
-	pyenv update
+	nvm install node
 	npm install -g yarn
 
 symlinks:
