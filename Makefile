@@ -1,6 +1,7 @@
 install:
 	sudo dnf install -y \
 		util-linux-user \
+		gnome-tweak-tool \
 		clang \
 		zsh \
 		xclip \
@@ -15,6 +16,7 @@ install:
 		fzf \
 		jq \
 		perl-Image-ExifTool \
+		vlc \
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
