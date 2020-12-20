@@ -28,10 +28,9 @@ install:
 	./scripts/rust.sh
 	./scripts/pyenv.sh
 
-	cargo install tealdeer
-
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install flathub com.spotify.Client
+	flatpak install flathub org.signal.Signal
 
 setup:
 	# Should be called after make install
