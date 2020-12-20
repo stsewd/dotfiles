@@ -9,4 +9,5 @@ sudo dnf install -y \
 
 # Create neovim environment
 pyenv install 3.9.1
-pyenv virtualenv 3.9.1 neovim
+pyenv virtualenv --force 3.9.1 neovim
+PATH="$PYENV_ROOT/versions/neovim/bin:$PATH" pip install --upgrade pip pynvim

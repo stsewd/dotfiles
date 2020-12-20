@@ -40,8 +40,8 @@ setup:
 	
 	tldr --update
 
-	nvm install node
-	npm install -g yarn
+	tldr --update
+	pyenv update
 
 symlinks:
 	ln -sf `pwd`/ctags ~/.ctags
