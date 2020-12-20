@@ -5,10 +5,15 @@ FONT_NAME=JetBrainsMono-2.001.zip
 wget -O /tmp/fonts.zip https://download.jetbrains.com/fonts/${FONT_NAME}
 unzip -od /tmp/fonts/ /tmp/fonts.zip
 
-FONT_DIR=/tmp/fonts/ttf
+FONTS_DIR=/tmp/fonts/ttf
+FONTS_TARGET_DIR=~/.local/share/fonts/
+if [[ ! -d "$FONTS_TARGET_DIR" ]]; then
+  mkdir -p $FONTS_TARGET_DIR
+fi
+
 cp -v \
-  $FONT_DIR/JetBrainsMono-Regular.ttf \
-  $FONT_DIR/JetBrainsMono-Bold.ttf \
-  $FONT_DIR/JetBrainsMono-Italic.ttf \
-  $FONT_DIR/JetBrainsMono-Bold-Italic.ttf \
-  ~/.local/share/fonts
+  $FONTS_DIR/JetBrainsMono-Regular.ttf \
+  $FONTS_DIR/JetBrainsMono-Bold.ttf \
+  $FONTS_DIR/JetBrainsMono-Italic.ttf \
+  $FONTS_DIR/JetBrainsMono-Bold-Italic.ttf \
+  $FONTS_TARGET_DIR
