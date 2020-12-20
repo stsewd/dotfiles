@@ -17,6 +17,7 @@ install:
 		jq \
 		perl-Image-ExifTool \
 		vlc \
+		tealdeer \
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
@@ -36,6 +37,8 @@ setup:
 	./scripts/fonts.sh
 	./scripts/kitty.sh
 	./scripts/nvm.sh
+	
+	tldr --update
 
 	nvm install node
 	npm install -g yarn
@@ -51,6 +54,8 @@ symlinks:
 	ln -sf `pwd`/config/nvim/ ~/.config/
 	ln -sf `pwd`/config/bat/ ~/.config/
 	ln -sf `pwd`/config/kitty/ ~/.config/
+	rm -rf ~/.local/share/nautilus/scripts/
+	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
 
 	sudo ln -sf `pwd`/daemon.json /etc/docker/daemon.json
 
