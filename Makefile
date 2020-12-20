@@ -34,11 +34,10 @@ install:
 	flatpak install flathub com.spotify.Client
 
 setup:
+	# Should be called after make install
 	./scripts/fonts.sh
 	./scripts/kitty.sh
 	./scripts/nvm.sh
-	
-	tldr --update
 
 	tldr --update
 	pyenv update
