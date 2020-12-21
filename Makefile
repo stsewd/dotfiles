@@ -24,20 +24,26 @@ install:
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
+	# Install docker
+	sudo dnf install -y moby-engine
+	sudo usermod -aG docker $(whoami)
+	sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+
+	# Flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install flathub com.spotify.Client
 	flatpak install flathub org.signal.Signal
 	flatpak install flathub org.kde.krita
-
-	touch ~/.notags
 
 	./scripts/zsh.sh
 	./scripts/nvim.sh
 	./scripts/rust.sh
 	./scripts/pyenv.sh
 
+# Should be called after make install
 setup:
-	# Should be called after make install
+	touch ~/.notags
+
 	./scripts/fonts.sh
 	./scripts/kitty.sh
 	./scripts/nvm.sh
