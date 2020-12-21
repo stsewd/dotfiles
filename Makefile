@@ -21,6 +21,7 @@ install:
 		gnome-tweak-tool \
 		vlc \
 		qbittorrent \
+		gnome-chess \
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
