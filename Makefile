@@ -24,17 +24,17 @@ install:
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
+	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	flatpak install flathub com.spotify.Client
+	flatpak install flathub org.signal.Signal
+	flatpak install flathub org.kde.krita
+
 	touch ~/.notags
 
 	./scripts/zsh.sh
 	./scripts/nvim.sh
 	./scripts/rust.sh
 	./scripts/pyenv.sh
-
-	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-	flatpak install flathub com.spotify.Client
-	flatpak install flathub org.signal.Signal
-	flatpak install flathub org.kde.krita
 
 setup:
 	# Should be called after make install
