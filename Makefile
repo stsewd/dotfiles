@@ -34,6 +34,7 @@ install:
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install flathub com.spotify.Client
 	flatpak install flathub org.signal.Signal
+	flatpak install flathub org.kde.krita
 
 setup:
 	# Should be called after make install
