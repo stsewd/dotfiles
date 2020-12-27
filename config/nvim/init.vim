@@ -310,20 +310,20 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
 " ## Luatree
 
-nnoremap <silent> <leader>n :LuaTreeToggle<CR>
-nnoremap <silent> <leader>N :LuaTreeFindFile<CR>
+nnoremap <silent> <leader>n :NvimTreeToggle<CR>
+nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
-let g:lua_tree_show_icons = {'git': 1, 'icons': 0, 'folders': 1}
-let g:lua_tree_ignore = [
+let g:nvim_tree_show_icons = {'git': 1, 'icons': 0, 'folders': 1}
+let g:nvim_tree_ignore = [
       \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags', '.nox', '.pytest_cache',
       \]
-let g:lua_tree_icons = {
+let g:nvim_tree_icons = {
       \ 'default': '  ',
       \ 'folder': {'default': '', 'open': ''},
       \}
 
-highlight link LuaTreeFolderName NERDTreeDir
-highlight link LuaTreeSpecialFile Normal
+highlight link NvimTreeFolderName NERDTreeDir
+highlight link NvimTreeSpecialFile Normal
 
 
 " ## Vista

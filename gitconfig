@@ -11,3 +11,6 @@ editor = nvim
 
 [hub]
 protocol = ssh
+
+[pull]
+ff = only
