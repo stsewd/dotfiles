@@ -2,6 +2,7 @@ install:
 	sudo dnf install -y \
 		util-linux-user \
 		clang \
+		kitty \
 		zsh \
 		xclip \
 		encfs \
