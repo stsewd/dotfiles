@@ -1,3 +1,9 @@
+require'bufferline'.setup {
+  options = {
+    mappings = true,
+  },
+}
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   highlight = {

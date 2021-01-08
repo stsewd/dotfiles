@@ -11,7 +11,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'mhinz/vim-startify'  " Start screen
 Plug 'itchyny/lightline.vim'
-Plug 'pacha/vem-tabline'
+Plug 'akinsho/nvim-bufferline.lua'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
 
@@ -64,7 +64,7 @@ Plug 'honza/vim-snippets'
 " ## Themes & Color Schemes
 
 Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
-Plug 'stsewd/ayu-vim', {'branch': 'tabline'}
+Plug 'ayu-theme/ayu-vim'
 
 
 " ## Languages
@@ -336,11 +336,11 @@ nnoremap <silent> <leader>m :Vista!!<CR>
 nnoremap <silent> <leader>M :Vista ctags<CR>
 
 
-" ## vem-tabline
+" ## nvim-bufferline
 
-let g:vem_tabline_show = 2
-nmap <leader>j <Plug>vem_prev_buffer-
-nmap <leader>k <Plug>vem_next_buffer-
+nnoremap <silent> <leader>j :BufferLineCyclePrev<CR>
+nnoremap <silent> <leader>k :BufferLineCycleNext<CR>
+nnoremap <silent> gb :BufferLinePick<CR>
 
 
 " ## Lightline
@@ -481,4 +481,4 @@ let g:startify_lists = [
 
 highlight link TSDefinition TSDefinitionUsage
 
-luafile $HOME/.config/nvim/tree-sitter-config.lua
+luafile $HOME/.config/nvim/config.lua
