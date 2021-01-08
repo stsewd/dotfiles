@@ -168,3 +168,4 @@ alias clean-meta="exiftool -overwrite_original -ALL= "
 alias icat="kitty +kitten icat"
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
+alias ssh="kitty +kitten ssh"
