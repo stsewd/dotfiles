@@ -34,7 +34,6 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 " ## Navigation
 
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'liuchengxu/vista.vim'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
@@ -324,16 +323,6 @@ let g:nvim_tree_icons = {
 
 highlight link NvimTreeFolderName NERDTreeDir
 highlight link NvimTreeSpecialFile Normal
-
-
-" ## Vista
-
-let g:vista_default_executive = 'coc'
-let g:vista_sidebar_width = 40
-let g:vista_echo_cursor = 0
-
-nnoremap <silent> <leader>m :Vista!!<CR>
-nnoremap <silent> <leader>M :Vista ctags<CR>
 
 
 " ## nvim-bufferline
