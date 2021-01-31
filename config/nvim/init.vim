@@ -62,7 +62,7 @@ Plug 'honza/vim-snippets'
 
 " ## Themes & Color Schemes
 
-Plug 'ryanoasis/vim-devicons'  " Show icons on filetypes
+Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
 Plug 'ayu-theme/ayu-vim'
 
 
@@ -274,14 +274,8 @@ let g:coc_global_extensions = [
     \]
 
 " Show documentation using K
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if index(['vim', 'help'], &filetype) >= 0
-    normal! K
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+nnoremap <silent> K :call CocAction('doHover')<CR>
+nnoremap gK K
 
 augroup CocAutocomands
   autocmd!

@@ -1,8 +1,4 @@
-require'bufferline'.setup {
-  options = {
-    mappings = true,
-  },
-}
+require'bufferline'.setup {}
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
