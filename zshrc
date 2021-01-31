@@ -8,6 +8,9 @@ export EDITOR=nvim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
+# Shorter history
+export HISTSIZE=6000
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -168,4 +171,6 @@ alias clean-meta="exiftool -overwrite_original -ALL= "
 alias icat="kitty +kitten icat"
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
-alias ssh="kitty +kitten ssh"
+
+# Make ssh compatible with kitty
+alias ssh="TERM=xterm-256color ssh"
