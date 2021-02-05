@@ -63,7 +63,7 @@ Plug 'honza/vim-snippets'
 " ## Themes & Color Schemes
 
 Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
-Plug 'ayu-theme/ayu-vim'
+Plug 'stsewd/ayu-vim', {'branch': 'fork'}
 
 
 " ## Languages
@@ -315,7 +315,6 @@ let g:nvim_tree_icons = {
       \ 'folder': {'default': '', 'open': ''},
       \}
 
-highlight link NvimTreeFolderName NERDTreeDir
 highlight link NvimTreeSpecialFile Normal
 
 
@@ -353,6 +352,7 @@ noremap <leader>fo :FzBuffers<CR>
 noremap <leader>fl :FzBLines<CR>
 noremap <leader>fr :FzRg<CR>
 noremap <leader>fs :FzGFiles?<CR>
+noremap <leader>fsf :FzSphinxFiles<CR>
 noremap <leader>fg :FzGBranches<CR>
 
 
