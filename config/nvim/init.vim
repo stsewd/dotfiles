@@ -246,7 +246,7 @@ augroup CustomTerminalAutoCommand
   autocmd TermOpen * setlocal norelativenumber nonumber
   " - Highlight on yank
   autocmd TextYankPost *
-        \ silent! lua require'vim.highlight'.on_yank {timeout=250}
+        \ silent! lua require'vim.highlight'.on_yank {timeout = 300}
 augroup end
 
 
