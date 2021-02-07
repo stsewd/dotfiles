@@ -1,1 +1,1 @@
-set buflisted
+setlocal buflisted
