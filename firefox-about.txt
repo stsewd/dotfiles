@@ -1,0 +1,29 @@
+# about:config
+
+# Expire cookies after 7 days.
+network.cookie.lifetimePolicy = 3
+network.cookie.lifetime.days = 7
+
+# Show raw punycode to avoid phishing attempts.
+network.IDN_show_punycode = true
+
+# Don't allow websites to prevent use of right-click.
+dom.event.contextmenu.enabled = false
+
+# Don't allow websites to mess up with the clipboard
+dom.event.clipboardevents.enabled = false
+
+# Disable site reading installed plugins.
+plugins.enumerable_names = blank
+
+# Disable website reading how much battery your mobile device or laptop has.
+dom.battery.enabled = false
+
+# Disable 3rd party closed-source Pocket integration.
+extensions.pocket.enabled
+
+# Disable preloading of autocomplete URLs.
+browser.urlbar.speculativeConnect.enabled = false 
+
+# Disable geolocation.
+geo.enabled = false

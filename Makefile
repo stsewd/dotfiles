@@ -15,6 +15,7 @@ install:
 		bat \
 		fzf \
 		jq \
+		httpie \
 		tealdeer \
 		perl-Image-ExifTool
 

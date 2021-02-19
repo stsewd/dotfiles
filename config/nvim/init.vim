@@ -236,7 +236,7 @@ augroup AutoRestoreWinAutoCommand
 augroup end
 
 
-augroup CustomTerminalAutoCommand
+augroup CustomAutoCommand
   autocmd!
   " - Start on insert mode
   autocmd TermOpen * startinsert
@@ -266,8 +266,8 @@ let g:coc_global_extensions = [
     \ 'coc-yaml',
     \ 'coc-html',
     \ 'coc-css',
-    \ 'coc-python',
-    \ 'coc-rls',
+    \ 'coc-pyright',
+    \ 'coc-rust-analyzer',
     \ 'coc-tsserver',
     \ 'coc-tag',
     \ 'coc-clangd',
@@ -312,7 +312,7 @@ let g:nvim_tree_ignore = [
       \]
 let g:nvim_tree_icons = {
       \ 'default': '  ',
-      \ 'folder': {'default': '', 'open': ''},
+      \ 'folder': {'default': '', 'open': '', 'empty': '', 'empty_open': ''},
       \}
 
 highlight link NvimTreeSpecialFile Normal
@@ -352,7 +352,7 @@ noremap <leader>fo :FzBuffers<CR>
 noremap <leader>fl :FzBLines<CR>
 noremap <leader>fr :FzRg<CR>
 noremap <leader>fs :FzGFiles?<CR>
-noremap <leader>fsf :FzSphinxFiles<CR>
+noremap <leader>ft :FzSphinxFiles<CR>
 noremap <leader>fg :FzGBranches<CR>
 
 
