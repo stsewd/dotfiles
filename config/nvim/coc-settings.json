@@ -1,4 +1,6 @@
 {
+  "html.autoClosingTags": true,
+
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.inlayHints.enable": false,
 
