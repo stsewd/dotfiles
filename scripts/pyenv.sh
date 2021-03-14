@@ -7,8 +7,8 @@ curl https://pyenv.run | bash
 sudo dnf install -y \
     make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
 
-pyenv install 3.9.1
-pyenv install 3.6.12
+pyenv install 3.9.2
+pyenv install 3.6.13
 
 # Create neovim environment
 pyenv virtualenv --system-site-packages --force system neovim
