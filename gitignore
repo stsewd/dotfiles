@@ -43,3 +43,6 @@ tags
 
 # nvm
 .nvmrc
+
+# pyright
+pyrightconfig.json
