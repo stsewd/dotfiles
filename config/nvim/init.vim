@@ -17,7 +17,7 @@ Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
 " ## Editor Utilities
 
-Plug 'yggdroot/indentline'  " Show indentation lines
+Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}  " Show indentation lines
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'tpope/vim-commentary'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
@@ -355,29 +355,14 @@ noremap <leader>ft :FzSphinxFiles<CR>
 noremap <leader>fg :FzGBranches<CR>
 
 
-" ## Indentline
+" ## Indent line
 
-let g:indentLine_setColors = 0
-
-let g:indentLine_bufTypeExclude = ['terminal', 'help']
-let g:indentLine_fileTypeExclude = [
-      \ 'text', 'man', 'rst', 'vader', 'help',
-      \ 'markdown', 'startify', 'tsplayground',
+let g:indent_blankline_char = '¦'
+let g:indent_blankline_filetype_exclude = [
+      \ 'help', 'markdown', 'text', 'rst', 'man',
+      \ 'startify', 'tsplayground',
       \]
-
-" Deactivate on sneak
-augroup indentLineAu
-  autocmd!
-  autocmd User SneakEnter IndentLinesDisable
-  autocmd User SneakLeave call <SID>indentline_enable()
-augroup END
-
-function! s:indentline_enable()
-  if (index(g:indentLine_fileTypeExclude, &filetype) < 0 &&
-      \ index(g:indentLine_bufTypeExclude, &buftype) < 0)
-    silent IndentLinesEnable
-  endif
-endfunction
+let g:indent_blankline_buftype_exclude = ['terminal', 'nofile']
 
 
 " ## Sneak
