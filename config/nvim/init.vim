@@ -62,7 +62,7 @@ Plug 'honza/vim-snippets'
 " ## Themes & Color Schemes
 
 Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
-Plug 'stsewd/ayu-vim', {'branch': 'fork'}
+Plug 'stsewd/ayu-vim', {'branch': 'fork-2'}
 
 
 " ## Languages
@@ -114,7 +114,7 @@ set nojoinspaces  " Always use one space to join line
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set foldnestmax=2
+set foldnestmax=3
 set foldlevel=1
 
 set tabstop=4
