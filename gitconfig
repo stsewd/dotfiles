@@ -1,6 +1,7 @@
 [user]
 name = Santos Gallegos
 email = stsewd@protonmail.com
+signingkey = 811173C303342045
 
 [push]
 default = current
