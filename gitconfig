@@ -10,8 +10,11 @@ default = current
 excludesfile = ~/.gitignore
 editor = nvim
 
-[hub]
-protocol = ssh
-
 [pull]
 ff = only
+
+[commit]
+gpgsign = true
+
+[hub]
+protocol = ssh
