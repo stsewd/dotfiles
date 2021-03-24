@@ -17,6 +17,8 @@ install:
 		jq \
 		httpie \
 		tealdeer \
+		tmate \
+		seahorse \
 		perl-Image-ExifTool
 
 	sudo dnf install -y \
@@ -61,6 +63,7 @@ symlinks:
 	ln -sf `pwd`/config/nvim/ ~/.config/
 	ln -sf `pwd`/config/bat/ ~/.config/
 	ln -sf `pwd`/config/kitty/ ~/.config/
+	ln -sf `pwd`/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
 

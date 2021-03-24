@@ -75,6 +75,6 @@ require'nvim-treesitter.configs'.setup {
       },
     },
   },
-  playground = {enable = true },
+  playground = {enable = true},
   query_linter = {enable = true},
 }
