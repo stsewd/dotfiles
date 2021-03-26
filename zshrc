@@ -79,16 +79,12 @@ plugins=(
   git
   fzf
   docker
-  pip
-  dnf
   github
-  python
   rust
+  rustup
   cargo
   safe-paste
-  # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
   zsh-syntax-highlighting
-  # https://github.com/zsh-users/zsh-completions#oh-my-zsh
   zsh-completions
 )
 

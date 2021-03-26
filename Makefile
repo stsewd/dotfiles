@@ -29,12 +29,13 @@ install:
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
-	# Flatpak apps
+	@echo Install flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install flathub com.spotify.Client
 	flatpak install flathub org.signal.Signal
 	flatpak install flathub org.kde.krita
 
+	@echo Install other apps
 	./scripts/docker.sh
 	./scripts/zsh.sh
 	./scripts/nvim.sh
@@ -45,12 +46,24 @@ install:
 setup:
 	touch ~/.notags
 
+	@echo Install fonts
 	./scripts/fonts.sh
+
+	@echo Setup kitty
 	./scripts/kitty.sh
+
+	@echo Install nvm
 	./scripts/nvm.sh
 
+	@echo Update tldr
 	tldr --update
+
+	@echo Update pyenv
 	pyenv update
+
+	@echo Update rust
+	rustup update
+	rustup self update
 
 symlinks:
 	ln -sf `pwd`/ctags ~/.ctags
