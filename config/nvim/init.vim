@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " ## General Utilities
 
+Plug 'nvim-treesitter/playground'
 Plug 'mhinz/vim-startify'  " Start screen
 Plug 'itchyny/lightline.vim'
 Plug 'akinsho/nvim-bufferline.lua'
@@ -354,6 +355,10 @@ noremap <leader>fs :FzGFiles?<CR>
 noremap <leader>ft :FzSphinxFiles<CR>
 noremap <leader>fg :FzGBranches<CR>
 
+" ## fzf-checkout
+
+let g:fzf_checkout_use_current_buf_cwd = v:true
+
 
 " ## Indent line
 
@@ -363,6 +368,7 @@ let g:indent_blankline_filetype_exclude = [
       \ 'startify', 'tsplayground',
       \]
 let g:indent_blankline_buftype_exclude = ['terminal', 'nofile']
+let g:indent_blankline_show_trailing_blankline_indent = v:false
 
 
 " ## Sneak
