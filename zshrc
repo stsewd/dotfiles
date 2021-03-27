@@ -8,9 +8,6 @@ export EDITOR=nvim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-# Shorter history
-export HISTSIZE=6000
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -120,6 +117,10 @@ autoload -U compinit && compinit
 
 # ** Custom settings **
 
+# Shorter history
+export HISTSIZE=6000
+
+
 # Python & Django
 alias dj='python manage.py'
 alias p=python
@@ -172,4 +173,4 @@ kitty + complete setup zsh | source /dev/stdin
 # Make ssh compatible with kitty
 alias ssh="TERM=xterm-256color ssh"
 # ssh-agent
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
