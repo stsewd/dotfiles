@@ -14,7 +14,7 @@ export HISTSIZE=6000
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
@@ -168,5 +168,8 @@ alias icat="kitty +kitten icat"
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
+# SSH
 # Make ssh compatible with kitty
 alias ssh="TERM=xterm-256color ssh"
+# ssh-agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

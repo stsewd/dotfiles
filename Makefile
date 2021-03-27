@@ -49,6 +49,9 @@ setup:
 	@echo Install fonts
 	./scripts/fonts.sh
 
+	@echo Setup ssh-agent
+	./scripts/ssh.sh
+
 	@echo Setup kitty
 	./scripts/kitty.sh
 
@@ -79,7 +82,5 @@ symlinks:
 	ln -sf `pwd`/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
-
-	sudo ln -sf `pwd`/daemon.json /etc/docker/daemon.json
 
 .PHONY: install symlinks setup

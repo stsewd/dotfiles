@@ -1,2 +1,3 @@
 /config/nvim/spell/
 /config/kitty/themes/
+/config/systemd/user/*.wants
