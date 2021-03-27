@@ -89,9 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
+# ** User configuration **
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -102,20 +100,6 @@ autoload -U compinit && compinit
 # else
 #   export EDITOR='mvim'
 # fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# ** Custom settings **
 
 # Shorter history
 export HISTSIZE=6000
@@ -131,7 +115,6 @@ eval "$(direnv hook zsh)"
 
 
 # Integration with fzf
-
 # Respect .gitignore using rg
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob '!.git''
 
@@ -168,6 +151,7 @@ alias clean-meta="exiftool -overwrite_original -ALL= "
 alias icat="kitty +kitten icat"
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
+
 
 # SSH
 # Make ssh compatible with kitty
