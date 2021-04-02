@@ -306,12 +306,10 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>n :NvimTreeToggle<CR>
 nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
-let g:nvim_tree_show_icons = {'git': 1, 'icons': 0, 'folders': 1}
-let g:nvim_tree_ignore = [
-      \ '.git', 'node_modules', '.cache', '\.pyc$', '__pycache__', 'tags', '.nox', '.pytest_cache',
-      \]
+let g:nvim_tree_gitignore = 1
+let g:nvim_tree_ignore = ['.git', '\.pyc$']
 let g:nvim_tree_icons = {
-      \ 'default': '  ',
+      \ 'default': '',
       \ 'folder': {'default': '', 'open': '', 'empty': '', 'empty_open': ''},
       \}
 

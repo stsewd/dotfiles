@@ -8,7 +8,6 @@ install:
 		encfs \
 		ctags \
 		wmctrl \
-		the_silver_searcher \
 		ripgrep \
 		hub \
 		direnv \
