@@ -11,7 +11,7 @@
 
 ### Installation
 
-- [Install Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- [Install Neovim (nightly version)](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Make a symbolic link (or just copy the folder) of `config/nvim` to `~/.config/nvim`
 - Install [vim plug](https://github.com/junegunn/vim-plug#neovim) (plugin manager)
 - Open Neovim and do `:PlugInstall`
