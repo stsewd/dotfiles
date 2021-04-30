@@ -21,6 +21,10 @@ install:
 		perl-Image-ExifTool
 
 	sudo dnf install -y \
+	  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$$(rpm -E %fedora).noarch.rpm \
+	  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$$(rpm -E %fedora).noarch.rpm
+
+	sudo dnf install -y \
 		gnome-tweak-tool \
 		vlc \
 		qbittorrent \
@@ -30,15 +34,20 @@ install:
 
 	@echo Install flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-	flatpak install flathub com.spotify.Client
-	flatpak install flathub org.signal.Signal
-	flatpak install flathub org.kde.krita
+	flatpak install -y flathub com.spotify.Client
+	flatpak install -y flathub org.signal.Signal
+	flatpak install -y flathub org.kde.krita
+	flatpak install -y flathub org.kde.krita
+	flatpak install -y flathub com.discordapp.Discord
 
 	@echo Install other apps
 	./scripts/docker.sh
 	./scripts/zsh.sh
 	./scripts/nvim.sh
 	./scripts/rust.sh
+
+install-after:
+	./scripts/nvm.sh
 	./scripts/pyenv.sh
 
 # Should be called after make install
@@ -82,4 +91,4 @@ symlinks:
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
 
-.PHONY: install symlinks setup
+.PHONY: install install-after symlinks setup

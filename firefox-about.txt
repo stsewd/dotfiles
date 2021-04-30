@@ -11,10 +11,8 @@ network.IDN_show_punycode = true
 dom.event.contextmenu.enabled = false
 
 # Don't allow websites to mess up with the clipboard
-dom.event.clipboardevents.enabled = false
-
-# Disable site reading installed plugins.
-plugins.enumerable_names = blank
+# Gives problems when pasting in some webs.
+# dom.event.clipboardevents.enabled = false
 
 # Disable website reading how much battery your mobile device or laptop has.
 dom.battery.enabled = false
