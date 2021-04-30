@@ -142,6 +142,7 @@ set grepformat=%f:%l:%c:%m
 set termguicolors  " Active true colors on terminal
 let g:ayucolor = 'mirage'  " mirage, light, dark
 let g:tokyonight_italic_comments = v:false
+let g:tokyonight_style = 'storm'
 colorscheme tokyonight  " ayu
 
 
