@@ -108,6 +108,7 @@ export HISTSIZE=6000
 # Python & Django
 alias dj='python manage.py'
 alias p=python
+alias pp=ipython
 
 
 # Direnv integration

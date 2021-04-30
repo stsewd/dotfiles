@@ -1,4 +1,6 @@
 {
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.runtime.version": "LuaJIT",
   "html.autoClosingTags": true,
 
   "rust-analyzer.checkOnSave.command": "clippy",

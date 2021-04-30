@@ -64,14 +64,14 @@ Plug 'honza/vim-snippets'
 
 Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
 Plug 'stsewd/ayu-vim', {'branch': 'fork-2'}
+Plug 'folke/tokyonight.nvim'
 
 
 " ## Languages
 
-Plug 'sheerun/vim-polyglot'
-
 " ### Python
 
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " ### ReStructuredText
@@ -141,7 +141,8 @@ set grepformat=%f:%l:%c:%m
 
 set termguicolors  " Active true colors on terminal
 let g:ayucolor = 'mirage'  " mirage, light, dark
-colorscheme ayu
+let g:tokyonight_italic_comments = v:false
+colorscheme tokyonight  " ayu
 
 
 " ## Python providers
@@ -307,7 +308,7 @@ nnoremap <silent> <leader>n :NvimTreeToggle<CR>
 nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
 let g:nvim_tree_gitignore = 1
-let g:nvim_tree_ignore = ['.git', '\.pyc$']
+let g:nvim_tree_ignore = ['.git', '\.pyc$', '__pycache__']
 let g:nvim_tree_icons = {
       \ 'default': '',
       \ 'folder': {'default': '', 'open': '', 'empty': '', 'empty_open': ''},
