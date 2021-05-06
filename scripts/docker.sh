@@ -9,5 +9,5 @@ if [[ ! -d "DOCKER_DIR" ]]; then
 fi
 sudo ln -sf ~/dotfiles/daemon.json $DOCKER_DIR/daemon.json
 
-# Change cgroups and networking
+# Change cgroups
 sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
