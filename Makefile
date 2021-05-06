@@ -17,6 +17,7 @@ install:
 		httpie \
 		tealdeer \
 		tmate \
+		nmap \
 		seahorse \
 		perl-Image-ExifTool
 

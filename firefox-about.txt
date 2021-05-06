@@ -2,7 +2,7 @@
 
 # Expire cookies after 7 days.
 network.cookie.lifetimePolicy = 3
-network.cookie.lifetime.days = 7
+network.cookie.lifetime.days = 5
 
 # Show raw punycode to avoid phishing attempts.
 network.IDN_show_punycode = true
@@ -18,7 +18,7 @@ dom.event.contextmenu.enabled = false
 dom.battery.enabled = false
 
 # Disable 3rd party closed-source Pocket integration.
-extensions.pocket.enabled
+extensions.pocket.enabled = false
 
 # Disable preloading of autocomplete URLs.
 browser.urlbar.speculativeConnect.enabled = false 
