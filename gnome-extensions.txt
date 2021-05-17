@@ -8,3 +8,6 @@
 - https://extensions.gnome.org/extension/19/user-themes/
 - https://extensions.gnome.org/extension/1112/screenshot-tool/
 - https://extensions.gnome.org/extension/10/windownavigator/
+- https://extensions.gnome.org/extension/7/removable-drive-menu/
+- https://extensions.gnome.org/extension/4164/monitor-window-switcher/
+- https://extensions.gnome.org/extension/1702/overview-navigation/

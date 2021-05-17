@@ -63,7 +63,6 @@ Plug 'honza/vim-snippets'
 " ## Themes & Color Schemes
 
 Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
-Plug 'stsewd/ayu-vim', {'branch': 'fork-2'}
 Plug 'folke/tokyonight.nvim'
 
 
@@ -77,6 +76,10 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 " ### ReStructuredText
 
 Plug 'stsewd/sphinx.nvim', {'do': ':UpdateRemotePlugins'}
+
+" ### Rust
+
+Plug 'rust-lang/rust.vim'
 
 " ### Vim
 
@@ -140,10 +143,10 @@ set grepformat=%f:%l:%c:%m
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-let g:ayucolor = 'mirage'  " mirage, light, dark
 let g:tokyonight_italic_comments = v:false
 let g:tokyonight_style = 'storm'
-colorscheme tokyonight  " ayu
+set background=dark
+colorscheme tokyonight
 
 
 " ## Python providers
@@ -327,7 +330,7 @@ nnoremap <silent> gb :BufferLinePick<CR>
 
 " ## Lightline
 
-let g:lightline = {'colorscheme': 'ayu'}
+let g:lightline = {'colorscheme': 'tokyonight'}
 let g:lightline.enable = {'tabline': 0}
 let g:lightline.separator = {'left': '', 'right': ''}
 let g:lightline.component_function = {'gitbranch': 'FugitiveHead'}
