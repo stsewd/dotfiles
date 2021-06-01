@@ -40,6 +40,7 @@ install:
 	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub com.discordapp.Discord
+	flatpak install -y flathub com.github.tchx84.Flatseal
 
 	@echo Install other apps
 	./scripts/docker.sh

@@ -3,6 +3,9 @@ name = Santos Gallegos
 email = stsewd@protonmail.com
 signingkey = 811173C303342045
 
+[init]
+defaultBranch = main
+
 [push]
 default = current
 
