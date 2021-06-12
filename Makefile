@@ -1,4 +1,5 @@
 install:
+	@echo Installing core packages
 	sudo dnf install -y \
 		util-linux-user \
 		clang \
@@ -27,20 +28,19 @@ install:
 
 	sudo dnf install -y \
 		gnome-tweak-tool \
-		vlc \
 		qbittorrent \
 		gnome-chess \
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 
-	@echo Install flatpak apps
+	@echo Installing flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install -y flathub com.spotify.Client
 	flatpak install -y flathub org.signal.Signal
 	flatpak install -y flathub org.kde.krita
-	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.github.tchx84.Flatseal
+	flatpak install -y flathub org.videolan.VLC
 
 	@echo Install other apps
 	./scripts/docker.sh

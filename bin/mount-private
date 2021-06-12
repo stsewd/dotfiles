@@ -1,6 +1,6 @@
 #!/bin/sh
 
-time=20
+time=60
 directory=""
 while (( "$#" )); do
   case "$1" in
