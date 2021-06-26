@@ -20,6 +20,7 @@ install:
 		tmate \
 		nmap \
 		seahorse \
+		pam_yubico \
 		perl-Image-ExifTool
 
 	sudo dnf install -y \
@@ -29,7 +30,6 @@ install:
 	sudo dnf install -y \
 		gnome-tweak-tool \
 		qbittorrent \
-		gnome-chess \
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
 

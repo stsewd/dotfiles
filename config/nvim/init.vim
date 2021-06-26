@@ -405,12 +405,6 @@ nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
 
 
-" ## Markdown
-
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_no_default_key_mappings = 1
-
-
 " ## ReStructuredText
 
 let g:rst_style = 1

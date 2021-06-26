@@ -102,7 +102,8 @@ autoload -U compinit && compinit
 # fi
 
 # Shorter history
-export HISTSIZE=6000
+export SAVEHIST=1000
+export HISTSIZE=$SAVEHIST
 
 
 # Python & Django
@@ -122,7 +123,8 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob '!.git''
 
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
-export PATH="/home/stsewd/.pyenv/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
