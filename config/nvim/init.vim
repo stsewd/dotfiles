@@ -18,7 +18,7 @@ Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
 " ## Editor Utilities
 
-Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}  " Show indentation lines
+Plug 'lukas-reineke/indent-blankline.nvim'  " Show indentation lines
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'tpope/vim-commentary'  " Comment lines easily
 Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
@@ -448,9 +448,5 @@ let g:startify_lists = [
       \ {'type': 'commands'},
       \]
 
-
-" ## Treesitter
-
-highlight link TSDefinition TSDefinitionUsage
 
 luafile $HOME/.config/nvim/config.lua
