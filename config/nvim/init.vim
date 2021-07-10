@@ -275,6 +275,7 @@ let g:coc_global_extensions = [
     \ 'coc-rust-analyzer',
     \ 'coc-tsserver',
     \ 'coc-tag',
+    \ 'coc-lua',
     \ 'coc-clangd',
     \]
 
