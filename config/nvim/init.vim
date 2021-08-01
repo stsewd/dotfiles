@@ -79,7 +79,7 @@ Plug 'stsewd/sphinx.nvim', {'do': ':UpdateRemotePlugins'}
 
 " ### Rust
 
-Plug 'stsewd/rust.vim', {'branch': 'use-nvim-set-bufline'}
+Plug 'rust-lang/rust.vim'
 
 " ### Vim
 
