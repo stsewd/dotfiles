@@ -166,7 +166,7 @@ let g:mapleader = "\<space>"
 nnoremap <leader>w :update<CR>
 
 " Refresh
-nnoremap <leader>e :e! <bar> TSBufEnable highlight<CR>
+nnoremap <leader>e :e!<CR>
 
 " Edit init.vim
 nnoremap <leader>i :e $MYVIMRC<CR>

@@ -6,4 +6,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 # Install latest node version
 nvm install node
 npm install -g yarn
-npm install -g tree-sitter-cli@0.19.3
+npm install -g tree-sitter-cli@0.20.0

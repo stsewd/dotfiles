@@ -3,6 +3,7 @@ install:
 	sudo dnf install -y \
 		util-linux-user \
 		clang \
+		clang-tools-extra \
 		kitty \
 		zsh \
 		xclip \
