@@ -100,7 +100,6 @@ set mouse=a
 set updatetime=100
 set noshowmode
 set pumblend=30
-set hidden
 set noswapfile
 set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
@@ -114,7 +113,6 @@ set nowrap  " No wrap lines (display long lines)
 set number  " Display line numbers
 set relativenumber  " Show relative line numbers
 set cursorline  " Highlight current line
-set nojoinspaces  " Always use one space to join line
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -171,9 +169,6 @@ nnoremap <leader>e :e!<CR>
 " Edit init.vim
 nnoremap <leader>i :e $MYVIMRC<CR>
 
-" Clear highlight
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-
 " Copy/cut/paste to/from clipboard
 noremap <leader>y "+y
 noremap <leader>d "+d
@@ -189,10 +184,6 @@ nnoremap <left> zh
 " Search
 nnoremap * *``
 nnoremap # #``
-
-" Keep undo
-inoremap <C-U> <C-G>u<C-U>
-inoremap <C-W> <C-G>u<C-W>
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
