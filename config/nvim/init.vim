@@ -129,7 +129,6 @@ set expandtab
 set ignorecase
 set smartcase
 set gdefault
-set inccommand=nosplit " Show replace live preview
 
 " Use rg for :grep
 set grepprg=rg\ --vimgrep
