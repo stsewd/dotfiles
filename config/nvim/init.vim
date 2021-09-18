@@ -288,7 +288,7 @@ nnoremap <silent> <space>l :CocCommand<CR>
 
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
-inoremap <silent><expr> <C-n> coc#refresh()
+inoremap <silent> <expr> <C-n> coc#refresh()
 
 " Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
