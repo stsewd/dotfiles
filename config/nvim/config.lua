@@ -12,13 +12,10 @@ require("lualine").setup {
     disabled_filetypes = { "startify", "NvimTree" },
   },
   sections = {
-    lualine_c = {
-      "filename",
-      { "diagnostics", sources = { "coc" } },
-    },
+    lualine_b = { { "FugitiveHead", icon = "" } },
     lualine_x = { "filetype" },
   },
-  extensions = { "fugitive" },
+  extensions = { "fugitive", "quickfix" },
 }
 
 require("nvim-treesitter.configs").setup {
