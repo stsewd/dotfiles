@@ -1,9 +1,24 @@
 require("bufferline").setup {
   options = {
     offsets = {
-      {filetype = "NvimTree", text = "Files"},
+      { filetype = "NvimTree", text = "Files" },
     },
-  }
+  },
+}
+
+require("lualine").setup {
+  options = {
+    theme = "tokyonight",
+    disabled_filetypes = { "startify", "NvimTree" },
+  },
+  sections = {
+    lualine_c = {
+      "filename",
+      { "diagnostics", sources = { "coc" } },
+    },
+    lualine_x = { "filetype" },
+  },
+  extensions = { "fugitive" },
 }
 
 require("nvim-treesitter.configs").setup {
@@ -84,6 +99,6 @@ require("nvim-treesitter.configs").setup {
       },
     },
   },
-  playground = {enable = true},
-  query_linter = {enable = true},
+  playground = { enable = true },
+  query_linter = { enable = true },
 }

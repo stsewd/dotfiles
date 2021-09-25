@@ -9,7 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'nvim-treesitter/playground'
 Plug 'mhinz/vim-startify'  " Start screen
-Plug 'itchyny/lightline.vim'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
@@ -322,22 +322,6 @@ let g:nvim_tree_icons = {
 nnoremap <silent> <leader>j :BufferLineCyclePrev<CR>
 nnoremap <silent> <leader>k :BufferLineCycleNext<CR>
 nnoremap <silent> gb :BufferLinePick<CR>
-
-
-" ## Lightline
-
-let g:lightline = {'colorscheme': 'tokyonight'}
-let g:lightline.enable = {'tabline': 0}
-let g:lightline.separator = {'left': '', 'right': ''}
-let g:lightline.component_function = {'gitbranch': 'FugitiveHead'}
-let g:lightline.active = {}
-let g:lightline.active.left = [
-      \ ['mode', 'paste'],
-      \ ['gitbranch', 'readonly', 'filename', 'modified'],
-      \]
-let g:lightline.active.right = [
-      \ ['lineinfo'], ['percent'], ['filetype'],
-      \]
 
 
 " ## FZF
