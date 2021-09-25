@@ -282,9 +282,10 @@ augroup END
 
 " Mappings
 set tagfunc=CocTagFunc
+nnoremap <silent> <leader>cc :CocCommand<CR>
+nmap <silent> <leader>ca <Plug>(coc-codeaction-cursor)
 nmap <silent> gr <Plug>(coc-rename)
 nmap <silent> qf <Plug>(coc-fix-current)
-nnoremap <silent> <space>l :CocCommand<CR>
 
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
