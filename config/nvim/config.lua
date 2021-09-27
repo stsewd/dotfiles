@@ -1,3 +1,7 @@
+require("nvim-tree").setup {
+  disable_netrw = false,
+}
+
 require("bufferline").setup {
   options = {
     offsets = {
