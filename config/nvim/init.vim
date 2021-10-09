@@ -284,8 +284,10 @@ augroup END
 set tagfunc=CocTagFunc
 nnoremap <silent> <leader>cc :CocCommand<CR>
 nmap <silent> <leader>ca <Plug>(coc-codeaction-cursor)
+nmap <silent> <leader>cf <Plug>(coc-format)
 nmap <silent> gr <Plug>(coc-rename)
 nmap <silent> qf <Plug>(coc-fix-current)
+nnoremap <silent> <leader>cd :call CocAction('diagnosticToggle')<CR>
 
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
