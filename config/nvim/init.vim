@@ -9,7 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'nvim-treesitter/playground'
 Plug 'mhinz/vim-startify'  " Start screen
-Plug 'shadmansaleh/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
