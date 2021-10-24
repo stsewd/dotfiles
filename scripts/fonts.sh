@@ -1,7 +1,7 @@
 # Download and install the latast version of jetbrains mono.
 # https://www.jetbrains.com/lp/mono/
 
-FONT_NAME=JetBrainsMono-2.225.zip
+FONT_NAME=JetBrainsMono-2.242.zip
 wget -O /tmp/fonts.zip https://download.jetbrains.com/fonts/${FONT_NAME}
 unzip -od /tmp/fonts/ /tmp/fonts.zip
 

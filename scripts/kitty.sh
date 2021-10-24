@@ -1,15 +1,17 @@
-# Install/update kitty theme
-THEME_DIR=~/.config/kitty/themes
-THEME=ayu_mirage.conf
+# Update/install kitty
+# https://sw.kovidgoyal.net/kitty/binary/
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
 
-if [[ ! -d "$THEME_DIR" ]]; then
-  mkdir -p $THEME_DIR
+BIN_DIR=~/.local/bin/
+if [[ ! -d "$BIN_DIR" ]]; then
+  mkdir -p $BIN_DIR
 fi
+ln -sf ~/.local/kitty.app/bin/kitty $BIN_DIR
 
-wget \
-  https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/${THEME} \
-  -O "${THEME_DIR}/${THEME}"
+# Update the path to the kitty icon and binary in the kitty.desktop file
+cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications
+KITTY_DESKTOP_FILE=~/.local/share/applications/kitty.desktop
+sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" $KITTY_DESKTOP_FILE
 
-wget \
-  https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/kitty_tokyonight_storm.conf \
-  -O "${THEME_DIR}/tokyonight-storm.conf"
+# Set theme
+kitty +kitten themes 'Tokyo Night Storm'
