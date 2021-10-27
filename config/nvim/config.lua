@@ -1,3 +1,12 @@
+require("notify").setup {
+  timeout = 500,
+  on_open = function(win)
+    vim.api.nvim_win_set_option(win, "winblend", 30)
+    vim.api.nvim_win_set_config(win, { zindex = 100 })
+  end,
+}
+vim.notify = require "notify"
+
 require("nvim-tree").setup {
   disable_netrw = false,
 }

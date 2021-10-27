@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'nvim-treesitter/playground'
 Plug 'mhinz/vim-startify'  " Start screen
+Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
@@ -257,6 +258,7 @@ let g:coc_global_extensions = [
     \ 'coc-emoji',
     \ 'coc-json',
     \ 'coc-yaml',
+    \ 'coc-toml',
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-pyright',
