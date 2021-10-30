@@ -9,6 +9,9 @@ vim.notify = require "notify"
 
 require("nvim-tree").setup {
   disable_netrw = false,
+  filters = {
+    custom = { ".git", ".pyc$", "__pycache__" },
+  },
 }
 
 require("bufferline").setup {

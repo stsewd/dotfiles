@@ -306,7 +306,6 @@ nnoremap <silent> <leader>n :NvimTreeToggle<CR>
 nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
 let g:nvim_tree_gitignore = 1
-let g:nvim_tree_ignore = ['.git', '\.pyc$', '__pycache__']
 let g:nvim_tree_special_files = []
 let g:nvim_tree_show_icons = {
       \ 'folder_arrows': 0,
