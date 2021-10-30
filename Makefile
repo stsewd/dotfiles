@@ -4,7 +4,6 @@ install:
 		util-linux-user \
 		clang \
 		clang-tools-extra \
-		kitty \
 		zsh \
 		xclip \
 		encfs \
