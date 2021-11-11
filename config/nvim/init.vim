@@ -343,6 +343,7 @@ noremap <leader>fg :FzGBranches<CR>
 " ## fzf-checkout
 
 let g:fzf_checkout_use_current_buf_cwd = v:true
+let g:fzf_checkout_git_options = '--sort=-committerdate'
 
 
 " ## Indent line

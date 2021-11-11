@@ -1,4 +1,5 @@
 {
+  "coc.preferences.enableMessageDialog": true,
   "dialog.floatBorderHighlight": "FloatBorder",
   "suggest.floatConfig": {
     "border": true,
