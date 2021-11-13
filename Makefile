@@ -2,6 +2,7 @@ install:
 	@echo Installing core packages
 	sudo dnf install -y \
 		util-linux-user \
+		openssl	\
 		clang \
 		clang-tools-extra \
 		zsh \
@@ -29,6 +30,7 @@ install:
 
 	sudo dnf install -y \
 		gnome-tweak-tool \
+		gnome-extensions-app \
 		qbittorrent \
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme
