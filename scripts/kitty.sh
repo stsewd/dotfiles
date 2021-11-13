@@ -14,4 +14,4 @@ KITTY_DESKTOP_FILE=~/.local/share/applications/kitty.desktop
 sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" $KITTY_DESKTOP_FILE
 
 # Set theme
-kitty +kitten themes 'Tokyo Night Storm'
+kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/current-theme.conf
