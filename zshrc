@@ -147,7 +147,7 @@ export PATH="$HOME/.rustup:$HOME/.cargo/bin:$PATH"
 alias psmem="ps aux  | awk '{print \$6/1024 \" MB\\t\\t\" \$11}'  | sort -n"
 alias cat=bat
 alias ts=tree-sitter
-alias clean-meta="exiftool -overwrite_original -ALL= "
+alias clear-meta="exiftool -overwrite_original -ALL= "
 
 
 # Kitty

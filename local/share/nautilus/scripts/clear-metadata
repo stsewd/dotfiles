@@ -1,2 +1,2 @@
 #!/bin/bash
-clear-metadata ${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS}
+clear-meta ${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS}
