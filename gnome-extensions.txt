@@ -9,3 +9,4 @@
 - https://extensions.gnome.org/extension/7/removable-drive-menu/
 - https://extensions.gnome.org/extension/4164/monitor-window-switcher/
 - https://extensions.gnome.org/extension/1702/overview-navigation/
+- https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/
