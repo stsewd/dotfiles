@@ -3,6 +3,8 @@ install:
 	sudo dnf install -y \
 		util-linux-user \
 		openssl	\
+		openssh-askpass \
+		setroubleshoot \
 		clang \
 		clang-tools-extra \
 		zsh \
