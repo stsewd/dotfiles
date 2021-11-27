@@ -305,7 +305,6 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>n :NvimTreeToggle<CR>
 nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
-let g:nvim_tree_gitignore = 1
 let g:nvim_tree_disable_window_picker = 1
 let g:nvim_tree_special_files = []
 let g:nvim_tree_show_icons = {
