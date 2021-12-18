@@ -45,6 +45,7 @@ install:
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.github.tchx84.Flatseal
 	flatpak install -y flathub org.videolan.VLC
+	flatpak install -y flathub com.calibre_ebook.calibre
 
 	@echo Install other apps
 	./scripts/docker.sh

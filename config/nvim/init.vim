@@ -10,6 +10,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'nvim-treesitter/playground'
 Plug 'mhinz/vim-startify'  " Start screen
 Plug 'rcarriga/nvim-notify'
+Plug 'stevearc/dressing.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
@@ -417,6 +418,7 @@ let g:startify_custom_header = startify#pad([
 
 let g:startify_commands = [
       \ {'u': ':PlugUpgrade | PlugUpdate'},
+      \ {'t': ':terminal'},
       \]
 
 let g:startify_lists = [

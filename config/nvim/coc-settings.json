@@ -23,6 +23,7 @@
   },
   "Lua.diagnostics.globals": ["vim"],
   "Lua.runtime.version": "LuaJIT",
+  "Lua.workspace.preloadFileSize": 500,
   "html.autoClosingTags": true,
 
   "rust-analyzer.checkOnSave.command": "clippy",
