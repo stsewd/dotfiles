@@ -21,7 +21,7 @@ dom.battery.enabled = false
 extensions.pocket.enabled = false
 
 # Disable preloading of autocomplete URLs.
-browser.urlbar.speculativeConnect.enabled = false 
+browser.urlbar.speculativeConnect.enabled = false
 
 # Disable geolocation.
 geo.enabled = false
@@ -29,3 +29,6 @@ geo.enabled = false
 # Disable sending analytics.
 # https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
 beacon.enabled = false
+
+# Disable autofill of forms, you can still see the suggestions once you click on the field.
+signon.autofillForms = false
