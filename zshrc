@@ -78,8 +78,6 @@ plugins=(
   docker
   github
   rust
-  rustup
-  cargo
   safe-paste
   zsh-syntax-highlighting
   zsh-completions

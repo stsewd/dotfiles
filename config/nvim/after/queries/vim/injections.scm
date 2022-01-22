@@ -1,4 +1,4 @@
-((command (command_name) @_command_name (arguments) @javascript)
+((user_command (command_name) @_command_name (arguments) @javascript)
  (#eq? @_command_name "Plug"))
 
 ((map_statement
