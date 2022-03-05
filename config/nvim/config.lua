@@ -9,6 +9,13 @@ vim.notify = require "notify"
 
 require("nvim-tree").setup {
   disable_netrw = false,
+  actions = {
+    open_file = {
+      window_picker = {
+        enable = false,
+      },
+    },
+  },
   filters = {
     custom = { ".git", ".pyc$", "__pycache__" },
   },
@@ -24,7 +31,7 @@ require("bufferline").setup {
 
 require("lualine").setup {
   options = {
-    theme = "tokyonight",
+    theme = "auto",
     disabled_filetypes = { "startify", "NvimTree" },
   },
   sections = {

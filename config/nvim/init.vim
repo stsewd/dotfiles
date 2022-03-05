@@ -64,6 +64,7 @@ Plug 'honza/vim-snippets'
 
 Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
 Plug 'folke/tokyonight.nvim'
+Plug 'ishan9299/nvim-solarized-lua'
 
 
 " ## Languages
@@ -306,7 +307,6 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>n :NvimTreeToggle<CR>
 nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
-let g:nvim_tree_disable_window_picker = 1
 let g:nvim_tree_special_files = []
 let g:nvim_tree_show_icons = {
       \ 'folder_arrows': 0,
