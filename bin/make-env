@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python_version=3.10.0
+python_version=3.10.1
 venv_name="$(basename `pwd`)"
 help="Usage $0 [--name virtualenv name] [--version python version]"
 
