@@ -4,9 +4,7 @@ index-servers =
     testpypi
 
 [pypi]
-username = stsewd
-repository = https://upload.pypi.org/legacy/
+username = __token__
 
 [testpypi]
-username = stsewd
-repository = https://test.pypi.org/legacy/
+username = __token__

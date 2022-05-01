@@ -107,6 +107,10 @@ set scrolloff=3  " Display at least 3 lines around you cursor
 set diffopt+=vertical  " Always use vertical diffs
 set spelllang=en,es
 
+" Enable experimental lua filetype detection.
+let g:do_filetype_lua = 1
+let g:did_load_filetypes = 1
+
 
 " ## Lines
 
@@ -143,7 +147,6 @@ set grepformat=%f:%l:%c:%m
 set termguicolors  " Active true colors on terminal
 let g:tokyonight_italic_comments = v:false
 let g:tokyonight_style = 'storm'
-set background=dark
 colorscheme tokyonight
 
 
@@ -187,6 +190,7 @@ nnoremap # #``
 
 " Exit terminal mode with escape
 tnoremap <Esc> <C-\><C-n>
+tnoremap <C-[> <C-\><C-n>
 " Send escape to terminal
 tnoremap <A-[> <Esc>
 

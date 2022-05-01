@@ -35,5 +35,6 @@
     "--cross-file-rename",
     "--index"
   ],
-  "yaml.format.enable": true
+  "yaml.format.enable": true,
+  "python.formatting.provider": "black"
 }
