@@ -19,6 +19,23 @@ require("nvim-tree").setup {
   filters = {
     custom = { ".git", ".pyc$", "__pycache__" },
   },
+  renderer = {
+    special_files = {},
+    icons = {
+      show = {
+        folder_arrow = false,
+      },
+      glyphs = {
+        default = '',
+        folder = {
+          default = '',
+          open = '',
+          empty = '',
+          empty_open = '',
+        },
+      },
+    },
+  },
 }
 
 require("bufferline").setup {

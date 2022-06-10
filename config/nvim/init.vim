@@ -311,19 +311,6 @@ nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>n :NvimTreeToggle<CR>
 nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
 
-let g:nvim_tree_special_files = []
-let g:nvim_tree_show_icons = {
-      \ 'folder_arrows': 0,
-      \ 'folders': 1,
-      \ 'git': 1,
-      \ 'files': 1
-      \}
-let g:nvim_tree_icons = {
-      \ 'default': '',
-      \ 'folder': {'default': '', 'open': '', 'empty': '', 'empty_open': ''},
-      \}
-
-
 " ## nvim-bufferline
 
 nnoremap <silent> <leader>j :BufferLineCyclePrev<CR>
