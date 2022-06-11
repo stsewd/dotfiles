@@ -15,4 +15,5 @@ sed -i "s|^Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x
 sed -i "s|Exec=kitty|Exec=${BIN_DIR}kitty|g" $KITTY_DESKTOP_FILE
 
 # Set theme
+mkdir -p ~/.config/kitty/
 kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/current-theme.conf

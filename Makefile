@@ -35,7 +35,8 @@ install:
 		gnome-extensions-app \
 		qbittorrent \
 		gnome-shell-theme-flat-remix \
-		flat-remix-theme
+		flat-remix-theme \
+		vlc
 
 	@echo Installing flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -44,7 +45,6 @@ install:
 	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.github.tchx84.Flatseal
-	flatpak install -y flathub org.videolan.VLC
 	flatpak install -y flathub com.calibre_ebook.calibre
 
 	@echo Install other apps
