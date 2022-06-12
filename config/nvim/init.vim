@@ -2,7 +2,11 @@
 " # Plugins
 " .........................................................
 
-call plug#begin('~/.local/share/nvim/plugged')
+" Enable experimental lua filetype detection.
+let g:do_filetype_lua = 1
+let g:did_load_filetypes = 0
+
+call plug#begin()
 
 
 " ## General Utilities
@@ -106,10 +110,6 @@ set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
 set diffopt+=vertical  " Always use vertical diffs
 set spelllang=en,es
-
-" Enable experimental lua filetype detection.
-let g:do_filetype_lua = 1
-let g:did_load_filetypes = 1
 
 
 " ## Lines
