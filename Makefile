@@ -37,6 +37,8 @@ install:
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme \
 		vlc
+	@echo Installing Proton VPN
+	./scripts/protonvpn.sh
 
 	@echo Installing flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -46,6 +48,7 @@ install:
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.github.tchx84.Flatseal
 	flatpak install -y flathub com.calibre_ebook.calibre
+	flatpak install -y flathub com.google.AndroidStudio
 
 	@echo Install other apps
 	./scripts/docker.sh
