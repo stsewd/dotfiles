@@ -273,6 +273,7 @@ let g:coc_global_extensions = [
     \ 'coc-tag',
     \ 'coc-lua',
     \ 'coc-clangd',
+    \ 'coc-esbonio',
     \]
 
 " Show documentation using K
@@ -300,6 +301,10 @@ nnoremap <silent> <leader>cd :call CocAction('diagnosticToggle')<CR>
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
 inoremap <silent> <expr> <C-n> coc#refresh()
+inoremap <silent><expr> <CR>
+      \ pumvisible()?
+      \ coc#_select_confirm()
+      \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
