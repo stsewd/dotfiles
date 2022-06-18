@@ -21,6 +21,7 @@ install:
 		httpie \
 		tealdeer \
 		tmate \
+		gh \
 		nmap \
 		seahorse \
 		pam_yubico \
