@@ -2,10 +2,6 @@
 " # Plugins
 " .........................................................
 
-" Enable experimental lua filetype detection.
-let g:do_filetype_lua = 1
-let g:did_load_filetypes = 0
-
 call plug#begin()
 
 
@@ -62,6 +58,7 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'honza/vim-snippets'
+Plug 'yaegassy/coc-esbonio'
 
 
 " ## Themes & Color Schemes
