@@ -28,6 +28,7 @@
   "html.autoClosingTags": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.inlayHints.enable": false,
+  "rust-analyzer.disableProgressNotifications": true,
   "clangd.arguments": [
     "--fallback-style", "{BasedOnStyle: webkit, IndentWidth: 2}",
     "--clang-tidy", "--clang-tidy-checks=*",
