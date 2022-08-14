@@ -25,7 +25,6 @@
   "Lua.diagnostics.globals": ["vim"],
   "Lua.runtime.version": "LuaJIT",
   "Lua.workspace.preloadFileSize": 500,
-  "html.autoClosingTags": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.inlayHints.enable": false,
   "rust-analyzer.disableProgressNotifications": true,

@@ -155,6 +155,7 @@ alias icat="kitty +kitten icat"
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
+export BACKGROUND=dark
 
 # SSH
 # Make ssh compatible with kitty

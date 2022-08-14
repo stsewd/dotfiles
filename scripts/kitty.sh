@@ -3,9 +3,7 @@
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
 
 BIN_DIR=~/.local/bin/
-if [[ ! -d "$BIN_DIR" ]]; then
-  mkdir -p $BIN_DIR
-fi
+mkdir -p $BIN_DIR
 ln -sf ~/.local/kitty.app/bin/kitty $BIN_DIR
 
 # Update the path to the kitty icon and binary in the kitty.desktop file
@@ -14,6 +12,8 @@ KITTY_DESKTOP_FILE=~/.local/share/applications/kitty.desktop
 sed -i "s|^Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" $KITTY_DESKTOP_FILE
 sed -i "s|Exec=kitty|Exec=${BIN_DIR}kitty|g" $KITTY_DESKTOP_FILE
 
-# Set theme
+# Update and set theme.
 mkdir -p ~/.config/kitty/
-kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/current-theme.conf
+kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/current-theme.dark.conf
+kitty +kitten themes --dump-theme 'Solarized Light' > ~/.config/kitty/current-theme.light.conf
+ln -sf ~/.config/kitty/current-theme.dark.conf ~/.config/kitty/current-theme.conf

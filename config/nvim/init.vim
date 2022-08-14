@@ -144,8 +144,8 @@ set grepformat=%f:%l:%c:%m
 set termguicolors  " Active true colors on terminal
 let g:tokyonight_italic_comments = v:false
 let g:tokyonight_style = 'storm'
-colorscheme tokyonight
-
+let s:theme =  $BACKGROUND == "dark" ? "tokyonight" : "solarized"
+execute "colorscheme " . s:theme
 
 " ## Python providers
 
@@ -297,7 +297,8 @@ nnoremap <silent> <leader>cd :call CocAction('diagnosticToggle')<CR>
 
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
-inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
+inoremap <silent> <expr> <CR> coc#pum#visible() && coc#pum#info()['index'] != -1 ?
+      \ coc#pum#confirm() : "\<C-g>u\<CR>"
 
 " Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)

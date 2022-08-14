@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TO_BACKGROUND=light
+if [[ "$BACKGROUND" == "light" ]]; then
+  TO_BACKGROUND=dark
+fi
+
+echo "Changing to" $TO_BACKGROUND
+
+sed --follow-symlinks -i "s/^export BACKGROUND=.*/export BACKGROUND=${TO_BACKGROUND}/" ~/.zshrc
+ln -sf $HOME/.config/kitty/current-theme.${TO_BACKGROUND}.conf $HOME/.config/kitty/current-theme.conf
+
+echo "Re-open the terminal for the changes to take effect."
