@@ -7,6 +7,10 @@ require("notify").setup {
 }
 vim.notify = require "notify"
 
+require("auto-session").setup {
+  auto_session_create_enabled = false,
+}
+
 require("nvim-tree").setup {
   disable_netrw = false,
   actions = {

@@ -9,6 +9,7 @@ call plug#begin()
 
 Plug 'nvim-treesitter/playground'
 Plug 'mhinz/vim-startify'  " Start screen
+Plug 'rmagatti/auto-session'
 Plug 'rcarriga/nvim-notify'
 Plug 'stevearc/dressing.nvim'
 Plug 'nvim-lualine/lualine.nvim'
@@ -144,7 +145,7 @@ set grepformat=%f:%l:%c:%m
 set termguicolors  " Active true colors on terminal
 let g:tokyonight_italic_comments = v:false
 let g:tokyonight_style = 'storm'
-let s:theme =  $BACKGROUND == "dark" ? "tokyonight" : "solarized"
+let s:theme =  $BACKGROUND == "light" ? "solarized" : "tokyonight"
 execute "colorscheme " . s:theme
 
 " ## Python providers
@@ -399,9 +400,6 @@ nnoremap <silent> <leader>Q :Sayonara!<CR>
 
 " ## Startify
 
-let g:startify_session_persistence = 1  " Autosave sessions
-let g:startify_change_to_vcs_root = 1  " Change cwd to root of git project
-
 let g:startify_custom_header = startify#pad([
       \ '>>> Happy coding @' . $USER . '!',
       \])
@@ -411,10 +409,7 @@ let g:startify_commands = [
       \ {'t': ':terminal'},
       \]
 
-let g:startify_lists = [
-      \ {'type': 'sessions'},
-      \ {'type': 'commands'},
-      \]
+let g:startify_lists = [{'type': 'commands'}]
 
 
 luafile $HOME/.config/nvim/config.lua
