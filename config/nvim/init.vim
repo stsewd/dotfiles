@@ -143,8 +143,9 @@ set grepformat=%f:%l:%c:%m
 " ## Theme & Colorscheme
 
 set termguicolors  " Active true colors on terminal
-let g:tokyonight_italic_comments = v:false
-let g:tokyonight_style = 'storm'
+
+" Needs to be run before setting the colorscheme.
+call v:lua.require'tokyonight'.setup({"styles": {"comments": "None"}})
 let s:theme =  $BACKGROUND == "light" ? "solarized" : "tokyonight"
 execute "colorscheme " . s:theme
 
