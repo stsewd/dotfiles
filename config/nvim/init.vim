@@ -74,7 +74,6 @@ Plug 'ishan9299/nvim-solarized-lua'
 " ### Python
 
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " ### ReStructuredText
 
@@ -145,10 +144,7 @@ set grepformat=%f:%l:%c:%m
 set termguicolors  " Active true colors on terminal
 
 " Needs to be run before setting the colorscheme.
-call v:lua.require'tokyonight'.setup({
-      \ "styles": {"comments": "None"},
-      \ "sidebars": ["qf"],
-      \})
+luafile $HOME/.config/nvim/tokyonight.lua
 let s:theme =  $BACKGROUND == "light" ? "solarized" : "tokyonight"
 execute "colorscheme " . s:theme
 

@@ -28,7 +28,7 @@
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.updates.channel": "stable",
   "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.enable": false,
+  "inlayHint.enable": false,
   "rust-analyzer.disableProgressNotifications": true,
   "clangd.arguments": [
     "--fallback-style", "{BasedOnStyle: webkit, IndentWidth: 2}",
@@ -40,6 +40,5 @@
   "yaml.format.enable": true,
   "python.formatting.provider": "black",
   "pyright.disableProgressNotifications": true,
-  "esbonio.enableFixDirectiveCompletion": false,
-  "pyright.inlayHints.enable": false
+  "esbonio.enableFixDirectiveCompletion": false
 }
