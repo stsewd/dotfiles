@@ -1,1 +1,2 @@
+; extends
 ["{" "}"] @punctuation.bracket

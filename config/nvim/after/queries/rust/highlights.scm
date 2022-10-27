@@ -1,3 +1,4 @@
+; extends
 ((impl_item (declaration_list (function_item (identifier) @constructor)))
  (#eq? @constructor "new"))
 
