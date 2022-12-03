@@ -34,7 +34,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " ## Navigation
 
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
@@ -64,7 +64,7 @@ Plug 'yaegassy/coc-esbonio'
 
 " ## Themes & Color Schemes
 
-Plug 'kyazdani42/nvim-web-devicons'  " Show icons on filetypes
+Plug 'nvim-tree/nvim-web-devicons'  " Show icons on filetypes
 Plug 'folke/tokyonight.nvim'
 Plug 'ishan9299/nvim-solarized-lua'
 
