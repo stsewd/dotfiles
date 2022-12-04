@@ -156,6 +156,8 @@ nnoremap <leader>e :e!<CR>
 
 " Edit init.vim
 nnoremap <leader>i :e $MYVIMRC<CR>
+" Edit config.lua
+nnoremap <leader>l :e $HOME/.config/nvim/config.lua<CR>
 
 " Copy/cut/paste to/from clipboard
 noremap <leader>y "+y
