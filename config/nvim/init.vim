@@ -107,6 +107,8 @@ set colorcolumn=100  " Set & show limit column
 set scrolloff=3  " Display at least 3 lines around you cursor
 set diffopt+=vertical  " Always use vertical diffs
 set spelllang=en,es
+set termguicolors  " Active true colors on terminal
+let g:python3_host_prog = $NVIM_PYTHON_HOST  " Set python provider
 
 
 " ## Lines
@@ -137,21 +139,6 @@ set gdefault
 " Use rg for :grep
 set grepprg=rg\ --vimgrep
 set grepformat=%f:%l:%c:%m
-
-
-" ## Theme & Colorscheme
-
-set termguicolors  " Active true colors on terminal
-
-" Needs to be run before setting the colorscheme.
-luafile $HOME/.config/nvim/tokyonight.lua
-let s:theme =  $BACKGROUND == "light" ? "solarized" : "tokyonight"
-execute "colorscheme " . s:theme
-
-" ## Python providers
-
-let g:loaded_python_provider = 0
-let g:python3_host_prog = $NVIM_PYTHON_HOST
 
 
 " .........................................................
@@ -304,19 +291,6 @@ inoremap <silent> <expr> <CR> coc#pum#visible() && coc#pum#info()['index'] != -1
 " Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
-
-
-" ## NvimTree
-
-nnoremap <silent> <leader>n :NvimTreeToggle<CR>
-nnoremap <silent> <leader>N :NvimTreeFindFile<CR>
-
-" ## nvim-bufferline
-
-nnoremap <silent> <leader>j :BufferLineCyclePrev<CR>
-nnoremap <silent> <leader>k :BufferLineCycleNext<CR>
-nnoremap <silent> gb :BufferLinePick<CR>
-
 
 " ## FZF
 

@@ -1,3 +1,20 @@
+-- Shortcuts
+local map = vim.keymap.set
+
+-- tokyonight
+require("tokyonight").setup({
+  styles = {comments = "None"},
+  sidebars = {"qf"},
+  on_highlights = function(hl, c)
+    hl["@punctuation.special.rst"] = { fg = c.orange, style = "bold" }
+  end,
+})
+
+-- Set theme
+local theme = (vim.env.BACKGROUND == "light" and "solarized") or "tokyonight"
+vim.cmd.colorscheme(theme)
+
+-- nvim-notify
 require("notify").setup {
   timeout = 500,
   on_open = function(win)
@@ -7,9 +24,14 @@ require("notify").setup {
 }
 vim.notify = require "notify"
 
+-- auto-session
 require("auto-session").setup {
   auto_session_create_enabled = false,
 }
+
+-- nvim-tree
+map("n", "<leader>n", ":NvimTreeToggle<CR>", { silent = true })
+map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
 
 require("nvim-tree").setup {
   disable_netrw = false,
@@ -42,6 +64,11 @@ require("nvim-tree").setup {
   },
 }
 
+-- nvim-bufferline
+map("n", "<leader>j", ":BufferLineCyclePrev<CR>", { silent = true })
+map("n", "<leader>k", ":BufferLineCycleNext<CR>", { silent = true })
+map("n", "gb", ":BufferLinePick<CR>", { silent = true })
+
 require("bufferline").setup {
   options = {
     offsets = {
@@ -50,6 +77,7 @@ require("bufferline").setup {
   },
 }
 
+-- lualine
 require("lualine").setup {
   options = {
     theme = "auto",
@@ -62,6 +90,7 @@ require("lualine").setup {
   extensions = { "fugitive", "quickfix" },
 }
 
+-- nvim-treesitter
 require("nvim-treesitter.configs").setup {
   ensure_installed = "all",
   ignore_install = { "diff" },
