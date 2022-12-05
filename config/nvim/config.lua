@@ -90,6 +90,26 @@ require("lualine").setup({
   extensions = { "fugitive", "quickfix" },
 })
 
+-- nvim-autopairs
+require("nvim-autopairs").setup({
+  map_c_h = true,
+  map_cr = false,
+})
+
+-- gitsigns.nvim
+local gitsigns = require("gitsigns")
+gitsigns.setup({})
+map("n", "[c", gitsigns.prev_hunk)
+map("n", "]c", gitsigns.next_hunk)
+map({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>")
+map({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>")
+map("n", "<leader>hu", gitsigns.undo_stage_hunk)
+map("n", "<leader>hp", gitsigns.preview_hunk)
+map("n", "<leader>hb", function()
+  gitsigns.blame_line({ full = true })
+end)
+map("n", "<leader>td", gitsigns.toggle_deleted)
+
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
   ensure_installed = "all",

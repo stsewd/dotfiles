@@ -4,11 +4,9 @@
 
 call plug#begin()
 
-
 " ## General Utilities
 
 Plug 'nvim-treesitter/playground'
-Plug 'mhinz/vim-startify'  " Start screen
 Plug 'rmagatti/auto-session'
 Plug 'rcarriga/nvim-notify'
 Plug 'stevearc/dressing.nvim'
@@ -16,13 +14,12 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'stsewd/spotify.nvim', {'do': ':UpdateRemotePlugins'}  " Control Spotify
 
-
 " ## Editor Utilities
 
 Plug 'lukas-reineke/indent-blankline.nvim'  " Show indentation lines
 Plug 'tpope/vim-surround'  " Surround easily text with quotes, parentheses, etc.
 Plug 'tpope/vim-commentary'  " Comment lines easily
-Plug 'jiangmiao/auto-pairs'  " Autopair quotes, parentheses, etc.
+Plug 'windwp/nvim-autopairs'  " Autopair quotes, parentheses, etc.
 Plug 'tpope/vim-unimpaired'  " Handy bracket mappings
 Plug 'tpope/vim-repeat'  " Extend '.' for repeat scripts actions
 Plug 'tpope/vim-eunuch'  " Command line utilities
@@ -30,7 +27,6 @@ Plug 'mhinz/vim-sayonara', {'on': 'Sayonara'}  " Close/hide/delete current buffe
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-
 
 " ## Navigation
 
@@ -40,27 +36,22 @@ Plug 'junegunn/fzf.vim'  " General fuzzy finder
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'stsewd/gx-extended.vim'
 
-
 " ## Text Objects & Motions
 
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
 Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
 Plug 'justinmk/vim-sneak'  " s
 
-
 " ## Git Integration
 
-Plug 'airblade/vim-gitgutter'  " Show git diff on the numbers column
+Plug 'lewis6991/gitsigns.nvim'  " Show git diff on the numbers column
 Plug 'tpope/vim-fugitive'  " Git wrapper
 Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
-
 
 " ## Autocompletion
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'honza/vim-snippets'
-Plug 'yaegassy/coc-esbonio'
-
 
 " ## Themes & Color Schemes
 
@@ -71,25 +62,20 @@ Plug 'ishan9299/nvim-solarized-lua'
 
 " ## Languages
 
-" ### Python
-
+" Python
 Plug 'Vimjas/vim-python-pep8-indent'
 
-" ### ReStructuredText
-
+" ReStructuredText
 Plug 'stsewd/sphinx.nvim', {'do': ':UpdateRemotePlugins'}
 
-" ### Rust
-
+" Rust
 Plug 'rust-lang/rust.vim'
 
-" ### Vim
-
+" Vim
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 
 call plug#end()
-
 
 " ..........................................................
 " # Settings
@@ -110,7 +96,6 @@ set spelllang=en,es
 set termguicolors  " Active true colors on terminal
 let g:python3_host_prog = $NVIM_PYTHON_HOST  " Set python provider
 
-
 " ## Lines
 
 set nowrap  " No wrap lines (display long lines)
@@ -129,7 +114,6 @@ set softtabstop=2
 set shiftround
 set expandtab
 
-
 " ## Search & replace
 
 set ignorecase
@@ -139,7 +123,6 @@ set gdefault
 " Use rg for :grep
 set grepprg=rg\ --vimgrep
 set grepformat=%f:%l:%c:%m
-
 
 " .........................................................
 "  # Mappings
@@ -194,6 +177,8 @@ command! -range=% RemoveTrailing <line1>,<line2>s/\s\+$//e
 
 command! -nargs=+ -complete=file Grep silent grep! <args> <bar> cwindow
 
+command! U PlugUpgrade | PlugUpdate
+
 " Save current view settings on a per-window, per-buffer basis.
 " https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
 function! AutoSaveWinView()
@@ -235,7 +220,6 @@ augroup CustomAutoCommand
   autocmd TextYankPost *
         \ silent! lua require'vim.highlight'.on_yank {timeout = 300}
 augroup end
-
 
 " ..........................................................
 " # Plugins Settings
@@ -290,7 +274,6 @@ nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
 inoremap <silent> <expr> <CR> coc#pum#visible() && coc#pum#info()['index'] != -1 ?
       \ coc#pum#confirm() : "\<C-g>u\<CR>"
 
-" Move to prev/next error
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
 
@@ -313,7 +296,6 @@ noremap <leader>fg :FzGBranches<CR>
 let g:fzf_checkout_use_current_buf_cwd = v:true
 let g:fzf_checkout_git_options = '--sort=-committerdate'
 
-
 " ## Indent line
 
 let g:indent_blankline_char = '¦'
@@ -324,14 +306,12 @@ let g:indent_blankline_filetype_exclude = [
 let g:indent_blankline_buftype_exclude = ['terminal', 'nofile']
 let g:indent_blankline_show_trailing_blankline_indent = v:false
 
-
 " ## Sneak
 
 " Show labels
 let g:sneak#label = 1
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
-
 
 " ## Gina
 
@@ -340,7 +320,6 @@ nnoremap <leader>gO :Gina browse<CR>
 nnoremap <leader>gp :Gina push<CR>
 nnoremap <leader>gP :Gina pull<CR>
 
-
 " ## Fugitive
 
 nnoremap <silent> <leader>gs :Git<CR>
@@ -348,16 +327,13 @@ nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>gu :Gread<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
 
-
 " ## ReStructuredText
 
 let g:rst_style = 1
 
-
 " ## rust.vim
 
 let g:rustfmt_autosave = 1
-
 
 " ## Spotify
 
@@ -367,25 +343,10 @@ nmap <leader>sk <Plug>(spotify-prev)
 nmap <leader>so <Plug>(spotify-show)
 nmap <leader>sc <Plug>(spotify-status)
 
-
 " ## Sayonara
 
 nnoremap <silent> <leader>q :Sayonara<CR>
 nnoremap <silent> <leader>Q :Sayonara!<CR>
 
-
-" ## Startify
-
-let g:startify_custom_header = startify#pad([
-      \ '>>> Happy coding @' . $USER . '!',
-      \])
-
-let g:startify_commands = [
-      \ {'u': ':PlugUpgrade | PlugUpdate'},
-      \ {'t': ':terminal'},
-      \]
-
-let g:startify_lists = [{'type': 'commands'}]
-
-
+" ## Lua config
 luafile $HOME/.config/nvim/config.lua
