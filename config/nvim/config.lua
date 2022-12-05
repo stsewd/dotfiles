@@ -3,8 +3,8 @@ local map = vim.keymap.set
 
 -- tokyonight
 require("tokyonight").setup({
-  styles = {comments = "None"},
-  sidebars = {"qf"},
+  styles = { comments = "None" },
+  sidebars = { "qf" },
   on_highlights = function(hl, c)
     hl["@punctuation.special.rst"] = { fg = c.orange, style = "bold" }
   end,
@@ -15,25 +15,25 @@ local theme = (vim.env.BACKGROUND == "light" and "solarized") or "tokyonight"
 vim.cmd.colorscheme(theme)
 
 -- nvim-notify
-require("notify").setup {
+require("notify").setup({
   timeout = 500,
   on_open = function(win)
     vim.api.nvim_win_set_option(win, "winblend", 30)
     vim.api.nvim_win_set_config(win, { zindex = 100 })
   end,
-}
-vim.notify = require "notify"
+})
+vim.notify = require("notify")
 
 -- auto-session
-require("auto-session").setup {
+require("auto-session").setup({
   auto_session_create_enabled = false,
-}
+})
 
 -- nvim-tree
 map("n", "<leader>n", ":NvimTreeToggle<CR>", { silent = true })
 map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
 
-require("nvim-tree").setup {
+require("nvim-tree").setup({
   disable_netrw = false,
   actions = {
     open_file = {
@@ -52,33 +52,33 @@ require("nvim-tree").setup {
         folder_arrow = false,
       },
       glyphs = {
-        default = '',
+        default = "",
         folder = {
-          default = '',
-          open = '',
-          empty = '',
-          empty_open = '',
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
         },
       },
     },
   },
-}
+})
 
 -- nvim-bufferline
 map("n", "<leader>j", ":BufferLineCyclePrev<CR>", { silent = true })
 map("n", "<leader>k", ":BufferLineCycleNext<CR>", { silent = true })
 map("n", "gb", ":BufferLinePick<CR>", { silent = true })
 
-require("bufferline").setup {
+require("bufferline").setup({
   options = {
     offsets = {
       { filetype = "NvimTree", text = "Files" },
     },
   },
-}
+})
 
 -- lualine
-require("lualine").setup {
+require("lualine").setup({
   options = {
     theme = "auto",
     disabled_filetypes = { "startify", "NvimTree" },
@@ -88,10 +88,10 @@ require("lualine").setup {
     lualine_x = { "filetype" },
   },
   extensions = { "fugitive", "quickfix" },
-}
+})
 
 -- nvim-treesitter
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter.configs").setup({
   ensure_installed = "all",
   ignore_install = { "diff" },
   highlight = {
@@ -173,4 +173,4 @@ require("nvim-treesitter.configs").setup {
   },
   playground = { enable = true },
   query_linter = { enable = true },
-}
+})
