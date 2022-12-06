@@ -110,6 +110,13 @@ map("n", "<leader>hb", function()
 end)
 map("n", "<leader>td", gitsigns.toggle_deleted)
 
+-- indent-blankline.nvim
+require("indent_blankline").setup({
+  char = "¦",
+  filetype_exclude = { "help", "man", "", "text", "tsplayground", "rst", "markdown", "checkhealth" },
+  show_trailing_blankline_indent = false,
+})
+
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
   ensure_installed = "all",

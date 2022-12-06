@@ -296,16 +296,6 @@ noremap <leader>fg :FzGBranches<CR>
 let g:fzf_checkout_use_current_buf_cwd = v:true
 let g:fzf_checkout_git_options = '--sort=-committerdate'
 
-" ## Indent line
-
-let g:indent_blankline_char = '¦'
-let g:indent_blankline_filetype_exclude = [
-      \ 'help', 'markdown', 'text', 'rst', 'man',
-      \ 'startify', 'tsplayground',
-      \]
-let g:indent_blankline_buftype_exclude = ['terminal', 'nofile']
-let g:indent_blankline_show_trailing_blankline_indent = v:false
-
 " ## Sneak
 
 " Show labels
