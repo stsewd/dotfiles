@@ -35,10 +35,10 @@ map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
 
 require("nvim-tree").setup({
   disable_netrw = false,
-  actions = {
-    open_file = {
-      window_picker = {
-        enable = false,
+  view = {
+    mappings = {
+      list = {
+        { key = "<cr>", action = "edit_no_picker" },
       },
     },
   },
