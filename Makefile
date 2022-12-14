@@ -27,10 +27,12 @@ install:
 		pam_yubico \
 		perl-Image-ExifTool
 
+	@echo Installing rpmfusion repos
 	sudo dnf install -y \
 	  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$$(rpm -E %fedora).noarch.rpm \
 	  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$$(rpm -E %fedora).noarch.rpm
 
+	@echo Installing additional apps
 	sudo dnf install -y \
 		gnome-tweak-tool \
 		gnome-extensions-app \
@@ -38,6 +40,7 @@ install:
 		gnome-shell-theme-flat-remix \
 		flat-remix-theme \
 		vlc
+
 	@echo Installing Proton VPN
 	./scripts/protonvpn.sh
 
@@ -51,31 +54,33 @@ install:
 	flatpak install -y flathub com.calibre_ebook.calibre
 	flatpak install -y flathub com.google.AndroidStudio
 
-	@echo Install other apps
-	./scripts/docker.sh
-	./scripts/zsh.sh
-	./scripts/nvim.sh
-	./scripts/rust.sh
-
-install-after:
-	./scripts/nvm.sh
-	./scripts/pyenv.sh
-
-# Should be called after make install
-setup:
-	touch ~/.notags
-
 	@echo Install fonts
 	./scripts/fonts.sh
 
 	@echo Setup ssh-agent
 	./scripts/ssh.sh
 
-	@echo Setup kitty
+	@echo Install kitty
 	./scripts/kitty.sh
 
-	@echo Install nvm
+	@echo Install other apps
+	./scripts/docker.sh
+	./scripts/nvim.sh
+	./scripts/rust.sh
 	./scripts/nvm.sh
+	./scripts/pyenv.sh
+	./scripts/zsh.sh
+
+# Should be called after make install, and in a fresh shell.
+setup:
+	touch ~/.notags
+	cargo install stylua
+
+	@echo Install nvm
+	# TODO: mvm isn't found when executed from the makefile :/
+	nvm install node
+	npm install -g yarn
+	npm install -g tree-sitter-cli@0.20.6
 
 	@echo Update tldr
 	tldr --update
@@ -97,7 +102,7 @@ symlinks:
 	ln -sf `pwd`/zshrc ~/.zshrc
 	ln -sf `pwd`/config/nvim/ ~/.config/
 	ln -sf `pwd`/config/bat/ ~/.config/
-	ln -sf `pwd`/config/kitty/ ~/.config/
+	ln -sf `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 	ln -sf `pwd`/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
