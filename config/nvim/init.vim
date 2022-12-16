@@ -68,9 +68,6 @@ Plug 'Vimjas/vim-python-pep8-indent'
 " ReStructuredText
 Plug 'stsewd/sphinx.nvim', {'do': ':UpdateRemotePlugins'}
 
-" Rust
-Plug 'rust-lang/rust.vim'
-
 " Vim
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
@@ -264,6 +261,11 @@ augroup END
 set tagfunc=CocTagFunc
 nnoremap <silent> <leader>cc :CocCommand<CR>
 nmap <silent> <leader>ca <Plug>(coc-codeaction-cursor)
+xmap <silent> <leader>ca  <Plug>(coc-codeaction-selected)
+nmap <silent> <leader>cs  <Plug>(coc-codeaction-source)
+nmap <silent> <leader>r <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>cl <Plug>(coc-codelens-action)
 nmap <silent> <leader>cf <Plug>(coc-format)
 nmap <silent> gr <Plug>(coc-rename)
 nmap <silent> qf <Plug>(coc-fix-current)
@@ -272,10 +274,11 @@ nnoremap <silent> <leader>cd :call CocAction('diagnosticToggle')<CR>
 imap <silent> <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> <C-w><leader> <Plug>(coc-float-jump)
 inoremap <silent> <expr> <CR> coc#pum#visible() && coc#pum#info()['index'] != -1 ?
-      \ coc#pum#confirm() : "\<C-g>u\<CR>"
+      \ coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " ## FZF
 
@@ -320,10 +323,6 @@ nnoremap <silent> <leader>gc :Git commit<CR>
 " ## ReStructuredText
 
 let g:rst_style = 1
-
-" ## rust.vim
-
-let g:rustfmt_autosave = 1
 
 " ## Spotify
 
