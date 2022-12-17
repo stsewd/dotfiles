@@ -22,9 +22,9 @@
     "winblend": 15,
     "borderhighlight": "FloatBorder"
   },
-  "Lua.diagnostics.globals": ["vim"],
+  "Lua.telemetry.enable": false,
   "Lua.runtime.version": "LuaJIT",
-  "Lua.workspace.preloadFileSize": 500,
+  "sumneko-lua.enableNvimLuaDev": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.updates.channel": "stable",
   "rust-analyzer.inlayHints.typeHints.enable": false,
@@ -39,6 +39,5 @@
   "clangd.disableProgressNotifications": true,
   "yaml.format.enable": true,
   "python.formatting.provider": "black",
-  "pyright.disableProgressNotifications": true,
-  "esbonio.enableFixDirectiveCompletion": false
+  "pyright.disableProgressNotifications": true
 }

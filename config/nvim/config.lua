@@ -1,6 +1,11 @@
 -- Shortcuts
 local map = vim.keymap.set
 
+-- Edit this file.
+map("n", "<leader>l", function()
+  vim.cmd.e(vim.api.nvim_get_runtime_file("config.lua", true)[1])
+end)
+
 -- tokyonight
 require("tokyonight").setup({
   styles = { comments = "None" },
