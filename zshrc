@@ -105,8 +105,7 @@ export SAVEHIST=1000
 export HISTSIZE=$SAVEHIST
 
 
-# Python & Django
-alias dj='python manage.py'
+# Python
 alias p=python
 alias pp=ipython
 
@@ -116,8 +115,8 @@ eval "$(direnv hook zsh)"
 
 
 # Integration with fzf
-# Respect .gitignore using rg
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob '!.git''
+export FZF_DEFAULT_COMMAND='fd --type=file --hidden --exclude=.git'
+export FZF_DEFAULT_OPTS='--bind "ctrl-space:toggle-preview"'
 
 
 # pyenv
@@ -148,6 +147,7 @@ alias cat=bat
 alias ts=tree-sitter
 alias up='sudo dnf up --refresh -y'
 alias clear-meta='exiftool -overwrite_original -ALL= '
+alias ls='ls --color=auto --hyperlink=auto'
 
 
 # Kitty

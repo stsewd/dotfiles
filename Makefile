@@ -13,6 +13,7 @@ install:
 		ctags \
 		wmctrl \
 		ripgrep \
+		fd-find \
 		hub \
 		direnv \
 		bat \
@@ -25,7 +26,8 @@ install:
 		nmap \
 		seahorse \
 		pam_yubico \
-		perl-Image-ExifTool
+		perl-Image-ExifTool \
+		ImageMagick
 
 	@echo Installing rpmfusion repos
 	sudo dnf install -y \

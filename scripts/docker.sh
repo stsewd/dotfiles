@@ -1,7 +1,7 @@
 curl -fsSL https://get.docker.com | bash
-# sudo dnf install -y moby-engine docker-compose
-# sudo groupadd docker
-# sudo usermod -aG docker $USER
+
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
 
 # Change cgroups.
 # Isn't needed for the current version of docker,
