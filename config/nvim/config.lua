@@ -124,6 +124,10 @@ require("indent_blankline").setup({
   show_trailing_blankline_indent = false,
 })
 
+-- Workaround for https://github.com/lukas-reineke/indent-blankline.nvim/issues/449.
+map("n", "za", "za<cmd>IndentBlanklineRefresh<CR>")
+map("n", "zR", "zR<cmd>IndentBlanklineRefresh<CR>")
+
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
   ensure_installed = "all",
