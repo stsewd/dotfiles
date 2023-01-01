@@ -14,6 +14,11 @@ require("tokyonight").setup({
   sidebars = { "qf" },
   on_highlights = function(hl, c)
     hl["@punctuation.special.rst"] = { fg = c.orange, style = "bold" }
+
+    hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg_dark }
+    hl.TelescopeBorder = { fg = c.bg_search, bg = c.bg_dark }
+    hl.TelescopeTitle = { fg = c.blue, bg = c.bg_dark }
+    hl.TelescopePromptNormal = { bg = c.bg_dark, fg = c.fg }
   end,
 })
 
@@ -128,6 +133,47 @@ require("indent_blankline").setup({
 -- Workaround for https://github.com/lukas-reineke/indent-blankline.nvim/issues/449.
 map("n", "za", "za<cmd>IndentBlanklineRefresh<CR>")
 map("n", "zR", "zR<cmd>IndentBlanklineRefresh<CR>")
+
+-- telescope
+require("telescope").setup({
+  defaults = {
+    winblend = 10,
+    results_title = false,
+    scroll_strategy = "limit",
+    borderchars = {
+      prompt = { " ", "│", "─", "│", "│", "│", "┴ ", "└" },
+      results = { "─", "│", " ", "│", "┌", "┬", "│", "│" },
+      preview = { "─", "│", "─", " ", "─", "┐", "┘", "─" },
+    },
+    mappings = {
+      i = {
+        ["<C-q>"] = require("telescope.actions").close,
+        ["<C-n>"] = require("telescope.actions").cycle_history_next,
+        ["<C-p>"] = require("telescope.actions").cycle_history_prev,
+        ["<C-j>"] = require("telescope.actions").move_selection_next,
+        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+        ["<C-space>"] = require("telescope.actions.layout").toggle_preview,
+        ["<C-s>"] = require("telescope.actions").cycle_previewers_next,
+        ["<C-a>"] = require("telescope.actions").cycle_previewers_prev,
+        ["<C-u>"] = false,
+      },
+    },
+    history = {
+      handler = require("me.telescope.history"),
+    },
+  },
+})
+
+require("telescope").load_extension("fzf")
+
+local builtin = require("telescope.builtin")
+map("n", "<leader>ff", builtin.find_files)
+map("n", "<leader>fr", builtin.live_grep)
+map("n", "<leader>fl", builtin.current_buffer_fuzzy_find)
+map("n", "<leader>fo", builtin.buffers)
+map("n", "<leader>fe", builtin.symbols)
+map("n", "<leader>fs", builtin.git_status)
+map("n", "<leader>f<leader>", builtin.resume)
 
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({

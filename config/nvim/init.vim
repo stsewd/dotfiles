@@ -30,6 +30,11 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " ## Navigation
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-symbols.nvim'
+
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'  " General fuzzy finder
@@ -286,10 +291,6 @@ let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_layout = {'window': {'width': 0.80, 'height': 0.85}}
 
-noremap <leader>ff :FzFiles<CR>
-noremap <leader>fo :FzBuffers<CR>
-noremap <leader>fl :FzBLines<CR>
-noremap <leader>fr :FzRg<CR>
 noremap <leader>fs :FzGFiles?<CR>
 noremap <leader>ft :FzSphinxFiles<CR>
 noremap <leader>fg :FzGBranches<CR>
