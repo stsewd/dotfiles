@@ -30,10 +30,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " ## Navigation
 
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'nvim-telescope/telescope-symbols.nvim'
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}

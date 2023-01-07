@@ -15,10 +15,8 @@ require("tokyonight").setup({
   on_highlights = function(hl, c)
     hl["@punctuation.special.rst"] = { fg = c.orange, style = "bold" }
 
-    hl.TelescopeNormal = { fg = c.fg_dark, bg = c.bg_dark }
-    hl.TelescopeBorder = { fg = c.bg_search, bg = c.bg_dark }
-    hl.TelescopeTitle = { fg = c.blue, bg = c.bg_dark }
-    hl.TelescopePromptNormal = { bg = c.bg_dark, fg = c.fg }
+    hl.FzfLuaNormal = { fg = c.fg_dark, bg = c.bg_dark }
+    hl.FzfLuaBorder = { fg = c.bg_search, bg = c.bg_dark }
   end,
 })
 
@@ -134,47 +132,83 @@ require("indent_blankline").setup({
 map("n", "za", "za<cmd>IndentBlanklineRefresh<CR>")
 map("n", "zR", "zR<cmd>IndentBlanklineRefresh<CR>")
 
--- telescope
-require("telescope").setup({
-  defaults = {
-    winblend = 10,
-    results_title = false,
-    scroll_strategy = "limit",
-    borderchars = {
-      prompt = { " ", "│", "─", "│", "│", "│", "┴ ", "└" },
-      results = { "─", "│", " ", "│", "┌", "┬", "│", "│" },
-      preview = { "─", "│", "─", " ", "─", "┐", "┘", "─" },
+-- fzf-lua
+local history = vim.fn.stdpath("data") .. "/fzf-lua-history/"
+vim.fn.system({ "mkdir", "--parents", history })
+
+local fzf = require("fzf-lua")
+fzf.setup({
+  winopts = {
+    border = "single",
+    preview = {
+      horizontal = "right:45%",
+      title = false,
+      scrollbar = false,
     },
-    mappings = {
-      i = {
-        ["<C-q>"] = require("telescope.actions").close,
-        ["<C-n>"] = require("telescope.actions").cycle_history_next,
-        ["<C-p>"] = require("telescope.actions").cycle_history_prev,
-        ["<C-j>"] = require("telescope.actions").move_selection_next,
-        ["<C-k>"] = require("telescope.actions").move_selection_previous,
-        ["<C-space>"] = require("telescope.actions.layout").toggle_preview,
-        ["<C-s>"] = require("telescope.actions").cycle_previewers_next,
-        ["<C-a>"] = require("telescope.actions").cycle_previewers_prev,
-        ["<C-u>"] = false,
+  },
+  fzf_opts = {
+    -- Use defaults
+    ["--layout"] = false,
+    ["--boder"] = false,
+    ["--no-bold"] = "",
+    ["--marker"] = "+",
+    ["--no-separator"] = "",
+    -- History for all commands.
+    ["--history"] = history .. "all",
+  },
+  fzf_colors = {
+    ["gutter"] = { "bg", "FzfLuaNormal" },
+    ["fg+"] = { "fg", "FzfLuaNormal" },
+    ["bg+"] = { "fg", "FzfLuaBorder" },
+    ["info"] = { "fg", "Comment" },
+    ["separator"] = { "fg", "Comment" },
+    ["pointer"] = { "fg", "FzfLuaNormal" },
+    ["marker"] = { "fg", "WarningMsg" },
+  },
+  keymap = {
+    builtin = {
+      ["<C-/>"] = "toggle-help",
+      ["<F2>"] = "toggle-fullscreen",
+      ["<C-space>"] = "toggle-preview",
+      ["<C-D>"] = "preview-page-down",
+      ["<C-F>"] = "preview-page-up",
+    },
+  },
+  files = {
+    fzf_opts = {
+      ["--history"] = history .. "files",
+    },
+  },
+  git = {
+    branches = {
+      fzf_opts = {
+        ["--history"] = history .. "git_branches",
       },
     },
-    history = {
-      handler = require("me.telescope.history"),
+    status = {
+      fzf_opts = {
+        ["--history"] = history .. "files",
+      },
+    },
+  },
+  grep = {
+    fzf_opts = {
+      ["--history"] = history .. "grep",
     },
   },
 })
 
-require("telescope").load_extension("fzf")
-
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", function () builtin.find_files({find_command={'fd', '--type', 'file', '--hidden', '--exclude', '.git'}}) end)
-map("n", "<leader>fr", function () builtin.grep_string({search=''}) end)
-map("n", "<leader>fR", function () builtin.grep_string({search='', only_sort_text=true}) end)
-map("n", "<leader>fl", builtin.current_buffer_fuzzy_find)
-map("n", "<leader>fo", builtin.buffers)
-map("n", "<leader>fe", builtin.symbols)
-map("n", "<leader>fs", builtin.git_status)
-map("n", "<leader>f<leader>", builtin.resume)
+map("n", "<leader>ff", fzf.files)
+map("n", "<leader>fr", function()
+  fzf.grep({ search = "" })
+end)
+map("n", "<leader>fR", fzf.grep_project)
+map("n", "<leader>fl", fzf.blines)
+map("n", "<leader>fo", fzf.buffers)
+map("n", "<leader>fs", fzf.git_status)
+-- map("n", "<leader>fg", fzf.git_branches)
+map("n", "<leader>fh", fzf.builtin)
+map("n", "<leader>f<leader>", fzf.resume)
 
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
