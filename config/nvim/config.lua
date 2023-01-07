@@ -15,7 +15,7 @@ require("tokyonight").setup({
   on_highlights = function(hl, c)
     hl["@punctuation.special.rst"] = { fg = c.orange, style = "bold" }
 
-    hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg_dark }
+    hl.TelescopeNormal = { fg = c.fg_dark, bg = c.bg_dark }
     hl.TelescopeBorder = { fg = c.bg_search, bg = c.bg_dark }
     hl.TelescopeTitle = { fg = c.blue, bg = c.bg_dark }
     hl.TelescopePromptNormal = { bg = c.bg_dark, fg = c.fg }
@@ -167,7 +167,7 @@ require("telescope").setup({
 require("telescope").load_extension("fzf")
 
 local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files)
+map("n", "<leader>ff", function () builtin.find_files({find_command={'fd', '--type', 'file', '--hidden', '--exclude', '.git'}}) end)
 map("n", "<leader>fr", function () builtin.grep_string({search=''}) end)
 map("n", "<leader>fR", function () builtin.grep_string({search='', only_sort_text=true}) end)
 map("n", "<leader>fl", builtin.current_buffer_fuzzy_find)
