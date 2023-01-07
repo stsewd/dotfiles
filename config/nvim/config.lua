@@ -17,6 +17,7 @@ require("tokyonight").setup({
 
     hl.FzfLuaNormal = { fg = c.fg_dark, bg = c.bg_dark }
     hl.FzfLuaBorder = { fg = c.bg_search, bg = c.bg_dark }
+    hl.FzfLuaCurrentLine = { fg = c.fg_dark, bg = c.bg_search }
   end,
 })
 
@@ -158,11 +159,11 @@ fzf.setup({
   },
   fzf_colors = {
     ["gutter"] = { "bg", "FzfLuaNormal" },
-    ["fg+"] = { "fg", "FzfLuaNormal" },
-    ["bg+"] = { "fg", "FzfLuaBorder" },
+    ["fg+"] = { "fg", "FzfLuaCurrentLine" },
+    ["bg+"] = { "bg", "FzfLuaCurrentLine" },
     ["info"] = { "fg", "Comment" },
     ["separator"] = { "fg", "Comment" },
-    ["pointer"] = { "fg", "FzfLuaNormal" },
+    ["pointer"] = { "fg", "ErrorMsg" },
     ["marker"] = { "fg", "WarningMsg" },
   },
   keymap = {
