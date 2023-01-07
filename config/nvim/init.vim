@@ -288,7 +288,6 @@ let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_layout = {'window': {'width': 0.80, 'height': 0.85}}
 
-noremap <leader>fs :FzGFiles?<CR>
 noremap <leader>ft :FzSphinxFiles<CR>
 noremap <leader>fg :FzGBranches<CR>
 
