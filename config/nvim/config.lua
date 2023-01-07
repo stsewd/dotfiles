@@ -137,35 +137,40 @@ map("n", "zR", "zR<cmd>IndentBlanklineRefresh<CR>")
 local history = vim.fn.stdpath("data") .. "/fzf-lua-history/"
 vim.fn.system({ "mkdir", "--parents", history })
 
+vim.g.fzf_colors = {
+  ["fg"] = { "fg", "FzfLuaNormal" },
+  ["bg"] = { "bg", "FzfLuaNormal" },
+  ["fg+"] = { "fg", "FzfLuaCurrentLine" },
+  ["bg+"] = { "bg", "FzfLuaCurrentLine" },
+  ["info"] = { "fg", "Comment" },
+  ["separator"] = { "fg", "Comment" },
+  ["pointer"] = { "fg", "ErrorMsg" },
+  ["marker"] = { "fg", "WarningMsg" },
+  ["gutter"] = { "bg", "FzfLuaNormal" },
+  ["border"] = { "fg", "FzfLuaBorder" },
+}
+
 local fzf = require("fzf-lua")
 fzf.setup({
   winopts = {
     border = "single",
     preview = {
       horizontal = "right:45%",
-      title = false,
+      layout = "horizontal",
       scrollbar = false,
     },
   },
   fzf_opts = {
-    -- Use defaults
-    ["--layout"] = false,
-    ["--boder"] = false,
+    ["--layout"] = "default",
     ["--no-bold"] = "",
+    ["--pointer"] = "",
     ["--marker"] = "+",
+    ["--prompt"] = " ",
     ["--no-separator"] = "",
     -- History for all commands.
     ["--history"] = history .. "all",
   },
-  fzf_colors = {
-    ["gutter"] = { "bg", "FzfLuaNormal" },
-    ["fg+"] = { "fg", "FzfLuaCurrentLine" },
-    ["bg+"] = { "bg", "FzfLuaCurrentLine" },
-    ["info"] = { "fg", "Comment" },
-    ["separator"] = { "fg", "Comment" },
-    ["pointer"] = { "fg", "ErrorMsg" },
-    ["marker"] = { "fg", "WarningMsg" },
-  },
+  fzf_colors = vim.g.fzf_colors,
   keymap = {
     builtin = {
       ["<C-/>"] = "toggle-help",
@@ -176,6 +181,8 @@ fzf.setup({
     },
   },
   files = {
+    prompt = "   ",
+    git_icons = false,
     fzf_opts = {
       ["--history"] = history .. "files",
     },
@@ -193,6 +200,7 @@ fzf.setup({
     },
   },
   grep = {
+    git_icons = false,
     fzf_opts = {
       ["--history"] = history .. "grep",
     },
