@@ -116,7 +116,9 @@ eval "$(direnv hook zsh)"
 
 # Integration with fzf
 export FZF_DEFAULT_COMMAND='fd --type=file --hidden --exclude=.git'
-export FZF_DEFAULT_OPTS='--bind "ctrl-space:toggle-preview"'
+FZF_DEFAULT_OPTS='--bind=ctrl-space:toggle-preview --bind=ctrl-d:preview-down --bind=ctrl-f:preview-up'
+FZF_DEFAULT_OPTS+=' --no-bold --pointer="" --marker="+" --no-separator --info=inline --layout=default --prompt=" "'
+export FZF_DEFAULT_OPTS
 
 
 # pyenv

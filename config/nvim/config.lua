@@ -46,6 +46,7 @@ require("nvim-tree").setup({
     mappings = {
       list = {
         { key = "<cr>", action = "edit_no_picker" },
+        { key = "<2-LeftMouse>", action = "edit_no_picker" },
       },
     },
   },

@@ -258,6 +258,7 @@ augroup END
 " Mappings
 set tagfunc=CocTagFunc
 nnoremap <silent> <leader>cc :CocCommand<CR>
+nmap <silent> <leader>cg <Plug>(coc-definition)
 nmap <silent> <leader>ca <Plug>(coc-codeaction-cursor)
 xmap <silent> <leader>ca  <Plug>(coc-codeaction-selected)
 nmap <silent> <leader>cs  <Plug>(coc-codeaction-source)
@@ -283,6 +284,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 let g:fzf_command_prefix = 'Fz'
 let g:fzf_commands_expect = 'alt-enter'
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_layout = {'window': {'width': 0.80, 'height': 0.85}}
 
 noremap <leader>ff :FzFiles<CR>
 noremap <leader>fo :FzBuffers<CR>

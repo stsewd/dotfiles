@@ -1,2 +1,2 @@
-setlocal winblend=30
+setlocal winblend=10
 file fzf
