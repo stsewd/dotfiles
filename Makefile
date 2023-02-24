@@ -27,7 +27,8 @@ install:
 		seahorse \
 		pam_yubico \
 		perl-Image-ExifTool \
-		ImageMagick
+		ImageMagick \
+		git-delta
 
 	@echo Installing rpmfusion repos
 	sudo dnf install -y \

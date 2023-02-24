@@ -1,24 +1,37 @@
 [user]
-name = Santos Gallegos
-email = stsewd@proton.me
-signingkey = C1AD42C27116CB5A
+  name = Santos Gallegos
+  email = stsewd@proton.me
+  signingkey = C1AD42C27116CB5A
 
 [init]
-defaultBranch = main
+  defaultBranch = main
 
 [push]
-default = current
-autoSetupRemote = true
+  default = current
+  autoSetupRemote = true
 
 [core]
-excludesfile = ~/.gitignore
-editor = nvim
+  excludesfile = ~/.gitignore
+  editor = nvim
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[delta]
+  line-numbers = true
+
+[delta "light"]
+  light = true
+
+[diff]
+  colorMoved = default
 
 [pull]
-ff = only
+  ff = only
 
 [commit]
-gpgsign = true
+  gpgsign = true
 
 [hub]
-protocol = ssh
+  protocol = ssh
