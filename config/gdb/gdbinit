@@ -1,0 +1,20 @@
+# Pretty print.
+set print pretty on
+set print array on
+
+# Number of lines allowed before pagination starts.
+set height 500
+
+# Enable history.
+set history save on
+set history size 1000
+
+# Use debuginfod to find debug symbols online.
+set debuginfod enabled on
+
+# Temporarily enable pending breakpoints, so all
+# breakpoints are set when the program is started.
+set breakpoint pending on
+# Set breakpoint when a panic occurs.
+break rust_panic
+set breakpoint pending off
