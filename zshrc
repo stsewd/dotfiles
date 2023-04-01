@@ -117,8 +117,7 @@ eval "$(direnv hook zsh)"
 # Integration with fzf
 export FZF_DEFAULT_COMMAND='fd --type=file --hidden --exclude=.git'
 FZF_DEFAULT_OPTS='--bind=ctrl-space:toggle-preview --bind=ctrl-d:preview-down --bind=ctrl-f:preview-up'
-# --info="inline: / " This requires fzf 0.37.
-FZF_DEFAULT_OPTS+=' --no-bold --pointer="" --marker="+" --no-separator --info=inline --layout=default --prompt=" "'
+FZF_DEFAULT_OPTS+=' --no-bold --pointer="" --marker="+" --no-separator --info="inline: " --layout=default --prompt=" "'
 export FZF_DEFAULT_OPTS
 
 

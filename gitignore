@@ -49,3 +49,6 @@ venv
 
 # pyright
 pyrightconfig.json
+
+# gdb
+.gdb_history

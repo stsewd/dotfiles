@@ -54,6 +54,7 @@ Plug 'lambdalisue/gina.vim'  " Asynchronously Git wrapper
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'honza/vim-snippets'
+Plug 'github/copilot.vim'
 
 " ## Themes & Color Schemes
 

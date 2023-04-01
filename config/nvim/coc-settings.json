@@ -22,7 +22,6 @@
     "winblend": 15,
     "borderhighlight": "FloatBorder"
   },
-  "Lua.telemetry.enable": false,
   "Lua.runtime.version": "LuaJIT",
   "sumneko-lua.enableNvimLuaDev": true,
   "rust-analyzer.checkOnSave.command": "clippy",

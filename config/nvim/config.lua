@@ -167,6 +167,7 @@ fzf.setup({
     ["--marker"] = "+",
     ["--prompt"] = " ",
     ["--no-separator"] = "",
+    ["--info"] = "'inline: '",
     -- History for all commands.
     ["--history"] = history .. "all",
   },
