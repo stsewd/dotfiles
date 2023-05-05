@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 return {
   {
-    dir = "~/github/spotify.nvim",
+    "stsewd/spotify.nvim",
     build = ":UpdateRemotePlugins",
     cmd = "Spotify",
     init = function()
@@ -10,10 +10,6 @@ return {
       map("n", "<leader>sk", ":Spotify prev<CR>", { silent = true })
       map("n", "<leader>so", ":Spotify show<CR>", { silent = true })
       map("n", "<leader>sc", ":Spotify status<CR>", { silent = true })
-    end,
-    config = function()
-      local spotify = require("spotify")
-      spotify.setup({ timeout = 5000 })
     end,
   },
 }
