@@ -7,6 +7,7 @@ map("n", "<leader>i", ":e $MYVIMRC<CR>", { desc = "Edit init.lua" })
 
 -- Copy/cut/paste to/from clipboard
 map("", "<leader>y", '"+y', { desc = "Copy to clipboard" })
+map("", "<leader>Y", '"+y$', { desc = "Copy to clipboard" })
 map("", "<leader>d", '"+d', { desc = "Cut to clipboard" })
 map("", "<leader>p", '"+p', { desc = "Paste from clipboard" })
 map("", "<leader>P", '"+P', { desc = "Paste from clipboard" })
