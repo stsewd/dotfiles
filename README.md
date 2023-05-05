@@ -33,7 +33,7 @@ Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-b
 - [kitty](https://sw.kovidgoyal.net/kitty/) as terminal emulator
 - [zsh + ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) as shell
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) for a patched font to have nice characters inside Neovim
-  (I use [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf))
+  (I use [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFontMono-Regular.ttf))
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font with ligatures support
 - [fzf](https://github.com/junegunn/fzf) for fuzzy search
 - [ripgrep](https://github.com/BurntSushi/ripgrep) for recursive search using regular expressions
