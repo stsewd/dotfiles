@@ -10,20 +10,6 @@ return {
     end,
   },
   {
-    "rcarriga/nvim-notify",
-    config = function()
-      require("notify").setup({
-        timeout = 500,
-        on_open = function(win)
-          vim.api.nvim_win_set_option(win, "winblend", 30)
-          vim.api.nvim_win_set_config(win, { zindex = 100 })
-        end,
-      })
-      vim.notify = require("notify")
-    end,
-  },
-  "stevearc/dressing.nvim",
-  {
     dir = "~/github/spotify.nvim",
     build = ":UpdateRemotePlugins",
     config = function()
@@ -46,7 +32,8 @@ return {
 
   -- Editor utilities
   {
-    "lukas-reineke/indent-blankline.nvim", -- Show indentation lines
+    -- Show indentation lines
+    "lukas-reineke/indent-blankline.nvim",
     config = function()
       require("indent_blankline").setup({
         char = "¦",
@@ -62,7 +49,8 @@ return {
   "tpope/vim-surround",
   "tpope/vim-commentary",
   {
-    "windwp/nvim-autopairs", -- Handy bracket mappings
+    -- Handy bracket mappings
+    "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup({
         map_c_h = true,
@@ -73,7 +61,8 @@ return {
   "tpope/vim-unimpaired",
   "tpope/vim-repeat",
   {
-    "mhinz/vim-sayonara", -- Close/hide/delete current buffer
+    -- Close/hide/delete current buffer.
+    "mhinz/vim-sayonara",
     config = function()
       map("n", "<leader>q", ":Sayonara<CR>", { silent = true })
       map("n", "<leader>Q", ":Sayonara!<CR>", { silent = true })
@@ -87,7 +76,8 @@ return {
   "chaoren/vim-wordmotion",
   "wellle/targets.vim", -- Operator pending mappings ()[]{}
   {
-    "ggandor/leap.nvim", -- Jump to any character in the buffer
+    -- Jump to any character in the buffer
+    "ggandor/leap.nvim",
     config = function()
       require("leap").add_default_mappings()
       require("leap").opts.case_sensitive = true

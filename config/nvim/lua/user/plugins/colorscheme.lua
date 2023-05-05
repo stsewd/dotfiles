@@ -3,8 +3,8 @@ return {
   "nvim-tree/nvim-web-devicons",
   {
     "folke/tokyonight.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
+    -- make sure to load this before other plugins.
+    priority = 1000,
     config = function()
       require("tokyonight").setup({
         styles = { comments = "None" },
@@ -25,8 +25,8 @@ return {
   },
   {
     "ishan9299/nvim-solarized-lua",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
+    -- make sure to load this before other plugins.
+    priority = 1000,
     config = function()
       if vim.env.BACKGROUND == "light" then
         vim.cmd("colorscheme solarized")

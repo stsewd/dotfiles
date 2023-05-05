@@ -1,5 +1,19 @@
 local map = vim.keymap.set
 return {
+  "stevearc/dressing.nvim",
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      require("notify").setup({
+        timeout = 500,
+        on_open = function(win)
+          vim.api.nvim_win_set_option(win, "winblend", 30)
+          vim.api.nvim_win_set_config(win, { zindex = 100 })
+        end,
+      })
+      vim.notify = require("notify")
+    end,
+  },
   {
     "nvim-lualine/lualine.nvim",
     config = function()

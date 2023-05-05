@@ -39,15 +39,22 @@ return {
         augroup END
       ]])
 
-      --Show documentation using K
-      map("n", "K", ":call CocAction('doHover')<CR>", { silent = true })
-      map("n", "gK", "K")
+      map("n", "K", ":call CocAction('doHover')<CR>", { silent = true, desc = "Hover" })
+      map("n", "gK", "K", { desc = "Search man/help page" })
+
       map("i", "<CR>", function()
-        if vim.fn["coc#pum#visible"]() and vim.fn["coc#pum#info"]()["index"] ~= -1 then
+        if vim.fn["coc#pum#visible"]() ~= 0 and vim.fn["coc#pum#info"]()["index"] ~= -1 then
           return vim.fn["coc#pum#confirm"]()
         end
-        return "<C-g>u<CR><c-r>=coc#on_enter()<CR>"
+        return "<C-g>u<CR><C-r>=coc#on_enter()<CR>"
       end, { expr = true, silent = true })
+      map("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)", { silent = true })
+      map("n", "<C-k>", "<Plug>(coc-diagnostic-prev)", { silent = true })
+      map("n", "<C-j>", "<Plug>(coc-diagnostic-next)", { silent = true })
+      map("i", "<C-space>", "coc#refresh()", { silent = true })
+
+      map("n", "<C-w><leader>", "<Plug>(coc-float-jump)", { silent = true })
+
       map("n", "<leader>cc", ":CocCommand<CR>", { silent = true })
       map("n", "<leader>cg", "<Plug>(coc-definition)", { silent = true })
       map("n", "<leader>ca", "<Plug>(coc-codeaction-cursor)", { silent = true })
@@ -59,12 +66,6 @@ return {
       map("n", "gr", "<Plug>(coc-rename)", { silent = true })
       map("n", "qf", "<Plug>(coc-fix-current)", { silent = true })
       map("n", "<leader>cd", ":call CocAction('diagnosticToggle')<CR>", { silent = true })
-      map("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)", { silent = true })
-      map("n", "<C-w><leader>", "<Plug>(coc-float-jump)", { silent = true })
-
-      map("n", "<C-k>", "<Plug>(coc-diagnostic-prev)", { silent = true })
-      map("n", "<C-j>", "<Plug>(coc-diagnostic-next)", { silent = true })
-      map("i", "<C-space>", "coc#refresh()", { silent = true })
     end,
   },
 }

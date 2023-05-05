@@ -1,7 +1,8 @@
 local map = vim.keymap.set
 return {
   {
-    "lewis6991/gitsigns.nvim", -- Show git diff on the numbers column
+    -- Show git diff on the numbers column
+    "lewis6991/gitsigns.nvim",
     config = function()
       local gitsigns = require("gitsigns")
       gitsigns.setup({})
@@ -18,7 +19,8 @@ return {
     end,
   },
   {
-    "tpope/vim-fugitive", -- Git wrapper
+    -- Git wrapper
+    "tpope/vim-fugitive",
     config = function()
       map("n", "<leader>gs", ":Git<CR>", { silent = true })
       map("n", "<leader>gw", ":Gwrite<CR>", { silent = true })
@@ -27,7 +29,8 @@ return {
     end,
   },
   {
-    "lambdalisue/gina.vim", -- Asynchronously Git wrapper
+    -- Asynchronously Git wrapper
+    "lambdalisue/gina.vim",
     config = function()
       map("n", "<leader>go", ":Gina browse :<CR>")
       map("n", "<leader>gO", ":Gina browse<CR>")

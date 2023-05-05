@@ -19,6 +19,49 @@ return {
             node_decremental = "<S-TAB>",
           },
         },
+      })
+    end,
+  },
+  {
+    "nvim-treesitter/playground",
+    config = function ()
+      require("nvim-treesitter.configs").setup({
+        playground = { enable = true },
+        query_linter = { enable = true },
+      })
+    end
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-refactor",
+    config = function ()
+      require("nvim-treesitter.configs").setup({
+        refactor = {
+          highlight_definitions = {
+            enable = true,
+            clear_on_cursor_move = false,
+          },
+          smart_rename = {
+            enable = true,
+            keymaps = {
+              smart_rename = "grr",
+            },
+          },
+          navigation = {
+            enable = true,
+            keymaps = {
+              goto_definition = "gd",
+              goto_next_usage = "]d",
+              goto_previous_usage = "[d",
+            },
+          },
+        },
+      })
+    end
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    config = function ()
+      require("nvim-treesitter.configs").setup({
         textobjects = {
           select = {
             enable = true,
@@ -63,32 +106,7 @@ return {
             },
           },
         },
-        refactor = {
-          highlight_definitions = {
-            enable = true,
-            clear_on_cursor_move = false,
-          },
-          smart_rename = {
-            enable = true,
-            keymaps = {
-              smart_rename = "grr",
-            },
-          },
-          navigation = {
-            enable = true,
-            keymaps = {
-              goto_definition = "gd",
-              goto_next_usage = "]d",
-              goto_previous_usage = "[d",
-            },
-          },
-        },
-        playground = { enable = true },
-        query_linter = { enable = true },
       })
-    end,
+    end
   },
-  "nvim-treesitter/playground",
-  "nvim-treesitter/nvim-treesitter-refactor",
-  "nvim-treesitter/nvim-treesitter-textobjects",
 }
