@@ -2,6 +2,9 @@
 " # Plugins
 " .........................................................
 
+" Experimental lua bytecode cache.
+lua vim.loader.enable()
+
 call plug#begin()
 
 " ## General Utilities
@@ -42,7 +45,7 @@ Plug 'stsewd/gx-extended.vim'
 
 Plug 'chaoren/vim-wordmotion'  " Wordmotion text-object
 Plug 'wellle/targets.vim'  " Operator pending mappings ()[]{}
-Plug 'justinmk/vim-sneak'  " s
+Plug 'ggandor/leap.nvim'
 
 " ## Git Integration
 
@@ -295,13 +298,6 @@ noremap <leader>fg :FzGBranches<CR>
 
 let g:fzf_checkout_use_current_buf_cwd = v:true
 let g:fzf_checkout_git_options = '--sort=-committerdate'
-
-" ## Sneak
-
-" Show labels
-let g:sneak#label = 1
-nmap s <Plug>SneakLabel_s
-nmap S <Plug>SneakLabel_S
 
 " ## Gina
 

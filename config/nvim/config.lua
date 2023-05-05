@@ -46,14 +46,6 @@ map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
 
 require("nvim-tree").setup({
   disable_netrw = false,
-  view = {
-    mappings = {
-      list = {
-        { key = "<cr>", action = "edit_no_picker" },
-        { key = "<2-LeftMouse>", action = "edit_no_picker" },
-      },
-    },
-  },
   filters = {
     custom = { ".git$", ".pyc$", "__pycache__" },
   },
@@ -74,6 +66,19 @@ require("nvim-tree").setup({
       },
     },
   },
+  on_attach = function(bufnr)
+    local api = require('nvim-tree.api')
+
+    -- Default mappings
+    api.config.mappings.default_on_attach(bufnr)
+
+    -- Custom mappings
+    local function opts(desc)
+      return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+    map('n', '<cr>', api.node.open.no_window_picker, opts('Open: No Window Picker'))
+    map('n', '<2-LeftMouse>', api.node.open.no_window_picker, opts('Open: No Window Picker'))
+  end,
 })
 
 -- nvim-bufferline
@@ -132,6 +137,10 @@ require("indent_blankline").setup({
 -- Workaround for https://github.com/lukas-reineke/indent-blankline.nvim/issues/449.
 map("n", "za", "za<cmd>IndentBlanklineRefresh<CR>")
 map("n", "zR", "zR<cmd>IndentBlanklineRefresh<CR>")
+
+-- leap.nvim
+require('leap').add_default_mappings()
+require('leap').opts.case_sensitive = true
 
 -- fzf-lua
 local history = vim.fn.stdpath("data") .. "/fzf-lua-history/"
