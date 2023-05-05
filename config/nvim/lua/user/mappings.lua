@@ -6,10 +6,10 @@ map("n", "<leader>e", ":e!<CR>", { desc = "Refresh" })
 map("n", "<leader>i", ":e $MYVIMRC<CR>", { desc = "Edit init.lua" })
 
 -- Copy/cut/paste to/from clipboard
-map("n", "<leader>y", '"+y', { desc = "Copy to clipboard" })
-map("n", "<leader>d", '"+d', { desc = "Cut to clipboard" })
-map("n", "<leader>p", '"+p', { desc = "Paste from clipboard" })
-map("n", "<leader>P", '"+P', { desc = "Paste from clipboard" })
+map("", "<leader>y", '"+y', { desc = "Copy to clipboard" })
+map("", "<leader>d", '"+d', { desc = "Cut to clipboard" })
+map("", "<leader>p", '"+p', { desc = "Paste from clipboard" })
+map("", "<leader>P", '"+P', { desc = "Paste from clipboard" })
 
 -- Scroll
 map("n", "<up>", "<C-y>", { desc = "Scroll up" })
