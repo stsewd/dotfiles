@@ -22,7 +22,7 @@ docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.
 
 Open neovim and start coding.
 
-To update the docker image just run `docker pull stsewd/neovim`
+To update the docker image just run `docker pull ghcr.io/stsewd/neovim`
 
 ### Configurations
 
