@@ -2,17 +2,19 @@ FROM ubuntu:22.04
 
 # Install latest Neovim
 RUN apt update && apt install -y software-properties-common
-RUN add-repository ppa:neovim-ppa/unstable
+RUN add-apt-repository ppa:neovim-ppa/unstable
 RUN apt update && apt install -y neovim
 
+RUN apt install -y git curl gnupg
+
 # Python dependencies
-RUN get install -y python3-dev python3-pip
+RUN apt install -y python3-dev python3-pip
 RUN pip3 install pynvim
 
 # Node dependencies
-RUN apt install yarn
-
-RUN get install -y git curl
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+RUN apt install -y nodejs
+RUN npm install --global yarn
 
 # My configuration
 RUN git clone --depth 1 \
