@@ -17,7 +17,7 @@
 ### Test it with Docker
 
 ```bash
-docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.local/share/nvim/lazy stsewd/neovim
+docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.local/share/nvim/lazy ghcr.io/stsewd/neovim
 ```
 
 Open neovim and start coding.

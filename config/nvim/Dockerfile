@@ -1,15 +1,18 @@
 FROM ubuntu:22.04
 
 # Install latest Neovim
-RUN apt-get update && apt-get install -y software-properties-common
-RUN add-apt-repository ppa:neovim-ppa/unstable
-RUN apt-get update && apt-get install -y neovim
+RUN apt update && apt install -y software-properties-common
+RUN add-repository ppa:neovim-ppa/unstable
+RUN apt update && apt install -y neovim
 
 # Python dependencies
-RUN apt-get install -y python3-dev python3-pip
+RUN get install -y python3-dev python3-pip
 RUN pip3 install pynvim
 
-RUN apt-get install -y git curl
+# Node dependencies
+RUN apt install yarn
+
+RUN get install -y git curl
 
 # My configuration
 RUN git clone --depth 1 \
@@ -22,5 +25,5 @@ WORKDIR /src
 CMD bash
 
 # Run this Dockerfile with
-# $ docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.local/share/nvim/lazy stsewd/neovim
+# $ docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.local/share/nvim/lazy ghcr.io/stsewd/neovim
 # $ nvim
