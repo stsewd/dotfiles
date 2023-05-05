@@ -1,6 +1,9 @@
 -- Themes & color schemes
 return {
-  "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-tree/nvim-web-devicons",
+    lazy = true,
+  },
   {
     "folke/tokyonight.nvim",
     -- make sure to load this before other plugins.

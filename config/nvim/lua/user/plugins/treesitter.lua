@@ -24,16 +24,17 @@ return {
   },
   {
     "nvim-treesitter/playground",
-    config = function ()
+    cmd = "TSPlaygroundToggle",
+    config = function()
       require("nvim-treesitter.configs").setup({
         playground = { enable = true },
         query_linter = { enable = true },
       })
-    end
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter-refactor",
-    config = function ()
+    config = function()
       require("nvim-treesitter.configs").setup({
         refactor = {
           highlight_definitions = {
@@ -56,11 +57,11 @@ return {
           },
         },
       })
-    end
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
-    config = function ()
+    config = function()
       require("nvim-treesitter.configs").setup({
         textobjects = {
           select = {
@@ -107,6 +108,6 @@ return {
           },
         },
       })
-    end
+    end,
   },
 }

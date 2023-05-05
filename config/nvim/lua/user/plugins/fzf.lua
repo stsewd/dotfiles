@@ -21,13 +21,14 @@ return {
       vim.g.fzf_checkout_use_current_buf_cwd = true
       vim.g.fzf_checkout_git_options = "--sort=-committerdate"
     end,
-    config = function ()
+    config = function()
       map("n", "<leader>fg", ":FzGBranches<CR>", { silent = true })
-    end
+    end,
   },
   {
     "ibhagwan/fzf-lua",
     branch = "main",
+    keys = { "<leader>f" },
     config = function()
       local history = vim.fn.stdpath("data") .. "/fzf-lua-history/"
       vim.fn.system({ "mkdir", "--parents", history })
@@ -111,9 +112,11 @@ return {
       map("n", "<leader>fl", fzf.blines)
       map("n", "<leader>fo", fzf.buffers)
       map("n", "<leader>fs", fzf.git_status)
-      -- map("n", "<leader>fg", fzf.git_branches)
       map("n", "<leader>fh", fzf.builtin)
       map("n", "<leader>f<leader>", fzf.resume)
+      map("n", "<leader>fi", function()
+        fzf.files({ cwd = "~/.config/nvim/lua/user/" })
+      end, { desc = "Search user config files" })
     end,
   },
 }

@@ -17,8 +17,8 @@ return {
       spotify.setup({ timeout = 5000 })
 
       map("n", "<leader>ss", ":Spotify play/pause<CR>", { silent = true })
-      map("n", "<leader>sj", ":Spotify prev<CR>", { silent = true })
-      map("n", "<leader>sk", ":Spotify next<CR>", { silent = true })
+      map("n", "<leader>sj", ":Spotify next<CR>", { silent = true })
+      map("n", "<leader>sk", ":Spotify prev<CR>", { silent = true })
       map("n", "<leader>so", ":Spotify show<CR>", { silent = true })
       map("n", "<leader>sc", ":Spotify status<CR>", { silent = true })
 
@@ -63,7 +63,8 @@ return {
   {
     -- Close/hide/delete current buffer.
     "mhinz/vim-sayonara",
-    config = function()
+    cmd = "Sayonara",
+    init = function()
       map("n", "<leader>q", ":Sayonara<CR>", { silent = true })
       map("n", "<leader>Q", ":Sayonara!<CR>", { silent = true })
     end,
@@ -85,12 +86,15 @@ return {
   },
 
   -- Additional support for languages
-  "Vimjas/vim-python-pep8-indent",
+  {
+    "Vimjas/vim-python-pep8-indent",
+    ft = "python",
+  },
   {
     "stsewd/sphinx.nvim",
     build = ":UpdateRemotePlugins",
     config = function()
       map("n", "<leader>ft", ":FzSphinxFiles<CR>", { silent = true })
-    end
+    end,
   },
 }

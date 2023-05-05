@@ -2,6 +2,7 @@ local map = vim.keymap.set
 return {
   {
     "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFindFile" },
     config = function()
       map("n", "<leader>n", ":NvimTreeToggle<CR>", { silent = true })
       map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
