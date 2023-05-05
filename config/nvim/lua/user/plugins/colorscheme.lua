@@ -7,7 +7,7 @@ return {
     "folke/tokyonight.nvim",
     -- make sure to load this before other plugins.
     priority = 1000,
-    cond = function ()
+    cond = function()
       return vim.env.BACKGROUND ~= "light"
     end,
     config = function()
@@ -30,7 +30,7 @@ return {
     "ishan9299/nvim-solarized-lua",
     -- make sure to load this before other plugins.
     priority = 1000,
-    cond = function ()
+    cond = function()
       return vim.env.BACKGROUND == "light"
     end,
     config = function()
