@@ -12,21 +12,17 @@ return {
   {
     dir = "~/github/spotify.nvim",
     build = ":UpdateRemotePlugins",
-    config = function()
-      local spotify = require("spotify")
-      spotify.setup({ timeout = 5000 })
-
+    cmd = "Spotify",
+    init = function()
       map("n", "<leader>ss", ":Spotify play/pause<CR>", { silent = true })
       map("n", "<leader>sj", ":Spotify next<CR>", { silent = true })
       map("n", "<leader>sk", ":Spotify prev<CR>", { silent = true })
       map("n", "<leader>so", ":Spotify show<CR>", { silent = true })
       map("n", "<leader>sc", ":Spotify status<CR>", { silent = true })
-
-      -- map("n", "<leader>ss", function () spotify.play_pause(); spotify.status() end)
-      -- map("n", "<leader>sj", function () spotify.next(); spotify.status() end)
-      -- map("n", "<leader>sk", function () spotify.prev(); spotify.status() end)
-      -- map("n", "<leader>so", function () spotify.show(); spotify.status() end)
-      -- map("n", "<leader>sc", spotify.status)
+    end,
+    config = function()
+      local spotify = require("spotify")
+      spotify.setup({ timeout = 5000 })
     end,
   },
 

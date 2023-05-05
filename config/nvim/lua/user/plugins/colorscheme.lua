@@ -1,4 +1,3 @@
--- Themes & color schemes
 return {
   {
     "nvim-tree/nvim-web-devicons",
@@ -8,6 +7,9 @@ return {
     "folke/tokyonight.nvim",
     -- make sure to load this before other plugins.
     priority = 1000,
+    cond = function ()
+      return vim.env.BACKGROUND ~= "light"
+    end,
     config = function()
       require("tokyonight").setup({
         styles = { comments = "None" },
@@ -21,19 +23,18 @@ return {
         end,
       })
 
-      if vim.env.BACKGROUND ~= "light" then
-        vim.cmd("colorscheme tokyonight")
-      end
+      vim.cmd("colorscheme tokyonight")
     end,
   },
   {
     "ishan9299/nvim-solarized-lua",
     -- make sure to load this before other plugins.
     priority = 1000,
+    cond = function ()
+      return vim.env.BACKGROUND == "light"
+    end,
     config = function()
-      if vim.env.BACKGROUND == "light" then
-        vim.cmd("colorscheme solarized")
-      end
+      vim.cmd("colorscheme solarized")
     end,
   },
 }

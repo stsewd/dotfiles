@@ -3,10 +3,11 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFindFile" },
-    config = function()
+    init = function()
       map("n", "<leader>n", ":NvimTreeToggle<CR>", { silent = true })
       map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
-
+    end,
+    config = function()
       require("nvim-tree").setup({
         disable_netrw = false,
         filters = {
