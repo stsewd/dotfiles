@@ -4,6 +4,9 @@ vim.cmd([[ command! U Lazy update ]])
 vim.cmd("command! -range=% RemoveTrailing <line1>,<line2>s/\\s\\+$//e")
 vim.cmd("command! -nargs=+ -complete=file Grep silent grep! <args> <bar> cwindow")
 
+-- Delete the current file
+vim.cmd("command! Delete lua require'user.utils'.delete_current_file()")
+
 vim.cmd([[
 augroup CustomAutoCommand
   autocmd!
