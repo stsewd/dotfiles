@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 # Install latest Neovim
 RUN apt-get update && apt-get install -y software-properties-common
@@ -18,15 +18,9 @@ RUN git clone --depth 1 \
 RUN mkdir $HOME/.config/ && \
     ln -s $HOME/dotfiles/config/nvim $HOME/.config/nvim
 
-## Install vim-plug
-RUN curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 WORKDIR /src
 CMD bash
 
 # Run this Dockerfile with
-# $ docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/plugged:/root/.local/share/nvim/plugged stsewd/neovim
-# $ nvim +PlugInstall
-# :qa
+# $ docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.local/share/nvim/lazy stsewd/neovim
 # $ nvim

@@ -13,28 +13,21 @@
 
 - [Install Neovim (nightly version)](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Make a symbolic link (or just copy the folder) of `config/nvim` to `~/.config/nvim`
-- Install [vim plug](https://github.com/junegunn/vim-plug#neovim) (plugin manager)
-- Open Neovim and do `:PlugInstall`
+- Open neovim, the plugin manager and all plugins will be installed automatically
 
 ### Test it with Docker
 
 ```bash
-docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/plugged:/root/.local/share/nvim/plugged stsewd/neovim
+docker run --rm -it -v `pwd`:/src -v $HOME/.local/share/stsewd-nvim/lazy:/root/.local/share/nvim/lazy stsewd/neovim
 ```
 
-Install the plugins
-
-```bash
-nvim +PlugInstall
-```
-
-Reopen Neovim and start coding.
+Open neovim and start coding.
 
 To update the docker image just run `docker pull stsewd/neovim`
 
 ### Configurations
 
-Check [`config/nvim/init.vim`](config/nvim/init.vim) for see all the plugins, settings and key-bindings, it's well documented.
+Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-bindings, it's well documented.
 
 ## Recommended tools
 
