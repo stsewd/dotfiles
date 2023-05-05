@@ -12,7 +12,7 @@ RUN apt install -y python3-dev python3-pip
 RUN pip3 install pynvim
 
 # Node dependencies
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt install -y nodejs
 RUN npm install --global yarn
 
