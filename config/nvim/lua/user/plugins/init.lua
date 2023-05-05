@@ -72,7 +72,6 @@ return {
   },
   "tpope/vim-unimpaired",
   "tpope/vim-repeat",
-  "tpope/vim-eunuch", -- Command line utilities
   {
     "mhinz/vim-sayonara", -- Close/hide/delete current buffer
     config = function()
@@ -100,5 +99,8 @@ return {
   {
     "stsewd/sphinx.nvim",
     build = ":UpdateRemotePlugins",
+    config = function()
+      map("n", "<leader>ft", ":FzSphinxFiles<CR>", { silent = true })
+    end
   },
 }

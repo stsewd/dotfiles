@@ -21,6 +21,9 @@ return {
       vim.g.fzf_checkout_use_current_buf_cwd = true
       vim.g.fzf_checkout_git_options = "--sort=-committerdate"
     end,
+    config = function ()
+      map("n", "<leader>fg", ":FzGBranches<CR>", { silent = true })
+    end
   },
   {
     "ibhagwan/fzf-lua",
