@@ -1,3 +1,5 @@
+local map = vim.keymap.set
+
 vim.cmd([[ command! U Lazy update ]])
 
 -- Remove trailing white spaces
@@ -7,20 +9,29 @@ vim.cmd("command! -nargs=+ -complete=file Grep silent grep! <args> <bar> cwindow
 -- Delete the current file
 vim.cmd("command! Delete lua require'user.utils'.delete_current_file()")
 
-vim.cmd([[
-augroup CustomAutoCommand
-  autocmd!
-  " - Start on insert mode
-  autocmd TermOpen * startinsert
-  " - Execute previous command with <CR>
-  autocmd TermOpen * noremap <buffer> <CR> a<C-p><CR><C-\><C-n>
-  " - Don't show line numbers
-  autocmd TermOpen * setlocal norelativenumber nonumber
-  " - Highlight on yank
-  autocmd TextYankPost *
-        \ silent! lua require'vim.highlight'.on_yank {timeout = 300}
-augroup end
-]])
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = vim.api.nvim_create_augroup("UserOnTerminalOpen", {}),
+  pattern = "*",
+  desc = "Setup terminal window options",
+  callback = function()
+    -- Start on insert mode
+    vim.cmd.startinsert()
+    -- Don't show line numbers
+    vim.wo.relativenumber = false
+    vim.wo.number = false
+    -- Execute previous command with <CR>
+    map("n", "<CR>", "a<C-p><CR><C-\\><C-n>", { buffer = true })
+  end,
+})
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("UserOnTextYankPost", {}),
+  pattern = "*",
+  desc = "Highlight on yank",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 300 })
+  end,
+})
 
 vim.cmd([[
   " Save current view settings on a per-window, per-buffer basis.

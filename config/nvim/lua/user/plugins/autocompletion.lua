@@ -48,7 +48,7 @@ return {
         end
         return "<C-g>u<CR><C-r>=coc#on_enter()<CR>"
       end, { expr = true, silent = true })
-      map("i", "<C-space>", "coc#refresh()", { silent = true })
+      map("i", "<C-space>", "coc#refresh()", { expr = true, silent = true })
       map("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)", { silent = true })
       map("n", "<C-k>", "<Plug>(coc-diagnostic-prev)", { silent = true })
       map("n", "<C-j>", "<Plug>(coc-diagnostic-next)", { silent = true })
