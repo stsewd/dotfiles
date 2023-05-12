@@ -5,50 +5,87 @@ return {
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
   "hrsh7th/cmp-cmdline",
+  {
+    "uga-rosa/cmp-dictionary",
+    config = function()
+      local dict = require("cmp_dictionary")
+      dict.switcher({
+        spelllang = {
+          -- This is from https://github.com/neoclide/coc-sources/tree/master/packages/word.
+          -- TODO: make this path more portable.
+          en = "/home/stsewd/dotfiles/en.10k.dict",
+        },
+      })
+    end
+  },
   -- Snippets
+  -- NOTE: I tried to use luasnip, but it's slow.
   "SirVer/ultisnips",
   "honza/vim-snippets",
   "quangnguyen30192/cmp-nvim-ultisnips",
 
   -- LSP
   "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-nvim-lsp-signature-help",
+  {
+    "onsails/lspkind.nvim",
+    lazy = true,
+  },
+  {
+    "nvimdev/lspsaga.nvim",
+    lazy = true,
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      map("n", "<C-k>", vim.diagnostic.goto_prev)
-      map("n", "<C-j>", vim.diagnostic.goto_next)
+      -- Don't show diagnostics in virtual text.
+      vim.diagnostic.config({ virtual_text = false })
+
+      -- Set diagnostic symbols.
+      local signs = { Error = "✘", Warn = "▲ ", Hint = "⚑ ", Info = "»" }
+      for type, icon in pairs(signs) do
+        local hl = "DiagnosticSign" .. type
+        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+      end
+
       -- Use LspAttach autocommand to only map the following keys
-      -- after the language server attaches to the current buffer
+      -- after the language server attaches to the current buffer.
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-        callback = function(ev)
-          -- Enable completion triggered by <c-x><c-o>
-          vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+        callback = function(event)
+          -- Show border in signature help window.
+          vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+            border = "single",
+          })
 
+          -- Start lspsaga.
+          require("lspsaga").setup({
+            symbol_in_winbar = {
+              enable = false,
+            },
+          })
           -- Buffer local mappings.
-          -- See `:help vim.lsp.*` for documentation on any of the below functions
-          local opts = { buffer = ev.buf }
-          vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-          vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-          vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-          vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
-          vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
-          vim.keymap.set("n", "<space>wl", function()
-            print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-          end, opts)
-          vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
-          vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
-          vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-          vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-          vim.keymap.set("n", "<space>f", function()
+          local opts = { buffer = event.buf }
+          map("n", "<C-k>", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+          map("n", "<C-j>", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+          map("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+          map("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>", opts)
+          map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+          map("n", "<leader>r", "<cmd>Lspsaga rename ++project<CR>", opts)
+          map({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
+
+          map("n", "gi", vim.lsp.buf.implementation, opts)
+          map("n", "gt", vim.lsp.buf.type_definition, opts)
+          map("n", "gr", vim.lsp.buf.references, opts)
+          map("n", "<C-h>", vim.lsp.buf.signature_help, opts)
+          map("n", "<space>cf", function()
             vim.lsp.buf.format({ async = true })
           end, opts)
         end,
       })
 
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      -- Setup LSPs.
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       require("lspconfig").pyright.setup({
         capabilities = capabilities,
       })
@@ -57,6 +94,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     config = function()
+      local lspkind = require("lspkind")
       local cmp = require("cmp")
       local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
       cmp.setup({
@@ -83,17 +121,25 @@ return {
           documentation = cmp.config.window.bordered(),
         },
         snippet = {
-          -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             vim.fn["UltiSnips#Anon"](args.body)
           end,
         },
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
+          { name = "nvim_lsp_signature_help" },
           { name = "buffer" },
           { name = "ultisnips" },
           { name = "path" },
+          { name = "dictionary" },
         }),
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = "symbol_text",
+            maxwidth = 50,
+            ellipsis_char = "...",
+          }),
+        },
       })
       -- `/` cmdline setup.
       cmp.setup.cmdline({ "/", "?" }, {

@@ -50,7 +50,7 @@ return {
           navigation = {
             enable = true,
             keymaps = {
-              goto_definition = "gd",
+              goto_definition = "<leader>gd",
               goto_next_usage = "]d",
               goto_previous_usage = "[d",
             },
