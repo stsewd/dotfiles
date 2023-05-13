@@ -19,7 +19,6 @@ return {
     end,
   },
   -- Snippets
-  -- NOTE: I tried to use luasnip, but it's slow.
   "SirVer/ultisnips",
   "honza/vim-snippets",
   "quangnguyen30192/cmp-nvim-ultisnips",
@@ -27,10 +26,7 @@ return {
   -- LSP
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-nvim-lsp-signature-help",
-  {
-    "onsails/lspkind.nvim",
-    lazy = true,
-  },
+  "onsails/lspkind.nvim",
   "nvimdev/lspsaga.nvim",
   "folke/neodev.nvim",
   {
@@ -52,6 +48,11 @@ return {
     config = function()
       -- Don't show diagnostics in virtual text.
       vim.diagnostic.config({ virtual_text = false })
+
+      -- Show border in signature help window.
+      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+        border = "single",
+      })
 
       -- Set diagnostic symbols.
       local signs = { Error = "✘", Warn = "▲ ", Hint = "⚑ ", Info = "»" }
@@ -75,11 +76,6 @@ return {
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(event)
-          -- Show border in signature help window.
-          vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-            border = "single",
-          })
-
           -- Buffer local mappings.
           local opts = { buffer = event.buf }
           map("n", "<C-k>", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
@@ -91,7 +87,6 @@ return {
           map({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 
           map("n", "gi", vim.lsp.buf.implementation, opts)
-          map("n", "gt", vim.lsp.buf.type_definition, opts)
           map("n", "gr", vim.lsp.buf.references, opts)
           map("n", "<C-h>", vim.lsp.buf.signature_help, opts)
           map("n", "<space>cf", function()
@@ -180,16 +175,10 @@ return {
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
           ["<C-j>"] = cmp.mapping(function(fallback)
             cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
-          end, {
-            "i",
-            "s",
-          }),
+          end, { "i", "s" }),
           ["<C-k>"] = cmp.mapping(function(fallback)
             cmp_ultisnips_mappings.jump_backwards(fallback)
-          end, {
-            "i",
-            "s",
-          }),
+          end, { "i", "s" }),
         }),
         window = {
           completion = cmp.config.window.bordered(),
@@ -209,6 +198,7 @@ return {
           { name = "dictionary" },
         }),
         formatting = {
+          -- Show symbols next to each suggestion.
           format = lspkind.cmp_format({
             mode = "symbol_text",
             maxwidth = 50,
