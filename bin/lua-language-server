@@ -1,0 +1,4 @@
+#!/bin/bash
+# Wrapper script for lua-language-server, see
+# https://github.com/LuaLS/lua-language-server/wiki/Getting-Started#command-line.
+exec "~/.local/share/lua-language-server/bin/lua-language-server" "$@"

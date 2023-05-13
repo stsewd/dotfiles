@@ -7,6 +7,7 @@ install:
 		setroubleshoot \
 		clang \
 		clang-tools-extra \
+		nodejs \
 		zsh \
 		xclip \
 		encfs \
@@ -73,17 +74,34 @@ install:
 	./scripts/nvm.sh
 	./scripts/pyenv.sh
 	./scripts/zsh.sh
+	./scripts/lua-language-server.sh
 
 # Should be called after make install, and in a fresh shell.
 setup:
 	touch ~/.notags
+	pip install --user pipx
+	# Sphinx language server.
+	pipx install esbonio
+
+	# Used by null-ls-nvim.
 	cargo install stylua
 
 	@echo Install nvm
 	# TODO: mvm isn't found when executed from the makefile :/
 	nvm install node
 	npm install -g yarn
-	npm install -g tree-sitter-cli@0.20.6
+	# Tree sitter is used by nvim-treesitter.
+	npm install -g tree-sitter-cli
+	# Tools/LSPs used by nvim-lspconfig/null-ls-nvim.
+	npm install -g prettier
+	npm install -g pyright
+	npm install -g yaml-language-server
+	# https://github.com/hrsh7th/vscode-langservers-extracted
+	npm install -g vscode-html-language-server
+	npm install -g vscode-css-language-server
+	npm install -g vscode-json-language-server
+
+	npm install -g typescript-language-server typescript
 
 	@echo Update tldr
 	tldr --update

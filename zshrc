@@ -124,8 +124,11 @@ export FZF_DEFAULT_OPTS
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# This is slow, do I really need it?
 eval "$(pyenv init -)"
+# This is kind of slow, not much,
+# but can it be manually run when needed?
+# Similar to nvm.
 eval "$(pyenv virtualenv-init -)"
 
 
@@ -135,6 +138,9 @@ export NVIM_PYTHON_HOST=$PYENV_ROOT/versions/neovim/bin/python
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
+# --no-use speeds up shell startup,
+# to use node and friends, run `nvm use default` manually.
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
