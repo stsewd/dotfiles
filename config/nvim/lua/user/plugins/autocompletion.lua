@@ -34,6 +34,20 @@ return {
   "nvimdev/lspsaga.nvim",
   "folke/neodev.nvim",
   {
+    "jose-elias-alvarez/null-ls.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      local null_ls = require("null-ls")
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.black,
+          null_ls.builtins.formatting.prettier,
+        },
+      })
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       -- Don't show diagnostics in virtual text.
@@ -50,6 +64,9 @@ return {
       require("lspsaga").setup({
         symbol_in_winbar = {
           enable = false,
+        },
+        lightbulb = {
+          sign = false,
         },
       })
 
@@ -95,6 +112,13 @@ return {
       require("neodev").setup()
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
+        settings = {
+          Lua = {
+            workspace = {
+              checkThirdParty = false,
+            },
+          },
+        },
       })
 
       lspconfig.jsonls.setup({
