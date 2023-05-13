@@ -36,8 +36,11 @@ return {
       local null_ls = require("null-ls")
       null_ls.setup({
         sources = {
+          -- Lua formatter.
           null_ls.builtins.formatting.stylua,
+          -- Python formatter.
           null_ls.builtins.formatting.black,
+          -- json/yaml/js/css/html formatter.
           null_ls.builtins.formatting.prettier,
         },
       })
