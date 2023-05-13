@@ -16,7 +16,7 @@ return {
           en = "/home/stsewd/dotfiles/en.10k.dict",
         },
       })
-    end
+    end,
   },
   -- Snippets
   -- NOTE: I tried to use luasnip, but it's slow.
@@ -31,10 +31,8 @@ return {
     "onsails/lspkind.nvim",
     lazy = true,
   },
-  {
-    "nvimdev/lspsaga.nvim",
-    lazy = true,
-  },
+  "nvimdev/lspsaga.nvim",
+  "folke/neodev.nvim",
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -48,6 +46,13 @@ return {
         vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
       end
 
+      -- Start lspsaga.
+      require("lspsaga").setup({
+        symbol_in_winbar = {
+          enable = false,
+        },
+      })
+
       -- Use LspAttach autocommand to only map the following keys
       -- after the language server attaches to the current buffer.
       vim.api.nvim_create_autocmd("LspAttach", {
@@ -58,12 +63,6 @@ return {
             border = "single",
           })
 
-          -- Start lspsaga.
-          require("lspsaga").setup({
-            symbol_in_winbar = {
-              enable = false,
-            },
-          })
           -- Buffer local mappings.
           local opts = { buffer = event.buf }
           map("n", "<C-k>", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
@@ -86,8 +85,60 @@ return {
 
       -- Setup LSPs.
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      require("lspconfig").pyright.setup({
+      local lspconfig = require("lspconfig")
+
+      lspconfig.pyright.setup({
         capabilities = capabilities,
+      })
+
+      -- Add support for completion in neovim lua files.
+      require("neodev").setup()
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.jsonls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.yamlls.setup({
+        capabilities = capabilities,
+        settings = {
+          yaml = {
+            keyOrdering = false,
+          },
+        },
+      })
+
+      lspconfig.html.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.cssls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.tsserver.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.esbonio.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+        settings = {
+          ["rust-analyzer"] = {
+            check = {
+              command = "clippy",
+            },
+          },
+        },
       })
     end,
   },
