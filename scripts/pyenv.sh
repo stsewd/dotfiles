@@ -7,8 +7,9 @@ curl https://pyenv.run | bash
 sudo dnf install -y \
     make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel
 
-pyenv install 3.11.1
+pyenv install 3.11.3
 
 # Create neovim environment
 pyenv virtualenv --system-site-packages --force system neovim
+PYENV_ROOT=~/.pyenv
 PATH="$PYENV_ROOT/versions/neovim/bin:$PATH" pip install --upgrade pip pynvim pydbus sphinx

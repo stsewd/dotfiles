@@ -1,4 +1,7 @@
 install:
+	@echo Updating current packages
+	sudo dnf up --refresh -y
+
 	@echo Installing core packages
 	sudo dnf install -y \
 		util-linux-user \
@@ -17,6 +20,7 @@ install:
 		hub \
 		direnv \
 		bat \
+		nodejs \
 		fzf \
 		jq \
 		httpie \
@@ -70,6 +74,7 @@ install:
 	./scripts/docker.sh
 	./scripts/nvim.sh
 	./scripts/rust.sh
+	./scripts/node.sh
 	./scripts/nvm.sh
 	./scripts/pyenv.sh
 	./scripts/zsh.sh
@@ -79,11 +84,11 @@ setup:
 	touch ~/.notags
 	cargo install stylua
 
-	@echo Install nvm
+	@echo Install node packages
 	# TODO: mvm isn't found when executed from the makefile :/
 	nvm install node
 	npm install -g yarn
-	npm install -g tree-sitter-cli@0.20.6
+	npm install -g tree-sitter-cli
 
 	@echo Update tldr
 	tldr --update

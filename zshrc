@@ -137,6 +137,9 @@ export NVIM_PYTHON_HOST=$PYENV_ROOT/versions/neovim/bin/python
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Node/npm
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
 
 # Rust
 export PATH="$HOME/.rustup:$HOME/.cargo/bin:$PATH"
