@@ -1,5 +1,7 @@
 # Create a desktop entry for a Firefox profile.
-# Usage: create-firefox-profile [profile name]
+# Usage:
+# - Create the profile with `firefox -ProfileManager`
+# - Run create-firefox-profile [profile name]
 
 PROFILE=$1
 echo Creating profile: $PROFILE

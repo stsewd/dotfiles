@@ -13,7 +13,6 @@ install:
 		zsh \
 		xclip \
 		encfs \
-		ctags \
 		wmctrl \
 		ripgrep \
 		fd-find \
@@ -60,6 +59,7 @@ install:
 	flatpak install -y flathub com.github.tchx84.Flatseal
 	flatpak install -y flathub com.calibre_ebook.calibre
 	flatpak install -y flathub com.google.AndroidStudio
+	flatpak install -y flathub org.chromium.Chromium
 
 	@echo Install fonts
 	./scripts/fonts.sh
@@ -81,12 +81,14 @@ install:
 
 # Should be called after make install, and in a fresh shell.
 setup:
-	touch ~/.notags
+	@echo Install rust packages
 	cargo install stylua
 
-	@echo Install node packages
 	# TODO: mvm isn't found when executed from the makefile :/
-	nvm install node
+	# I'm not actively using node,
+	# and I'm installing node globally from dnf.
+	# nvm install node
+	@echo Install node packages
 	npm install -g yarn
 	npm install -g tree-sitter-cli
 
@@ -101,7 +103,6 @@ setup:
 	rustup self update
 
 symlinks:
-	ln -sf `pwd`/ctags ~/.ctags
 	ln -sf `pwd`/gitconfig ~/.gitconfig
 	ln -sf `pwd`/gitignore ~/.gitignore
 	ln -sf `pwd`/pypirc ~/.pypirc
