@@ -60,6 +60,7 @@ install:
 	flatpak install -y flathub com.github.tchx84.Flatseal
 	flatpak install -y flathub com.calibre_ebook.calibre
 	flatpak install -y flathub com.google.AndroidStudio
+	flatpak install -y flathub org.chromium.Chromium
 
 	@echo Install fonts
 	./scripts/fonts.sh
