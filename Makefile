@@ -85,9 +85,11 @@ setup:
 	touch ~/.notags
 	cargo install stylua
 
-	@echo Install node packages
 	# TODO: mvm isn't found when executed from the makefile :/
-	nvm install node
+	# I'm not actively using node,
+	# and I'm installing node globally from dnf.
+	# nvm install node
+	@echo Install node packages
 	npm install -g yarn
 	npm install -g tree-sitter-cli
 
