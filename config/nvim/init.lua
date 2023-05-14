@@ -7,4 +7,8 @@ require("user.mappings")
 require("user.commands")
 
 -- Load plugins.
-require("lazy").setup("user.plugins")
+require("lazy").setup("user.plugins", {
+  change_detection = {
+    notify = false,
+  },
+})

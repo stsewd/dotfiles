@@ -41,3 +41,16 @@ Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-b
 - [pyenv](https://github.com/pyenv/pyenv-installer) for installing and managing Python versions
 - [hub](https://hub.github.com/) (git wrapper for GitHub)
 - [tldr](https://github.com/dbrgn/tealdeer#installing)
+
+## After install
+
+- Create gnome shortcuts:
+  - Open terminal with ctrl-alt-enter
+  - Minimize all windows with super-d
+  - Open file explorer with super-e
+- Install the Gnome extensions from gnome-extensions.txt
+- Set the firefox options from firefox-about.txt
+- Add ssh/gpg keys
+- Copy sensitive configs from private gist
+- Create additional firefox profiles (scripts/create-firefox-profile.sh)
+- Setup yubikey (yubikey.md)
