@@ -13,7 +13,6 @@ install:
 		zsh \
 		xclip \
 		encfs \
-		ctags \
 		wmctrl \
 		ripgrep \
 		fd-find \
@@ -82,7 +81,7 @@ install:
 
 # Should be called after make install, and in a fresh shell.
 setup:
-	touch ~/.notags
+	@echo Install rust packages
 	cargo install stylua
 
 	# TODO: mvm isn't found when executed from the makefile :/
@@ -104,7 +103,6 @@ setup:
 	rustup self update
 
 symlinks:
-	ln -sf `pwd`/ctags ~/.ctags
 	ln -sf `pwd`/gitconfig ~/.gitconfig
 	ln -sf `pwd`/gitignore ~/.gitignore
 	ln -sf `pwd`/pypirc ~/.pypirc
