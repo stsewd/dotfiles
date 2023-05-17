@@ -81,7 +81,6 @@ plugins=(
   safe-paste
   zsh-syntax-highlighting
   zsh-completions
-  gh
 )
 
 source $ZSH/oh-my-zsh.sh
