@@ -1,2 +1,2 @@
 #!/bin/bash
-clear-meta ${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS}
+exiftool -overwrite_original -ALL=  ${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS}
