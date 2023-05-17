@@ -6,5 +6,7 @@
 - https://extensions.gnome.org/extension/19/user-themes/
 - https://extensions.gnome.org/extension/7/removable-drive-menu/
 - https://extensions.gnome.org/extension/4164/monitor-window-switcher/
+# This is a fork, since the original hasn't been updated to work with the latest version of Gnome.
+- https://extensions.gnome.org/extension/5568/monitor-window-switcher-2/
 - https://extensions.gnome.org/extension/1702/overview-navigation/
 - https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/
