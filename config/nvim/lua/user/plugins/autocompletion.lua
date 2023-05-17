@@ -29,6 +29,9 @@ return {
   "onsails/lspkind.nvim",
   "nvimdev/lspsaga.nvim",
   "folke/neodev.nvim",
+  -- jsonls doesn't download the schemas by default.
+  -- TODO: see if we can re-use the ones from yamlls.
+  "b0o/schemastore.nvim",
   {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -83,7 +86,8 @@ return {
           local opts = { buffer = event.buf }
           map("n", "<C-k>", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
           map("n", "<C-j>", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-          map("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+          -- Use ctrl-] instead.
+          -- map("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
           map("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>", opts)
           map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
           map("n", "<leader>r", "<cmd>Lspsaga rename ++project<CR>", opts)
@@ -121,6 +125,12 @@ return {
 
       lspconfig.jsonls.setup({
         capabilities = capabilities,
+        settings = {
+          json = {
+            schemas = require("schemastore").json.schemas(),
+            validate = { enable = true },
+          },
+        },
       })
 
       lspconfig.yamlls.setup({
