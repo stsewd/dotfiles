@@ -72,7 +72,9 @@ return {
         symbol_in_winbar = {
           enable = false,
         },
+        -- Disable the lightbulb, most of the time the suggestions are not useful.
         lightbulb = {
+          enable = false,
           sign = false,
         },
       })
@@ -236,6 +238,11 @@ return {
           { name = "cmdline" },
         }),
       })
+
+      -- n/p are used for scrolling in the cmp menu.
+      -- use ctrl-j/k to naviage the history instead.
+      map("c", "<C-j>", "<down>")
+      map("c", "<C-k>", "<up>")
     end,
   },
 }
