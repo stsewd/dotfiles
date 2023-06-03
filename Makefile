@@ -81,6 +81,10 @@ install:
 
 # Should be called after make install, and in a fresh shell.
 setup:
+	pip install --user pipx
+	pipx install black
+	pipx install td-watson
+
 	@echo Install rust packages
 	cargo install stylua
 
@@ -91,6 +95,7 @@ setup:
 	@echo Install node packages
 	npm install -g yarn
 	npm install -g tree-sitter-cli
+	npm install -g prettier
 
 	@echo Update tldr
 	tldr --update
