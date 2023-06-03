@@ -104,8 +104,8 @@ setup:
 	pyenv update
 
 	@echo Update rust
-	rustup update
 	rustup self update
+	rustup update
 
 symlinks:
 	ln -sf `pwd`/gitconfig ~/.gitconfig
