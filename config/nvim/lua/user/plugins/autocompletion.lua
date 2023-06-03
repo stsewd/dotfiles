@@ -52,6 +52,8 @@ return {
       map("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)", { silent = true })
       map("n", "<C-k>", "<Plug>(coc-diagnostic-prev)", { silent = true })
       map("n", "<C-j>", "<Plug>(coc-diagnostic-next)", { silent = true })
+      map("n", "gt", "<Plug>(coc-type-definition)", { silent = true })
+      map("n", "<C-h>", ":call CocActionAsync('showSignatureHelp')<CR>", { silent = true })
 
       map("n", "<C-w><leader>", "<Plug>(coc-float-jump)", { silent = true })
 
@@ -63,6 +65,7 @@ return {
       map("n", "<leader>r", "<Plug>(coc-references)", { silent = true })
       map("n", "<leader>cl", "<Plug>(coc-codelens-action)", { silent = true })
       map("n", "<leader>cf", "<Plug>(coc-format)", { silent = true })
+      map("v", "<leader>cf", "<Plug>(coc-format-selected)", { silent = true })
       map("n", "gr", "<Plug>(coc-rename)", { silent = true })
       map("n", "qf", "<Plug>(coc-fix-current)", { silent = true })
       map("n", "<leader>cd", ":call CocAction('diagnosticToggle')<CR>", { silent = true })
