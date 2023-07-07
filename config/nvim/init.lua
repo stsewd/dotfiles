@@ -24,7 +24,7 @@ require("lazy").setup("user.plugins", {
         "gzip",
         "tarPlugin",
         "zipPlugin",
-      }
+      },
     },
   },
 })
