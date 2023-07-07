@@ -4,8 +4,66 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = "all",
-        ignore_install = { "diff" },
+        ensure_installed = {
+          -- The usual suspects
+          "html",
+          "css",
+          "scss", -- SASS
+          "javascript",
+          "jsdoc",
+          "typescript",
+          "tsx",
+          "lua",
+          "luadoc",
+          "luap", -- Lua patterns
+          "python",
+          "htmldjango",
+          "rust",
+          "c",
+          "cpp",
+          "make",
+          "cmake",
+          "bash",
+          "sql",
+          "vim",
+
+          -- Config files
+          "dockerfile",
+          "ini",
+          "json",
+          "jsonc",
+          "toml",
+          "yaml",
+
+          -- Treesitter
+          "comment",
+          "query",
+
+          -- Markup
+          "markdown",
+          "markdown_inline",
+          "rst",
+          "vimdoc",
+
+          -- Just in case
+          "dart",
+          "go",
+          "graphql",
+          "java",
+          "kotlin",
+          "latex",
+          "php",
+          "phpdoc",
+          "terraform",
+          "hcl",
+
+          -- Git
+          "git_config",
+          "git_rebase",
+          "gitattributes",
+          "gitcommit",
+          "gitignore",
+        },
         highlight = {
           enable = true,
           disable = {},
