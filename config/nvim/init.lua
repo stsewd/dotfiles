@@ -17,6 +17,14 @@ require("lazy").setup("user.plugins", {
       -- but we need it to load spell files.
       -- Workaround for https://github.com/folke/lazy.nvim/issues/677.
       paths = { vim.fn.stdpath("data") .. "/site" },
+      disabled_plugins = {
+        "netrwPlugin",
+        "tohtml",
+        "tutor",
+        "gzip",
+        "tarPlugin",
+        "zipPlugin",
+      }
     },
   },
 })
