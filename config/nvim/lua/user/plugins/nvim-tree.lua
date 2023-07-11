@@ -9,7 +9,6 @@ return {
     end,
     config = function()
       require("nvim-tree").setup({
-        disable_netrw = false,
         filters = {
           custom = { ".git$", ".pyc$", "__pycache__" },
         },
