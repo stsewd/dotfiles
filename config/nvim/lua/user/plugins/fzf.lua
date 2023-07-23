@@ -115,7 +115,7 @@ return {
       map("n", "<leader>fh", fzf.builtin)
       map("n", "<leader>f<leader>", fzf.resume)
       map("n", "<leader>fi", function()
-        fzf.files({ cwd = "~/.config/nvim/lua/user/" })
+        fzf.files({ cwd = "~/.config/nvim/" })
       end, { desc = "Search user config files" })
     end,
   },

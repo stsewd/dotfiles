@@ -1,7 +1,14 @@
 local map = vim.keymap.set
 return {
   "honza/vim-snippets",
-  "github/copilot.vim",
+  {
+    "github/copilot.vim",
+    config = function()
+      vim.g.copilot_filetypes = {
+        ["*"] = true,
+      }
+    end,
+  },
   {
     "neoclide/coc.nvim",
     build = "yarn install --frozen-lockfile",
