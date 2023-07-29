@@ -17,7 +17,6 @@ return {
           "luadoc",
           "luap", -- Lua patterns
           "python",
-          "htmldjango",
           "rust",
           "c",
           "cpp",
