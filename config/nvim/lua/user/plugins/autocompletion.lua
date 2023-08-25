@@ -31,6 +31,7 @@ return {
         "coc-sumneko-lua",
         "coc-clangd",
         "coc-esbonio",
+        "coc-phpls",
       }
     end,
     config = function()
