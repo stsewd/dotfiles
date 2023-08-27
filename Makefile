@@ -122,4 +122,4 @@ symlinks:
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
 
-.PHONY: install install-after symlinks setup
+.PHONY: install symlinks setup

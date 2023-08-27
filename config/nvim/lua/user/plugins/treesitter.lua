@@ -80,16 +80,6 @@ return {
     end,
   },
   {
-    "nvim-treesitter/playground",
-    cmd = "TSPlaygroundToggle",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        playground = { enable = true },
-        query_linter = { enable = true },
-      })
-    end,
-  },
-  {
     "nvim-treesitter/nvim-treesitter-refactor",
     config = function()
       require("nvim-treesitter.configs").setup({
