@@ -75,7 +75,8 @@ install:
 	./scripts/nvim.sh
 	./scripts/rust.sh
 	./scripts/node.sh
-	./scripts/nvm.sh
+	# nvm is slow, and I'm not actively using node.
+	# ./scripts/nvm.sh
 	./scripts/pyenv.sh
 	./scripts/zsh.sh
 
