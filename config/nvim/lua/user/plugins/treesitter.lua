@@ -47,6 +47,7 @@ return {
           -- Just in case
           "dart",
           "go",
+          "ruby",
           "graphql",
           "java",
           "kotlin",

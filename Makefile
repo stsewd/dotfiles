@@ -81,9 +81,11 @@ install:
 
 # Should be called after make install, and in a fresh shell.
 setup:
-	pip install --user pipx
+	pip install --upgrade --user pipx
 	pipx install black
 	pipx install td-watson
+
+	pipx upgrade-all
 
 	@echo Install rust packages
 	cargo install stylua

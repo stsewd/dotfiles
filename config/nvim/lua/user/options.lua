@@ -25,6 +25,7 @@ vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldnestmax = 3
 vim.o.foldlevel = 1
+vim.wo.foldtext = "v:lua.vim.treesitter.foldtext()"
 
 -- Indentation
 vim.o.tabstop = 4

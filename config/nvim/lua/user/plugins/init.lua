@@ -1,6 +1,13 @@
 local map = vim.keymap.set
 return {
-  "tpope/vim-surround",
+  -- Say goodbye to surround?
+  -- "tpope/vim-surround",
+  {
+    "kylechui/nvim-surround",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
   "tpope/vim-commentary",
   "tpope/vim-unimpaired",
   "tpope/vim-repeat",
@@ -14,7 +21,6 @@ return {
       })
     end,
   },
-  "stsewd/gx-extended.vim",
   "chaoren/vim-wordmotion",
   -- Operator pending mappings ()[]{}
   "wellle/targets.vim",

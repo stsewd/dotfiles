@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -132,8 +132,13 @@ export NVIM_PYTHON_HOST=$PYENV_ROOT/versions/neovim/bin/python
 
 
 # nvm
+# nvm slows down shell startup, do I really use it?
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Witout this it takes 255.23ms
+# With this, it takes 312.37ms
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+# With this, it takes 349.82ms
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Node/npm
 NPM_PACKAGES="${HOME}/.npm-packages"
