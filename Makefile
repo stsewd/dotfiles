@@ -11,7 +11,6 @@ install:
 		clang \
 		clang-tools-extra \
 		zsh \
-		xclip \
 		encfs \
 		wmctrl \
 		ripgrep \
