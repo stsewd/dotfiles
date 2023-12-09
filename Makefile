@@ -84,6 +84,7 @@ setup:
 	pip install --upgrade --user pipx
 	pipx install black
 	pipx install td-watson
+	pipx install ipython
 
 	pipx upgrade-all
 

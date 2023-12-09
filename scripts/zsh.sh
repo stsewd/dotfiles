@@ -8,7 +8,4 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.
 git clone --depth=1 https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 
 # Set as default shell
-until chsh -s $(which zsh)
-do
-  "Try again"
-done
+chsh -s $(which zsh)
