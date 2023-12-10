@@ -2,6 +2,6 @@
 
 echo "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" | while read line ; do
    if [ -f "$line" ]; then
-     exiftool -overwrite_original -ALL=  -- "$line"
+     shred --remove --zero -v -- "$line"
    fi
 done
