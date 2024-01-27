@@ -2,7 +2,7 @@ curl -fsSL https://get.docker.com | sudo sh
 
 # TODO: is this created automatically?
 # sudo groupadd docker
-# sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
