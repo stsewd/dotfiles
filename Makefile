@@ -5,6 +5,8 @@ install:
 	@echo Installing core packages
 	sudo dnf install -y \
 		util-linux-user \
+		# Clipboard provider for Neovim.
+		wl-clipboard \
 		openssl	\
 		openssh-askpass \
 		setroubleshoot \
@@ -46,6 +48,11 @@ install:
 		flat-remix-theme \
 		vlc
 
+    # NOTE: I'm testing downloading from the latest release instead.
+	# @echo Install Neovim nightly
+	# sudo dnf copr enable -y agriffis/neovim-nightly
+	# sudo dnf install -y neovim
+
 	@echo Installing Proton VPN
 	./scripts/protonvpn.sh
 
@@ -72,7 +79,7 @@ install:
 
 	@echo Install other apps
 	./scripts/docker.sh
-	./scripts/nvim.sh
+	./scripts/nvim.sh --no-backup
 	./scripts/rust.sh
 	./scripts/node.sh
 	# nvm is slow, and I'm not actively using node.
@@ -80,8 +87,10 @@ install:
 	./scripts/pyenv.sh
 	./scripts/zsh.sh
 
-# Should be called after make install, and in a fresh shell.
-setup:
+# Should be called after make install, in a fresh shell.
+# Can also be called to update packages.
+update:
+	@echo Updating pipx packages
 	pip install --upgrade --user pipx
 	pipx install black
 	pipx install td-watson
@@ -89,27 +98,30 @@ setup:
 
 	pipx upgrade-all
 
-	@echo Install rust packages
+	@echo Updating rust packages
 	cargo install stylua
 
 	# TODO: mvm isn't found when executed from the makefile :/
 	# I'm not actively using node,
 	# and I'm installing node globally from dnf.
 	# nvm install node
-	@echo Install node packages
+	@echo Updating node packages
 	npm install -g yarn
 	npm install -g tree-sitter-cli
 	npm install -g prettier
 
-	@echo Update tldr
+	@echo Updating tldr
 	tldr --update
 
-	@echo Update pyenv
+	@echo Updating pyenv
 	pyenv update
 
-	@echo Update rust
+	@echo Updating rust
 	rustup self update
 	rustup update
+
+	@echo Updating Neovim
+	./scripts/nvim.sh
 
 symlinks:
 	ln -sf `pwd`/gitconfig ~/.gitconfig
@@ -126,4 +138,4 @@ symlinks:
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
 
-.PHONY: install symlinks setup
+.PHONY: install symlinks update

@@ -1,3 +1,42 @@
-# Install Neovim nightly
-sudo dnf copr enable -y agriffis/neovim-nightly
-sudo dnf install -y neovim
+# Install Neovim from nightly release by downloading the precompiled binaries.
+
+backup=true
+dowloaded_file=/tmp/nvim-linux64.tar.gz
+backup_dir=/tmp/nvim-backup
+
+while (( "$#" )); do
+  case "$1" in
+    --no-backup)
+      backup=false
+      shift
+      ;;
+    *)
+      echo "Invalid argument: $1"
+      exit 1
+      ;;
+  esac
+done
+
+wget -O $dowloaded_file \
+  https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+
+# Was the last command ok?
+if [ $? -ne 0 ]; then
+  echo "Error downloading Neovim"
+  exit 1
+fi
+
+echo Neovim downloaded
+
+if [ $backup = true ]; then
+  echo Backing up old Neovim
+  mkdir --parents $backup_dir
+  cp /usr/bin/nvim $backup_dir/bin
+  cp -r /usr/lib/nvim $backup_dir/lib
+  cp -r /usr/share/nvim $backup_dir/share
+fi
+
+echo Installing Neovim
+sudo tar -xzvf $dowloaded_file -C /usr/
+echo Neovim installed!
+nvim --version
