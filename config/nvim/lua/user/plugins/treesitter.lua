@@ -68,15 +68,6 @@ return {
           enable = true,
           disable = {},
         },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "<CR>",
-            scope_incremental = "<CR>",
-            node_incremental = "<TAB>",
-            node_decremental = "<S-TAB>",
-          },
-        },
       })
     end,
   },
@@ -126,15 +117,6 @@ return {
               ["ab"] = "@block.outer",
             },
           },
-          swap = {
-            enable = true,
-            swap_next = {
-              ["<leader>a"] = "@parameter.inner",
-            },
-            swap_previous = {
-              ["<leader>A"] = "@parameter.inner",
-            },
-          },
           move = {
             enable = true,
             goto_next_start = {
@@ -156,6 +138,12 @@ return {
           },
         },
       })
+    end,
+  },
+  {
+    "Wansmer/sibling-swap.nvim",
+    config = function()
+      require("sibling-swap").setup({})
     end,
   },
 }

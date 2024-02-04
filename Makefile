@@ -4,23 +4,26 @@ install:
 
 	@echo Installing core packages
 	sudo dnf install -y \
-		util-linux-user \
+		util-linux \
 		# Clipboard provider for Neovim.
 		wl-clipboard \
 		openssl	\
 		openssh-askpass \
+		# SELinux troubleshooting tool.
 		setroubleshoot \
 		clang \
 		clang-tools-extra \
 		zsh \
 		encfs \
-		wmctrl \
 		ripgrep \
 		fd-find \
 		hub \
 		direnv \
 		bat \
 		nodejs \
+		# Go + lsp.
+		golang \
+		golang-x-tools-gopls \
 		fzf \
 		jq \
 		httpie \

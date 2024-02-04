@@ -32,6 +32,7 @@ return {
         "coc-clangd",
         "coc-esbonio",
         "coc-phpls",
+        "coc-go",
       }
     end,
     config = function()
