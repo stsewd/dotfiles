@@ -72,9 +72,10 @@ return {
           builtin = {
             ["<C-/>"] = "toggle-help",
             ["<F2>"] = "toggle-fullscreen",
+            ["<F3>"] = "toggle-preview-wrap",
             ["<C-space>"] = "toggle-preview",
-            ["<C-D>"] = "preview-page-down",
-            ["<C-F>"] = "preview-page-up",
+            ["<down>"] = "preview-page-down",
+            ["<up>"] = "preview-page-up",
           },
         },
         files = {
