@@ -37,6 +37,7 @@ if [ $backup = true ]; then
 fi
 
 echo Installing Neovim
-sudo tar -xzvf $dowloaded_file -C /usr/
+# --strip-components=1 removes the first directory from the tarball (nvim-linux64).
+sudo tar -xzvf $dowloaded_file -C /usr/ --strip-components=1
 echo Neovim installed!
 nvim --version
