@@ -19,7 +19,6 @@ require("lazy").setup("user.plugins", {
       paths = { vim.fn.stdpath("data") .. "/site" },
       disabled_plugins = {
         "netrwPlugin",
-        "tohtml",
         "tutor",
         "gzip",
         "tarPlugin",

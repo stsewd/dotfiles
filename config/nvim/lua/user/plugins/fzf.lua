@@ -63,7 +63,7 @@ return {
           ["--marker"] = "+",
           ["--prompt"] = " ",
           ["--no-separator"] = "",
-          ["--info"] = "'inline: '",
+          ["--info"] = "inline: ",
           -- History for all commands.
           ["--history"] = history .. "all",
         },

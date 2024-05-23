@@ -8,7 +8,6 @@ return {
       require("nvim-surround").setup({})
     end,
   },
-  "tpope/vim-commentary",
   "tpope/vim-unimpaired",
   "tpope/vim-repeat",
   {
