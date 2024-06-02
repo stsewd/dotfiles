@@ -3,13 +3,12 @@ install:
 	sudo dnf up --refresh -y
 
 	@echo Installing core packages
+	# wl-clipboard: clipboard provider for Neovim.
+	# setroubleshoot: SELinux troubleshooting.
 	sudo dnf install -y \
-		util-linux \
-		# Clipboard provider for Neovim.
 		wl-clipboard \
 		openssl	\
 		openssh-askpass \
-		# SELinux troubleshooting tool.
 		setroubleshoot \
 		clang \
 		clang-tools-extra \
@@ -21,7 +20,6 @@ install:
 		direnv \
 		bat \
 		nodejs \
-		# Go + lsp.
 		golang \
 		golang-x-tools-gopls \
 		fzf \
@@ -125,6 +123,9 @@ update:
 
 	@echo Updating Neovim
 	./scripts/nvim.sh
+
+	@echo Updating gh extensions
+	gh extension upgrade --all
 
 symlinks:
 	ln -sf `pwd`/gitconfig ~/.gitconfig
