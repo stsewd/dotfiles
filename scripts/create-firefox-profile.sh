@@ -6,6 +6,6 @@
 PROFILE=$1
 echo Creating profile: $PROFILE
 TARGET=~/.local/share/applications/firefox-${PROFILE}.desktop
-cp /usr/share/applications/firefox.desktop $TARGET
+cp /usr/share/applications/org.mozilla.firefox.desktop $TARGET
 sed -i "s/Name=Firefox/Name=Firefox $PROFILE/" $TARGET
 sed -i "s/Exec=firefox %u/Exec=firefox -P $PROFILE %u/" $TARGET
