@@ -39,5 +39,6 @@
   "clangd.disableProgressNotifications": true,
   "yaml.format.enable": true,
   "python.formatting.provider": "black",
-  "pyright.disableProgressNotifications": true
+  "pyright.disableProgressNotifications": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
