@@ -1,7 +1,5 @@
 local map = vim.keymap.set
 return {
-  -- Say goodbye to surround?
-  -- "tpope/vim-surround",
   {
     "kylechui/nvim-surround",
     config = function()
