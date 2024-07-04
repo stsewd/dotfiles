@@ -12,18 +12,10 @@ return {
     end,
     config = function()
       require("tokyonight").setup({
-        styles = { comments = "None" },
-        sidebars = { "qf" },
-        on_highlights = function(hl, c)
-          hl["@punctuation.special.rst"] = { fg = c.orange, style = "bold" }
-
-          hl.FzfLuaNormal = { fg = c.fg_dark, bg = c.bg_dark }
-          hl.FzfLuaBorder = { fg = c.bg_search, bg = c.bg_dark }
-          hl.FzfLuaCurrentLine = { fg = c.fg_dark, bg = c.bg_search }
-        end,
+        styles = { comments = { italic = false } },
       })
 
-      vim.cmd("colorscheme tokyonight")
+      vim.cmd("colorscheme tokyonight-storm")
     end,
   },
   {
