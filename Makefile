@@ -22,6 +22,8 @@ install:
 		nodejs \
 		golang \
 		golang-x-tools-gopls \
+		ruby \
+		ruby-devel \
 		fzf \
 		jq \
 		httpie \
@@ -88,6 +90,12 @@ install:
 	./scripts/pyenv.sh
 	./scripts/zsh.sh
 
+	@echo Installing ruby on rails
+	gem install rails
+
+	@echo Installing ruby LSP
+	gem install solargraph
+
 # Should be called after make install, in a fresh shell.
 # Can also be called to update packages.
 update:
@@ -123,6 +131,12 @@ update:
 
 	@echo Updating Neovim
 	./scripts/nvim.sh
+
+	@echo Updating kitty
+	./scripts/kitty.sh
+
+	@echo Updating flatpak apps
+	flatpak update -y
 
 	@echo Updating gh extensions
 	gh extension upgrade --all
