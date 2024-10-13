@@ -25,10 +25,16 @@
   light = true
 
 [diff]
+  # Uses different colors to highlight lines in diffs that have been “moved”.
   colorMoved = default
+  algorithm = histogram
 
 [pull]
   ff = only
+
+[merge]
+  # Show three parts of the diff when there is a conflict.
+  conflictStyle = diff3
 
 [commit]
   gpgsign = true

@@ -24,7 +24,7 @@ extensions.pocket.enabled = false
 browser.urlbar.speculativeConnect.enabled = false
 
 # Disable geolocation.
-geo.enabled = false
+# geo.enabled = false
 
 # Disable sending analytics.
 # https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
