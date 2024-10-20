@@ -33,19 +33,6 @@ return {
       local history = vim.fn.stdpath("data") .. "/fzf-lua-history/"
       vim.fn.system({ "mkdir", "--parents", history })
 
-      vim.g.fzf_colors = {
-        ["fg"] = { "fg", "FzfLuaNormal" },
-        ["bg"] = { "bg", "FzfLuaNormal" },
-        ["fg+"] = { "fg", "FzfLuaCurrentLine" },
-        ["bg+"] = { "bg", "FzfLuaCurrentLine" },
-        ["info"] = { "fg", "Comment" },
-        ["separator"] = { "fg", "Comment" },
-        ["pointer"] = { "fg", "ErrorMsg" },
-        ["marker"] = { "fg", "WarningMsg" },
-        ["gutter"] = { "bg", "FzfLuaNormal" },
-        ["border"] = { "fg", "FzfLuaBorder" },
-      }
-
       local fzf = require("fzf-lua")
       fzf.setup({
         winopts = {
@@ -67,7 +54,6 @@ return {
           -- History for all commands.
           ["--history"] = history .. "all",
         },
-        fzf_colors = vim.g.fzf_colors,
         keymap = {
           builtin = {
             ["<C-/>"] = "toggle-help",
@@ -77,6 +63,15 @@ return {
             ["<down>"] = "preview-page-down",
             ["<up>"] = "preview-page-up",
           },
+        },
+        previewers = {
+          builtin = {
+            extensions = {
+              ["png"] = { "chafa" },
+              ["svg"] = { "chafa" },
+              ["jpg"] = { "chafa" },
+            }
+          }
         },
         files = {
           prompt = "   ",

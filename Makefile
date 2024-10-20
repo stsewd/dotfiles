@@ -35,7 +35,8 @@ install:
 		pam_yubico \
 		perl-Image-ExifTool \
 		ImageMagick \
-		git-delta
+		git-delta \
+		chafa
 
 	@echo Installing rpmfusion repos
 	sudo dnf install -y \

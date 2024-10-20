@@ -2,8 +2,7 @@ local map = vim.keymap.set
 
 vim.g.mapleader = " "
 map("n", "<leader>w", ":update<CR>", { desc = "Save file" })
-map("n", "<leader>e", ":e!<CR>", { desc = "Refresh" })
-map("n", "<leader>i", ":e $MYVIMRC<CR>", { desc = "Edit init.lua" })
+map("n", "<leader>e", ":e<CR>", { desc = "Refresh" })
 
 -- Copy/cut/paste to/from clipboard
 map("", "<leader>y", '"+y', { desc = "Copy to clipboard" })
