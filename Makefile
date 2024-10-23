@@ -3,15 +3,9 @@ install:
 	sudo dnf up --refresh -y
 
 	@echo Installing core packages
-	# wl-clipboard: clipboard provider for Neovim.
-	# setroubleshoot: SELinux troubleshooting.
 	sudo dnf install -y \
-		wl-clipboard \
 		openssl	\
 		openssh-askpass \
-		setroubleshoot \
-		clang \
-		clang-tools-extra \
 		zsh \
 		encfs \
 		ripgrep \
@@ -19,11 +13,6 @@ install:
 		hub \
 		direnv \
 		bat \
-		nodejs \
-		golang \
-		golang-x-tools-gopls \
-		ruby \
-		ruby-devel \
 		fzf \
 		jq \
 		httpie \
@@ -33,17 +22,37 @@ install:
 		nmap \
 		seahorse \
 		pam_yubico \
-		perl-Image-ExifTool \
-		ImageMagick \
 		git-delta \
-		chafa
+		rclone
+
+	# ExifTool to remove metadata from files/images.
+	sudo dnf install -y \
+		perl-Image-ExifTool \
+		ImageMagick
+
+	# Languages
+	sudo dnf install -y \
+		nodejs \
+		golang \
+		golang-x-tools-gopls \
+		ruby \
+		ruby-devel \
+		clang \
+		clang-tools-extra
+
+	# SELinux troubleshooting.
+	sudo dnf install -y setroubleshoot
+	# Clipboard provider for Neovim.
+	sudo dnf install -y wl-clipboard
+	# Image to ASCII converter (used by Neovim).
+	sudo dnf install -y chafa
 
 	@echo Installing rpmfusion repos
 	sudo dnf install -y \
 	  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$$(rpm -E %fedora).noarch.rpm \
 	  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$$(rpm -E %fedora).noarch.rpm
 
-	@echo Installing additional apps
+	@echo Installing additional apps from rpmfusion
 	sudo dnf install -y \
 		gnome-tweak-tool \
 		gnome-extensions-app \
