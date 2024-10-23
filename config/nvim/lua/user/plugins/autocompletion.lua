@@ -2,6 +2,9 @@ local map = vim.keymap.set
 return {
   {
     "L3MON4D3/LuaSnip",
+    -- Loading snippets is slow, we load the plugin only
+    -- when it's needed (imported from cmp_luasnip)
+    lazy = true,
     dependencies = {
       { "honza/vim-snippets" },
     },
@@ -108,6 +111,9 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    -- Load the first time we get into insert mode.
+    -- We don't need this plugin to be loaded at startup.
+    event = "InsertEnter",
     dependencies = {
       -- LSP
       { "hrsh7th/cmp-nvim-lsp" },
