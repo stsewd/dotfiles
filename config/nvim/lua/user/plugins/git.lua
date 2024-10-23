@@ -32,7 +32,7 @@ return {
     -- Asynchronously Git wrapper
     "lambdalisue/gina.vim",
     config = function()
-      map("", "<leader>go", "<cmd>Gina browse :<CR>")
+      map("", "<leader>go", ":Gina browse :<CR>")
       map("n", "<leader>gO", "<cmd>Gina browse<CR>")
       map("n", "<leader>gp", "<cmd>Gina push<CR>")
       map("n", "<leader>gP", "<cmd>Gina pull<CR>")

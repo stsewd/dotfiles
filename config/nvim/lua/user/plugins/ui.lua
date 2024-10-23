@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 return {
-  "stevearc/dressing.nvim",
+  { "nvim-tree/nvim-web-devicons", lazy = true },
+  { "stevearc/dressing.nvim" },
   {
     "rcarriga/nvim-notify",
     config = function()

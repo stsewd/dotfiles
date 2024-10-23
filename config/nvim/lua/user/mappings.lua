@@ -1,8 +1,9 @@
 local map = vim.keymap.set
 
 vim.g.mapleader = " "
-map("n", "<leader>w", ":update<CR>", { desc = "Save file" })
-map("n", "<leader>e", ":e<CR>", { desc = "Refresh" })
+map("n", "<leader>w", "<cmd>update<CR>", { silent=true, desc = "Save file" })
+map("n", "<leader>e", "<cmd>e<CR>", { silent=true, desc = "Refresh" })
+map("n", "<leader>hh", "<cmd>hide<CR>", { silent=true, desc = "Hide window" })
 
 -- Copy/cut/paste to/from clipboard
 map("", "<leader>y", '"+y', { desc = "Copy to clipboard" })
