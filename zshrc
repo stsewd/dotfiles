@@ -105,8 +105,8 @@ export HISTSIZE=$SAVEHIST
 
 
 # Python
-alias p=python
-alias pp=ipython
+alias p='uv run -- python'
+alias pp='uv run -- ipython'
 
 
 # Direnv integration
@@ -120,15 +120,8 @@ FZF_DEFAULT_OPTS+=' --no-bold --pointer="" --marker="+" --no-separator --info
 export FZF_DEFAULT_OPTS
 
 
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-
 # Neovim
-export NVIM_PYTHON_HOST=$PYENV_ROOT/versions/neovim/bin/python
+export NVIM_PYTHON_HOST=~/.local/share/nvim/.venv/bin/python
 
 
 # nvm
@@ -143,10 +136,6 @@ export NVM_DIR="$HOME/.nvm"
 # Node/npm
 NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"
-
-# Rust
-export PATH="$HOME/.rustup:$HOME/.cargo/bin:$PATH"
-
 
 # Utils
 # Check memory usage
@@ -173,3 +162,5 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # delta
 export DELTA_FEATURES=+$BACKGROUND
+# Rust/cargo
+. "$HOME/.cargo/env"

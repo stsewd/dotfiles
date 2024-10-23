@@ -123,9 +123,6 @@ update:
 	@echo Updating tldr
 	tldr --update
 
-	@echo Updating pyenv
-	pyenv update
-
 	@echo Updating rust
 	rustup self update
 	rustup update
