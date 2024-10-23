@@ -40,10 +40,10 @@ return {
           },
         },
       })
-    end,
-  },
-}
 
       map("n", "<leader>j", "<cmd>BufferLineCyclePrev<CR>", { silent = true })
       map("n", "<leader>k", "<cmd>BufferLineCycleNext<CR>", { silent = true })
       map("n", "gb", "<cmd>BufferLinePick<CR>", { silent = true })
+    end,
+  },
+}
