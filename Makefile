@@ -47,6 +47,9 @@ install:
 	# Image to ASCII converter (used by Neovim).
 	sudo dnf install -y chafa
 
+	# Bash LSP dependencies.
+	sudo dnf install -y shellcheck shfmt
+	
 	@echo Installing rpmfusion repos
 	sudo dnf install -y \
 	  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$$(rpm -E %fedora).noarch.rpm \
@@ -121,15 +124,26 @@ update:
 	# and I'm installing node globally from dnf.
 	# nvm install node
 	@echo Updating node packages
-	npm install -g yarn
 	npm install -g tree-sitter-cli
+	# Formatter for js, html, css, json, etc.
 	npm install -g prettier
+	# Python LSP
+	npm install -g pyright
+	# HTML, CSS, JS, JSON LSP
+	npm install -g vscode-langservers-extracted
+	# TypeScript LSP
+	npm install -g typescript typescript-language-server
+	npm install -g yaml-language-server
+	# PHP LSP
+	npm install -g intelephense
+	npm install -g bash-language-server
 
 	@echo Updating tldr
 	tldr --update
 
 	@echo Updating rust
 	rustup self update
+	rustup component add rust-analyzer
 	rustup update
 
 	@echo Updating Neovim
