@@ -97,7 +97,7 @@ install:
 	./scripts/node.sh
 	# nvm is slow, and I'm not actively using node.
 	# ./scripts/nvm.sh
-	./scripts/pyenv.sh
+	./scripts/uv.sh
 	./scripts/zsh.sh
 
 	@echo Installing ruby on rails
@@ -109,13 +109,9 @@ install:
 # Should be called after make install, in a fresh shell.
 # Can also be called to update packages.
 update:
-	@echo Updating pipx packages
-	pip install --upgrade --user pipx
-	pipx install black
-	pipx install td-watson
-	pipx install ipython
-
-	pipx upgrade-all
+	@echo Updating uv
+	uv self update
+	uv tool upgrade --all
 
 	@echo Updating rust packages
 	cargo install stylua
