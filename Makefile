@@ -102,6 +102,7 @@ install:
 	# ./scripts/nvm.sh
 	./scripts/uv.sh
 	./scripts/zsh.sh
+	./scripts/luals.sh
 
 	@echo Installing ruby on rails
 	gem install rails
