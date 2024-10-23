@@ -22,20 +22,20 @@ return {
     -- Git wrapper
     "tpope/vim-fugitive",
     config = function()
-      map("n", "<leader>gs", ":Git<CR>", { silent = true })
-      map("n", "<leader>gw", ":Gwrite<CR>", { silent = true })
-      map("n", "<leader>gu", ":Gread<CR>", { silent = true })
-      map("n", "<leader>gc", ":Git commit<CR>", { silent = true })
+      map("n", "<leader>gs", "<cmd>Git<CR>", { silent = true })
+      map("n", "<leader>gw", "<cmd>Gwrite<CR>", { silent = true })
+      map("n", "<leader>gu", "<cmd>Gread<CR>", { silent = true })
+      map("n", "<leader>gc", "<cmd>Git commit<CR>", { silent = true })
     end,
   },
   {
     -- Asynchronously Git wrapper
     "lambdalisue/gina.vim",
     config = function()
-      map("", "<leader>go", ":Gina browse :<CR>")
-      map("n", "<leader>gO", ":Gina browse<CR>")
-      map("n", "<leader>gp", ":Gina push<CR>")
-      map("n", "<leader>gP", ":Gina pull<CR>")
+      map("", "<leader>go", "<cmd>Gina browse :<CR>")
+      map("n", "<leader>gO", "<cmd>Gina browse<CR>")
+      map("n", "<leader>gp", "<cmd>Gina push<CR>")
+      map("n", "<leader>gP", "<cmd>Gina pull<CR>")
     end,
   },
 }

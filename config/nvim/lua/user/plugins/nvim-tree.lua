@@ -4,8 +4,8 @@ return {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFindFile" },
     init = function()
-      map("n", "<leader>n", ":NvimTreeToggle<CR>", { silent = true })
-      map("n", "<leader>N", ":NvimTreeFindFile<CR>", { silent = true })
+      map("n", "<leader>n", "<cmd>NvimTreeToggle<CR>", { silent = true })
+      map("n", "<leader>N", "<cmd>NvimTreeFindFile<CR>", { silent = true })
     end,
     config = function()
       require("nvim-tree").setup({

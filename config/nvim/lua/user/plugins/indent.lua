@@ -1,4 +1,3 @@
-local map = vim.keymap.set
 return {
   {
     -- Show indentation lines

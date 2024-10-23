@@ -1,4 +1,3 @@
-local map = vim.keymap.set
 return {
   {
     "kylechui/nvim-surround",

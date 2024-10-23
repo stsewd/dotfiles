@@ -6,11 +6,11 @@ return {
     build = ":UpdateRemotePlugins",
     cmd = "Spotify",
     init = function()
-      map("n", "<leader>ss", ":Spotify play/pause<CR>", { silent = true })
-      map("n", "<leader>sj", ":Spotify next<CR>", { silent = true })
-      map("n", "<leader>sk", ":Spotify prev<CR>", { silent = true })
-      map("n", "<leader>so", ":Spotify show<CR>", { silent = true })
-      map("n", "<leader>sc", ":Spotify status<CR>", { silent = true })
+      map("n", "<leader>ss", "<cmd>Spotify play/pause<CR>", { silent = true })
+      map("n", "<leader>sj", "<cmd>Spotify next<CR>", { silent = true })
+      map("n", "<leader>sk", "<cmd>Spotify prev<CR>", { silent = true })
+      map("n", "<leader>so", "<cmd>Spotify show<CR>", { silent = true })
+      map("n", "<leader>sc", "<cmd>Spotify status<CR>", { silent = true })
     end,
     config = function()
       local spotify = require("spotify")
