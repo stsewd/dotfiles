@@ -24,9 +24,7 @@ map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<C-[>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<A-[>", "<Esc>", { desc = "Send escape to the terminal" })
 
--- Copy current path with line number
-map("n", "<leader>o", [[:let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>]], { silent = true })
-
+-- Diagnostic mappings
 map("n", "<C-k>", function()
   vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = "Jump to previous diagnostic" })
@@ -34,6 +32,31 @@ map("n", "<C-j>", function()
   vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Jump to next diagnostic" })
 
-map("n", "<C-k>", function()
-  vim.diagnostic.jump({ count = -1, float = true })
-end, { desc = "Jump to previous diagnostic" })
+-- vim-unimpaired like mappings
+map("n", "yos", "<cmd>set spell! | set spell?<CR>", { desc = "Toggle spell checking" })
+map("n", "yow", "<cmd>set wrap! | set wrap?<CR>", { desc = "Toggle wrap" })
+
+map("n", "[<space>", "m`O<ESC>``", { desc = "Add a blank line above" })
+map("n", "]<space>", "m`o<ESC>``", { desc = "Add a blank line below" })
+
+map("n", "[n", function()
+  require("user.utils").goto_git_conflict(true)
+end, { desc = "Previous git conflict" })
+map("n", "]n", function()
+  require("user.utils").goto_git_conflict()
+end, { desc = "Next git conflict" })
+
+map("n", "[f", function()
+  require("user.utils").goto_file_entry(true)
+end, { desc = "Previous file" })
+map("n", "]f", function()
+  require("user.utils").goto_file_entry()
+end, { desc = "Next file" })
+
+-- Others
+map(
+  "n",
+  "<leader>o",
+  [[:let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>]],
+  { silent = true, desc = "Copy current path with line number" }
+)
