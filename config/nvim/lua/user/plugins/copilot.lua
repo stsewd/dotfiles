@@ -9,6 +9,21 @@ return {
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    -- Load the plugin only when these commands are run.
+    cmd = {
+      "CopilotChat",
+      "CopilotChatToggle",
+      "CopilotChatDebugInfo",
+      "CopilotChatExplain",
+      "CopilotChatReview",
+      "CopilotChatFix",
+      "CopilotChatOptimize",
+      "CopilotChatDocs",
+      "CopilotChatTests",
+      "CopilotChatFixDiagnostic",
+      "CopilotChatCommit",
+      "CopilotChatCommitStaged",
+    },
     branch = "canary",
     dependencies = {
       { "github/copilot.vim" },

@@ -23,6 +23,7 @@ return {
   {
     -- Jump to any character in the buffer
     "ggandor/leap.nvim",
+    keys = { { "S" }, { "s" } },
     config = function()
       require("leap").add_default_mappings()
       require("leap").opts.case_sensitive = true
