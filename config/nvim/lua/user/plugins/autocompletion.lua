@@ -89,6 +89,7 @@ return {
   },
   {
     "nvimdev/lspsaga.nvim",
+    cmd = "Lspsaga",
     config = function()
       local saga = require("lspsaga")
       saga.setup({
@@ -103,7 +104,8 @@ return {
           sign = false,
         },
       })
-
+    end,
+    init = function()
       -- This is the only thing that I kind of need from lspsaga.
       -- maybe we can have this built-in?
       map("n", "<leader><C-]>", ":Lspsaga peek_definition<CR>", { silent = true, desc = "Peek definition" })
@@ -117,7 +119,6 @@ return {
     dependencies = {
       -- LSP
       { "hrsh7th/cmp-nvim-lsp" },
-      { "hrsh7th/cmp-nvim-lsp-signature-help" },
       -- Other sources
       { "hrsh7th/cmp-buffer" },
       { "hrsh7th/cmp-path" },
@@ -174,7 +175,6 @@ return {
 
       require("cmp_dictionary").setup({
         paths = { dictionary_path },
-        -- exact_length = 3,
       })
     end,
   },
