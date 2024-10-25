@@ -106,7 +106,7 @@ return {
 
       -- This is the only thing that I kind of need from lspsaga.
       -- maybe we can have this built-in?
-      map("n", "<leader><C-]>", "<cmd>Lspsaga peek_definition<CR>", { silent = true, desc = "Peek definition" })
+      map("n", "<leader><C-]>", ":Lspsaga peek_definition<CR>", { silent = true, desc = "Peek definition" })
     end,
   },
   {
