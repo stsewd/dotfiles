@@ -27,9 +27,13 @@ map("t", "<A-[>", "<Esc>", { desc = "Send escape to the terminal" })
 -- Copy current path with line number
 map("n", "<leader>o", [[:let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>]], { silent = true })
 
+map("n", "<C-k>", function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Jump to previous diagnostic" })
 map("n", "<C-j>", function()
   vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Jump to next diagnostic" })
+
 map("n", "<C-k>", function()
   vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = "Jump to previous diagnostic" })
