@@ -10,7 +10,7 @@ return {
     config = function()
       require("nvim-tree").setup({
         filters = {
-          custom = { "\\.git$", "\\.pyc$", "__pycache__" },
+          custom = { "^\\.git$", "\\.pyc$", "__pycache__" },
         },
         renderer = {
           special_files = {},
