@@ -5,8 +5,8 @@ return {
     "mhinz/vim-sayonara",
     cmd = "Sayonara",
     init = function()
-      map("n", "<leader>q", "<cmd>Sayonara<CR>", { silent = true, desc = "Close current buffer" })
-      map("n", "<leader>Q", "<cmd>Sayonara!<CR>", { silent = true, desc = "Close current buffer, but keep layout" })
+      map("n", "<leader>q", ":Sayonara<CR>", { silent = true, desc = "Close current buffer" })
+      map("n", "<leader>Q", ":Sayonara!<CR>", { silent = true, desc = "Close current buffer, but keep layout" })
     end,
   },
 }

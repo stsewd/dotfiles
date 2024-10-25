@@ -1,9 +1,9 @@
 local map = vim.keymap.set
 
 vim.g.mapleader = " "
-map("n", "<leader>w", "<cmd>update<CR>", { silent = true, desc = "Save file" })
-map("n", "<leader>e", "<cmd>e<CR>", { silent = true, desc = "Refresh" })
-map("n", "<leader>hh", "<cmd>hide<CR>", { silent = true, desc = "Hide window" })
+map("n", "<leader>w", ":update<CR>", { silent = true, desc = "Save file" })
+map("n", "<leader>e", ":e<CR>", { silent = true, desc = "Refresh" })
+map("n", "<leader>hh", ":hide<CR>", { silent = true, desc = "Hide window" })
 
 -- Copy/cut/paste to/from clipboard
 map("", "<leader>y", '"+y', { desc = "Copy to clipboard" })
@@ -25,8 +25,8 @@ map("t", "<C-[>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<A-[>", "<Esc>", { desc = "Send escape to the terminal" })
 
 -- vim-unimpaired like mappings
-map("n", "yos", "<cmd>set spell! | set spell?<CR>", { desc = "Toggle spell checking" })
-map("n", "yow", "<cmd>set wrap! | set wrap?<CR>", { desc = "Toggle wrap" })
+map("n", "yos", ":set spell! | set spell?<CR>", { desc = "Toggle spell checking" })
+map("n", "yow", ":set wrap! | set wrap?<CR>", { desc = "Toggle wrap" })
 
 map("n", "[<space>", "m`O<ESC>``", { desc = "Add a blank line above" })
 map("n", "]<space>", "m`o<ESC>``", { desc = "Add a blank line below" })
@@ -49,6 +49,6 @@ end, { desc = "Next file" })
 map(
   "n",
   "<leader>o",
-  [[:let @" = expand('%:p') . ':' . line('.') <bar> echo @"<CR>]],
+  [[:let @" = expand('%:p') .. ':' .. line('.') <bar> echo @"<CR>]],
   { silent = true, desc = "Copy current path with line number" }
 )
