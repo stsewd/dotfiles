@@ -22,8 +22,8 @@ return {
       vim.g.fzf_checkout_use_current_buf_cwd = true
       vim.g.fzf_checkout_git_options = "--sort=-committerdate"
 
-      map("n", "<leader>fg", "<cmd>FzGBranches<CR>", { silent = true, desc = "List git branches" })
-      map("n", "<leader>fG", "<cmd>FzGTags<CR>", { silent = true, desc = "List git tags" })
+      map("n", "<leader>fg", ":FzGBranches<CR>", { silent = true, desc = "List git branches" })
+      map("n", "<leader>fG", ":FzGTags<CR>", { silent = true, desc = "List git tags" })
     end,
   },
   {

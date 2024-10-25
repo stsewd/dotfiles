@@ -42,9 +42,9 @@ return {
         },
       })
 
-      map("n", "<leader>j", "<cmd>BufferLineCyclePrev<CR>", { silent = true })
-      map("n", "<leader>k", "<cmd>BufferLineCycleNext<CR>", { silent = true })
-      map("n", "gb", "<cmd>BufferLinePick<CR>", { silent = true })
+      map("n", "<leader>j", ":BufferLineCyclePrev<CR>", { silent = true })
+      map("n", "<leader>k", ":BufferLineCycleNext<CR>", { silent = true })
+      map("n", "gb", ":BufferLinePick<CR>", { silent = true })
     end,
   },
 }
