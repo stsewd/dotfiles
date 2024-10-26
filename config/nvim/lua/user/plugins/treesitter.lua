@@ -73,6 +73,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter-refactor",
+    keys = { { "grnn" }, { "gd" }, { "]d" }, { "[d" } },
     config = function()
       require("nvim-treesitter.configs").setup({
         refactor = {
@@ -142,6 +143,7 @@ return {
   },
   {
     "Wansmer/sibling-swap.nvim",
+    keys = { { "<leader>," }, { "<leader>." } },
     config = function()
       require("sibling-swap").setup({})
     end,
