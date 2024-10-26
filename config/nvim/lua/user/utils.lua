@@ -37,7 +37,7 @@ function M.goto_file_entry(prev)
   -- Get the current file index (lua is 1-based index).
   local index = vim.fn.index(files, vim.fs.basename(current_file)) + 1
   index = prev and index - 1 or index + 1
-  if index <= 0 or index >= #files then
+  if index <= 0 or index > #files then
     vim.notify("No more files to go to")
     return
   end
