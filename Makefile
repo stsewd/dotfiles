@@ -79,10 +79,10 @@ install:
 	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub org.gimp.GIMP
 	flatpak install -y flathub com.discordapp.Discord
-	flatpak install -y flathub com.github.tchx84.Flatseal
 	flatpak install -y flathub com.calibre_ebook.calibre
-	flatpak install -y flathub com.google.AndroidStudio
 	flatpak install -y flathub org.chromium.Chromium
+	# flatpak install -y flathub com.google.AndroidStudio
+	# flatpak install -y flathub com.github.tchx84.Flatseal
 
 	@echo Install fonts
 	./scripts/fonts.sh

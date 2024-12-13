@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-vim.cmd([[ command! U Lazy update ]])
+vim.cmd("command! U Lazy update")
 
 -- Remove trailing white spaces
 vim.cmd("command! -range=% RemoveTrailing <line1>,<line2>s/\\s\\+$//e")
