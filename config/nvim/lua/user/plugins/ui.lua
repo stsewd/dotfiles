@@ -4,6 +4,7 @@ return {
   { "stevearc/dressing.nvim" },
   {
     "rcarriga/nvim-notify",
+    enabled = false,
     config = function()
       require("notify").setup({
         timeout = 500,
@@ -24,7 +25,6 @@ return {
           disabled_filetypes = { "startify", "NvimTree" },
         },
         sections = {
-          lualine_b = { { "FugitiveHead", icon = "" } },
           lualine_x = { "filetype" },
         },
         extensions = { "fugitive", "quickfix" },

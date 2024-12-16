@@ -43,6 +43,11 @@ return {
           map("n", "<2-LeftMouse>", api.node.open.no_window_picker, opts("Open: No Window Picker"))
         end,
       })
+
+      local events = require("nvim-tree.api").events
+      events.subscribe(events.Event.NodeRenamed, function(data)
+        Snacks.rename.on_rename_file(data.old_name, data.new_name)
+      end)
     end,
   },
 }

@@ -33,8 +33,8 @@ map("n", "<C-j>", function()
 end, { desc = "Jump to next diagnostic" })
 
 -- vim-unimpaired like mappings
-map("n", "yos", ":set spell! | set spell?<CR>", { desc = "Toggle spell checking" })
-map("n", "yow", ":set wrap! | set wrap?<CR>", { desc = "Toggle wrap" })
+-- map("n", "yos", ":set spell! | set spell?<CR>", { desc = "Toggle spell checking" })
+-- map("n", "yow", ":set wrap! | set wrap?<CR>", { desc = "Toggle wrap" })
 
 map("n", "[<space>", "m`O<ESC>``", { desc = "Add a blank line above" })
 map("n", "]<space>", "m`o<ESC>``", { desc = "Add a blank line below" })

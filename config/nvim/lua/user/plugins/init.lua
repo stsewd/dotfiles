@@ -38,4 +38,53 @@ return {
     "stsewd/sphinx.nvim",
     build = ":UpdateRemotePlugins",
   },
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      -- Disable some plugins when opening a big file.
+      bigfile = { enabled = true },
+      -- vim.notify implementation.
+      notifier = { enabled = true },
+      -- Load content as quickly as possible when opening a single file.
+      quickfile = { enabled = true },
+      -- Show fold/marks markers.
+      -- Takes too much space, I don't think I need it anyway
+      -- statuscolumn = {
+      --   enabled = false,
+      --   left = {"sign", "mark", "git" },
+      --   right = { "fold" },
+      -- },
+      styles = {
+        notification = {
+          -- wo = {winblend = 10},
+        },
+      },
+    },
+    keys = {
+      {
+        "<leader>tt",
+        function()
+          Snacks.terminal()
+        end,
+        mode = "",
+        desc = "Toggle terminal",
+      },
+    },
+    init = function()
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "VeryLazy",
+        callback = function()
+          -- Create toggle mappings
+          Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
+          Snacks.toggle.option("spell", { name = "Spell" }):map("<leader>us")
+          Snacks.toggle.diagnostics():map("<leader>ud")
+
+          -- Add a :Notifications command to show the notifications history.
+          vim.cmd("command! Notifications lua Snacks.notifier.show_history()")
+        end,
+      })
+    end,
+  },
 }

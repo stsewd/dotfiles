@@ -3,6 +3,7 @@ return {
   {
     "stsewd/spotify.nvim",
     branch = "lua-bridge",
+    dir = "~/github/spotify.nvim",
     build = ":UpdateRemotePlugins",
     cmd = "Spotify",
     init = function()
@@ -14,7 +15,13 @@ return {
     end,
     config = function()
       local spotify = require("spotify")
-      spotify.setup({ timeout = 5000 })
+      spotify.setup({
+        notification = {
+          extra_opts = {
+            icon = "",
+          },
+        }
+      })
     end,
   },
 }

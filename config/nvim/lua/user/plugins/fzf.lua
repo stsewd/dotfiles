@@ -2,12 +2,14 @@ local map = vim.keymap.set
 return {
   {
     "junegunn/fzf",
+    enabled = false,
     build = function()
       vim.fn["fzf#install"]()
     end,
   },
   {
     "junegunn/fzf.vim",
+    enabled = false,
     init = function()
       vim.g.fzf_command_prefix = "Fz"
       vim.g.fzf_commands_expect = "alt-enter"
@@ -17,13 +19,41 @@ return {
   },
   {
     "stsewd/fzf-checkout.vim",
+    enabled = false,
     cmd = { "FzGBranches", "FzGTags" },
     init = function()
       vim.g.fzf_checkout_use_current_buf_cwd = true
       vim.g.fzf_checkout_git_options = "--sort=-committerdate"
 
-      map("n", "<leader>fg", ":FzGBranches<CR>", { silent = true, desc = "List git branches" })
-      map("n", "<leader>fG", ":FzGTags<CR>", { silent = true, desc = "List git tags" })
+      -- map("n", "<leader>fg", ":FzGBranches<CR>", { silent = true, desc = "List git branches" })
+      -- map("n", "<leader>fG", ":FzGTags<CR>", { silent = true, desc = "List git tags" })
+    end,
+  },
+  {
+    "stsewd/fzf-lua-checkout.nvim",
+    dir = "~/github/fzf-lua-checkout.nvim",
+    keys = {
+      {
+        "<leader>fg",
+        function()
+          require("fzf-lua-checkout.list").branches()
+        end,
+        desc = "List git branches",
+      },
+      {
+        "<leader>fG",
+        function()
+          require("fzf-lua-checkout.list").tags()
+        end,
+        desc = "List git tags",
+      },
+    },
+    config = function()
+      local checkout = require("fzf-lua-checkout")
+      checkout.setup({
+        git_bin = "hub",
+      })
+      -- map("n", "<leader>fg", checkout.branches)
     end,
   },
   {
