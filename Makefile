@@ -64,25 +64,19 @@ install:
 		flat-remix-theme \
 		vlc
 
-    # NOTE: I'm testing downloading from the latest release instead.
-	# @echo Install Neovim nightly
-	# sudo dnf copr enable -y agriffis/neovim-nightly
-	# sudo dnf install -y neovim
-
 	@echo Installing Proton VPN
 	./scripts/protonvpn.sh
 
 	@echo Installing flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install -y flathub com.spotify.Client
-	flatpak install -y flathub org.signal.Signal
+	# flatpak install -y flathub org.signal.Signal
 	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub org.gimp.GIMP
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.calibre_ebook.calibre
 	flatpak install -y flathub org.chromium.Chromium
 	# flatpak install -y flathub com.google.AndroidStudio
-	# flatpak install -y flathub com.github.tchx84.Flatseal
 
 	@echo Install fonts
 	./scripts/fonts.sh
@@ -110,6 +104,9 @@ install:
 	@echo Installing ruby LSP
 	gem install solargraph
 
+	# Install copilot.
+	gh extension install github/gh-copilot
+
 # Should be called after make install, in a fresh shell.
 # Can also be called to update packages.
 update:
@@ -120,10 +117,6 @@ update:
 	@echo Updating rust packages
 	cargo install stylua
 
-	# TODO: mvm isn't found when executed from the makefile :/
-	# I'm not actively using node,
-	# and I'm installing node globally from dnf.
-	# nvm install node
 	@echo Updating node packages
 	npm install -g tree-sitter-cli
 	# Formatter for js, html, css, json, etc.
