@@ -166,10 +166,13 @@ symlinks:
 	ln -sf `pwd`/tmux.conf ~/.tmux.conf
 	ln -sf `pwd`/tmate.conf ~/.tmate.conf
 	ln -sf `pwd`/zshrc ~/.zshrc
+	mkdir -p ~/.ssh/
+	ln -sf `pwd`/ssh.config ~/.ssh/config
 	ln -sf `pwd`/config/gdb/ ~/.config/
 	ln -sf `pwd`/config/nvim/ ~/.config/
 	ln -sf `pwd`/config/bat/ ~/.config/
 	ln -sf `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+	mkdir -p ~/.gnupg/
 	ln -sf `pwd`/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	rm -rf ~/.local/share/nautilus/scripts/
 	ln -sf `pwd`/local/share/nautilus/scripts/ ~/.local/share/nautilus/
