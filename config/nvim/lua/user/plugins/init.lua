@@ -62,16 +62,6 @@ return {
         },
       },
     },
-    keys = {
-      {
-        "<leader>tt",
-        function()
-          Snacks.terminal()
-        end,
-        mode = "",
-        desc = "Toggle terminal",
-      },
-    },
     init = function()
       vim.api.nvim_create_autocmd("User", {
         pattern = "VeryLazy",
