@@ -23,7 +23,7 @@ return {
     "tpope/vim-fugitive",
     config = function()
       map("n", "<leader>gs", ":Git<CR>", { silent = true })
-      map("n", "<leader>gw", ":Gwrite<CR>", { silent = true })
+      map("n", "<leader>ga", ":Gwrite<CR>", { silent = true })
       map("n", "<leader>gu", ":Gread<CR>", { silent = true })
       map("n", "<leader>gc", ":Git commit<CR>", { silent = true })
     end,

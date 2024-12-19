@@ -20,7 +20,7 @@ return {
           extra_opts = {
             icon = "",
           },
-        }
+        },
       })
     end,
   },
