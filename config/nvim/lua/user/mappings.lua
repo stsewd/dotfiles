@@ -53,6 +53,13 @@ map("n", "]f", function()
   require("user.utils").goto_file_entry()
 end, { desc = "Next file" })
 
+map("n", "<leader>gp", function()
+  require("user.utils").system({ "git", "push" }, { title = "Git push", id = "git-push" })
+end, { desc = "Git push" })
+map("n", "<leader>gP", function()
+  require("user.utils").system({ "git", "pull" }, { title = "Git pull", id = "git-pull" })
+end, { desc = "Git pull" })
+
 -- Others
 map(
   "n",

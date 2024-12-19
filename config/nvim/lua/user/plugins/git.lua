@@ -28,14 +28,4 @@ return {
       map("n", "<leader>gc", ":Git commit<CR>", { silent = true })
     end,
   },
-  {
-    -- Asynchronously Git wrapper
-    "lambdalisue/gina.vim",
-    config = function()
-      map("", "<leader>go", ":Gina browse :<CR>")
-      map("n", "<leader>gO", ":Gina browse<CR>")
-      map("n", "<leader>gp", ":Gina push<CR>")
-      map("n", "<leader>gP", ":Gina pull<CR>")
-    end,
-  },
 }

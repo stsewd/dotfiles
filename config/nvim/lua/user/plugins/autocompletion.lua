@@ -89,6 +89,7 @@ return {
   },
   {
     "nvimdev/lspsaga.nvim",
+    enabled = false,
     cmd = "Lspsaga",
     init = function()
       -- This is the only thing that I kind of need from lspsaga.
