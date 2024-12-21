@@ -2,8 +2,6 @@ local map = vim.keymap.set
 return {
   {
     "stsewd/spotify.nvim",
-    branch = "lua-bridge",
-    dir = "~/github/spotify.nvim",
     build = ":UpdateRemotePlugins",
     cmd = "Spotify",
     init = function()
@@ -14,8 +12,7 @@ return {
       map("n", "<leader>sc", ":Spotify status<CR>", { silent = true })
     end,
     config = function()
-      local spotify = require("spotify")
-      spotify.setup({
+      require("spotify").setup({
         notification = {
           extra_opts = {
             icon = "",
