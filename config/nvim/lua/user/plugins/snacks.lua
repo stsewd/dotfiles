@@ -37,11 +37,6 @@ return {
           enabled = false,
         },
       },
-      styles = {
-        notification = {
-          -- wo = {winblend = 10},
-        },
-      },
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {

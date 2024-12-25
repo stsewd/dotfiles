@@ -1,4 +1,3 @@
-local map = vim.keymap.set
 return {
   {
     "L3MON4D3/LuaSnip",
@@ -83,31 +82,6 @@ return {
         end,
         settings = {
           Lua = {},
-        },
-      })
-    end,
-  },
-  {
-    "nvimdev/lspsaga.nvim",
-    enabled = false,
-    cmd = "Lspsaga",
-    init = function()
-      -- This is the only thing that I kind of need from lspsaga.
-      -- maybe we can have this built-in?
-      map("n", "<leader><C-]>", ":Lspsaga peek_definition<CR>", { silent = true, desc = "Peek definition" })
-    end,
-    config = function()
-      local saga = require("lspsaga")
-      saga.setup({
-        symbol_in_winbar = {
-          -- TODO: can we have this enabled, but only when requested?
-          enable = false,
-          show_file = false,
-        },
-        -- This is too noisy.
-        lightbulb = {
-          enable = false,
-          sign = false,
         },
       })
     end,

@@ -49,11 +49,7 @@ return {
       },
     },
     config = function()
-      local checkout = require("fzf-lua-checkout")
-      checkout.setup({
-        git_bin = "hub",
-      })
-      -- map("n", "<leader>fg", checkout.branches)
+      require("fzf-lua-checkout").setup()
     end,
   },
   {

@@ -16,9 +16,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
   callback = function()
     -- Start on insert mode
     vim.cmd.startinsert()
-    -- Don't show line numbers
-    vim.opt_local.relativenumber = false
-    vim.opt_local.number = false
     -- Execute previous command with <CR>
     map("n", "<CR>", "a<C-p><CR><C-\\><C-n>", { buffer = true })
   end,
