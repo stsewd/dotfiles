@@ -1,35 +1,6 @@
 local map = vim.keymap.set
 return {
   {
-    "junegunn/fzf",
-    enabled = false,
-    build = function()
-      vim.fn["fzf#install"]()
-    end,
-  },
-  {
-    "junegunn/fzf.vim",
-    enabled = false,
-    init = function()
-      vim.g.fzf_command_prefix = "Fz"
-      vim.g.fzf_commands_expect = "alt-enter"
-      vim.g.fzf_history_dir = "~/.local/share/fzf-history"
-      vim.g.fzf_layout = { window = { width = 0.80, height = 0.85 } }
-    end,
-  },
-  {
-    "stsewd/fzf-checkout.vim",
-    enabled = false,
-    cmd = { "FzGBranches", "FzGTags" },
-    init = function()
-      vim.g.fzf_checkout_use_current_buf_cwd = true
-      vim.g.fzf_checkout_git_options = "--sort=-committerdate"
-
-      -- map("n", "<leader>fg", ":FzGBranches<CR>", { silent = true, desc = "List git branches" })
-      -- map("n", "<leader>fG", ":FzGTags<CR>", { silent = true, desc = "List git tags" })
-    end,
-  },
-  {
     "stsewd/fzf-lua-checkout.nvim",
     dir = "~/github/fzf-lua-checkout.nvim",
     keys = {

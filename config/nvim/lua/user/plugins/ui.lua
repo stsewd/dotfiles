@@ -3,20 +3,6 @@ return {
   { "nvim-tree/nvim-web-devicons", lazy = true },
   { "stevearc/dressing.nvim" },
   {
-    "rcarriga/nvim-notify",
-    enabled = false,
-    config = function()
-      require("notify").setup({
-        timeout = 500,
-        on_open = function(win)
-          vim.api.nvim_set_option_value("winblend", 30, { win = win })
-          vim.api.nvim_win_set_config(win, { zindex = 100 })
-        end,
-      })
-      vim.notify = require("notify")
-    end,
-  },
-  {
     "nvim-lualine/lualine.nvim",
     config = function()
       require("lualine").setup({
