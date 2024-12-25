@@ -25,6 +25,9 @@ install:
 		git-delta \
 		rclone
 
+	# SSH passphrase prompt.
+	sudo dnf install -y ksshaskpass
+
 	# ExifTool to remove metadata from files/images.
 	sudo dnf install -y \
 		perl-Image-ExifTool \
@@ -70,13 +73,11 @@ install:
 	@echo Installing flatpak apps
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install -y flathub com.spotify.Client
-	# flatpak install -y flathub org.signal.Signal
 	flatpak install -y flathub org.kde.krita
 	flatpak install -y flathub org.gimp.GIMP
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.calibre_ebook.calibre
 	flatpak install -y flathub org.chromium.Chromium
-	# flatpak install -y flathub com.google.AndroidStudio
 
 	@echo Install fonts
 	./scripts/fonts.sh
@@ -92,8 +93,6 @@ install:
 	./scripts/nvim.sh --no-backup
 	./scripts/rust.sh
 	./scripts/node.sh
-	# nvm is slow, and I'm not actively using node.
-	# ./scripts/nvm.sh
 	./scripts/uv.sh
 	./scripts/zsh.sh
 	./scripts/luals.sh
