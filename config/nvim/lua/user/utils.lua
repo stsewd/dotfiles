@@ -52,11 +52,11 @@ function M.system(cmd, notify_opts)
   local onexit = function(result)
     local loglevel = result.code == 0 and vim.log.levels.INFO or vim.log.levels.ERROR
 
-    local output = result.stdout
+    local msg = result.stdout
     if result.stderr ~= "" then
-      output = output .. "\n" .. result.stderr
+      msg = msg .. "\n" .. result.stderr
     end
-    vim.notify(output, loglevel, notify_opts)
+    vim.notify(msg, loglevel, notify_opts)
   end
   vim.notify("Running: " .. table.concat(cmd, " "), vim.log.levels.INFO, notify_opts)
   vim.system(cmd, { text = true }, vim.schedule_wrap(onexit))

@@ -11,8 +11,6 @@ return {
       notifier = { enabled = true },
       -- Load content as quickly as possible when opening a single file.
       quickfile = { enabled = true },
-      -- Smooth scrolling.
-      -- scroll = { enabled = true },
       gitbrowse = {
         notify = false,
         -- Add an extra filename pattern to open just the file without the line.
