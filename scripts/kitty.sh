@@ -13,7 +13,8 @@ sed -i "s|^Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x
 sed -i "s|Exec=kitty|Exec=${BIN_DIR}kitty|g" $KITTY_DESKTOP_FILE
 
 # Update and set theme.
+# https://sw.kovidgoyal.net/kitty/kittens/themes/#auto-color-scheme
 mkdir -p ~/.config/kitty/
-kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/current-theme.dark.conf
-kitty +kitten themes --dump-theme 'Solarized Light' > ~/.config/kitty/current-theme.light.conf
-ln -sf ~/.config/kitty/current-theme.dark.conf ~/.config/kitty/current-theme.conf
+kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/dark-theme.auto.conf
+kitty +kitten themes --dump-theme 'Solarized Light' > ~/.config/kitty/light-theme.auto.conf
+ln -sf ~/.config/kitty/light-theme.auto.conf ~/.config/kitty/no-preference-theme.auto.conf
