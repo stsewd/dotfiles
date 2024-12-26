@@ -2,7 +2,6 @@ local map = vim.keymap.set
 return {
   {
     "stsewd/fzf-lua-checkout.nvim",
-    dir = "~/github/fzf-lua-checkout.nvim",
     keys = {
       {
         "<leader>fg",
