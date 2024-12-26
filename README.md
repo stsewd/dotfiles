@@ -53,7 +53,7 @@ Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-b
 - Add ssh/gpg keys
 - Copy sensitive configs from private gist
 - Create additional firefox profiles (scripts/create-firefox-profile.sh)
-- Setup yubikey (yubikey.md)
+- Setup yubikey ([yubikey.md](yubikey.md))
 - Setup `gh` and `gh-copilot`:
   - gh auth login
   - gh extension install github/gh-copilot

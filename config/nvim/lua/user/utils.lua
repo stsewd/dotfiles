@@ -46,4 +46,20 @@ function M.goto_file_entry(prev)
   vim.cmd.edit(vim.fn.fnamemodify(file, ":."))
 end
 
+--- Run a system command asynchronously.
+function M.system(cmd, notify_opts)
+  notify_opts = notify_opts or {}
+  local onexit = function(result)
+    local loglevel = result.code == 0 and vim.log.levels.INFO or vim.log.levels.ERROR
+
+    local msg = result.stdout
+    if result.stderr ~= "" then
+      msg = msg .. "\n" .. result.stderr
+    end
+    vim.notify(msg, loglevel, notify_opts)
+  end
+  vim.notify("Running: " .. table.concat(cmd, " "), vim.log.levels.INFO, notify_opts)
+  vim.system(cmd, { text = true }, vim.schedule_wrap(onexit))
+end
+
 return M

@@ -24,10 +24,15 @@ map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<C-[>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<A-[>", "<Esc>", { desc = "Send escape to the terminal" })
 
--- vim-unimpaired like mappings
-map("n", "yos", ":set spell! | set spell?<CR>", { desc = "Toggle spell checking" })
-map("n", "yow", ":set wrap! | set wrap?<CR>", { desc = "Toggle wrap" })
+-- Diagnostic mappings
+map("n", "<C-k>", function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Jump to previous diagnostic" })
+map("n", "<C-j>", function()
+  vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Jump to next diagnostic" })
 
+-- vim-unimpaired like mappings
 map("n", "[<space>", "m`O<ESC>``", { desc = "Add a blank line above" })
 map("n", "]<space>", "m`o<ESC>``", { desc = "Add a blank line below" })
 
@@ -44,6 +49,13 @@ end, { desc = "Previous file" })
 map("n", "]f", function()
   require("user.utils").goto_file_entry()
 end, { desc = "Next file" })
+
+map("n", "<leader>gp", function()
+  require("user.utils").system({ "git", "push" }, { title = "Git push", id = "git-push" })
+end, { desc = "Git push" })
+map("n", "<leader>gP", function()
+  require("user.utils").system({ "git", "pull" }, { title = "Git pull", id = "git-pull" })
+end, { desc = "Git pull" })
 
 -- Others
 map(

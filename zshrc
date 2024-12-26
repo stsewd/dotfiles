@@ -162,5 +162,9 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # delta
 export DELTA_FEATURES=+$BACKGROUND
+
+# lua-language-server
+export PATH="/$HOME/lua-language-server/bin:$PATH"
+
 # Rust/cargo
 . "$HOME/.cargo/env"

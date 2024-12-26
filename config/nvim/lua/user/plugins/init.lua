@@ -5,8 +5,7 @@ return {
       require("nvim-surround").setup({})
     end,
   },
-  -- I'm using my own mappings now.
-  -- {"tpope/vim-unimpaired"},
+  -- TODO: are we using this?
   "tpope/vim-repeat",
   {
     -- Handy bracket mappings

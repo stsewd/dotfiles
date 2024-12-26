@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-vim.cmd([[ command! U Lazy update ]])
+vim.cmd("command! U Lazy update")
 
 -- Remove trailing white spaces
 vim.cmd("command! -range=% RemoveTrailing <line1>,<line2>s/\\s\\+$//e")
@@ -16,9 +16,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
   callback = function()
     -- Start on insert mode
     vim.cmd.startinsert()
-    -- Don't show line numbers
-    vim.opt_local.relativenumber = false
-    vim.opt_local.number = false
     -- Execute previous command with <CR>
     map("n", "<CR>", "a<C-p><CR><C-\\><C-n>", { buffer = true })
   end,
