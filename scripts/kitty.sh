@@ -17,4 +17,6 @@ sed -i "s|Exec=kitty|Exec=${BIN_DIR}kitty|g" $KITTY_DESKTOP_FILE
 mkdir -p ~/.config/kitty/
 kitty +kitten themes --dump-theme 'Tokyo Night Storm' > ~/.config/kitty/dark-theme.auto.conf
 kitty +kitten themes --dump-theme 'Solarized Light' > ~/.config/kitty/light-theme.auto.conf
+# Overrides
+cat config/kitty/dark-theme.auto.conf >> ~/.config/kitty/dark-theme.auto.conf
 ln -sf ~/.config/kitty/light-theme.auto.conf ~/.config/kitty/no-preference-theme.auto.conf
