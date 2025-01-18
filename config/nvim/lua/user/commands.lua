@@ -30,6 +30,21 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+vim.api.nvim_create_autocmd("OptionSet", {
+  group = vim.api.nvim_create_augroup("UserOptionSet", {}),
+  pattern = "background",
+  desc = "Change colorscheme on background change",
+  callback = function()
+    local light = "solarized"
+    local dark = "tokyonight-storm"
+    local current = vim.g.colors_name
+    local new = vim.o.background == "light" and light or dark
+    if current ~= new then
+      vim.cmd("colorscheme " .. new)
+    end
+  end,
+})
+
 vim.cmd([[
   " Save current view settings on a per-window, per-buffer basis.
   " https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers

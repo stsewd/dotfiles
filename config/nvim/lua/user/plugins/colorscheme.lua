@@ -3,9 +3,6 @@ return {
     "folke/tokyonight.nvim",
     -- Make sure to load this before other plugins.
     priority = 1000,
-    cond = function()
-      return vim.env.BACKGROUND ~= "light"
-    end,
     config = function()
       require("tokyonight").setup({
         styles = { comments = { italic = false } },
@@ -15,14 +12,14 @@ return {
     end,
   },
   {
-    "ishan9299/nvim-solarized-lua",
+    "maxmx03/solarized.nvim",
     -- Make sure to load this before other plugins.
     priority = 1000,
-    cond = function()
-      return vim.env.BACKGROUND == "light"
-    end,
     config = function()
-      vim.cmd("colorscheme solarized")
+      require("solarized").setup({
+        variant = "autumn",
+      })
+      -- vim.cmd("colorscheme solarized")
     end,
   },
 }
