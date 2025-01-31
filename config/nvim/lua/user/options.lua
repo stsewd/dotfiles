@@ -55,6 +55,9 @@ vim.diagnostic.config({
     prefix = { "• ", "FloatBorder" },
     border = "rounded",
   },
+  jump = {
+    float = true,
+  },
   -- Use custom signs.
   signs = {
     text = {

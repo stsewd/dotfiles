@@ -33,9 +33,6 @@ map("n", "<C-j>", function()
 end, { desc = "Jump to next diagnostic" })
 
 -- vim-unimpaired like mappings
-map("n", "[<space>", "m`O<ESC>``", { desc = "Add a blank line above" })
-map("n", "]<space>", "m`o<ESC>``", { desc = "Add a blank line below" })
-
 map("n", "[n", function()
   require("user.utils").goto_git_conflict(true)
 end, { desc = "Previous git conflict" })
