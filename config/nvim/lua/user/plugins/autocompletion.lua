@@ -61,7 +61,9 @@ return {
           -- Taken from https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls.
           if client.workspace_folders then
             local path = client.workspace_folders[1].name
-            if vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc") then
+            local is_dotifiles = path:match("/dotfiles$")
+            local has_luarc = vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc")
+            if not is_dotifiles and has_luarc then
               return
             end
           end
