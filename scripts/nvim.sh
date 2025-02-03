@@ -18,7 +18,7 @@ while (( "$#" )); do
 done
 
 wget -O $dowloaded_file \
-  https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+  https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz
 
 # Was the last command ok?
 if [ $? -ne 0 ]; then

@@ -11,6 +11,7 @@ return {
       notifier = { enabled = true },
       -- Load content as quickly as possible when opening a single file.
       quickfile = { enabled = true },
+      input = { enabled = true },
       gitbrowse = {
         notify = false,
         -- Add an extra filename pattern to open just the file without the line.
@@ -35,6 +36,21 @@ return {
           enabled = false,
         },
       },
+      picker = {
+        win = {
+          input = {
+            keys = {
+              ["<c-p>"] = { "history_back", mode = { "i", "n" } },
+              ["<c-n>"] = { "history_forward", mode = { "i", "n" } },
+            },
+          },
+        },
+      },
+      styles = {
+        input = {
+          relative = "cursor",
+        },
+      },
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {
@@ -46,7 +62,7 @@ return {
           Snacks.toggle.diagnostics():map("<leader>ud")
 
           -- Add a :Notifications command to show the notifications history.
-          vim.cmd("command! Notifications lua Snacks.notifier.show_history()")
+          vim.cmd("command! Notifications lua Snacks.picker.notifications()")
 
           map("v", "<leader>go", function()
             Snacks.gitbrowse()

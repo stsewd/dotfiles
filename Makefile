@@ -131,6 +131,9 @@ update:
 	npm install -g intelephense
 	npm install -g bash-language-server
 
+	@echo Updating zsh
+	omz update
+
 	@echo Updating tldr
 	tldr --update
 
