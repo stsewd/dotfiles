@@ -10,6 +10,9 @@ vim.o.scrolloff = 3
 vim.opt.diffopt:append("vertical")
 vim.opt.spelllang = { "en", "es" }
 vim.o.termguicolors = true
+-- Recommended by auto-session.
+-- Don't save folds, they are calculated on the fly.
+vim.o.sessionoptions = "blank,buffers,curdir,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Python provider
 vim.g.python3_host_prog = vim.env.NVIM_PYTHON_HOST
@@ -22,7 +25,7 @@ vim.o.cursorline = true
 
 -- Folding
 vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldnestmax = 3
 vim.o.foldlevel = 1
 vim.o.foldtext = ""
@@ -47,8 +50,6 @@ vim.o.grepformat = "%f:%l:%c:%m"
 -- TODO: play with these icons.
 -- local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
 vim.diagnostic.config({
-  -- Don't show virtual text.
-  virtual_text = false,
   -- Use a round border without a header for the floating window.
   float = {
     header = "",
