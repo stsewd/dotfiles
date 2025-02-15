@@ -132,7 +132,8 @@ update:
 	npm install -g bash-language-server
 
 	@echo Updating zsh
-	omz update
+	# https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-update-oh-my-zsh
+	$(ZSH)/tools/upgrade.sh
 
 	@echo Updating tldr
 	tldr --update

@@ -12,6 +12,8 @@ return {
       -- Load content as quickly as possible when opening a single file.
       quickfile = { enabled = true },
       input = { enabled = true },
+      -- Display images when opening an image file, or in markdown files.
+      image = { enabled = true },
       gitbrowse = {
         notify = false,
         -- Add an extra filename pattern to open just the file without the line.
