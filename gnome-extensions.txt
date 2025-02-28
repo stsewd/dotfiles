@@ -8,3 +8,4 @@
 # This is a fork, since the original hasn't been updated to work with the latest version of Gnome.
 - https://extensions.gnome.org/extension/5568/monitor-window-switcher-2/
 - https://extensions.gnome.org/extension/1702/overview-navigation/
+- https://extensions.gnome.org/extension/6670/bluetooth-battery-meter/

@@ -73,7 +73,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter-refactor",
-    keys = { { "grnn" }, { "gd" }, { "]d" }, { "[d" } },
+    keys = { { "grnn" }, { "gd" } },
     config = function()
       require("nvim-treesitter.configs").setup({
         refactor = {
@@ -91,8 +91,6 @@ return {
             enable = true,
             keymaps = {
               goto_definition = "gd",
-              goto_next_usage = "]d",
-              goto_previous_usage = "[d",
             },
           },
         },

@@ -53,7 +53,10 @@ vim.diagnostic.config({
   -- Use a round border without a header for the floating window.
   float = {
     header = "",
-    prefix = { "• ", "FloatBorder" },
+    -- Show bullets only if there is more than one item.
+    prefix = function(diagnostic, i, total)
+      return total > 1 and "• " or "" 
+    end,
     border = "rounded",
   },
   jump = {

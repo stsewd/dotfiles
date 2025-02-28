@@ -1,7 +1,7 @@
 # My dotfiles
 
-- Clone this repo (on your home for example ~/.dotfiles).
-- Make symbolics links of the configuration file you want.
+- Clone this repo (on your home for example `~/.dotfiles`).
+- Make symbolics links of the configuration files you want.
 
 ## Neovim
 
@@ -48,13 +48,13 @@ Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-b
   - Open terminal with ctrl-alt-enter
   - Minimize all windows with super-d
   - Open file explorer with super-e
-- Install the Gnome extensions from gnome-extensions.txt
-- Set the firefox options from firefox-about.txt
+- Install the Gnome extensions from [gnome-extensions.txt](gnome-extensions.txt)
+- Set the firefox options from [firefox-about.txt](firefox-about.txt)
 - Add ssh/gpg keys
 - Copy sensitive configs from private gist
 - Create additional firefox profiles (scripts/create-firefox-profile.sh)
 - Setup yubikey ([yubikey.md](yubikey.md))
 - Setup `gh` and `gh-copilot`:
-  - gh auth login
-  - gh extension install github/gh-copilot
+  - `gh auth login`
+  - `gh extension install github/gh-copilot`
   - `:Copilot setup`

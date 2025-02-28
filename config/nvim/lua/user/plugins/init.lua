@@ -14,6 +14,8 @@ return {
       require("nvim-autopairs").setup({
         map_c_h = true,
         map_cr = false,
+        -- Disable autopairs when using Snacks' picker
+        disable_filetype = { "snacks_picker_input" },
       })
     end,
   },

@@ -25,12 +25,9 @@ map("t", "<C-[>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<A-[>", "<Esc>", { desc = "Send escape to the terminal" })
 
 -- Diagnostic mappings
-map("n", "<C-k>", function()
-  vim.diagnostic.jump({ count = -1, float = true })
-end, { desc = "Jump to previous diagnostic" })
-map("n", "<C-j>", function()
-  vim.diagnostic.jump({ count = 1, float = true })
-end, { desc = "Jump to next diagnostic" })
+map("n", "grd", function()
+  vim.diagnostic.open_float()
+end, { desc = "Show diagnostic" })
 
 -- vim-unimpaired like mappings
 map("n", "[n", function()
@@ -55,9 +52,8 @@ map("n", "<leader>gP", function()
 end, { desc = "Git pull" })
 
 -- Others
-map(
-  "n",
-  "<leader>o",
-  [[:let @" = expand('%:p') .. ':' .. line('.') <bar> echo @"<CR>]],
-  { silent = true, desc = "Copy current path with line number" }
-)
+map("n", "<leader>o", function()
+  local file_and_line = vim.fn.expand("%:p") .. ":" .. vim.fn.line(".")
+  vim.fn.setreg("@", file_and_line)
+  vim.notify("Copied " .. file_and_line)
+end, { desc = "Copy current path with line number" })

@@ -13,7 +13,13 @@ return {
       quickfile = { enabled = true },
       input = { enabled = true },
       -- Display images when opening an image file, or in markdown files.
-      image = { enabled = true },
+      image = {
+        enabled = true,
+        doc = {
+          inline = false,
+          float = false,
+        },
+      },
       gitbrowse = {
         notify = false,
         -- Add an extra filename pattern to open just the file without the line.
@@ -74,6 +80,28 @@ return {
             -- TODO: check if we are okay to always open with the current line.
             -- Snacks.gitbrowse()
           end, { desc = "Git browse" })
+
+          map("n", "gK", function()
+            Snacks.image.hover()
+          end, { desc = "Show image" })
+          -- LSP picker mappings
+          map("n", "<leader>fd", function()
+            Snacks.picker.diagnostics_buffer()
+          end, { desc = "Buffer diagnostics" })
+          map("n", "<leader>fD", function()
+            Snacks.picker.diagnostics()
+          end, { desc = "Diagnostics" })
+          map("n", "g<c-]>", function()
+            Snacks.picker.lsp_definitions()
+          end, { desc = "Definitions" })
+          map("n", "grr", function()
+            Snacks.picker.lsp_references()
+          end, { desc = "References" })
+
+          -- Plugin picker mappings
+          map("n", "<leader>fp", function()
+            Snacks.picker.lazy()
+          end, { desc = "Plugins" })
         end,
       })
     end,
