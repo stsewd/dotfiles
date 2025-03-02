@@ -55,7 +55,7 @@ vim.diagnostic.config({
     header = "",
     -- Show bullets only if there is more than one item.
     prefix = function(diagnostic, i, total)
-      return total > 1 and "• " or "" 
+      return total > 1 and "• " or ""
     end,
     border = "rounded",
   },
