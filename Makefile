@@ -103,9 +103,6 @@ install:
 	@echo Installing ruby LSP
 	gem install solargraph
 
-	# Install copilot.
-	gh extension install github/gh-copilot
-
 # Should be called after make install, in a fresh shell.
 # Can also be called to update packages.
 update:
