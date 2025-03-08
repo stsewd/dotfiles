@@ -98,16 +98,16 @@ return {
         },
       })
 
-      map("n", "<leader>ff", fzf.files)
-      map("n", "<leader>fr", function()
-        fzf.grep({ search = "" })
-      end)
-      map("n", "<leader>fR", fzf.grep_project)
-      map("n", "<leader>fl", fzf.blines)
-      map("n", "<leader>fo", fzf.buffers)
-      map("n", "<leader>fs", fzf.git_status)
-      map("n", "<leader>fh", fzf.builtin)
-      map("n", "<leader>f<leader>", fzf.resume)
+      -- map("n", "<leader>ff", fzf.files)
+      -- map("n", "<leader>fr", function()
+      --   fzf.grep({ search = "" })
+      -- end)
+      -- map("n", "<leader>fR", fzf.grep_project)
+      -- map("n", "<leader>fl", fzf.blines)
+      -- map("n", "<leader>fo", fzf.buffers)
+      -- map("n", "<leader>fs", fzf.git_status)
+      -- map("n", "<leader>fh", fzf.builtin)
+      -- map("n", "<leader>f<leader>", fzf.resume)
     end,
   },
 }

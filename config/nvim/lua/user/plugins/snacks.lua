@@ -84,6 +84,45 @@ return {
           map("n", "gK", function()
             Snacks.image.hover()
           end, { desc = "Show image" })
+
+          -- Picker mappings
+          map("n", "<leader>fh", function()
+            Snacks.picker.pickers()
+          end, { desc = "Builtin" })
+          map("n", "<leader>f<space>", function()
+            Snacks.picker.resume()
+          end, { desc = "Resume" })
+
+          -- File picker mappings
+          map("n", "<leader>ff", function()
+            Snacks.picker.files({ hidden = true })
+          end, { desc = "Files" })
+          map("n", "<leader>fo", function()
+            Snacks.picker.buffers()
+          end, { desc = "Buffers" })
+          map("n", "<leader>ft", function()
+            Snacks.picker.smart({ hidden = true })
+          end, { desc = "Files" })
+          map("n", "<leader>fl", function()
+            Snacks.picker.lines()
+          end, { desc = "Buffer lines" })
+
+          -- Grep picker mappings
+          map("n", "<leader>fr", function()
+            Snacks.picker.grep({ hidden = true })
+          end, { desc = "Grep" })
+          map("n", "<leader>fw", function()
+            Snacks.picker.grep_word({ hidden = true })
+          end, { desc = "Grep" })
+          map("n", "<leader>fR", function()
+            Snacks.picker.grep({ need_search = false, live = false, hidden = true })
+          end, { desc = "Grep all files" })
+
+          -- Git picker mappings
+          map("n", "<leader>fs", function()
+            Snacks.picker.git_status()
+          end, { desc = "Git status" })
+
           -- LSP picker mappings
           map("n", "<leader>fd", function()
             Snacks.picker.diagnostics_buffer()

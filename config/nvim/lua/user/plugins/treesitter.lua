@@ -118,6 +118,7 @@ return {
           },
           move = {
             enable = true,
+            -- These are slow in big files, hmmm.
             goto_next_start = {
               ["]m"] = "@function.outer",
               ["]]"] = "@class.outer",

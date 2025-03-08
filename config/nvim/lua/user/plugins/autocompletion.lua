@@ -109,8 +109,8 @@ return {
         },
         sources = {
           -- Add 'dictionary' to the list
-          -- default = { "dictionary", "lsp", "path", "snippets", "buffer" },
-          default = { "lsp", "path", "snippets", "buffer" },
+          default = { "lsp", "path", "snippets", "buffer", "dictionary" },
+          -- default = { "lsp", "path", "snippets", "buffer" },
           -- -- Dowlonad dictionary for cmp-dictionary.
           -- local data_dir = vim.fn.stdpath("data") .. "/cmp-dictionary"
           -- local url = "https://github.com/neoclide/coc-sources/raw/refs/heads/master/packages/word/10k.txt"
@@ -120,20 +120,23 @@ return {
           --   vim.system({ "wget", "-O", dictionary_path, url }):wait()
           -- end
 
-          -- providers = {
-          --   dictionary = {
-          --     module = "blink-cmp-dictionary",
-          --     name = "Dict",
-          --     -- Make sure this is at least 2.
-          --     -- 3 is recommended
-          --     min_keyword_length = 2,
-          --     max_items = 10,
-          --     opts = {
-          --       -- options for blink-cmp-dictionary
-          --       dictionary_files = { vim.fn.stdpath("data") .. "/cmp-dictionary/10k.txt" },
-          --     },
-          --   },
-          -- },
+          providers = {
+            dictionary = {
+              module = "blink-cmp-dictionary",
+              name = "Dict",
+              -- Make sure this is at least 2.
+              -- 3 is recommended
+              min_keyword_length = 2,
+              max_items = 10,
+              opts = {
+                -- options for blink-cmp-dictionary
+                dictionary_files = { vim.fn.stdpath("data") .. "/cmp-dictionary/10k.txt" },
+                get_documentation = function(item)
+                  return nil
+                end
+              },
+            },
+          },
         },
         cmdline = {
           enabled = true,
