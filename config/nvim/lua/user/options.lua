@@ -50,8 +50,8 @@ vim.o.grepformat = "%f:%l:%c:%m"
 -- TODO: play with these icons.
 -- local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
 vim.diagnostic.config({
-  -- Use a round border without a header for the floating window.
   float = {
+    -- Don't include a header in the floating window.
     header = "",
     -- Show bullets only if there is more than one item.
     prefix = function(diagnostic, i, total)
