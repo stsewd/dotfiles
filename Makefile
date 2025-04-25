@@ -67,6 +67,9 @@ install:
 		flat-remix-theme \
 		vlc
 
+	# Codecs
+	sudo dnf install -y libavcodec-freeworld
+
 	@echo Installing Proton VPN
 	./scripts/protonvpn.sh
 

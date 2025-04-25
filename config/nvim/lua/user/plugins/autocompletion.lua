@@ -31,6 +31,7 @@ return {
       lspconfig.bashls.setup({})
       -- NOTE: esbonio should be installed on each project.
       lspconfig.esbonio.setup({})
+      lspconfig.marksman.setup({})
       -- PHP
       lspconfig.intelephense.setup({})
       lspconfig.gopls.setup({})
