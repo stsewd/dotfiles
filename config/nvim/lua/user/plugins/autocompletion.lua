@@ -29,9 +29,9 @@ return {
       lspconfig.yamlls.setup({})
       lspconfig.clangd.setup({})
       lspconfig.bashls.setup({})
+      lspconfig.marksman.setup({})
       -- NOTE: esbonio should be installed on each project.
       lspconfig.esbonio.setup({})
-      lspconfig.marksman.setup({})
       -- PHP
       lspconfig.intelephense.setup({})
       lspconfig.gopls.setup({})
