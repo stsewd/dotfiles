@@ -3,6 +3,8 @@
 # Expire cookies after 7 days.
 network.cookie.lifetimePolicy = 3
 network.cookie.lifetime.days = 5
+# TODO: check how to use this option
+# network.cookie.maxageCap
 
 # Show raw punycode to avoid phishing attempts.
 network.IDN_show_punycode = true
