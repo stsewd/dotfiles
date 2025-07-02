@@ -2,6 +2,7 @@ local map = vim.keymap.set
 return {
   {
     "stsewd/spotify.nvim",
+    enabled = false,
     build = ":UpdateRemotePlugins",
     cmd = "Spotify",
     init = function()
