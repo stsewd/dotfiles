@@ -79,8 +79,8 @@ plugins=(
   github
   rust
   safe-paste
-  zsh-syntax-highlighting
   zsh-completions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
