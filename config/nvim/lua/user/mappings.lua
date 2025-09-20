@@ -24,11 +24,6 @@ map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<C-[>", "<C-\\><C-n>", { desc = "Exit terminal mode with escape" })
 map("t", "<A-[>", "<Esc>", { desc = "Send escape to the terminal" })
 
--- Diagnostic mappings
-map("n", "grd", function()
-  vim.diagnostic.open_float()
-end, { desc = "Show diagnostic" })
-
 -- vim-unimpaired like mappings
 map("n", "[n", function()
   require("user.utils").goto_git_conflict(true)

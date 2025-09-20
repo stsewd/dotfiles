@@ -8,17 +8,7 @@ return {
       { "b0o/schemastore.nvim" },
     },
     config = function()
-      -- TODO: load capabilities without loading the whole plugin!
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-      vim.lsp.config("*", { capabilities = capabilities })
-
-      local lspconfig = require("lspconfig")
-      lspconfig.pyright.setup({})
-      lspconfig.html.setup({})
-      lspconfig.cssls.setup({})
-      lspconfig.eslint.setup({})
-      lspconfig.ts_ls.setup({})
-      lspconfig.jsonls.setup({
+      vim.lsp.config("jsonls", {
         settings = {
           json = {
             schemas = require("schemastore").json.schemas(),
@@ -26,16 +16,7 @@ return {
           },
         },
       })
-      lspconfig.yamlls.setup({})
-      lspconfig.clangd.setup({})
-      lspconfig.bashls.setup({})
-      lspconfig.marksman.setup({})
-      -- NOTE: esbonio should be installed on each project.
-      lspconfig.esbonio.setup({})
-      -- PHP
-      lspconfig.intelephense.setup({})
-      lspconfig.gopls.setup({})
-      lspconfig.rust_analyzer.setup({
+      vim.lsp.config("rust_analyzer", {
         settings = {
           ["rust-analyzer"] = {
             check = {
@@ -44,7 +25,7 @@ return {
           },
         },
       })
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls", {
         on_init = function(client)
           -- Set up the Lua language server to use the runtime files for Neovim
           -- Taken from https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls.
@@ -76,15 +57,24 @@ return {
         },
       })
 
-      -- Enable document color support.
-      -- :h lsp-document_color
-      vim.api.nvim_create_autocmd('LspAttach', {
-        callback = function(args)
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
-          if client:supports_method('textDocument/documentColor') then
-            vim.lsp.document_color.enable(true, args.buf)
-          end
-        end
+      vim.lsp.enable({
+        "pyright",
+        "html",
+        "cssls",
+        "eslint",
+        "ts_ls",
+        "jsonls",
+        "yamlls",
+        "clangd",
+        "bashls",
+        "marksman",
+        -- NOTE: esbonio should be installed on each project.
+        "esbonio",
+        -- PHP
+        "intelephense",
+        "gopls",
+        "rust_analyzer",
+        "lua_ls",
       })
     end,
   },
@@ -145,7 +135,7 @@ return {
                 dictionary_files = { vim.fn.stdpath("data") .. "/cmp-dictionary/10k.txt" },
                 get_documentation = function(item)
                   return nil
-                end
+                end,
               },
             },
           },

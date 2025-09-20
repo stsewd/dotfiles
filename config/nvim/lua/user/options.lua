@@ -19,6 +19,8 @@ vim.o.sessionoptions = "blank,buffers,curdir,help,tabpages,winsize,winpos,termin
 -- require('vim._extui').enable({})
 
 -- Python provider
+-- TODO: Use new autodection method uv tool install pynvim,
+-- see :h provider-python.
 vim.g.python3_host_prog = vim.env.NVIM_PYTHON_HOST
 
 -- Lines
@@ -64,7 +66,9 @@ vim.diagnostic.config({
     border = "rounded",
   },
   jump = {
-    float = true,
+    on_jump = function(diagnostic, bufnr)
+      vim.diagnostic.open_float()
+    end,
   },
   -- Use custom signs.
   signs = {
