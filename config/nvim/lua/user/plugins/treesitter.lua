@@ -66,10 +66,22 @@ return {
         "gitignore",
       })
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "lua", "rust", "javascript", "zig" },
+        pattern = "*",
         callback = function()
-          -- syntax highlighting, provided by Neovim
-          vim.treesitter.start()
+          -- Check if the buffer is loaded
+          if not vim.api.nvim_buf_is_loaded(0) then
+            return
+          end
+          local tree, _ = vim.treesitter.get_parser(0, nil, {error = false})
+          if tree then
+            -- syntax highlighting, provided by Neovim
+            vim.treesitter.start()
+          end
+        end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "lua", "rust", "javascript", "zig", "python" },
+        callback = function()
           -- folds, provided by Neovim
           -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
           -- -- indentation, provided by nvim-treesitter
