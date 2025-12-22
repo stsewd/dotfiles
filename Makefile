@@ -10,7 +10,6 @@ install:
 		encfs \
 		ripgrep \
 		fd-find \
-		hub \
 		direnv \
 		bat \
 		fzf \
@@ -63,8 +62,6 @@ install:
 		gnome-tweak-tool \
 		gnome-extensions-app \
 		qbittorrent \
-		gnome-shell-theme-flat-remix \
-		flat-remix-theme \
 		vlc
 
 	# Codecs

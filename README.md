@@ -39,7 +39,6 @@ Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-b
 - [ripgrep](https://github.com/BurntSushi/ripgrep) for recursive search using regular expressions
 - [nvm](https://github.com/nvm-sh/nvm) for installing and managing Node versions
 - [pyenv](https://github.com/pyenv/pyenv-installer) for installing and managing Python versions
-- [hub](https://hub.github.com/) (git wrapper for GitHub)
 - [tldr](https://github.com/dbrgn/tealdeer#installing)
 
 ## After install
