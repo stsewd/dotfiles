@@ -1,6 +1,6 @@
 # Install Lua Language Server
 
-VERSION=3.15.0
+VERSION=3.16.3
 wget \
   https://github.com/LuaLS/lua-language-server/releases/download/$VERSION/lua-language-server-$VERSION-linux-x64.tar.gz \
   -O /tmp/lua-language-server.tar.gz
