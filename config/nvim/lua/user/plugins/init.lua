@@ -1,3 +1,5 @@
+local map = vim.keymap.set
+
 return {
   {
     "kylechui/nvim-surround",
@@ -24,11 +26,11 @@ return {
   "wellle/targets.vim",
   {
     -- Jump to any character in the buffer
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim",
     keys = { { "S" }, { "s" } },
     config = function()
-      require("leap").add_default_mappings()
-      require("leap").opts.case_sensitive = true
+      map({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+      map({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
     end,
   },
   {

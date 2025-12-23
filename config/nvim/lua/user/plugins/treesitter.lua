@@ -72,7 +72,7 @@ return {
           if not vim.api.nvim_buf_is_loaded(0) then
             return
           end
-          local tree, _ = vim.treesitter.get_parser(0, nil, {error = false})
+          local tree, _ = vim.treesitter.get_parser(0, nil, { error = false })
           if tree then
             -- syntax highlighting, provided by Neovim
             vim.treesitter.start()
