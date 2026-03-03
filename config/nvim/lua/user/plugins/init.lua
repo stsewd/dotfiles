@@ -1,12 +1,7 @@
 local map = vim.keymap.set
 
 return {
-  {
-    "kylechui/nvim-surround",
-    config = function()
-      require("nvim-surround").setup({})
-    end,
-  },
+  "kylechui/nvim-surround",
   -- TODO: are we using this?
   "tpope/vim-repeat",
   {
