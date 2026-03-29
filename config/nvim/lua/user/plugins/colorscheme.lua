@@ -7,7 +7,6 @@ return {
       require("tokyonight").setup({
         styles = { comments = { italic = false } },
       })
-
       vim.cmd("colorscheme tokyonight-storm")
     end,
   },
@@ -19,7 +18,6 @@ return {
       require("solarized").setup({
         variant = "autumn",
       })
-      -- vim.cmd("colorscheme solarized")
     end,
   },
 }

@@ -11,6 +11,4 @@ uv tool install isort
 uv tool install pylint
 
 # Create neovim environment
-cd ~/.local/share/nvim/
-uv venv --python-preference system --system-site-packages
-uv pip install pynvim pydbus sphinx
+uv tool install --upgrade pynvim

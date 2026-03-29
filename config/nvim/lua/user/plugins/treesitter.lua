@@ -31,7 +31,6 @@ return {
         "dockerfile",
         "ini",
         "json",
-        "jsonc",
         "toml",
         "yaml",
 
@@ -87,33 +86,6 @@ return {
           -- -- indentation, provided by nvim-treesitter
           -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end,
-      })
-    end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-refactor",
-    enabled = false,
-    keys = { { "grnn" }, { "gd" } },
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        refactor = {
-          highlight_definitions = {
-            enable = true,
-            clear_on_cursor_move = false,
-          },
-          smart_rename = {
-            enable = true,
-            keymaps = {
-              smart_rename = "grnn",
-            },
-          },
-          navigation = {
-            enable = true,
-            keymaps = {
-              goto_definition = "gd",
-            },
-          },
-        },
       })
     end,
   },

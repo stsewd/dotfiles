@@ -14,15 +14,6 @@ vim.o.termguicolors = true
 -- Don't save folds, they are calculated on the fly.
 vim.o.sessionoptions = "blank,buffers,curdir,help,tabpages,winsize,winpos,terminal,localoptions"
 
--- Enable experimental UI for command mode.
--- https://x.com/justinmk/status/1918805272274833443.
--- require('vim._extui').enable({})
-
--- Python provider
--- TODO: Use new autodection method uv tool install pynvim,
--- see :h provider-python.
-vim.g.python3_host_prog = vim.env.NVIM_PYTHON_HOST
-
 -- Lines
 vim.o.wrap = false
 vim.o.number = true

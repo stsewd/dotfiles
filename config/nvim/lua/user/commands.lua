@@ -49,6 +49,10 @@ vim.cmd([[
   " Save current view settings on a per-window, per-buffer basis.
   " https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
   function! AutoSaveWinView()
+    " Omit terminal buffers, since they don't have a view to save.
+    if &buftype == 'terminal'
+      return
+    endif
     if !exists('w:SavedBufView')
       let w:SavedBufView = {}
     endif
