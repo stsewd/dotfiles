@@ -57,3 +57,5 @@ Check [`config/nvim/`](config/nvim/) for see all the plugins, settings and key-b
   - `gh auth login`
   - `gh extension install github/gh-copilot`
   - `:Copilot setup`
+- If something doesn't work, deal with the nvidia drivers https://rpmfusion.org/Howto/NVIDIA.
+  Choose the open kernel drivers if you have problems with the proprietary ones.

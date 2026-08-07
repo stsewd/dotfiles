@@ -7,7 +7,6 @@ vim.o.pumblend = 30
 vim.o.swapfile = false
 vim.o.colorcolumn = "100"
 vim.o.scrolloff = 3
-vim.opt.diffopt:append("vertical")
 vim.opt.spelllang = { "en", "es" }
 vim.o.termguicolors = true
 -- Recommended by auto-session.

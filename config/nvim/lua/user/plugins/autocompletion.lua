@@ -8,6 +8,7 @@ return {
       { "b0o/schemastore.nvim" },
     },
     config = function()
+      -- TODO: try https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#copilot.
       vim.lsp.config("jsonls", {
         settings = {
           json = {

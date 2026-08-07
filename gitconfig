@@ -41,3 +41,6 @@
 
 [hub]
   protocol = ssh
+
+[alias]
+  sync = "!set -x; git pull --prune"
