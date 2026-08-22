@@ -17,4 +17,4 @@ cp -v \
   $FONTS_TARGET_DIR
 
 wget --directory-prefix=$FONTS_TARGET_DIR \
-  https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFontMono-Regular.ttf
+  https://github.com/ryanoasis/nerd-fonts/raw/refs/heads/master/patched-fonts/JetBrainsMono/Ligatures/JetBrainsMonoNerdFontMono-Regular.ttf
